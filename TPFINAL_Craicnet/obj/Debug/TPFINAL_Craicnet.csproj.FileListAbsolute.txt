@@ -1,0 +1,12 @@
+C:\Users\bruno\Documents\Visual Studio 2017\Projects\TPFINAL_Craicnet\TPFINAL_Craicnet\bin\Debug\TPFINAL_Craicnet.exe.config
+C:\Users\bruno\Documents\Visual Studio 2017\Projects\TPFINAL_Craicnet\TPFINAL_Craicnet\bin\Debug\TPFINAL_Craicnet.exe
+C:\Users\bruno\Documents\Visual Studio 2017\Projects\TPFINAL_Craicnet\TPFINAL_Craicnet\bin\Debug\TPFINAL_Craicnet.pdb
+C:\Users\bruno\Documents\Visual Studio 2017\Projects\TPFINAL_Craicnet\TPFINAL_Craicnet\obj\Debug\TPFINAL_Craicnet.csprojAssemblyReference.cache
+C:\Users\bruno\Documents\Visual Studio 2017\Projects\TPFINAL_Craicnet\TPFINAL_Craicnet\obj\Debug\TPFINAL_Craicnet.Administrador.resources
+C:\Users\bruno\Documents\Visual Studio 2017\Projects\TPFINAL_Craicnet\TPFINAL_Craicnet\obj\Debug\TPFINAL_Craicnet.Inicio.resources
+C:\Users\bruno\Documents\Visual Studio 2017\Projects\TPFINAL_Craicnet\TPFINAL_Craicnet\obj\Debug\TPFINAL_Craicnet.Properties.Resources.resources
+C:\Users\bruno\Documents\Visual Studio 2017\Projects\TPFINAL_Craicnet\TPFINAL_Craicnet\obj\Debug\TPFINAL_Craicnet.csproj.GenerateResource.cache
+C:\Users\bruno\Documents\Visual Studio 2017\Projects\TPFINAL_Craicnet\TPFINAL_Craicnet\obj\Debug\TPFINAL_Craicnet.csproj.CoreCompileInputs.cache
+C:\Users\bruno\Documents\Visual Studio 2017\Projects\TPFINAL_Craicnet\TPFINAL_Craicnet\obj\Debug\TPFINAL_Craicnet.exe
+C:\Users\bruno\Documents\Visual Studio 2017\Projects\TPFINAL_Craicnet\TPFINAL_Craicnet\obj\Debug\TPFINAL_Craicnet.pdb
+C:\Users\bruno\Documents\Visual Studio 2017\Projects\TPFINAL_Craicnet\TPFINAL_Craicnet\obj\Debug\TPFINAL_Craicnet.Cliente.resources
