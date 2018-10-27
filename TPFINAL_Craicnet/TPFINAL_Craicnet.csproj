@@ -52,12 +52,15 @@
     <Compile Include="Administrador.Designer.cs">
       <DependentUpon>Administrador.cs</DependentUpon>
     </Compile>
+    <Compile Include="cBalde.cs" />
     <Compile Include="Cliente.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Cliente.Designer.cs">
       <DependentUpon>Cliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="cNodo.cs" />
+    <Compile Include="Hash.cs" />
     <Compile Include="Inicio.cs">
       <SubType>Form</SubType>
     </Compile>

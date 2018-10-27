@@ -15,6 +15,7 @@ namespace TPFINAL_Craicnet
             this.Director = " ";
             this.Genero = " ";
             this.Año = " ";
+            this.Resena = " ";
         }
 
         public string Pelicula { get; set; }
@@ -22,6 +23,6 @@ namespace TPFINAL_Craicnet
         public string Director { get; set; }
         public string Genero { get; set; }
         public string Año { get; set; }
- 
+        public string Resena { get; set; }
     }
 }
