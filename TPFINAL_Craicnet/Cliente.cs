@@ -19,16 +19,22 @@ namespace TPFINAL_Craicnet
 
         private void alquilerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            gbox_alquilar.Visible = false;
-            gbox_estadisticas.Visible = true;
-            gbox_graficos.Visible = false;
+            gbox_alquilar.Visible = true;
+            split_alquilar.Visible = true;
+            split_graficos.Visible = false;
+
         }
 
         private void estadisticasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             gbox_alquilar.Visible = false;
-            gbox_estadisticas.Visible = true;
-            gbox_graficos.Visible = true;
+            split_alquilar.Visible = false;
+            split_graficos.Visible = true;
+        }
+
+        private void gbox_graficos_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -10,3 +10,15 @@ C:\Users\bruno\Documents\Visual Studio 2017\Projects\TPFINAL_Craicnet\TPFINAL_Cr
 C:\Users\bruno\Documents\Visual Studio 2017\Projects\TPFINAL_Craicnet\TPFINAL_Craicnet\obj\Debug\TPFINAL_Craicnet.exe
 C:\Users\bruno\Documents\Visual Studio 2017\Projects\TPFINAL_Craicnet\TPFINAL_Craicnet\obj\Debug\TPFINAL_Craicnet.pdb
 C:\Users\bruno\Documents\Visual Studio 2017\Projects\TPFINAL_Craicnet\TPFINAL_Craicnet\obj\Debug\TPFINAL_Craicnet.Cliente.resources
+D:\Previous\Universidad\2018\2018 - 2do cuatrimestre\LP2\TP Final\Craicnet\TPFINAL_Craicnet\bin\Debug\TPFINAL_Craicnet.exe.config
+D:\Previous\Universidad\2018\2018 - 2do cuatrimestre\LP2\TP Final\Craicnet\TPFINAL_Craicnet\bin\Debug\TPFINAL_Craicnet.exe
+D:\Previous\Universidad\2018\2018 - 2do cuatrimestre\LP2\TP Final\Craicnet\TPFINAL_Craicnet\bin\Debug\TPFINAL_Craicnet.pdb
+D:\Previous\Universidad\2018\2018 - 2do cuatrimestre\LP2\TP Final\Craicnet\TPFINAL_Craicnet\obj\Debug\TPFINAL_Craicnet.csprojAssemblyReference.cache
+D:\Previous\Universidad\2018\2018 - 2do cuatrimestre\LP2\TP Final\Craicnet\TPFINAL_Craicnet\obj\Debug\TPFINAL_Craicnet.Administrador.resources
+D:\Previous\Universidad\2018\2018 - 2do cuatrimestre\LP2\TP Final\Craicnet\TPFINAL_Craicnet\obj\Debug\TPFINAL_Craicnet.Cliente.resources
+D:\Previous\Universidad\2018\2018 - 2do cuatrimestre\LP2\TP Final\Craicnet\TPFINAL_Craicnet\obj\Debug\TPFINAL_Craicnet.Inicio.resources
+D:\Previous\Universidad\2018\2018 - 2do cuatrimestre\LP2\TP Final\Craicnet\TPFINAL_Craicnet\obj\Debug\TPFINAL_Craicnet.Properties.Resources.resources
+D:\Previous\Universidad\2018\2018 - 2do cuatrimestre\LP2\TP Final\Craicnet\TPFINAL_Craicnet\obj\Debug\TPFINAL_Craicnet.csproj.GenerateResource.cache
+D:\Previous\Universidad\2018\2018 - 2do cuatrimestre\LP2\TP Final\Craicnet\TPFINAL_Craicnet\obj\Debug\TPFINAL_Craicnet.csproj.CoreCompileInputs.cache
+D:\Previous\Universidad\2018\2018 - 2do cuatrimestre\LP2\TP Final\Craicnet\TPFINAL_Craicnet\obj\Debug\TPFINAL_Craicnet.exe
+D:\Previous\Universidad\2018\2018 - 2do cuatrimestre\LP2\TP Final\Craicnet\TPFINAL_Craicnet\obj\Debug\TPFINAL_Craicnet.pdb

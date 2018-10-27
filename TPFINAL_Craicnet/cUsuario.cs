@@ -12,13 +12,16 @@ namespace TPFINAL_Craicnet
         {
             this.Id = " ";
             this.Password = " ";
+            this.Admin = false;
         }
-        public cUsuario(string id, string password)
+        public cUsuario(string id, string password, bool admin)
         {
             this.Id = id;
             this.Password = password;
+            this.Admin = admin;
         }
         public string Id { get; set; }
         public string Password { get; set; }
+        public bool Admin { get; set; }
     }
 }
