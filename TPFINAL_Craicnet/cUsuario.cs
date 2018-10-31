@@ -13,14 +13,14 @@ namespace TPFINAL_Craicnet
             this.Id = " ";
             this.Password = " ";
             this.Admin = false;
-            this.Peliculas_Alquiladas = new LinkedList<cPeliculas_Alquiladas>();
+          //  this.Peliculas_Alquiladas = new LinkedList<cPeliculas_Alquiladas>();
         }
         public cUsuario(string id, string password, bool admin)
         {
             this.Id = id;
             this.Password = password;
             this.Admin = admin;
-            this.Peliculas_Alquiladas = new LinkedList<cPeliculas_Alquiladas>();
+          //  this.Peliculas_Alquiladas = new LinkedList<cPeliculas_Alquiladas>();
         }
         public string Id { get; set; }
         public string Password { get; set; }

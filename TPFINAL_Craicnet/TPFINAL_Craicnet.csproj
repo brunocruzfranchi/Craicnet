@@ -52,7 +52,6 @@
     <Compile Include="Administrador.Designer.cs">
       <DependentUpon>Administrador.cs</DependentUpon>
     </Compile>
-    <Compile Include="cAdministrador.cs" />
     <Compile Include="cBalde.cs" />
     <Compile Include="cCliente.cs" />
     <Compile Include="Cliente.cs">
@@ -64,6 +63,7 @@
     <Compile Include="cNodo.cs" />
     <Compile Include="cPeliculas_Alquiladas.cs" />
     <Compile Include="Hash.cs" />
+    <Compile Include="Importar.cs" />
     <Compile Include="Inicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,7 +103,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
