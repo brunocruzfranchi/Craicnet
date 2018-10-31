@@ -52,7 +52,9 @@
     <Compile Include="Administrador.Designer.cs">
       <DependentUpon>Administrador.cs</DependentUpon>
     </Compile>
+    <Compile Include="cAdministrador.cs" />
     <Compile Include="cBalde.cs" />
+    <Compile Include="cCliente.cs" />
     <Compile Include="Cliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +62,7 @@
       <DependentUpon>Cliente.cs</DependentUpon>
     </Compile>
     <Compile Include="cNodo.cs" />
+    <Compile Include="cPeliculas_Alquiladas.cs" />
     <Compile Include="Hash.cs" />
     <Compile Include="Inicio.cs">
       <SubType>Form</SubType>

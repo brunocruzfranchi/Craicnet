@@ -6,22 +6,25 @@ using System.Threading.Tasks;
 
 namespace TPFINAL_Craicnet
 {
-    class cUsuario
+     public class cUsuario
     {
         public cUsuario()
         {
             this.Id = " ";
             this.Password = " ";
             this.Admin = false;
+            this.Peliculas_Alquiladas = new LinkedList<cPeliculas_Alquiladas>();
         }
         public cUsuario(string id, string password, bool admin)
         {
             this.Id = id;
             this.Password = password;
             this.Admin = admin;
+            this.Peliculas_Alquiladas = new LinkedList<cPeliculas_Alquiladas>();
         }
         public string Id { get; set; }
         public string Password { get; set; }
-        public bool Admin { get; set; }
+        public bool Admin { get; set; }//la idea es eliminarlo y usar algun tipo de dynamic cast
+      
     }
 }

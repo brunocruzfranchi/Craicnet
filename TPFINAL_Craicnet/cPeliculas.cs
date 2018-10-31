@@ -18,6 +18,8 @@ namespace TPFINAL_Craicnet
             this.Resena = " ";
         }
 
+       
+
         public string Pelicula { get; set; }
         public string Principal { get; set; }
         public string Director { get; set; }
@@ -26,3 +28,4 @@ namespace TPFINAL_Craicnet
         public string Resena { get; set; }
     }
 }
+
