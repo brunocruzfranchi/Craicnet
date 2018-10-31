@@ -22,9 +22,7 @@ namespace TPFINAL_Craicnet
         }
         public string Key { get; set; }
         public cUsuario Value { get; set; }
-        public bool Eliminado { get; set; }
-
-        //generar clave
+        public bool  eliminado { get; set; }
     }
 }
 
