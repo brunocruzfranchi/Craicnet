@@ -11,11 +11,12 @@ namespace TPFINAL_Craicnet
         public cNodo()
         {
             this.Key = " ";
-            this.Value = new cUsuario();
+            //this.Value = new cUsuario();
         }
         public string Key { get; set; }
-        public cUsuario Value { get; set; }
-        public bool  eliminado { get; set; }
+       // public cUsuario Value { get; set; }
+        public bool eliminado { get; set; }
     }
+}
 
         
