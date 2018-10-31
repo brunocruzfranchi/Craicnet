@@ -39,15 +39,16 @@
             this.alquilerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.estadisticasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.split_alquilar = new System.Windows.Forms.SplitContainer();
-            this.gbox_cliente = new System.Windows.Forms.GroupBox();
             this.gbox_alquilar = new System.Windows.Forms.GroupBox();
+            this.gbox_cliente = new System.Windows.Forms.GroupBox();
             this.split_graficos = new System.Windows.Forms.SplitContainer();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.promosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.split_alquilar)).BeginInit();
             this.split_alquilar.Panel2.SuspendLayout();
@@ -69,17 +70,18 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(16, 5, 0, 5);
-            this.menuStrip1.Size = new System.Drawing.Size(2240, 55);
+            this.menuStrip1.Size = new System.Drawing.Size(2240, 58);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // clienteToolStripMenuItem
             // 
             this.clienteToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.promosToolStripMenuItem,
             this.alquilerToolStripMenuItem,
             this.estadisticasToolStripMenuItem});
             this.clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
-            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(122, 45);
+            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(122, 48);
             this.clienteToolStripMenuItem.Text = "Cliente";
             // 
             // alquilerToolStripMenuItem
@@ -111,19 +113,6 @@
             this.split_alquilar.SplitterWidth = 11;
             this.split_alquilar.TabIndex = 0;
             // 
-            // gbox_cliente
-            // 
-            this.gbox_cliente.AutoSize = true;
-            this.gbox_cliente.Controls.Add(this.split_alquilar);
-            this.gbox_cliente.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.gbox_cliente.Location = new System.Drawing.Point(0, 1245);
-            this.gbox_cliente.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.gbox_cliente.Name = "gbox_cliente";
-            this.gbox_cliente.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.gbox_cliente.Size = new System.Drawing.Size(2240, 45);
-            this.gbox_cliente.TabIndex = 1;
-            this.gbox_cliente.TabStop = false;
-            // 
             // gbox_alquilar
             // 
             this.gbox_alquilar.AutoSize = true;
@@ -137,10 +126,23 @@
             this.gbox_alquilar.TabStop = false;
             this.gbox_alquilar.Text = "Alquilar";
             // 
+            // gbox_cliente
+            // 
+            this.gbox_cliente.AutoSize = true;
+            this.gbox_cliente.Controls.Add(this.split_alquilar);
+            this.gbox_cliente.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.gbox_cliente.Location = new System.Drawing.Point(0, 1245);
+            this.gbox_cliente.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.gbox_cliente.Name = "gbox_cliente";
+            this.gbox_cliente.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.gbox_cliente.Size = new System.Drawing.Size(2240, 45);
+            this.gbox_cliente.TabIndex = 1;
+            this.gbox_cliente.TabStop = false;
+            // 
             // split_graficos
             // 
             this.split_graficos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.split_graficos.Location = new System.Drawing.Point(0, 55);
+            this.split_graficos.Location = new System.Drawing.Point(0, 58);
             this.split_graficos.Name = "split_graficos";
             // 
             // split_graficos.Panel1
@@ -154,9 +156,31 @@
             this.split_graficos.Panel2.Controls.Add(this.radioButton4);
             this.split_graficos.Panel2.Controls.Add(this.radioButton3);
             this.split_graficos.Panel2.Controls.Add(this.chart2);
-            this.split_graficos.Size = new System.Drawing.Size(2240, 1190);
+            this.split_graficos.Size = new System.Drawing.Size(2240, 1187);
             this.split_graficos.SplitterDistance = 1073;
             this.split_graficos.TabIndex = 2;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(194, 337);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(215, 36);
+            this.radioButton2.TabIndex = 2;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "radioButton2";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(190, 209);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(215, 36);
+            this.radioButton1.TabIndex = 1;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "radioButton1";
+            this.radioButton1.UseVisualStyleBackColor = true;
             // 
             // chart1
             // 
@@ -174,6 +198,28 @@
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
             // 
+            // radioButton4
+            // 
+            this.radioButton4.AutoSize = true;
+            this.radioButton4.Location = new System.Drawing.Point(264, 319);
+            this.radioButton4.Name = "radioButton4";
+            this.radioButton4.Size = new System.Drawing.Size(215, 36);
+            this.radioButton4.TabIndex = 2;
+            this.radioButton4.TabStop = true;
+            this.radioButton4.Text = "radioButton4";
+            this.radioButton4.UseVisualStyleBackColor = true;
+            // 
+            // radioButton3
+            // 
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Location = new System.Drawing.Point(238, 196);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(215, 36);
+            this.radioButton3.TabIndex = 1;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "radioButton3";
+            this.radioButton3.UseVisualStyleBackColor = true;
+            // 
             // chart2
             // 
             chartArea2.Name = "ChartArea1";
@@ -190,49 +236,11 @@
             this.chart2.TabIndex = 0;
             this.chart2.Text = "chart2";
             // 
-            // radioButton1
+            // promosToolStripMenuItem
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(190, 209);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(215, 36);
-            this.radioButton1.TabIndex = 1;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "radioButton1";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(194, 337);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(215, 36);
-            this.radioButton2.TabIndex = 2;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "radioButton2";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // radioButton3
-            // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(238, 196);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(215, 36);
-            this.radioButton3.TabIndex = 1;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "radioButton3";
-            this.radioButton3.UseVisualStyleBackColor = true;
-            // 
-            // radioButton4
-            // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(264, 319);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(215, 36);
-            this.radioButton4.TabIndex = 2;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "radioButton4";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.promosToolStripMenuItem.Name = "promosToolStripMenuItem";
+            this.promosToolStripMenuItem.Size = new System.Drawing.Size(396, 46);
+            this.promosToolStripMenuItem.Text = "Promociones";
             // 
             // Cliente
             // 
@@ -282,5 +290,6 @@
         private System.Windows.Forms.RadioButton radioButton4;
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
+        private System.Windows.Forms.ToolStripMenuItem promosToolStripMenuItem;
     }
 }

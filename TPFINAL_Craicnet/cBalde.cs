@@ -8,5 +8,9 @@ namespace TPFINAL_Craicnet
 {
     class cBalde
     {
+       
+        public LinkedList<cNodo> Lista { get; set; }
+        public int Clave { get; set; }
+
     }
 }
