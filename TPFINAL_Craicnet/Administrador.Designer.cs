@@ -28,20 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.administradorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarEliminarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.promocionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cerrarSesiónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.grid_peliculas = new System.Windows.Forms.DataGridView();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Director = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Genero = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Año = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Puntaje = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Actor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Sinopsis = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupbox_agregar = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
@@ -69,8 +61,17 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.gbox_agregar = new System.Windows.Forms.GroupBox();
+            this.grid_peliculas = new System.Windows.Forms.DataGridView();
+            this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.directorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.generoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.precioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.puntajeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.añoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sinopsisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.actoresDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cPeliculaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grid_peliculas)).BeginInit();
             this.groupbox_agregar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -78,6 +79,8 @@
             this.splitContainer1.SuspendLayout();
             this.gbox_promocion.SuspendLayout();
             this.gbox_agregar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grid_peliculas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cPeliculaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -103,118 +106,23 @@
             // agregarEliminarToolStripMenuItem
             // 
             this.agregarEliminarToolStripMenuItem.Name = "agregarEliminarToolStripMenuItem";
-            this.agregarEliminarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.agregarEliminarToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.agregarEliminarToolStripMenuItem.Text = "Agregar/Eliminar";
             this.agregarEliminarToolStripMenuItem.Click += new System.EventHandler(this.agregarEliminarToolStripMenuItem_Click);
             // 
             // promocionesToolStripMenuItem
             // 
             this.promocionesToolStripMenuItem.Name = "promocionesToolStripMenuItem";
-            this.promocionesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.promocionesToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.promocionesToolStripMenuItem.Text = "Promociones";
             this.promocionesToolStripMenuItem.Click += new System.EventHandler(this.promocionesToolStripMenuItem_Click);
             // 
             // cerrarSesiónToolStripMenuItem
             // 
             this.cerrarSesiónToolStripMenuItem.Name = "cerrarSesiónToolStripMenuItem";
-            this.cerrarSesiónToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cerrarSesiónToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.cerrarSesiónToolStripMenuItem.Text = "Cerrar Sesión";
             this.cerrarSesiónToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesiónToolStripMenuItem_Click);
-            // 
-            // grid_peliculas
-            // 
-            this.grid_peliculas.AllowUserToAddRows = false;
-            this.grid_peliculas.AllowUserToDeleteRows = false;
-            this.grid_peliculas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.Raised;
-            this.grid_peliculas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.grid_peliculas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Nombre,
-            this.Director,
-            this.Precio,
-            this.Genero,
-            this.Año,
-            this.Puntaje,
-            this.Actor,
-            this.Sinopsis});
-            this.grid_peliculas.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grid_peliculas.Location = new System.Drawing.Point(0, 0);
-            this.grid_peliculas.Name = "grid_peliculas";
-            this.grid_peliculas.ReadOnly = true;
-            this.grid_peliculas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grid_peliculas.Size = new System.Drawing.Size(651, 498);
-            this.grid_peliculas.TabIndex = 0;
-            this.grid_peliculas.SelectionChanged += new System.EventHandler(this.grid_peliculas_SelectionChanged);
-            // 
-            // Nombre
-            // 
-            this.Nombre.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Nombre.DataPropertyName = "Nombre";
-            this.Nombre.FillWeight = 25F;
-            this.Nombre.HeaderText = "Pelicula";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            // 
-            // Director
-            // 
-            this.Director.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Director.DataPropertyName = "Director";
-            this.Director.FillWeight = 18F;
-            this.Director.HeaderText = "Director";
-            this.Director.Name = "Director";
-            this.Director.ReadOnly = true;
-            // 
-            // Precio
-            // 
-            this.Precio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Precio.DataPropertyName = "Precio";
-            this.Precio.FillWeight = 10F;
-            this.Precio.HeaderText = "Precio";
-            this.Precio.Name = "Precio";
-            this.Precio.ReadOnly = true;
-            // 
-            // Genero
-            // 
-            this.Genero.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Genero.DataPropertyName = "Genero";
-            this.Genero.FillWeight = 10F;
-            this.Genero.HeaderText = "Genero";
-            this.Genero.Name = "Genero";
-            this.Genero.ReadOnly = true;
-            // 
-            // Año
-            // 
-            this.Año.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Año.DataPropertyName = "Año";
-            this.Año.FillWeight = 10F;
-            this.Año.HeaderText = "Año";
-            this.Año.Name = "Año";
-            this.Año.ReadOnly = true;
-            // 
-            // Puntaje
-            // 
-            this.Puntaje.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Puntaje.DataPropertyName = "Puntaje";
-            this.Puntaje.FillWeight = 15F;
-            this.Puntaje.HeaderText = "Puntaje";
-            this.Puntaje.Name = "Puntaje";
-            this.Puntaje.ReadOnly = true;
-            // 
-            // Actor
-            // 
-            this.Actor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Actor.DataPropertyName = "Actores";
-            this.Actor.FillWeight = 25F;
-            this.Actor.HeaderText = "Actor/Actriz Principal";
-            this.Actor.Name = "Actor";
-            this.Actor.ReadOnly = true;
-            // 
-            // Sinopsis
-            // 
-            this.Sinopsis.DataPropertyName = "Sinopsis";
-            this.Sinopsis.HeaderText = "Sinopsis";
-            this.Sinopsis.Name = "Sinopsis";
-            this.Sinopsis.ReadOnly = true;
-            this.Sinopsis.Visible = false;
             // 
             // groupbox_agregar
             // 
@@ -496,6 +404,91 @@
             this.gbox_agregar.TabIndex = 2;
             this.gbox_agregar.TabStop = false;
             // 
+            // grid_peliculas
+            // 
+            this.grid_peliculas.AllowUserToAddRows = false;
+            this.grid_peliculas.AllowUserToDeleteRows = false;
+            this.grid_peliculas.AutoGenerateColumns = false;
+            this.grid_peliculas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grid_peliculas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.nombreDataGridViewTextBoxColumn,
+            this.directorDataGridViewTextBoxColumn,
+            this.generoDataGridViewTextBoxColumn,
+            this.precioDataGridViewTextBoxColumn,
+            this.puntajeDataGridViewTextBoxColumn,
+            this.añoDataGridViewTextBoxColumn,
+            this.sinopsisDataGridViewTextBoxColumn,
+            this.actoresDataGridViewTextBoxColumn});
+            this.grid_peliculas.DataSource = this.cPeliculaBindingSource;
+            this.grid_peliculas.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grid_peliculas.Location = new System.Drawing.Point(0, 0);
+            this.grid_peliculas.Name = "grid_peliculas";
+            this.grid_peliculas.ReadOnly = true;
+            this.grid_peliculas.Size = new System.Drawing.Size(651, 498);
+            this.grid_peliculas.TabIndex = 0;
+            this.grid_peliculas.SelectionChanged += new System.EventHandler(this.grid_peliculas_SelectionChanged);
+            // 
+            // nombreDataGridViewTextBoxColumn
+            // 
+            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.HeaderText = "Peliculas";
+            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // directorDataGridViewTextBoxColumn
+            // 
+            this.directorDataGridViewTextBoxColumn.DataPropertyName = "Director";
+            this.directorDataGridViewTextBoxColumn.HeaderText = "Director";
+            this.directorDataGridViewTextBoxColumn.Name = "directorDataGridViewTextBoxColumn";
+            this.directorDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // generoDataGridViewTextBoxColumn
+            // 
+            this.generoDataGridViewTextBoxColumn.DataPropertyName = "Genero";
+            this.generoDataGridViewTextBoxColumn.HeaderText = "Genero";
+            this.generoDataGridViewTextBoxColumn.Name = "generoDataGridViewTextBoxColumn";
+            this.generoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // precioDataGridViewTextBoxColumn
+            // 
+            this.precioDataGridViewTextBoxColumn.DataPropertyName = "Precio";
+            this.precioDataGridViewTextBoxColumn.HeaderText = "Precio";
+            this.precioDataGridViewTextBoxColumn.Name = "precioDataGridViewTextBoxColumn";
+            this.precioDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // puntajeDataGridViewTextBoxColumn
+            // 
+            this.puntajeDataGridViewTextBoxColumn.DataPropertyName = "Puntaje";
+            this.puntajeDataGridViewTextBoxColumn.HeaderText = "Puntaje";
+            this.puntajeDataGridViewTextBoxColumn.Name = "puntajeDataGridViewTextBoxColumn";
+            this.puntajeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // añoDataGridViewTextBoxColumn
+            // 
+            this.añoDataGridViewTextBoxColumn.DataPropertyName = "Año";
+            this.añoDataGridViewTextBoxColumn.HeaderText = "Año";
+            this.añoDataGridViewTextBoxColumn.Name = "añoDataGridViewTextBoxColumn";
+            this.añoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // sinopsisDataGridViewTextBoxColumn
+            // 
+            this.sinopsisDataGridViewTextBoxColumn.DataPropertyName = "Sinopsis";
+            this.sinopsisDataGridViewTextBoxColumn.HeaderText = "Sinopsis";
+            this.sinopsisDataGridViewTextBoxColumn.Name = "sinopsisDataGridViewTextBoxColumn";
+            this.sinopsisDataGridViewTextBoxColumn.ReadOnly = true;
+            this.sinopsisDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // actoresDataGridViewTextBoxColumn
+            // 
+            this.actoresDataGridViewTextBoxColumn.DataPropertyName = "Actores";
+            this.actoresDataGridViewTextBoxColumn.HeaderText = "Actores";
+            this.actoresDataGridViewTextBoxColumn.Name = "actoresDataGridViewTextBoxColumn";
+            this.actoresDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // cPeliculaBindingSource
+            // 
+            this.cPeliculaBindingSource.DataSource = typeof(TPFINAL_Craicnet.cPelicula);
+            // 
             // Administrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -509,7 +502,6 @@
             this.Load += new System.EventHandler(this.Administrador_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.grid_peliculas)).EndInit();
             this.groupbox_agregar.ResumeLayout(false);
             this.groupbox_agregar.PerformLayout();
             this.splitContainer1.Panel1.ResumeLayout(false);
@@ -520,6 +512,8 @@
             this.gbox_promocion.ResumeLayout(false);
             this.gbox_promocion.PerformLayout();
             this.gbox_agregar.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.grid_peliculas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cPeliculaBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -531,7 +525,6 @@
         private System.Windows.Forms.ToolStripMenuItem administradorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem agregarEliminarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem promocionesToolStripMenuItem;
-        private System.Windows.Forms.DataGridView grid_peliculas;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.GroupBox gbox_agregar;
         private System.Windows.Forms.TextBox txt_año;
@@ -559,14 +552,16 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Director;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Genero;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Año;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Puntaje;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Actor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Sinopsis;
         private System.Windows.Forms.ToolStripMenuItem cerrarSesiónToolStripMenuItem;
+        private System.Windows.Forms.DataGridView grid_peliculas;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn directorDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn generoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn precioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn puntajeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn añoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sinopsisDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn actoresDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource cPeliculaBindingSource;
     }
 }

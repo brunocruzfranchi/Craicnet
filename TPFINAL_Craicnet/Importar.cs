@@ -7,19 +7,19 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data;
 using System.Data.OleDb;
-
+using System.IO;
 
 namespace TPFINAL_Craicnet
 {
     class Importar
     {
-        OleDbConnection conn;
+        /*OleDbConnection conn;
         OleDbDataAdapter MyDataAdapter;
         DataTable dt;
 
         public void importarExcel(DataGridView dgv,String nombreHoja)
         {
-            String ruta = "C:\\Users\\bruno\\Documents\\Visual Studio 2017\\Projects\\TPFINAL_Craicnet\\Peliculas.xlsx";
+            String ruta = "C:\\Users\\alumnos.ALUMNOS\\Downloads\\Craicnet-Craicnet\\Craicnet-Craicnet\\Peliculas.xlsx";
             try
             {              
                     conn = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;data source=" + ruta + ";Extended Properties='Excel 12.0 Xml;HDR=Yes'");
@@ -32,6 +32,28 @@ namespace TPFINAL_Craicnet
             {
                 MessageBox.Show(ex.ToString());
             }
+        }*/
+
+        public List<cPelicula> ReadCSV(String filename) {
+
+            List<cPelicula> lista_peliculas = File.ReadAllLines(filename).Skip(1).Select(v => cPelicula.FromString(v)).ToList();
+
+            /*
+            string[] lineas = File.ReadAllLines(filename);
+          
+            List<cPelicula> lista_peliculas = new List<cPelicula>();
+
+            cPelicula pelicula = null;
+
+            foreach (var linea in lineas)
+            {
+                pelicula = cPelicula.FromString(linea);
+                lista_peliculas.Add(pelicula);
+            }
+            */
+            return lista_peliculas;
+
         }
+
     }
 }

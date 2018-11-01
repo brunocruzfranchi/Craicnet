@@ -34,7 +34,17 @@ namespace TPFINAL_Craicnet
 
         private void Administrador_Load(object sender, EventArgs e)
         {
-            new Importar().importarExcel(grid_peliculas, "Hoja1");
+            //new Importar().importarExcel(grid_peliculas, "Hoja1");
+            var source = new BindingSource();
+
+            List<cPelicula> lista_peliculas = new List<cPelicula>();
+
+            lista_peliculas = new Importar().ReadCSV("C:\\Users\\bruno\\Desktop\\Craicnet-Craicnet\\Craicnet-Craicnet\\Craicnet-Craicnet\\Peliculas-CSV.csv");
+
+            source.DataSource = lista_peliculas;
+
+            grid_peliculas.DataSource = source;
+
         }
 
         private void grid_peliculas_SelectionChanged(object sender, EventArgs e)
@@ -50,15 +60,16 @@ namespace TPFINAL_Craicnet
                 DataGridViewRow row = cell.OwningRow;
                 txt_pelicula_promo.Text = row.Cells[0].Value.ToString();
                 txt_precio_promo.Text = row.Cells[3].Value.ToString();
-                txt_director_promo.Text = row.Cells[2].Value.ToString();
-                txt_genero_promo.Text = row.Cells[5].Value.ToString();
-                txt_año_promo.Text = row.Cells[1].Value.ToString();
+                txt_director_promo.Text = row.Cells[1].Value.ToString();
+                txt_genero_promo.Text = row.Cells[2].Value.ToString();
+                txt_año_promo.Text = row.Cells[5].Value.ToString();
             }
 
         } ///ESTO ES PARA SELECCIONAR Y LUEGO EDITAR EL NOMBRE O LO QUE SEA
 
         private void button1_Click(object sender, EventArgs e)
         {
+           /*
             //Agregar las Filas al DataRow y asignar el valor correspondiente. 
             DataTable aux = new DataTable();
             aux = grid_peliculas.DataSource as DataTable;
@@ -74,11 +85,18 @@ namespace TPFINAL_Craicnet
 
             //Esto se encargará de agregar la fila.
             aux.Rows.Add(datarow);
+            */
         }
 
         private void cerrarSesiónToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            this.Owner.Show();
             this.Close();
+        }
+
+        private void grid_peliculas_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

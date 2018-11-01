@@ -39,35 +39,41 @@ namespace TPFINAL_Craicnet
 
         }
 
-        private void Cliente_Load(object sender, EventArgs e)
+        public void Cliente_Load(object sender, EventArgs e)
         {
-            new Importar().importarExcel(grid_peliculas_cliente, "Hoja1");
+            List<cPelicula> lista_peliculas = new List<cPelicula>();
+
+            lista_peliculas = new Importar().ReadCSV("C:\\Users\\bruno\\Desktop\\Craicnet-Craicnet\\Craicnet-Craicnet\\Craicnet-Craicnet\\Peliculas-CSV.csv");
+
+            grid_peliculas_cliente.DataSource = lista_peliculas;
         }
 
         private void grid_peliculas_cliente_SelectionChanged(object sender, EventArgs e)
         {
             DataGridViewCell cell = null;
+
             foreach (DataGridViewCell selectedCell in grid_peliculas_cliente.SelectedCells)
             {
                 cell = selectedCell;
                 break;
             }
+
             if (cell != null)
             {
                 DataGridViewRow row = cell.OwningRow;
                 txt_pelicula_cliente.Text = row.Cells[0].Value.ToString();
+                txt_genero_cliente.Text = row.Cells[2].Value.ToString();
+                txt_director_cliente.Text = row.Cells[1].Value.ToString();
                 txt_precio_cliente.Text = row.Cells[3].Value.ToString();
-                txt_director_cliente.Text = row.Cells[2].Value.ToString();
-                txt_genero_cliente.Text = row.Cells[5].Value.ToString();
-                txt_año_cliente.Text = row.Cells[1].Value.ToString();
+                txt_año_cliente.Text = row.Cells[5].Value.ToString();
                 txt_sinopsis.Text = row.Cells[7].Value.ToString();
             }
-
+            
         }
 
         private void cerrarSesiónToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           // this.Owner.Show(); NO FUNCIONA 
+            this.Owner.Show();
             this.Close();
 
         }
@@ -79,6 +85,17 @@ namespace TPFINAL_Craicnet
             split_graficos.Visible = false;
             split_usuario.Visible = true;
             //Se tendrian que ver unicamente las que estan en promocion
+        }
+
+        private void combo_ordenar_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_alquilar_Click(object sender, EventArgs e)
+        {
+          /*  string column = grid_peliculas_cliente.Columns[0].HeaderText;
+            grid_peliculas_cliente.Sort(grid_peliculas_cliente.Columns[0], ListSortDirection.Ascending);*/
         }
     }
 }

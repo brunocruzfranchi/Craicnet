@@ -49,6 +49,7 @@ namespace TPFINAL_Craicnet
                     {
                         Administrador admin = new Administrador();
                         admin.Show(this);
+                        this.Hide();
                     }
                     else
                         MessageBox.Show("Contraseña incorrecta");
@@ -68,6 +69,7 @@ namespace TPFINAL_Craicnet
                         {
                             Cliente cliente = new Cliente();
                             cliente.Show(this);
+                            this.Hide();
                         }
                         else
                             MessageBox.Show("Contraseña incorrecta");
@@ -79,6 +81,19 @@ namespace TPFINAL_Craicnet
                 {
                     MessageBox.Show("No ha seleccionado tipo de usuario {admin,cleinte}");
                 }
+
+             /*  
+                
+                cUsuario esteUsuario = new cUsuario();
+
+                cCliente esto = esteUsuario as cCliente;
+
+                if (esto != null)
+                {
+
+                }
+             
+             */
             }
         }
     }
