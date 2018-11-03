@@ -51,6 +51,7 @@ namespace TPFINAL_Craicnet
                 lista_peliculas.Add(pelicula);
             }
             */
+
             return lista_peliculas;
 
         }

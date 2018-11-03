@@ -70,3 +70,10 @@ C:\Users\bruno\Desktop\Craicnet-Craicnet\Craicnet-Craicnet\Craicnet-Craicnet\TPF
 C:\Users\bruno\Desktop\Craicnet-Craicnet\Craicnet-Craicnet\Craicnet-Craicnet\TPFINAL_Craicnet\obj\Debug\TPFINAL_Craicnet.csproj.CopyComplete
 C:\Users\bruno\Desktop\Craicnet-Craicnet\Craicnet-Craicnet\Craicnet-Craicnet\TPFINAL_Craicnet\obj\Debug\TPFINAL_Craicnet.exe
 C:\Users\bruno\Desktop\Craicnet-Craicnet\Craicnet-Craicnet\Craicnet-Craicnet\TPFINAL_Craicnet\obj\Debug\TPFINAL_Craicnet.pdb
+C:\Users\bruno\Documents\Craicnet\TPFINAL_Craicnet\bin\Debug\CsvHelper.dll
+C:\Users\bruno\Documents\Craicnet\TPFINAL_Craicnet\bin\Debug\ExcelDataReader.DataSet.dll
+C:\Users\bruno\Documents\Craicnet\TPFINAL_Craicnet\bin\Debug\ExcelDataReader.dll
+C:\Users\bruno\Documents\Craicnet\TPFINAL_Craicnet\bin\Debug\CsvHelper.xml
+C:\Users\bruno\Documents\Craicnet\TPFINAL_Craicnet\bin\Debug\ExcelDataReader.xml
+C:\Users\bruno\Documents\Craicnet\TPFINAL_Craicnet\bin\Debug\ExcelDataReader.DataSet.xml
+C:\Users\bruno\Documents\Craicnet\TPFINAL_Craicnet\obj\Debug\TPFINAL_Craicnet.csproj.CopyComplete
