@@ -14,7 +14,9 @@ namespace TPFINAL_Craicnet
 
     public class cPelicula
     {
-         public cPelicula()
+        internal object dt;
+
+        public cPelicula()
             {
                 this.Nombre = " ";
                 this.Actores = " ";

@@ -38,14 +38,16 @@
             this.txt_contraseña = new System.Windows.Forms.TextBox();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btn_registrar = new System.Windows.Forms.Button();
+            this.txt_verificacion = new System.Windows.Forms.TextBox();
+            this.txt_ContraseñaNueva = new System.Windows.Forms.TextBox();
+            this.txt_UsuarioNuevo = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.StatusStrip_Inicio = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatus = new System.Windows.Forms.ToolStripStatusLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -55,6 +57,7 @@
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
+            this.StatusStrip_Inicio.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -106,6 +109,8 @@
             this.cbox_tipo.Name = "cbox_tipo";
             this.cbox_tipo.Size = new System.Drawing.Size(145, 21);
             this.cbox_tipo.TabIndex = 4;
+            this.cbox_tipo.MouseLeave += new System.EventHandler(this.cbox_tipo_MouseLeave);
+            this.cbox_tipo.MouseHover += new System.EventHandler(this.cbox_tipo_MouseHover);
             // 
             // btn_iniciar_sesion
             // 
@@ -117,6 +122,8 @@
             this.btn_iniciar_sesion.Text = "Iniciar Sesión";
             this.btn_iniciar_sesion.UseVisualStyleBackColor = true;
             this.btn_iniciar_sesion.Click += new System.EventHandler(this.btn_iniciar_sesion_Click);
+            this.btn_iniciar_sesion.MouseLeave += new System.EventHandler(this.btn_iniciar_sesion_MouseLeave);
+            this.btn_iniciar_sesion.MouseHover += new System.EventHandler(this.btn_iniciar_sesion_MouseHover);
             // 
             // txt_usuario
             // 
@@ -124,6 +131,8 @@
             this.txt_usuario.Name = "txt_usuario";
             this.txt_usuario.Size = new System.Drawing.Size(267, 20);
             this.txt_usuario.TabIndex = 6;
+            this.txt_usuario.MouseLeave += new System.EventHandler(this.txt_usuario_MouseLeave);
+            this.txt_usuario.MouseHover += new System.EventHandler(this.txt_usuario_MouseHover);
             // 
             // txt_contraseña
             // 
@@ -132,6 +141,8 @@
             this.txt_contraseña.PasswordChar = '*';
             this.txt_contraseña.Size = new System.Drawing.Size(267, 20);
             this.txt_contraseña.TabIndex = 7;
+            this.txt_contraseña.MouseLeave += new System.EventHandler(this.txt_contraseña_MouseLeave);
+            this.txt_contraseña.MouseHover += new System.EventHandler(this.txt_contraseña_MouseHover);
             // 
             // splitContainer1
             // 
@@ -173,10 +184,10 @@
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.BackColor = System.Drawing.Color.LightGoldenrodYellow;
-            this.splitContainer2.Panel2.Controls.Add(this.button1);
-            this.splitContainer2.Panel2.Controls.Add(this.textBox3);
-            this.splitContainer2.Panel2.Controls.Add(this.textBox2);
-            this.splitContainer2.Panel2.Controls.Add(this.textBox1);
+            this.splitContainer2.Panel2.Controls.Add(this.btn_registrar);
+            this.splitContainer2.Panel2.Controls.Add(this.txt_verificacion);
+            this.splitContainer2.Panel2.Controls.Add(this.txt_ContraseñaNueva);
+            this.splitContainer2.Panel2.Controls.Add(this.txt_UsuarioNuevo);
             this.splitContainer2.Panel2.Controls.Add(this.label4);
             this.splitContainer2.Panel2.Controls.Add(this.label2);
             this.splitContainer2.Panel2.Controls.Add(this.label3);
@@ -185,36 +196,36 @@
             this.splitContainer2.SplitterDistance = 574;
             this.splitContainer2.TabIndex = 9;
             // 
-            // button1
+            // btn_registrar
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.button1.Location = new System.Drawing.Point(54, 393);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(279, 45);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "Registrate!";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_registrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.btn_registrar.Location = new System.Drawing.Point(54, 393);
+            this.btn_registrar.Name = "btn_registrar";
+            this.btn_registrar.Size = new System.Drawing.Size(279, 45);
+            this.btn_registrar.TabIndex = 14;
+            this.btn_registrar.Text = "Registrate!";
+            this.btn_registrar.UseVisualStyleBackColor = true;
             // 
-            // textBox3
+            // txt_verificacion
             // 
-            this.textBox3.Location = new System.Drawing.Point(145, 284);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(188, 20);
-            this.textBox3.TabIndex = 13;
+            this.txt_verificacion.Location = new System.Drawing.Point(145, 284);
+            this.txt_verificacion.Name = "txt_verificacion";
+            this.txt_verificacion.Size = new System.Drawing.Size(188, 20);
+            this.txt_verificacion.TabIndex = 13;
             // 
-            // textBox2
+            // txt_ContraseñaNueva
             // 
-            this.textBox2.Location = new System.Drawing.Point(145, 251);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(188, 20);
-            this.textBox2.TabIndex = 12;
+            this.txt_ContraseñaNueva.Location = new System.Drawing.Point(145, 251);
+            this.txt_ContraseñaNueva.Name = "txt_ContraseñaNueva";
+            this.txt_ContraseñaNueva.Size = new System.Drawing.Size(188, 20);
+            this.txt_ContraseñaNueva.TabIndex = 12;
             // 
-            // textBox1
+            // txt_UsuarioNuevo
             // 
-            this.textBox1.Location = new System.Drawing.Point(145, 220);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(188, 20);
-            this.textBox1.TabIndex = 11;
+            this.txt_UsuarioNuevo.Location = new System.Drawing.Point(145, 220);
+            this.txt_UsuarioNuevo.Name = "txt_UsuarioNuevo";
+            this.txt_UsuarioNuevo.Size = new System.Drawing.Size(188, 20);
+            this.txt_UsuarioNuevo.TabIndex = 11;
             // 
             // label4
             // 
@@ -256,11 +267,27 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Crear tu cuenta de Craicnet";
             // 
+            // StatusStrip_Inicio
+            // 
+            this.StatusStrip_Inicio.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatus});
+            this.StatusStrip_Inicio.Location = new System.Drawing.Point(0, 537);
+            this.StatusStrip_Inicio.Name = "StatusStrip_Inicio";
+            this.StatusStrip_Inicio.Size = new System.Drawing.Size(960, 22);
+            this.StatusStrip_Inicio.TabIndex = 10;
+            this.StatusStrip_Inicio.Text = "statusStrip1";
+            // 
+            // toolStripStatus
+            // 
+            this.toolStripStatus.Name = "toolStripStatus";
+            this.toolStripStatus.Size = new System.Drawing.Size(0, 17);
+            // 
             // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(960, 559);
+            this.Controls.Add(this.StatusStrip_Inicio);
             this.Controls.Add(this.splitContainer2);
             this.Name = "Inicio";
             this.Text = "Form1";
@@ -275,7 +302,10 @@
             this.splitContainer2.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
+            this.StatusStrip_Inicio.ResumeLayout(false);
+            this.StatusStrip_Inicio.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -291,14 +321,16 @@
         private System.Windows.Forms.TextBox txt_contraseña;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.SplitContainer splitContainer2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btn_registrar;
+        private System.Windows.Forms.TextBox txt_verificacion;
+        private System.Windows.Forms.TextBox txt_ContraseñaNueva;
+        private System.Windows.Forms.TextBox txt_UsuarioNuevo;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.StatusStrip StatusStrip_Inicio;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatus;
     }
 }
 
