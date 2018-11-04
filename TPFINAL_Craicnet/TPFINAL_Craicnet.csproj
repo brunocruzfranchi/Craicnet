@@ -70,7 +70,6 @@
     <Compile Include="FORMS\Cliente.Designer.cs">
       <DependentUpon>Cliente.cs</DependentUpon>
     </Compile>
-    <Compile Include="CLASES\cNodo.cs" />
     <Compile Include="CLASES\cPelicula.cs" />
     <Compile Include="CLASES\HashExt.cs" />
     <Compile Include="CLASES\Importar.cs" />
