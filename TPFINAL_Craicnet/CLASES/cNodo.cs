@@ -10,19 +10,27 @@ namespace TPFINAL_Craicnet
     {
         public cNodo()
         {
-            this.Key = " ";//= generar clave
+            this.Key = CT_Nodos ;//= generar clave
             this.Value = new cUsuario();
-           // this.Eliminado = false;
+           this.Eliminado = false;
+            CT_Nodos++;
         }
         public cNodo(cUsuario  u)
         {
-            this.Key = " "; //=generar clave
+            this.Key = CT_Nodos; //=generar clave
             this.Value = u;
-           // this.Eliminado = false;
+           this.Eliminado = false;
+            CT_Nodos++;
         }
-        public string Key { get; set; }
+        public int Key { get; set; }
         public cUsuario Value { get; set; }
-        public bool  eliminado { get; set; }
+        public bool Eliminado { get; set; }
+        public static int CT_Nodos { get; set; }
+
+        static cNodo()
+        {
+            CT_Nodos = 0;
+        }
     }
 }
 
