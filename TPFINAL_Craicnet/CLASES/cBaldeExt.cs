@@ -10,6 +10,7 @@ namespace TPFINAL_Craicnet
     {
 
         public LinkedList<KeyValuePair<int, cUsuario>> Lista { get; set; }
+
         public int Clave_Balde { get; set; }
         public static int CA_Baldes { get; set; }
         public const int CMAX = 10 ; // Cant max de elementos x balde
@@ -19,6 +20,7 @@ namespace TPFINAL_Craicnet
         {
             CA_Baldes = 0;
         }
+
         public cBaldeExt()
         {
             this.Lista = new LinkedList<KeyValuePair<int, cUsuario>>();
