@@ -12,7 +12,8 @@ namespace TPFINAL_Craicnet
         public LinkedList<KeyValuePair<int, cUsuario>> Lista { get; set; }
         public int Clave_Balde { get; set; }
         public static int CA_Baldes { get; set; }
-        public const int CMAX = 10 ; //getter?? Cant max de elementos x balde
+        public const int CMAX = 10 ; // Cant max de elementos x balde
+        
                
         static cBaldeExt()
         {
@@ -22,11 +23,13 @@ namespace TPFINAL_Craicnet
         {
             this.Lista = new LinkedList<KeyValuePair<int, cUsuario>>();
             this.Clave_Balde = CA_Baldes ;
-            CA_Baldes++; //chequear con CMAX, rehash?
+            CA_Baldes++; 
         }
 
        public bool Agregar(KeyValuePair<int,cUsuario> pair)
         {
+            if (Lista.Count >= CMAX)
+                return false;//balde lleno
             Lista.AddLast(pair);
             return true;
         }
@@ -37,6 +40,45 @@ namespace TPFINAL_Craicnet
             return Agregar(pair);
         }
 
+       public bool Eliminar(int key)
+        {
+            foreach (KeyValuePair<int, cUsuario> pair in Lista)
+            {
+                if (pair.Key == key)
+                {
+                    Lista.Remove(pair);
+                    return true;
+                }                    
+            }
+            return false; //no encontrado
+        }
+       public KeyValuePair<int,cUsuario> Buscar_par(int key)
+        {
+            foreach (KeyValuePair<int, cUsuario> pair in Lista)
+            {
+                if (pair.Key == key)
+
+                    return pair;
+            }
+
+            return new KeyValuePair<int,cUsuario>(-1,null);
+        }
+       public cUsuario Buscar_usuario(int key)
+        {
+            KeyValuePair<int, cUsuario> aux = Buscar_par(key);
+          
+            return aux.Value;
+            
+        } 
+        public cUsuario Buscar_usuario(string id)
+        {
+            foreach(KeyValuePair<int,cUsuario> pair in Lista)
+            {
+                if (pair.Value.Id == id)
+                    return pair.Value;
+            }
+            return null;
+        }
         
         //metodos: agregar, eliminar, buscar
     }
