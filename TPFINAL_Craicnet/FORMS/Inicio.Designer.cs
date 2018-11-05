@@ -105,7 +105,7 @@
             this.cbox_tipo.Items.AddRange(new object[] {
             "Administrador",
             "Cliente"});
-            this.cbox_tipo.Location = new System.Drawing.Point(163, 139);
+            this.cbox_tipo.Location = new System.Drawing.Point(155, 136);
             this.cbox_tipo.Name = "cbox_tipo";
             this.cbox_tipo.Size = new System.Drawing.Size(145, 21);
             this.cbox_tipo.TabIndex = 4;

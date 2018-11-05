@@ -29,25 +29,16 @@ namespace TPFINAL_Craicnet
         {
             /*
             var source = new BindingSource();
-
             lista_peliculas = new Importar().ReadCSV("C:\\Users\\bruno\\Desktop\\Craicnet-Craicnet\\Craicnet-Craicnet\\Craicnet-Craicnet\\Peliculas-CSV.csv");
-
             source.DataSource = lista_peliculas;
-
             grid_peliculas.DataSource = source;
             */
 
-            lista_peliculas = new Importar().ReadCSV("C:\\Users\\bruno\\Desktop\\Craicnet-Craicnet\\Craicnet-Craicnet\\Craicnet-Craicnet\\Peliculas-CSV.csv");
+            lista_peliculas = new Importar().ReadCSV("C:\\Users\\bruno\\Documents\\Craicnet\\Peliculas-CSV.csv");
 
             DataTable peliculas = new DataTable();
 
             peliculas = ToDataTable<cPelicula>(lista_peliculas);
-
-            /* BindingSource bs = new BindingSource         No me sirvio usar esto porque sigo teniendo el mismo problema de Binding
-             {                                              
-                 DataSource = lista_peliculas
-             };*/
-
             grid_peliculas.DataSource = peliculas;
         }
 
@@ -76,13 +67,13 @@ namespace TPFINAL_Craicnet
         //DataGrid Funciones
 
                     /// <summary>
-        /// ToDataTable me ayuda a convertir lo que una variable list
-        /// a una DataTable. Esto me ayuda para poder facilitarme hacer las 
-        /// funciones de Ordenar, Agregar , etc.
-        /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="items"></param>
-        /// <returns></returns>
+                    /// ToDataTable me ayuda a convertir lo que una variable list
+                    /// a una DataTable. Esto me ayuda para poder facilitarme hacer las 
+                    /// funciones de Ordenar, Agregar , etc.
+                    /// </summary>
+                    /// <typeparam name="T"></typeparam>
+                    /// <param name="items"></param>
+                    /// <returns></returns>
                     public static DataTable ToDataTable<T>(List<T> items)
                     {
                         DataTable dataTable = new DataTable(typeof(T).Name);
@@ -277,14 +268,30 @@ namespace TPFINAL_Craicnet
                             txt_genero_promo.Text = row.Cells[4].Value.ToString();
                             txt_año_promo.Text = row.Cells[5].Value.ToString();
                         }
+
+                        if(radio_editar.Checked == true || radio_eliminar.Checked == true)
+                        {
+                            DataGridViewRow row = cell.OwningRow;
+                            txt_pelicula.Text = row.Cells[0].Value.ToString();
+                            txt_director.Text = row.Cells[1].Value.ToString();
+                            txt_precio.Text = row.Cells[2].Value.ToString();
+                            txt_genero.Text = row.Cells[4].Value.ToString();                            
+                            txt_año.Text = row.Cells[5].Value.ToString();
+                            txt_actores.Text = row.Cells[6].Value.ToString();
+                            txt_sinopsis.Text = row.Cells[7].Value.ToString();
+                        }
                     }
 
         //Buttons 
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btn_promocion_Click(object sender, EventArgs e)
         {
-           
-            //Agregar las Filas al DataRow y asignar el valor correspondiente. 
+            
+        }
+
+        private void btn_Agregar_Click(object sender, EventArgs e)
+        {
+            //Agregar las filas al DataRow y asignar el valor correspondiente. 
             DataTable aux = new DataTable();
             aux = grid_peliculas.DataSource as DataTable;
 
@@ -292,19 +299,82 @@ namespace TPFINAL_Craicnet
             datarow = aux.NewRow(); //Con esto le indica que es una nueva fila.
 
             datarow["Nombre"] = txt_pelicula.Text;
-            datarow["Actores"] = txt_actores.Text;
+            datarow["Director"] = txt_director.Text;
+            datarow["Precio"] = txt_precio.Text;
             datarow["Genero"] = txt_genero.Text;
             datarow["Año"] = txt_año.Text;
-            datarow["Director"] = txt_director.Text;
+            datarow["Actores"] = txt_actores.Text;
+
+            cPelicula peli_aux = new cPelicula(txt_pelicula.Text.ToString(), txt_actores.Text.ToString(), double.Parse(txt_precio.Text.ToString()), txt_director.Text.ToString(), txt_genero.Text.ToString(), txt_año.Text.ToString(), txt_sinopsis.Text.ToString());
+
+            lista_peliculas.Add(peli_aux);
 
             //Esto se encargará de agregar la fila.
+
             aux.Rows.Add(datarow);
-            
+
+            //TODO: Ver como puedo mejorar la parte de agregado
+            //      Esto lo puedo hacer creandome una peli_aux, le agrego los datos, lo guardo en mi lista
+            //      Y luego puedo actualizar la DataGrid o dejarlo como estaba;
+            //      Puedo agregar para que salga un mensaje diciendo:  Pelicula Agreaga y los datos o algo parecido
         }
 
-        private void btn_promocion_Click(object sender, EventArgs e)
+        private void btn_eliminar_Click(object sender, EventArgs e)
         {
-            
+
+        }
+
+        private void radio_agregar_CheckedChanged(object sender, EventArgs e)
+        {
+            txt_pelicula.Enabled = true;
+            txt_director.Enabled = true;
+            txt_precio.Enabled = true;
+            txt_genero.Enabled = true;
+            txt_año.Enabled = true;
+            txt_actores.Enabled = true;
+            txt_sinopsis.Enabled = true;
+
+            btn_Agregar.Enabled = true;
+            btn_eliminar.Enabled = false;
+            btn_editar.Enabled = false;
+
+            txt_pelicula.Text = "";
+            txt_director.Text = "";
+            txt_precio.Text = "";
+            txt_genero.Text = "";
+            txt_año.Text = "";
+            txt_actores.Text = "";
+            txt_sinopsis.Text = "";
+        }
+
+        private void radio_editar_CheckedChanged(object sender, EventArgs e)
+        {
+            txt_pelicula.Enabled = true;
+            txt_director.Enabled = true;
+            txt_precio.Enabled = true;
+            txt_genero.Enabled = true;
+            txt_año.Enabled = true;
+            txt_actores.Enabled = true;
+            txt_sinopsis.Enabled = true;
+
+            btn_Agregar.Enabled = false;
+            btn_eliminar.Enabled = false;
+            btn_editar.Enabled = true;
+        }
+
+        private void radio_eliminar_CheckedChanged(object sender, EventArgs e)
+        {
+            txt_pelicula.Enabled = false;
+            txt_director.Enabled = false;
+            txt_precio.Enabled = false;
+            txt_genero.Enabled = false;
+            txt_año.Enabled = false;
+            txt_actores.Enabled = false;
+            txt_sinopsis.Enabled = true;
+
+            btn_Agregar.Enabled = false;
+            btn_eliminar.Enabled = true;
+            btn_editar.Enabled = false;
         }
     }
 }

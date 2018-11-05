@@ -14,6 +14,7 @@ namespace TPFINAL_Craicnet
     public partial class Cliente : Form
     {
         //Propiedades
+
         public List<cPelicula> lista_peliculas = new List<cPelicula>();
 
         //Cliente Form 

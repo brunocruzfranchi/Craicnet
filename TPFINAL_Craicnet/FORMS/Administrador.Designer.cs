@@ -35,13 +35,21 @@
             this.promocionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cerrarSesiónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupbox_agregar = new System.Windows.Forms.GroupBox();
+            this.btn_editar = new System.Windows.Forms.Button();
+            this.radio_editar = new System.Windows.Forms.RadioButton();
+            this.txt_sinopsis = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txt_precio = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.radio_eliminar = new System.Windows.Forms.RadioButton();
+            this.radio_agregar = new System.Windows.Forms.RadioButton();
             this.btn_eliminar = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_Agregar = new System.Windows.Forms.Button();
             this.txt_año = new System.Windows.Forms.TextBox();
             this.txt_genero = new System.Windows.Forms.TextBox();
             this.txt_director = new System.Windows.Forms.TextBox();
@@ -71,10 +79,6 @@
             this.ActoresColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sinopsisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cPeliculaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.radio_agregar = new System.Windows.Forms.RadioButton();
-            this.radio_eliminar = new System.Windows.Forms.RadioButton();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             this.groupbox_agregar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.split_promo)).BeginInit();
@@ -131,7 +135,11 @@
             // groupbox_agregar
             // 
             this.groupbox_agregar.AutoSize = true;
-            this.groupbox_agregar.Controls.Add(this.textBox1);
+            this.groupbox_agregar.Controls.Add(this.btn_editar);
+            this.groupbox_agregar.Controls.Add(this.radio_editar);
+            this.groupbox_agregar.Controls.Add(this.txt_sinopsis);
+            this.groupbox_agregar.Controls.Add(this.label2);
+            this.groupbox_agregar.Controls.Add(this.txt_precio);
             this.groupbox_agregar.Controls.Add(this.label1);
             this.groupbox_agregar.Controls.Add(this.radio_eliminar);
             this.groupbox_agregar.Controls.Add(this.radio_agregar);
@@ -141,7 +149,7 @@
             this.groupbox_agregar.Controls.Add(this.label13);
             this.groupbox_agregar.Controls.Add(this.label14);
             this.groupbox_agregar.Controls.Add(this.label15);
-            this.groupbox_agregar.Controls.Add(this.button1);
+            this.groupbox_agregar.Controls.Add(this.btn_Agregar);
             this.groupbox_agregar.Controls.Add(this.txt_año);
             this.groupbox_agregar.Controls.Add(this.txt_genero);
             this.groupbox_agregar.Controls.Add(this.txt_director);
@@ -155,21 +163,106 @@
             this.groupbox_agregar.TabStop = false;
             this.groupbox_agregar.Text = "Agregar/Eliminar";
             // 
+            // btn_editar
+            // 
+            this.btn_editar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btn_editar.Location = new System.Drawing.Point(145, 432);
+            this.btn_editar.Name = "btn_editar";
+            this.btn_editar.Size = new System.Drawing.Size(88, 40);
+            this.btn_editar.TabIndex = 24;
+            this.btn_editar.Text = "Editar";
+            this.btn_editar.UseVisualStyleBackColor = true;
+            // 
+            // radio_editar
+            // 
+            this.radio_editar.AutoSize = true;
+            this.radio_editar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.radio_editar.Location = new System.Drawing.Point(158, 38);
+            this.radio_editar.Name = "radio_editar";
+            this.radio_editar.Size = new System.Drawing.Size(63, 21);
+            this.radio_editar.TabIndex = 23;
+            this.radio_editar.Text = "Editar";
+            this.radio_editar.UseVisualStyleBackColor = true;
+            this.radio_editar.CheckedChanged += new System.EventHandler(this.radio_editar_CheckedChanged);
+            // 
+            // txt_sinopsis
+            // 
+            this.txt_sinopsis.Location = new System.Drawing.Point(133, 294);
+            this.txt_sinopsis.Multiline = true;
+            this.txt_sinopsis.Name = "txt_sinopsis";
+            this.txt_sinopsis.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txt_sinopsis.Size = new System.Drawing.Size(176, 95);
+            this.txt_sinopsis.TabIndex = 22;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label2.Location = new System.Drawing.Point(55, 294);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(61, 17);
+            this.label2.TabIndex = 21;
+            this.label2.Text = "Sinopsis";
+            // 
+            // txt_precio
+            // 
+            this.txt_precio.Location = new System.Drawing.Point(133, 155);
+            this.txt_precio.Name = "txt_precio";
+            this.txt_precio.Size = new System.Drawing.Size(175, 20);
+            this.txt_precio.TabIndex = 20;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label1.Location = new System.Drawing.Point(66, 158);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(48, 17);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "Precio";
+            // 
+            // radio_eliminar
+            // 
+            this.radio_eliminar.AutoSize = true;
+            this.radio_eliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.radio_eliminar.Location = new System.Drawing.Point(247, 38);
+            this.radio_eliminar.Name = "radio_eliminar";
+            this.radio_eliminar.Size = new System.Drawing.Size(76, 21);
+            this.radio_eliminar.TabIndex = 18;
+            this.radio_eliminar.Text = "Eliminar";
+            this.radio_eliminar.UseVisualStyleBackColor = true;
+            this.radio_eliminar.CheckedChanged += new System.EventHandler(this.radio_eliminar_CheckedChanged);
+            // 
+            // radio_agregar
+            // 
+            this.radio_agregar.AutoSize = true;
+            this.radio_agregar.Checked = true;
+            this.radio_agregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.radio_agregar.Location = new System.Drawing.Point(55, 38);
+            this.radio_agregar.Name = "radio_agregar";
+            this.radio_agregar.Size = new System.Drawing.Size(77, 21);
+            this.radio_agregar.TabIndex = 17;
+            this.radio_agregar.TabStop = true;
+            this.radio_agregar.Text = "Agregar";
+            this.radio_agregar.UseVisualStyleBackColor = true;
+            this.radio_agregar.CheckedChanged += new System.EventHandler(this.radio_agregar_CheckedChanged);
+            // 
             // btn_eliminar
             // 
             this.btn_eliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_eliminar.Location = new System.Drawing.Point(204, 382);
+            this.btn_eliminar.Location = new System.Drawing.Point(246, 432);
             this.btn_eliminar.Name = "btn_eliminar";
-            this.btn_eliminar.Size = new System.Drawing.Size(130, 40);
+            this.btn_eliminar.Size = new System.Drawing.Size(88, 40);
             this.btn_eliminar.TabIndex = 16;
             this.btn_eliminar.Text = "Eliminar";
             this.btn_eliminar.UseVisualStyleBackColor = true;
+            this.btn_eliminar.Click += new System.EventHandler(this.btn_eliminar_Click);
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label11.Location = new System.Drawing.Point(57, 220);
+            this.label11.Location = new System.Drawing.Point(58, 260);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(56, 17);
             this.label11.TabIndex = 15;
@@ -179,7 +272,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label12.Location = new System.Drawing.Point(80, 290);
+            this.label12.Location = new System.Drawing.Point(81, 226);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(33, 17);
             this.label12.TabIndex = 14;
@@ -189,7 +282,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label13.Location = new System.Drawing.Point(57, 255);
+            this.label13.Location = new System.Drawing.Point(58, 192);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(56, 17);
             this.label13.TabIndex = 13;
@@ -199,7 +292,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label14.Location = new System.Drawing.Point(55, 185);
+            this.label14.Location = new System.Drawing.Point(56, 124);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(58, 17);
             this.label14.TabIndex = 12;
@@ -209,54 +302,54 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label15.Location = new System.Drawing.Point(56, 150);
+            this.label15.Location = new System.Drawing.Point(57, 90);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(57, 17);
             this.label15.TabIndex = 11;
             this.label15.Text = "Pelicula";
             // 
-            // button1
+            // btn_Agregar
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(50, 382);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(130, 40);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Agregar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btn_Agregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Agregar.Location = new System.Drawing.Point(44, 432);
+            this.btn_Agregar.Name = "btn_Agregar";
+            this.btn_Agregar.Size = new System.Drawing.Size(88, 40);
+            this.btn_Agregar.TabIndex = 10;
+            this.btn_Agregar.Text = "Agregar";
+            this.btn_Agregar.UseVisualStyleBackColor = true;
+            this.btn_Agregar.Click += new System.EventHandler(this.btn_Agregar_Click);
             // 
             // txt_año
             // 
-            this.txt_año.Location = new System.Drawing.Point(136, 290);
+            this.txt_año.Location = new System.Drawing.Point(133, 226);
             this.txt_año.Name = "txt_año";
             this.txt_año.Size = new System.Drawing.Size(175, 20);
             this.txt_año.TabIndex = 9;
             // 
             // txt_genero
             // 
-            this.txt_genero.Location = new System.Drawing.Point(136, 255);
+            this.txt_genero.Location = new System.Drawing.Point(133, 189);
             this.txt_genero.Name = "txt_genero";
             this.txt_genero.Size = new System.Drawing.Size(175, 20);
             this.txt_genero.TabIndex = 8;
             // 
             // txt_director
             // 
-            this.txt_director.Location = new System.Drawing.Point(136, 220);
+            this.txt_director.Location = new System.Drawing.Point(133, 123);
             this.txt_director.Name = "txt_director";
             this.txt_director.Size = new System.Drawing.Size(175, 20);
             this.txt_director.TabIndex = 7;
             // 
             // txt_actores
             // 
-            this.txt_actores.Location = new System.Drawing.Point(136, 185);
+            this.txt_actores.Location = new System.Drawing.Point(133, 259);
             this.txt_actores.Name = "txt_actores";
             this.txt_actores.Size = new System.Drawing.Size(175, 20);
             this.txt_actores.TabIndex = 6;
             // 
             // txt_pelicula
             // 
-            this.txt_pelicula.Location = new System.Drawing.Point(136, 150);
+            this.txt_pelicula.Location = new System.Drawing.Point(133, 87);
             this.txt_pelicula.Name = "txt_pelicula";
             this.txt_pelicula.Size = new System.Drawing.Size(175, 20);
             this.txt_pelicula.TabIndex = 5;
@@ -512,47 +605,6 @@
             // 
             this.cPeliculaBindingSource.DataSource = typeof(TPFINAL_Craicnet.cPelicula);
             // 
-            // radio_agregar
-            // 
-            this.radio_agregar.AutoSize = true;
-            this.radio_agregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.radio_agregar.Location = new System.Drawing.Point(58, 101);
-            this.radio_agregar.Name = "radio_agregar";
-            this.radio_agregar.Size = new System.Drawing.Size(77, 21);
-            this.radio_agregar.TabIndex = 17;
-            this.radio_agregar.TabStop = true;
-            this.radio_agregar.Text = "Agregar";
-            this.radio_agregar.UseVisualStyleBackColor = true;
-            // 
-            // radio_eliminar
-            // 
-            this.radio_eliminar.AutoSize = true;
-            this.radio_eliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.radio_eliminar.Location = new System.Drawing.Point(248, 101);
-            this.radio_eliminar.Name = "radio_eliminar";
-            this.radio_eliminar.Size = new System.Drawing.Size(76, 21);
-            this.radio_eliminar.TabIndex = 18;
-            this.radio_eliminar.TabStop = true;
-            this.radio_eliminar.Text = "Eliminar";
-            this.radio_eliminar.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label1.Location = new System.Drawing.Point(65, 325);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(48, 17);
-            this.label1.TabIndex = 19;
-            this.label1.Text = "Precio";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(136, 325);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(175, 20);
-            this.textBox1.TabIndex = 20;
-            // 
             // Administrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -597,7 +649,7 @@
         private System.Windows.Forms.TextBox txt_actores;
         private System.Windows.Forms.TextBox txt_pelicula;
         public System.Windows.Forms.GroupBox groupbox_agregar;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_Agregar;
         private System.Windows.Forms.GroupBox gbox_promocion;
         private System.Windows.Forms.TextBox txt_año_promo;
         private System.Windows.Forms.TextBox txt_genero_promo;
@@ -629,7 +681,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn sinopsisDataGridViewTextBoxColumn;
         private System.Windows.Forms.RadioButton radio_eliminar;
         private System.Windows.Forms.RadioButton radio_agregar;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_precio;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btn_editar;
+        private System.Windows.Forms.RadioButton radio_editar;
+        private System.Windows.Forms.TextBox txt_sinopsis;
+        private System.Windows.Forms.Label label2;
     }
 }
