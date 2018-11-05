@@ -16,7 +16,7 @@ namespace TPFINAL_Craicnet
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Cliente());
+            Application.Run(new Administrador());
         }
     }
 }
