@@ -10,11 +10,10 @@ namespace TPFINAL_Craicnet
     {
 
         public LinkedList<KeyValuePair<int, cUsuario>> Lista { get; set; }
-
         public int Clave_Balde { get; set; }
         public static int CA_Baldes { get; set; }
-        public const int CMAX = 4 ; // Cant max de elementos x balde
-                   
+        public const int CMAX = 4; // Cant max de elementos x balde
+
         static cBaldeExt()
         {
             CA_Baldes = 0;
@@ -23,25 +22,25 @@ namespace TPFINAL_Craicnet
         public cBaldeExt()
         {
             this.Lista = new LinkedList<KeyValuePair<int, cUsuario>>();
-            this.Clave_Balde = CA_Baldes ;
-            CA_Baldes++; 
+            this.Clave_Balde = CA_Baldes;
+            CA_Baldes++;
         }
 
-       public int Agregar(KeyValuePair<int,cUsuario> pair)
+        public bool Agregar(KeyValuePair<int, cUsuario> pair)
         {
             if (Lista.Count >= CMAX)
-                return 1;//balde lleno reHASH?
+                return false;
             Lista.AddLast(pair);
-            return 0;
+            return true;
         }
 
-       public int Agregar(int key, cUsuario value)
+        public bool Agregar(int key, cUsuario value)
         {
-            KeyValuePair<int,cUsuario> pair = new KeyValuePair<int, cUsuario>(key,value);
+            KeyValuePair<int, cUsuario> pair = new KeyValuePair<int, cUsuario>(key, value);
             return Agregar(pair);
         }
 
-       public bool Eliminar(int key)
+        public bool Eliminar(int key)
         {
             foreach (KeyValuePair<int, cUsuario> pair in Lista)
             {
@@ -49,39 +48,39 @@ namespace TPFINAL_Craicnet
                 {
                     Lista.Remove(pair);
                     return true;
-                }                    
+                }
             }
             return false; //no encontrado
         }
-       public KeyValuePair<int,cUsuario> Buscar_par(int key,string id)
+        public KeyValuePair<int, cUsuario> Buscar_par(int key, string id)
         {
             foreach (KeyValuePair<int, cUsuario> pair in Lista)
             {
                 if (pair.Key == key)
 
-                    if(pair.Value.Id== id)
-                    return pair;
+                    if (pair.Value.Id == id)
+                        return pair;
             }
 
-            return new KeyValuePair<int,cUsuario>(-1,null);
+            return new KeyValuePair<int, cUsuario>(-1, null);
         }
-       public cUsuario Buscar_usuario(int key, string id)
+        public cUsuario Buscar_usuario(int key, string id)
         {
-            KeyValuePair<int, cUsuario> aux = Buscar_par(key,id);
-          
+            KeyValuePair<int, cUsuario> aux = Buscar_par(key, id);
+
             return aux.Value;
-            
-        } 
+
+        }
         public cUsuario Buscar_usuario(string id)
         {
-            foreach(KeyValuePair<int,cUsuario> pair in Lista)
+            foreach (KeyValuePair<int, cUsuario> pair in Lista)
             {
                 if (pair.Value.Id == id)
                     return pair.Value;
             }
             return null;
         }
-        
+
         //metodos: agregar, eliminar, buscar
     }
 }

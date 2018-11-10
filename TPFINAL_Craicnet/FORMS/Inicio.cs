@@ -38,10 +38,10 @@ namespace TPFINAL_Craicnet
         //Tabla Hash nueva
         HashExt Tabla_Usuarios;
         public const string Clave_verificacion = "ULTRAVIOLETA";
+
         //Inicio Form
         public Inicio()
         {
-
             InitializeComponent();
             Tabla_Usuarios = new HashExt();
             cUsuario cliente = new cUsuario("41292443", " ", false);
@@ -51,17 +51,12 @@ namespace TPFINAL_Craicnet
         }
 
         // TODO: VER ALGUNA FORMA DE PODER MANDAR EL USUARIO CUANDO ESTE LISTA LA TABLA HASH PARA PODER USARLO DE ALGUNA FORMA 
-        //       COMO POR EJEMPLO, PONER EN LISTA CUALES SON LAS PELICULAS QUE TIENE ALQUILADA.
-        //       
+        //       COMO POR EJEMPLO, PONER EN LISTA CUALES SON LAS PELICULAS QUE TIENE ALQUILADA.    
 
         //Buttons 
-        private void btn_iniciar_sesion_Click(object sender, EventArgs e) 
+        private void btn_iniciar_sesion_Click(object sender, EventArgs e)
         {
-            
-
-
-            /*
-            if (cbox_tipo.Text == "Administrador")
+           /* if (cbox_tipo.Text == "Administrador")
             {
                 Hashtable users_admin = GetHashtable_admin();
                 if (users_admin.ContainsKey(txt_usuario.Text))
@@ -103,7 +98,7 @@ namespace TPFINAL_Craicnet
                     MessageBox.Show("No ha seleccionado tipo de usuario {admin,cleinte}");
                 }
 
-                 /*  
+                 /* 
                     cUsuario esteUsuario = new cUsuario();
                     cCliente esto = esteUsuario as cCliente;
                     if (esto != null)
@@ -154,25 +149,10 @@ namespace TPFINAL_Craicnet
             {
                 toolStripStatus.Text = "";
             }
-<<<<<<< HEAD
 
-        private void btn_registrar_Click(object sender, EventArgs e)
+        private void Inicio_Load(object sender, EventArgs e)
         {
-
-            cUsuario nuevo_usuario = new cUsuario(txt_usuario.Text,txt_contraseña.Text,radio_Admin.Checked);
-            int aux = Tabla_Usuarios.Agregar(nuevo_usuario);
-            switch (aux)
-            {
-                case 1:
-                   Tabla_Usuarios.Rehash();
-                    break;
-                case 2:
-                    //tiro nueva ventana or sth?? Preguntar a bru
-                    break;
-                default:
-                    break;
-            }
-
+            pictureBox1.Image = Image.FromFile(AppDomain.CurrentDomain.BaseDirectory + "\\Caricenet000.png");
         }
 
         private void radio_Cliente_CheckedChanged(object sender, EventArgs e)
@@ -185,11 +165,7 @@ namespace TPFINAL_Craicnet
             txt_verificacion.Enabled = true;
         }
 
-        //TODO: FALTA HACER LOS TXT Y EL BTN DE LA PARTE DE REGISTRARSE
-=======
-            
-            //TODO: FALTA HACER LOS TXT Y EL BTN DE LA PARTE DE REGISTRARSE
->>>>>>> parent of 6ae78ec... HI JULI
+        //TODO: EL BTN DE LA PARTE DE REGISTRARSE
 
     }
 }

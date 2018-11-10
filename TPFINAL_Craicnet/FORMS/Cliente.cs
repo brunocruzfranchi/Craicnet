@@ -27,7 +27,7 @@ namespace TPFINAL_Craicnet
         public void Cliente_Load(object sender, EventArgs e)
         {
 
-            lista_peliculas = new Importar().ReadCSV("C:\\Users\\bruno\\Desktop\\Craicnet-Craicnet\\Craicnet-Craicnet\\Craicnet-Craicnet\\Peliculas-CSV.csv");
+            lista_peliculas = new Importar().ReadCSV(AppDomain.CurrentDomain.BaseDirectory + "\\Peliculas-CSV.csv");
 
             DataTable peliculas = new DataTable();
 
@@ -142,14 +142,14 @@ namespace TPFINAL_Craicnet
                     grid.Columns[e.ColumnIndex].HeaderCell.SortGlyphDirection = so;  //Envio que tipo de flecha deberia aparecer 
         }
         
-                 /// <summary>
+                /// <summary>
                  /// Ahora en la funcion Sort lo que pasa es que al haberme mandado el nombre de la columna y el tipo de orden que quiero
                  /// Tengo que ordenar la lista que estoy usando, en este caso, seria la lista Lista_Peliculas.
                  /// Y una vez ordenada la lista, hago el mismo procedimiento que arriba
                  /// </summary>
                  /// <param name="column"></param>
                  /// <param name="sortOrder"></param>
-                 private void Sort(string column, SortOrder sortOrder)
+                private void Sort(string column, SortOrder sortOrder)
                 {
                     DataTable peliculas = new DataTable();
 
@@ -256,14 +256,14 @@ namespace TPFINAL_Craicnet
                     }
                 }
                  
-                 /// <summary>
+                /// <summary>
                  /// Esto me permite que aparezca los datos de la pelicula en
                  /// un textbox para que le cliente vea los datos de dicha
                  /// pelicula.
                  /// </summary>
                  /// <param name="sender"></param>
                  /// <param name="e"></param>
-                 private void grid_peliculas_cliente_SelectionChanged(object sender, EventArgs e)
+                private void grid_peliculas_cliente_SelectionChanged(object sender, EventArgs e)
                  {
                     DataGridViewCell cell = null;
 
