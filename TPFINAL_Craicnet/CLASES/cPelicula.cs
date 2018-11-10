@@ -50,25 +50,25 @@ namespace TPFINAL_Craicnet
             public string Año { get; set; }
             public string Sinopsis { get; set; }
 
-            internal static cPelicula FromString(string linea)
-            {
-                cPelicula pelicula = new cPelicula();
+        internal static cPelicula FromString(string linea)
+        {
+            cPelicula pelicula = new cPelicula();
 
-                string[] datos = linea.Split(';');
+            string[] datos = linea.Split(';');
 
-                pelicula.Nombre = datos[0];
-                pelicula.Genero = datos[1];
-                pelicula.Director = datos[2];
-                pelicula.Precio = double.Parse(datos[3]);
-                pelicula.Año = datos[4];
-                pelicula.Actores = datos[5];
-                pelicula.Puntaje = Int32.Parse(datos[6]);
-                pelicula.Sinopsis = datos[7];
+            pelicula.Nombre = datos[0];
+            pelicula.Genero = datos[1];
+            pelicula.Director = datos[2];
+            pelicula.Precio = double.Parse(datos[3]);
+            pelicula.Año = datos[4];
+            pelicula.Actores = datos[5];
+            pelicula.Puntaje = Int32.Parse(datos[6]);
+            pelicula.Sinopsis = datos[7];
 
-                datos = null;
+            datos = null;
 
-                return pelicula;
-            }
+            return pelicula;
+        }
     }
 
 }

@@ -37,6 +37,7 @@ namespace TPFINAL_Craicnet
         public List<cPelicula> ReadCSV(String filename) {
 
             List<cPelicula> lista_peliculas = File.ReadAllLines(filename).Skip(1).Select(v => cPelicula.FromString(v)).ToList();
+
             /*
             string[] lineas = File.ReadAllLines(filename);
           

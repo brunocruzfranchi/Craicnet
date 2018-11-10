@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label_Usuario = new System.Windows.Forms.Label();
             this.label_Contraseña = new System.Windows.Forms.Label();
             this.btn_iniciar_sesion = new System.Windows.Forms.Button();
@@ -47,7 +48,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.StatusStrip_Inicio = new System.Windows.Forms.StatusStrip();
             this.toolStripStatus = new System.Windows.Forms.ToolStripStatusLabel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -57,8 +58,16 @@
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
             this.StatusStrip_Inicio.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(574, 332);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // label_Usuario
             // 
@@ -122,12 +131,11 @@
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.BackColor = System.Drawing.Color.LightCyan;
             this.splitContainer1.Panel1.Controls.Add(this.pictureBox1);
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.BackColor = System.Drawing.Color.LightCyan;
+            this.splitContainer1.Panel2.BackColor = System.Drawing.Color.Gainsboro;
             this.splitContainer1.Panel2.Controls.Add(this.txt_usuario);
             this.splitContainer1.Panel2.Controls.Add(this.txt_contraseña);
             this.splitContainer1.Panel2.Controls.Add(this.label_Usuario);
@@ -151,12 +159,16 @@
             // splitContainer2.Panel2
             // 
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.splitContainer2.Panel2.BackColor = System.Drawing.Color.LightGoldenrodYellow;
             this.splitContainer2.Panel2.Controls.Add(this.radio_Admin);
             this.splitContainer2.Panel2.Controls.Add(this.radio_Cliente);
 =======
             this.splitContainer2.Panel2.BackColor = System.Drawing.Color.SkyBlue;
 >>>>>>> Craicnet
+=======
+            this.splitContainer2.Panel2.BackColor = System.Drawing.Color.LightGoldenrodYellow;
+>>>>>>> parent of 6ae78ec... HI JULI
             this.splitContainer2.Panel2.Controls.Add(this.btn_registrar);
             this.splitContainer2.Panel2.Controls.Add(this.txt_verificacion);
             this.splitContainer2.Panel2.Controls.Add(this.txt_ContraseñaNueva);
@@ -280,17 +292,6 @@
             this.toolStripStatus.Name = "toolStripStatus";
             this.toolStripStatus.Size = new System.Drawing.Size(0, 17);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.LightCyan;
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 77);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(574, 255);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -300,7 +301,7 @@
             this.Controls.Add(this.splitContainer2);
             this.Name = "Inicio";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Inicio_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             this.splitContainer1.Panel2.PerformLayout();
@@ -313,13 +314,14 @@
             this.splitContainer2.ResumeLayout(false);
             this.StatusStrip_Inicio.ResumeLayout(false);
             this.StatusStrip_Inicio.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label_Usuario;
         private System.Windows.Forms.Label label_Contraseña;
         private System.Windows.Forms.Button btn_iniciar_sesion;
@@ -338,11 +340,14 @@
         private System.Windows.Forms.StatusStrip StatusStrip_Inicio;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatus;
 <<<<<<< HEAD
+<<<<<<< HEAD
         private System.Windows.Forms.RadioButton radio_Admin;
         private System.Windows.Forms.RadioButton radio_Cliente;
 =======
         private System.Windows.Forms.PictureBox pictureBox1;
 >>>>>>> Craicnet
+=======
+>>>>>>> parent of 6ae78ec... HI JULI
     }
 }
 

@@ -27,7 +27,7 @@ namespace TPFINAL_Craicnet
         public void Cliente_Load(object sender, EventArgs e)
         {
 
-            lista_peliculas = new Importar().ReadCSV(AppDomain.CurrentDomain.BaseDirectory + "\\Peliculas-CSV.csv");
+            lista_peliculas = new Importar().ReadCSV("C:\\Users\\bruno\\Desktop\\Craicnet-Craicnet\\Craicnet-Craicnet\\Craicnet-Craicnet\\Peliculas-CSV.csv");
 
             DataTable peliculas = new DataTable();
 
