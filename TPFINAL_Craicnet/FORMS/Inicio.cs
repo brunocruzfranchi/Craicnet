@@ -14,30 +14,40 @@ namespace TPFINAL_Craicnet
     public partial class Inicio : Form
     {
         //Tabla Hash previa
-        static Hashtable GetHashtable_admin()
-        {
-            // Create and return new Hashtable.
-            Hashtable admin = new Hashtable();
-            admin.Add("admin1", "1234");
-            admin.Add("admin", "12346");
-            admin.Add("ad_bruno", " ");
-            return admin;
-        }
+        /* static Hashtable GetHashtable_admin()
+         {
+             // Create and return new Hashtable.
+             Hashtable admin = new Hashtable();
+             admin.Add("admin1", "1234");
+             admin.Add("admin", "12346");
+             admin.Add("ad_bruno", " ");
+             return admin;
+         }
 
-        static Hashtable GetHashtable_cliente()
-        {
-            // Create and return new Hashtable.
-            Hashtable cliente = new Hashtable();
-            cliente.Add("cliente", "1234");
-            cliente.Add("cliente1", "12346");
-            cliente.Add("cl_juli", " ");
-            return cliente;
-        }
+         static Hashtable GetHashtable_cliente()
+         {
+             // Create and return new Hashtable.
+             Hashtable cliente = new Hashtable();
 
+             cliente.Add("cliente", "1234");
+             cliente.Add("cliente1", "12346");
+             cliente.Add("cl_juli", " ");
+             return cliente;
+         }
+         */
+        //Tabla Hash nueva
+        HashExt Tabla_Usuarios;
+        public const string Clave_verificacion = "ULTRAVIOLETA";
         //Inicio Form
         public Inicio()
         {
+
             InitializeComponent();
+            Tabla_Usuarios = new HashExt();
+            cUsuario cliente = new cUsuario("41292443", " ", false);
+            cUsuario admin = new cUsuario("41394723", " ", true);
+            Tabla_Usuarios.Agregar(cliente);
+            Tabla_Usuarios.Agregar(admin);
         }
 
         // TODO: VER ALGUNA FORMA DE PODER MANDAR EL USUARIO CUANDO ESTE LISTA LA TABLA HASH PARA PODER USARLO DE ALGUNA FORMA 
@@ -45,8 +55,12 @@ namespace TPFINAL_Craicnet
         //       
 
         //Buttons 
-        private void btn_iniciar_sesion_Click(object sender, EventArgs e)
+        private void btn_iniciar_sesion_Click(object sender, EventArgs e) 
         {
+            
+
+
+            /*
             if (cbox_tipo.Text == "Administrador")
             {
                 Hashtable users_admin = GetHashtable_admin();
@@ -96,7 +110,7 @@ namespace TPFINAL_Craicnet
                     {
                     }     
                  */
-            }
+            //}
         }
 
         //Status Strip
@@ -140,8 +154,37 @@ namespace TPFINAL_Craicnet
             {
                 toolStripStatus.Text = "";
             }
-            
-            //TODO: FALTA HACER LOS TXT Y EL BTN DE LA PARTE DE REGISTRARSE
+
+        private void btn_registrar_Click(object sender, EventArgs e)
+        {
+
+            cUsuario nuevo_usuario = new cUsuario(txt_usuario.Text,txt_contraseña.Text,radio_Admin.Checked);
+            int aux = Tabla_Usuarios.Agregar(nuevo_usuario);
+            switch (aux)
+            {
+                case 1:
+                   Tabla_Usuarios.Rehash();
+                    break;
+                case 2:
+                    //tiro nueva ventana or sth?? Preguntar a bru
+                    break;
+                default:
+                    break;
+            }
+
+        }
+
+        private void radio_Cliente_CheckedChanged(object sender, EventArgs e)
+        {
+            txt_verificacion.Enabled = false;
+        }
+
+        private void radio_Admin_CheckedChanged(object sender, EventArgs e)
+        {
+            txt_verificacion.Enabled = true;
+        }
+
+        //TODO: FALTA HACER LOS TXT Y EL BTN DE LA PARTE DE REGISTRARSE
 
     }
 }

@@ -14,6 +14,7 @@ namespace TPFINAL_Craicnet
     public partial class Cliente : Form
     {
         //Propiedades
+
         public List<cPelicula> lista_peliculas = new List<cPelicula>();
 
         //Cliente Form 
@@ -32,10 +33,12 @@ namespace TPFINAL_Craicnet
 
             peliculas = ToDataTable<cPelicula>(lista_peliculas);
 
-            /* BindingSource bs = new BindingSource         No me sirvio usar esto porque sigo teniendo el mismo problema de Binding
+            /* 
+             BindingSource bs = new BindingSource         No me sirvio usar esto porque sigo teniendo el mismo problema de Binding
              {                                              
                  DataSource = lista_peliculas
-             };*/
+             };
+             */
 
             grid_peliculas_cliente.DataSource = peliculas;
         }
@@ -261,27 +264,27 @@ namespace TPFINAL_Craicnet
                  /// <param name="sender"></param>
                  /// <param name="e"></param>
                  private void grid_peliculas_cliente_SelectionChanged(object sender, EventArgs e)
-        {
-            DataGridViewCell cell = null;
+                 {
+                    DataGridViewCell cell = null;
 
-            foreach (DataGridViewCell selectedCell in grid_peliculas_cliente.SelectedCells)
-            {
-                cell = selectedCell;
-                break;
-            }
+                    foreach (DataGridViewCell selectedCell in grid_peliculas_cliente.SelectedCells)
+                    {
+                        cell = selectedCell;
+                        break;
+                    }
 
-            if (cell != null)
-            {
-                DataGridViewRow row = cell.OwningRow;
-                txt_pelicula_cliente.Text = row.Cells[0].Value.ToString();
-                txt_director_cliente.Text = row.Cells[1].Value.ToString();
-                txt_precio_cliente.Text = row.Cells[2].Value.ToString();
-                txt_genero_cliente.Text = row.Cells[4].Value.ToString();
-                txt_año_cliente.Text = row.Cells[5].Value.ToString();
-                txt_sinopsis.Text = row.Cells[7].Value.ToString();
-            }
+                    if (cell != null)
+                    {
+                        DataGridViewRow row = cell.OwningRow;
+                        txt_pelicula_cliente.Text = row.Cells[0].Value.ToString();
+                        txt_director_cliente.Text = row.Cells[1].Value.ToString();
+                        txt_precio_cliente.Text = row.Cells[2].Value.ToString();
+                        txt_genero_cliente.Text = row.Cells[4].Value.ToString();
+                        txt_año_cliente.Text = row.Cells[5].Value.ToString();
+                        txt_sinopsis.Text = row.Cells[7].Value.ToString();
+                    }
             
-        }
+                 }
 
         //Buttons 
 

@@ -31,13 +31,13 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label_Usuario = new System.Windows.Forms.Label();
             this.label_Contraseña = new System.Windows.Forms.Label();
-            this.label_Tipo = new System.Windows.Forms.Label();
-            this.cbox_tipo = new System.Windows.Forms.ComboBox();
             this.btn_iniciar_sesion = new System.Windows.Forms.Button();
             this.txt_usuario = new System.Windows.Forms.TextBox();
             this.txt_contraseña = new System.Windows.Forms.TextBox();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.radio_Admin = new System.Windows.Forms.RadioButton();
+            this.radio_Cliente = new System.Windows.Forms.RadioButton();
             this.btn_registrar = new System.Windows.Forms.Button();
             this.txt_verificacion = new System.Windows.Forms.TextBox();
             this.txt_ContraseñaNueva = new System.Windows.Forms.TextBox();
@@ -88,29 +88,6 @@
             this.label_Contraseña.Size = new System.Drawing.Size(85, 17);
             this.label_Contraseña.TabIndex = 2;
             this.label_Contraseña.Text = "Contraseña:";
-            // 
-            // label_Tipo
-            // 
-            this.label_Tipo.AutoSize = true;
-            this.label_Tipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label_Tipo.Location = new System.Drawing.Point(99, 137);
-            this.label_Tipo.Name = "label_Tipo";
-            this.label_Tipo.Size = new System.Drawing.Size(40, 17);
-            this.label_Tipo.TabIndex = 3;
-            this.label_Tipo.Text = "Tipo:";
-            // 
-            // cbox_tipo
-            // 
-            this.cbox_tipo.FormattingEnabled = true;
-            this.cbox_tipo.Items.AddRange(new object[] {
-            "Administrador",
-            "Cliente"});
-            this.cbox_tipo.Location = new System.Drawing.Point(163, 139);
-            this.cbox_tipo.Name = "cbox_tipo";
-            this.cbox_tipo.Size = new System.Drawing.Size(145, 21);
-            this.cbox_tipo.TabIndex = 4;
-            this.cbox_tipo.MouseLeave += new System.EventHandler(this.cbox_tipo_MouseLeave);
-            this.cbox_tipo.MouseHover += new System.EventHandler(this.cbox_tipo_MouseHover);
             // 
             // btn_iniciar_sesion
             // 
@@ -164,8 +141,6 @@
             this.splitContainer1.Panel2.Controls.Add(this.label_Usuario);
             this.splitContainer1.Panel2.Controls.Add(this.label_Contraseña);
             this.splitContainer1.Panel2.Controls.Add(this.btn_iniciar_sesion);
-            this.splitContainer1.Panel2.Controls.Add(this.label_Tipo);
-            this.splitContainer1.Panel2.Controls.Add(this.cbox_tipo);
             this.splitContainer1.Size = new System.Drawing.Size(574, 559);
             this.splitContainer1.SplitterDistance = 332;
             this.splitContainer1.TabIndex = 8;
@@ -184,6 +159,8 @@
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.BackColor = System.Drawing.Color.LightGoldenrodYellow;
+            this.splitContainer2.Panel2.Controls.Add(this.radio_Admin);
+            this.splitContainer2.Panel2.Controls.Add(this.radio_Cliente);
             this.splitContainer2.Panel2.Controls.Add(this.btn_registrar);
             this.splitContainer2.Panel2.Controls.Add(this.txt_verificacion);
             this.splitContainer2.Panel2.Controls.Add(this.txt_ContraseñaNueva);
@@ -196,6 +173,30 @@
             this.splitContainer2.SplitterDistance = 574;
             this.splitContainer2.TabIndex = 9;
             // 
+            // radio_Admin
+            // 
+            this.radio_Admin.AutoSize = true;
+            this.radio_Admin.Location = new System.Drawing.Point(213, 186);
+            this.radio_Admin.Name = "radio_Admin";
+            this.radio_Admin.Size = new System.Drawing.Size(88, 17);
+            this.radio_Admin.TabIndex = 16;
+            this.radio_Admin.TabStop = true;
+            this.radio_Admin.Text = "Administrador";
+            this.radio_Admin.UseVisualStyleBackColor = true;
+            this.radio_Admin.CheckedChanged += new System.EventHandler(this.radio_Admin_CheckedChanged);
+            // 
+            // radio_Cliente
+            // 
+            this.radio_Cliente.AutoSize = true;
+            this.radio_Cliente.Location = new System.Drawing.Point(78, 186);
+            this.radio_Cliente.Name = "radio_Cliente";
+            this.radio_Cliente.Size = new System.Drawing.Size(57, 17);
+            this.radio_Cliente.TabIndex = 15;
+            this.radio_Cliente.TabStop = true;
+            this.radio_Cliente.Text = "Cliente";
+            this.radio_Cliente.UseVisualStyleBackColor = true;
+            this.radio_Cliente.CheckedChanged += new System.EventHandler(this.radio_Cliente_CheckedChanged);
+            // 
             // btn_registrar
             // 
             this.btn_registrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
@@ -203,26 +204,27 @@
             this.btn_registrar.Name = "btn_registrar";
             this.btn_registrar.Size = new System.Drawing.Size(279, 45);
             this.btn_registrar.TabIndex = 14;
-            this.btn_registrar.Text = "Registrate!";
+            this.btn_registrar.Text = "Registrate";
             this.btn_registrar.UseVisualStyleBackColor = true;
+            this.btn_registrar.Click += new System.EventHandler(this.btn_registrar_Click);
             // 
             // txt_verificacion
             // 
-            this.txt_verificacion.Location = new System.Drawing.Point(145, 284);
+            this.txt_verificacion.Location = new System.Drawing.Point(145, 307);
             this.txt_verificacion.Name = "txt_verificacion";
             this.txt_verificacion.Size = new System.Drawing.Size(188, 20);
             this.txt_verificacion.TabIndex = 13;
             // 
             // txt_ContraseñaNueva
             // 
-            this.txt_ContraseñaNueva.Location = new System.Drawing.Point(145, 251);
+            this.txt_ContraseñaNueva.Location = new System.Drawing.Point(145, 274);
             this.txt_ContraseñaNueva.Name = "txt_ContraseñaNueva";
             this.txt_ContraseñaNueva.Size = new System.Drawing.Size(188, 20);
             this.txt_ContraseñaNueva.TabIndex = 12;
             // 
             // txt_UsuarioNuevo
             // 
-            this.txt_UsuarioNuevo.Location = new System.Drawing.Point(145, 220);
+            this.txt_UsuarioNuevo.Location = new System.Drawing.Point(145, 243);
             this.txt_UsuarioNuevo.Name = "txt_UsuarioNuevo";
             this.txt_UsuarioNuevo.Size = new System.Drawing.Size(188, 20);
             this.txt_UsuarioNuevo.TabIndex = 11;
@@ -231,7 +233,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label4.Location = new System.Drawing.Point(51, 284);
+            this.label4.Location = new System.Drawing.Point(51, 307);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(85, 17);
             this.label4.TabIndex = 10;
@@ -241,7 +243,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label2.Location = new System.Drawing.Point(51, 220);
+            this.label2.Location = new System.Drawing.Point(51, 243);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(61, 17);
             this.label2.TabIndex = 8;
@@ -251,7 +253,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label3.Location = new System.Drawing.Point(51, 251);
+            this.label3.Location = new System.Drawing.Point(51, 274);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(85, 17);
             this.label3.TabIndex = 9;
@@ -314,8 +316,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label_Usuario;
         private System.Windows.Forms.Label label_Contraseña;
-        private System.Windows.Forms.Label label_Tipo;
-        private System.Windows.Forms.ComboBox cbox_tipo;
         private System.Windows.Forms.Button btn_iniciar_sesion;
         private System.Windows.Forms.TextBox txt_usuario;
         private System.Windows.Forms.TextBox txt_contraseña;
@@ -331,6 +331,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.StatusStrip StatusStrip_Inicio;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatus;
+        private System.Windows.Forms.RadioButton radio_Admin;
+        private System.Windows.Forms.RadioButton radio_Cliente;
     }
 }
 

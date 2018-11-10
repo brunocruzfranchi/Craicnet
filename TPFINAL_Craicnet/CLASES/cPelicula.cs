@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace TPFINAL_Craicnet
 {
@@ -14,9 +15,9 @@ namespace TPFINAL_Craicnet
 
     public class cPelicula
     {
-        internal object dt;
+        // internal object dt;
 
-        public cPelicula()
+            public cPelicula()
             {
                 this.Nombre = " ";
                 this.Actores = " ";
@@ -26,6 +27,18 @@ namespace TPFINAL_Craicnet
                 this.Genero = " ";
                 this.Año = " ";
                 this.Sinopsis = " ";
+            }
+
+            public cPelicula(string nombre, string actores, double precio, string director, string genero, string año, string sinopsis)
+            {
+                this.Nombre = nombre;
+                this.Actores = actores;
+                this.Precio = precio;
+                this.Director = director;
+                this.Puntaje = 0;
+                this.Genero = genero;
+                this.Año = año;
+                this.Sinopsis = sinopsis;
             }
 
             public string Nombre { get; set; }

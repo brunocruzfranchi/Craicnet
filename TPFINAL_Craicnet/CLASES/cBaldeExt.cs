@@ -12,13 +12,13 @@ namespace TPFINAL_Craicnet
         public LinkedList<KeyValuePair<int, cUsuario>> Lista { get; set; }
         public int Clave_Balde { get; set; }
         public static int CA_Baldes { get; set; }
-        public const int CMAX = 10 ; // Cant max de elementos x balde
-        
-               
+        public const int CMAX = 4 ; // Cant max de elementos x balde
+                   
         static cBaldeExt()
         {
             CA_Baldes = 0;
         }
+
         public cBaldeExt()
         {
             this.Lista = new LinkedList<KeyValuePair<int, cUsuario>>();
@@ -26,15 +26,15 @@ namespace TPFINAL_Craicnet
             CA_Baldes++; 
         }
 
-       public bool Agregar(KeyValuePair<int,cUsuario> pair)
+       public int Agregar(KeyValuePair<int,cUsuario> pair)
         {
             if (Lista.Count >= CMAX)
-                return false;//balde lleno
+                return 1;//balde lleno reHASH?
             Lista.AddLast(pair);
-            return true;
+            return 0;
         }
 
-       public bool Agregar(int key, cUsuario value)
+       public int Agregar(int key, cUsuario value)
         {
             KeyValuePair<int,cUsuario> pair = new KeyValuePair<int, cUsuario>(key,value);
             return Agregar(pair);
@@ -52,20 +52,21 @@ namespace TPFINAL_Craicnet
             }
             return false; //no encontrado
         }
-       public KeyValuePair<int,cUsuario> Buscar_par(int key)
+       public KeyValuePair<int,cUsuario> Buscar_par(int key,string id)
         {
             foreach (KeyValuePair<int, cUsuario> pair in Lista)
             {
                 if (pair.Key == key)
 
+                    if(pair.Value.Id== id)
                     return pair;
             }
 
             return new KeyValuePair<int,cUsuario>(-1,null);
         }
-       public cUsuario Buscar_usuario(int key)
+       public cUsuario Buscar_usuario(int key, string id)
         {
-            KeyValuePair<int, cUsuario> aux = Buscar_par(key);
+            KeyValuePair<int, cUsuario> aux = Buscar_par(key,id);
           
             return aux.Value;
             
