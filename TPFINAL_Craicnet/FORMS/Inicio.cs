@@ -51,8 +51,7 @@ namespace TPFINAL_Craicnet
         }
 
         // TODO: VER ALGUNA FORMA DE PODER MANDAR EL USUARIO CUANDO ESTE LISTA LA TABLA HASH PARA PODER USARLO DE ALGUNA FORMA 
-        //       COMO POR EJEMPLO, PONER EN LISTA CUALES SON LAS PELICULAS QUE TIENE ALQUILADA.
-        //       
+        //       COMO POR EJEMPLO, PONER EN LISTA CUALES SON LAS PELICULAS QUE TIENE ALQUILADA.    
 
         //Buttons 
         private void btn_iniciar_sesion_Click(object sender, EventArgs e) 
