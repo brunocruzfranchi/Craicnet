@@ -19,7 +19,7 @@ namespace TPFINAL_Craicnet
             this.T_Hash = new List<cBaldeExt>();
             for (int i = 0; i < BaldesMAX; i++)
             {
-                T_Hash[i] = new cBaldeExt(); //ERROR
+                T_Hash.Add(new cBaldeExt());
 
             }
             this.CA_Elementos = 0;
