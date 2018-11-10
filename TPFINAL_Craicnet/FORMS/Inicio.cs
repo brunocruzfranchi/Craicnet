@@ -56,6 +56,36 @@ namespace TPFINAL_Craicnet
         //Buttons 
         private void btn_iniciar_sesion_Click(object sender, EventArgs e)
         {
+            cUsuario usuario_ingresando = Tabla_Usuarios.Buscar_usuario(txt_usuario.Text);
+            if (usuario_ingresando!=null)
+            {
+                if (usuario_ingresando.Password == txt_contraseña.Text)
+                {
+                    if (usuario_ingresando.Admin)
+                    {
+                        Administrador admin = new Administrador();
+                        admin.Show(this);
+                        this.Hide();
+                    }
+                    else
+                    {
+                        Cliente cliente = new Cliente();
+                        cliente.Show(this);
+                        this.Hide();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Contraseña Incorrecta");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Usuario No Existente");
+            }
+          
+                
+
            /* if (cbox_tipo.Text == "Administrador")
             {
                 Hashtable users_admin = GetHashtable_admin();
@@ -106,13 +136,16 @@ namespace TPFINAL_Craicnet
                     }     
                  */
             //}
+
+
+
         }
 
         //Status Strip
 
             private void txt_usuario_MouseHover(object sender, EventArgs e)
             {
-                toolStripStatus.Text = "Ingrese un Usuario";
+                toolStripStatus.Text = "Ingrese su DNI";
             }
 
             private void txt_usuario_MouseLeave(object sender, EventArgs e)
@@ -122,7 +155,7 @@ namespace TPFINAL_Craicnet
 
             private void txt_contraseña_MouseHover(object sender, EventArgs e)
             {
-                toolStripStatus.Text = "Ingrese una Contraseña";
+                toolStripStatus.Text = "Ingrese su Contraseña";
             }
 
             private void txt_contraseña_MouseLeave(object sender, EventArgs e)
@@ -163,6 +196,32 @@ namespace TPFINAL_Craicnet
         private void radio_Admin_CheckedChanged(object sender, EventArgs e)
         {
             txt_verificacion.Enabled = true;
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_registrar_Click(object sender, EventArgs e)
+        {
+            if (Tabla_Usuarios.Buscar_usuario(txt_UsuarioNuevo.Text) != null)
+                MessageBox.Show("Usuario ya existente");
+            else
+            {
+                if (radio_Admin.Checked)
+                {
+                    if (txt_verificacion.Text == Clave_verificacion)
+                        Tabla_Usuarios.Agregar(new cUsuario(txt_UsuarioNuevo.Text, txt_ContraseñaNueva.Text, radio_Admin.Checked));
+                    else
+                        MessageBox.Show("Clave de Verificación Incorrecta");
+                }
+                else
+                {
+                    Tabla_Usuarios.Agregar(new cUsuario(txt_UsuarioNuevo.Text, txt_ContraseñaNueva.Text, radio_Admin.Checked));
+                }
+
+                }
         }
 
         //TODO: EL BTN DE LA PARTE DE REGISTRARSE

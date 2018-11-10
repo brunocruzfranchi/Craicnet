@@ -49,7 +49,8 @@ namespace TPFINAL_Craicnet
         }
         public int DefinoClave(string key)
         {
-            return int.Parse(key.Substring(3, 3));
+            
+            return int.Parse(key.Substring(key.Length - 3, 3));
         }
         public int FuncionHash(string id)
         {
