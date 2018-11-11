@@ -17,11 +17,20 @@ namespace TPFINAL_Craicnet
 
         public List<cPelicula> lista_peliculas = new List<cPelicula>();
 
+        public cUsuario Cliente_Activo;
+
         //Cliente Form 
 
         public Cliente()
         {
             InitializeComponent();
+            Cliente_Activo = null;
+        }
+
+        public Cliente(cUsuario cliente)
+        {
+            InitializeComponent();
+            Cliente_Activo = cliente;
         }
 
         public void Cliente_Load(object sender, EventArgs e)
@@ -290,6 +299,9 @@ namespace TPFINAL_Craicnet
 
         private void btn_alquilar_Click(object sender, EventArgs e)
         {
+        
+            Cliente_Activo.peliculas_alquiladas.Add(lista_peliculas.Find(x => x.Nombre.Contains(txt_pelicula_cliente.Text)));
+            MessageBox.Show("Pelicula alquilada");
         }
 
     }

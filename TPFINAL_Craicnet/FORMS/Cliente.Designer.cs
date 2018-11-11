@@ -148,28 +148,28 @@
             // alquilerToolStripMenuItem
             // 
             this.alquilerToolStripMenuItem.Name = "alquilerToolStripMenuItem";
-            this.alquilerToolStripMenuItem.Size = new System.Drawing.Size(396, 46);
+            this.alquilerToolStripMenuItem.Size = new System.Drawing.Size(307, 46);
             this.alquilerToolStripMenuItem.Text = "Alquiler";
             this.alquilerToolStripMenuItem.Click += new System.EventHandler(this.alquilerToolStripMenuItem_Click);
             // 
             // estadisticasToolStripMenuItem
             // 
             this.estadisticasToolStripMenuItem.Name = "estadisticasToolStripMenuItem";
-            this.estadisticasToolStripMenuItem.Size = new System.Drawing.Size(396, 46);
+            this.estadisticasToolStripMenuItem.Size = new System.Drawing.Size(307, 46);
             this.estadisticasToolStripMenuItem.Text = "Estadisticas";
             this.estadisticasToolStripMenuItem.Click += new System.EventHandler(this.estadisticasToolStripMenuItem_Click);
             // 
             // alquiladasToolStripMenuItem
             // 
             this.alquiladasToolStripMenuItem.Name = "alquiladasToolStripMenuItem";
-            this.alquiladasToolStripMenuItem.Size = new System.Drawing.Size(396, 46);
+            this.alquiladasToolStripMenuItem.Size = new System.Drawing.Size(307, 46);
             this.alquiladasToolStripMenuItem.Text = "Perfil";
             this.alquiladasToolStripMenuItem.Click += new System.EventHandler(this.alquiladasToolStripMenuItem_Click);
             // 
             // cerrarSesiónToolStripMenuItem
             // 
             this.cerrarSesiónToolStripMenuItem.Name = "cerrarSesiónToolStripMenuItem";
-            this.cerrarSesiónToolStripMenuItem.Size = new System.Drawing.Size(396, 46);
+            this.cerrarSesiónToolStripMenuItem.Size = new System.Drawing.Size(307, 46);
             this.cerrarSesiónToolStripMenuItem.Text = "Cerrar Sesión";
             this.cerrarSesiónToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesiónToolStripMenuItem_Click);
             // 
@@ -187,7 +187,7 @@
             // split_alquilar.Panel2
             // 
             this.split_alquilar.Panel2.Controls.Add(this.gbox_alquilar);
-            this.split_alquilar.Size = new System.Drawing.Size(2907, 1509);
+            this.split_alquilar.Size = new System.Drawing.Size(2907, 1567);
             this.split_alquilar.SplitterDistance = 1736;
             this.split_alquilar.SplitterWidth = 11;
             this.split_alquilar.TabIndex = 0;
@@ -216,7 +216,7 @@
             this.grid_peliculas_cliente.Name = "grid_peliculas_cliente";
             this.grid_peliculas_cliente.ReadOnly = true;
             this.grid_peliculas_cliente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.grid_peliculas_cliente.Size = new System.Drawing.Size(1736, 1509);
+            this.grid_peliculas_cliente.Size = new System.Drawing.Size(1736, 1567);
             this.grid_peliculas_cliente.TabIndex = 1;
             this.grid_peliculas_cliente.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.grid_peliculas_cliente_ColumnHeaderMouseClick);
             this.grid_peliculas_cliente.SelectionChanged += new System.EventHandler(this.grid_peliculas_cliente_SelectionChanged);
@@ -242,7 +242,7 @@
             this.gbox_alquilar.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.gbox_alquilar.Name = "gbox_alquilar";
             this.gbox_alquilar.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.gbox_alquilar.Size = new System.Drawing.Size(1160, 1509);
+            this.gbox_alquilar.Size = new System.Drawing.Size(1160, 1567);
             this.gbox_alquilar.TabIndex = 0;
             this.gbox_alquilar.TabStop = false;
             this.gbox_alquilar.Text = "Alquilar";
@@ -380,11 +380,11 @@
             this.gbox_cliente.AutoSize = true;
             this.gbox_cliente.Controls.Add(this.split_alquilar);
             this.gbox_cliente.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gbox_cliente.Location = new System.Drawing.Point(0, 58);
+            this.gbox_cliente.Location = new System.Drawing.Point(0, 0);
             this.gbox_cliente.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.gbox_cliente.Name = "gbox_cliente";
             this.gbox_cliente.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.gbox_cliente.Size = new System.Drawing.Size(2923, 1554);
+            this.gbox_cliente.Size = new System.Drawing.Size(2923, 1612);
             this.gbox_cliente.TabIndex = 1;
             this.gbox_cliente.TabStop = false;
             // 
@@ -567,7 +567,7 @@
             // split_usuario
             // 
             this.split_usuario.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.split_usuario.Location = new System.Drawing.Point(0, 0);
+            this.split_usuario.Location = new System.Drawing.Point(0, 58);
             this.split_usuario.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.split_usuario.Name = "split_usuario";
             // 
@@ -579,7 +579,7 @@
             // split_usuario.Panel2
             // 
             this.split_usuario.Panel2.Controls.Add(this.grid_alquiladas_usuario);
-            this.split_usuario.Size = new System.Drawing.Size(2923, 1612);
+            this.split_usuario.Size = new System.Drawing.Size(2923, 1532);
             this.split_usuario.SplitterDistance = 1317;
             this.split_usuario.SplitterWidth = 11;
             this.split_usuario.TabIndex = 3;
@@ -628,7 +628,7 @@
             this.grid_alquiladas_usuario.Name = "grid_alquiladas_usuario";
             this.grid_alquiladas_usuario.ReadOnly = true;
             this.grid_alquiladas_usuario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grid_alquiladas_usuario.Size = new System.Drawing.Size(1595, 1612);
+            this.grid_alquiladas_usuario.Size = new System.Drawing.Size(1595, 1532);
             this.grid_alquiladas_usuario.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
@@ -805,11 +805,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(2923, 1612);
-            this.Controls.Add(this.statusStrip1);
-            this.Controls.Add(this.gbox_cliente);
-            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.split_usuario);
+            this.Controls.Add(this.statusStrip1);
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.split_graficos);
+            this.Controls.Add(this.gbox_cliente);
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.Name = "Cliente";

@@ -17,12 +17,19 @@ namespace TPFINAL_Craicnet
         //Propiedades
 
         List<cPelicula> lista_peliculas = new List<cPelicula>();
+        public cUsuario Admin_Activo;
 
         //Cliente Form 
 
         public Administrador()
         {
             InitializeComponent();
+        }
+
+        public Administrador(cUsuario admin)
+        {
+            InitializeComponent();
+            Admin_Activo = admin;
         }
 
         private void Administrador_Load(object sender, EventArgs e)

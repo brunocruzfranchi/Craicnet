@@ -38,7 +38,7 @@ namespace TPFINAL_Craicnet
         //Tabla Hash nueva
         HashExt Tabla_Usuarios;
         public const string Clave_verificacion = "ULTRAVIOLETA";
-        public const int Min_Length_ID = 7;
+        public const int Min_Length_ID = 5;
 
         //Inicio Form
         public Inicio()
@@ -61,7 +61,7 @@ namespace TPFINAL_Craicnet
         //Buttons 
         private void btn_iniciar_sesion_Click(object sender, EventArgs e)
         {
-            if (txt_UsuarioNuevo.Text.Length < Min_Length_ID)
+            if (txt_usuario.Text.Length < Min_Length_ID)
             {
                 MessageBox.Show("Usuario Inválido");
                 return;
@@ -73,13 +73,13 @@ namespace TPFINAL_Craicnet
                 {
                     if (usuario_ingresando.Admin)
                     {
-                        Administrador admin = new Administrador();
+                        Administrador admin = new Administrador(usuario_ingresando);
                         admin.Show(this);
                         this.Hide();
                     }
                     else
                     {
-                        Cliente cliente = new Cliente();
+                        Cliente cliente = new Cliente(usuario_ingresando);
                         cliente.Show(this);
                         this.Hide();
                     }

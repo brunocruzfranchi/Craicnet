@@ -41,13 +41,13 @@
             this.btn_registrar = new System.Windows.Forms.Button();
             this.txt_verificacion = new System.Windows.Forms.TextBox();
             this.txt_ContraseñaNueva = new System.Windows.Forms.TextBox();
-            this.txt_UsuarioNuevo = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.StatusStrip_Inicio = new System.Windows.Forms.StatusStrip();
             this.toolStripStatus = new System.Windows.Forms.ToolStripStatusLabel();
+            this.txt_UsuarioNuevo = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -171,12 +171,12 @@
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.BackColor = System.Drawing.Color.SkyBlue;
+            this.splitContainer2.Panel2.Controls.Add(this.txt_UsuarioNuevo);
             this.splitContainer2.Panel2.Controls.Add(this.radio_Admin);
             this.splitContainer2.Panel2.Controls.Add(this.radio_Cliente);
             this.splitContainer2.Panel2.Controls.Add(this.btn_registrar);
             this.splitContainer2.Panel2.Controls.Add(this.txt_verificacion);
             this.splitContainer2.Panel2.Controls.Add(this.txt_ContraseñaNueva);
-            this.splitContainer2.Panel2.Controls.Add(this.txt_UsuarioNuevo);
             this.splitContainer2.Panel2.Controls.Add(this.label4);
             this.splitContainer2.Panel2.Controls.Add(this.label2);
             this.splitContainer2.Panel2.Controls.Add(this.label3);
@@ -195,7 +195,6 @@
             this.radio_Admin.Name = "radio_Admin";
             this.radio_Admin.Size = new System.Drawing.Size(255, 42);
             this.radio_Admin.TabIndex = 16;
-            this.radio_Admin.TabStop = true;
             this.radio_Admin.Text = "Administrador";
             this.radio_Admin.UseVisualStyleBackColor = true;
             this.radio_Admin.CheckedChanged += new System.EventHandler(this.radio_Admin_CheckedChanged);
@@ -203,6 +202,7 @@
             // radio_Cliente
             // 
             this.radio_Cliente.AutoSize = true;
+            this.radio_Cliente.Checked = true;
             this.radio_Cliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radio_Cliente.Location = new System.Drawing.Point(248, 391);
             this.radio_Cliente.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
@@ -228,7 +228,8 @@
             // 
             // txt_verificacion
             // 
-            this.txt_verificacion.Location = new System.Drawing.Point(387, 677);
+            this.txt_verificacion.Enabled = false;
+            this.txt_verificacion.Location = new System.Drawing.Point(393, 679);
             this.txt_verificacion.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.txt_verificacion.Name = "txt_verificacion";
             this.txt_verificacion.PasswordChar = '*';
@@ -237,20 +238,12 @@
             // 
             // txt_ContraseñaNueva
             // 
-            this.txt_ContraseñaNueva.Location = new System.Drawing.Point(387, 599);
+            this.txt_ContraseñaNueva.Location = new System.Drawing.Point(393, 603);
             this.txt_ContraseñaNueva.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.txt_ContraseñaNueva.Name = "txt_ContraseñaNueva";
             this.txt_ContraseñaNueva.PasswordChar = '*';
             this.txt_ContraseñaNueva.Size = new System.Drawing.Size(495, 38);
             this.txt_ContraseñaNueva.TabIndex = 12;
-            // 
-            // txt_UsuarioNuevo
-            // 
-            this.txt_UsuarioNuevo.Location = new System.Drawing.Point(387, 525);
-            this.txt_UsuarioNuevo.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.txt_UsuarioNuevo.Name = "txt_UsuarioNuevo";
-            this.txt_UsuarioNuevo.Size = new System.Drawing.Size(495, 38);
-            this.txt_UsuarioNuevo.TabIndex = 11;
             // 
             // label4
             // 
@@ -296,6 +289,7 @@
             this.label1.Size = new System.Drawing.Size(761, 69);
             this.label1.TabIndex = 0;
             this.label1.Text = "Crear tu cuenta de Craicnet";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // StatusStrip_Inicio
             // 
@@ -313,6 +307,13 @@
             // 
             this.toolStripStatus.Name = "toolStripStatus";
             this.toolStripStatus.Size = new System.Drawing.Size(0, 17);
+            // 
+            // txt_UsuarioNuevo
+            // 
+            this.txt_UsuarioNuevo.Location = new System.Drawing.Point(393, 527);
+            this.txt_UsuarioNuevo.Name = "txt_UsuarioNuevo";
+            this.txt_UsuarioNuevo.Size = new System.Drawing.Size(495, 38);
+            this.txt_UsuarioNuevo.TabIndex = 17;
             // 
             // Inicio
             // 
@@ -354,7 +355,6 @@
         private System.Windows.Forms.Button btn_registrar;
         private System.Windows.Forms.TextBox txt_verificacion;
         private System.Windows.Forms.TextBox txt_ContraseñaNueva;
-        private System.Windows.Forms.TextBox txt_UsuarioNuevo;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -364,6 +364,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.RadioButton radio_Admin;
         private System.Windows.Forms.RadioButton radio_Cliente;
+        private System.Windows.Forms.TextBox txt_UsuarioNuevo;
     }
 }
 
