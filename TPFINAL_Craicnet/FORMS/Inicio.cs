@@ -56,6 +56,11 @@ namespace TPFINAL_Craicnet
         //Buttons 
         private void btn_iniciar_sesion_Click(object sender, EventArgs e)
         {
+            if (txt_UsuarioNuevo.Text.Length < 4)
+            {
+                MessageBox.Show("Usuario Inválido");
+                return;
+            }
             cUsuario usuario_ingresando = Tabla_Usuarios.Buscar_usuario(txt_usuario.Text);
             if (usuario_ingresando!=null)
             {
@@ -77,11 +82,13 @@ namespace TPFINAL_Craicnet
                 else
                 {
                     MessageBox.Show("Contraseña Incorrecta");
+                    return;
                 }
             }
             else
             {
                 MessageBox.Show("Usuario No Existente");
+                return;
             }
           
                 
@@ -205,26 +212,38 @@ namespace TPFINAL_Craicnet
 
         private void btn_registrar_Click(object sender, EventArgs e)
         {
+
+            if (txt_UsuarioNuevo.Text.Length < 4)
+            {
+                MessageBox.Show("Usuario Inválido");
+                return;
+            }
             if (Tabla_Usuarios.Buscar_usuario(txt_UsuarioNuevo.Text) != null)
-                MessageBox.Show("Usuario ya existente");
+            { MessageBox.Show("Usuario ya existente");
+                return;
+            }
             else
             {
                 if (radio_Admin.Checked)
                 {
                     if (txt_verificacion.Text == Clave_verificacion)
+                    {
                         Tabla_Usuarios.Agregar(new cUsuario(txt_UsuarioNuevo.Text, txt_ContraseñaNueva.Text, radio_Admin.Checked));
+                        MessageBox.Show("Nuevo usuario registrado exitosamente");
+                    }
                     else
                         MessageBox.Show("Clave de Verificación Incorrecta");
                 }
                 else
                 {
                     Tabla_Usuarios.Agregar(new cUsuario(txt_UsuarioNuevo.Text, txt_ContraseñaNueva.Text, radio_Admin.Checked));
+                    MessageBox.Show("Nuevo usuario registrado exitosamente");
                 }
 
-                }
+            }
         }
 
-        //TODO: EL BTN DE LA PARTE DE REGISTRARSE
+        
 
     }
 }
