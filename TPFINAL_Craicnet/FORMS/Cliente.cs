@@ -24,12 +24,18 @@ namespace TPFINAL_Craicnet
         public Cliente()
         {
             InitializeComponent();
+            this.Height = 700;
+            this.Width = 1000;
+            this.CenterToScreen();
             Cliente_Activo = null;
         }
 
         public Cliente(cUsuario cliente)
         {
             InitializeComponent();
+            this.Height = 700;
+            this.Width = 1000;
+            this.CenterToScreen();
             Cliente_Activo = cliente;
         }
 
@@ -306,5 +312,14 @@ namespace TPFINAL_Craicnet
 
         }
 
+        private void gbox_alquilar_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gbox_cliente_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

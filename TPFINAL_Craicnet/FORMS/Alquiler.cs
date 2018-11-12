@@ -7,24 +7,44 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using TPFINAL_Craicnet.CLASES;
 namespace TPFINAL_Craicnet.FORMS
+    
 {
     public partial class Alquiler : Form
     {
         public cPelicula Pelicula_Alquilada;
         public cUsuario Cliente_que_alquila;
+       
         public Alquiler()
         {
             InitializeComponent();
+            this.Width = 1000;
+            this.Height = 700;
+            this.CenterToScreen();
         }
         public Alquiler(cPelicula peli, cUsuario cliente)
         {
             InitializeComponent();
+            this.Width = 1000;
+            this.Height = 700;
+            this.CenterToScreen();
             this.Pelicula_Alquilada = peli;
             this.Cliente_que_alquila = cliente;
             txt_Nombre.Text = Pelicula_Alquilada.Nombre;
             txt_Precio.Text = Pelicula_Alquilada.Precio.ToString();
+        }
+        public Alquiler(cPromo peli, cUsuario cliente)
+        {
+            InitializeComponent();
+            this.Width = 1000;
+            this.Height = 700;
+            this.CenterToScreen();
+            this.Pelicula_Alquilada = peli.Pelicula;
+            this.Cliente_que_alquila = cliente;
+            txt_Nombre.Text = Pelicula_Alquilada.Nombre;
+            txt_Precio.Text = peli.PrecioPromo_String().ToString();
+               
         }
         private void button1_Click(object sender, EventArgs e)
         {
