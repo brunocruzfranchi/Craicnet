@@ -8,6 +8,8 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TPFINAL_Craicnet.FORMS;
+using TPFINAL_Craicnet.CLASES;
 
 namespace TPFINAL_Craicnet
 {
@@ -320,6 +322,12 @@ namespace TPFINAL_Craicnet
         private void gbox_cliente_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void btn_Promociones_Click(object sender, EventArgs e)
+        {
+            Promociones promociones = new Promociones(Cliente_Activo);
+            promociones.Show(this);
         }
     }
 }
