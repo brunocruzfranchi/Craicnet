@@ -49,6 +49,7 @@ namespace TPFINAL_Craicnet
             public string Genero { get; set; }
             public string Año { get; set; }
             public string Sinopsis { get; set; }
+            
 
             internal static cPelicula FromString(string linea)
             {

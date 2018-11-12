@@ -120,3 +120,4 @@ D:\Previous\Universidad\2018\2018 - 2do cuatrimestre\LP2\TP Final\Craicnet\TPFIN
 D:\Previous\Universidad\2018\2018 - 2do cuatrimestre\LP2\TP Final\Craicnet\TPFINAL_Craicnet\bin\Debug\ExcelDataReader.xml
 D:\Previous\Universidad\2018\2018 - 2do cuatrimestre\LP2\TP Final\Craicnet\TPFINAL_Craicnet\bin\Debug\ExcelDataReader.DataSet.xml
 D:\Previous\Universidad\2018\2018 - 2do cuatrimestre\LP2\TP Final\Craicnet\TPFINAL_Craicnet\obj\Debug\TPFINAL_Craicnet.csproj.CopyComplete
+D:\Previous\Universidad\2018\2018 - 2do cuatrimestre\LP2\TP Final\Craicnet\TPFINAL_Craicnet\obj\Debug\TPFINAL_Craicnet.FORMS.Alquiler.resources

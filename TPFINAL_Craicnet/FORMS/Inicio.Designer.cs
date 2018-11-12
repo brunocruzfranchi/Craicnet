@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inicio));
             this.label_Usuario = new System.Windows.Forms.Label();
             this.label_Contraseña = new System.Windows.Forms.Label();
             this.btn_iniciar_sesion = new System.Windows.Forms.Button();
@@ -36,6 +37,7 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.txt_UsuarioNuevo = new System.Windows.Forms.TextBox();
             this.radio_Admin = new System.Windows.Forms.RadioButton();
             this.radio_Cliente = new System.Windows.Forms.RadioButton();
             this.btn_registrar = new System.Windows.Forms.Button();
@@ -47,7 +49,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.StatusStrip_Inicio = new System.Windows.Forms.StatusStrip();
             this.toolStripStatus = new System.Windows.Forms.ToolStripStatusLabel();
-            this.txt_UsuarioNuevo = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -186,6 +187,13 @@
             this.splitContainer2.SplitterWidth = 11;
             this.splitContainer2.TabIndex = 9;
             // 
+            // txt_UsuarioNuevo
+            // 
+            this.txt_UsuarioNuevo.Location = new System.Drawing.Point(393, 527);
+            this.txt_UsuarioNuevo.Name = "txt_UsuarioNuevo";
+            this.txt_UsuarioNuevo.Size = new System.Drawing.Size(495, 38);
+            this.txt_UsuarioNuevo.TabIndex = 17;
+            // 
             // radio_Admin
             // 
             this.radio_Admin.AutoSize = true;
@@ -308,13 +316,6 @@
             this.toolStripStatus.Name = "toolStripStatus";
             this.toolStripStatus.Size = new System.Drawing.Size(0, 17);
             // 
-            // txt_UsuarioNuevo
-            // 
-            this.txt_UsuarioNuevo.Location = new System.Drawing.Point(393, 527);
-            this.txt_UsuarioNuevo.Name = "txt_UsuarioNuevo";
-            this.txt_UsuarioNuevo.Size = new System.Drawing.Size(495, 38);
-            this.txt_UsuarioNuevo.TabIndex = 17;
-            // 
             // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
@@ -322,6 +323,7 @@
             this.ClientSize = new System.Drawing.Size(2560, 1333);
             this.Controls.Add(this.StatusStrip_Inicio);
             this.Controls.Add(this.splitContainer2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.Name = "Inicio";
             this.Text = "Form1";

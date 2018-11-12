@@ -298,10 +298,12 @@ namespace TPFINAL_Craicnet
         //Buttons 
 
         private void btn_alquilar_Click(object sender, EventArgs e)
-        {
-        
-            Cliente_Activo.peliculas_alquiladas.Add(lista_peliculas.Find(x => x.Nombre.Contains(txt_pelicula_cliente.Text)));
-            MessageBox.Show("Pelicula alquilada");
+        {            
+            FORMS.Alquiler alquiler = new FORMS.Alquiler(lista_peliculas.Find(x => x.Nombre.Contains(txt_pelicula_cliente.Text)), Cliente_Activo);
+            alquiler.Show(this);
+            //MessageBox.Show("Película alquilada");
+            //falta sumar alquiler
+
         }
 
     }

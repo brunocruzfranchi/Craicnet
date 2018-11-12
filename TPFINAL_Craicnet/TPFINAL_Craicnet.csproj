@@ -64,6 +64,12 @@
     </Compile>
     <Compile Include="CLASES\cBaldeExt.cs" />
     <Compile Include="CLASES\cCliente.cs" />
+    <Compile Include="FORMS\Alquiler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FORMS\Alquiler.Designer.cs">
+      <DependentUpon>Alquiler.cs</DependentUpon>
+    </Compile>
     <Compile Include="FORMS\Cliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +90,9 @@
     <Compile Include="CLASES\cUsuario.cs" />
     <EmbeddedResource Include="FORMS\Administrador.resx">
       <DependentUpon>Administrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORMS\Alquiler.resx">
+      <DependentUpon>Alquiler.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FORMS\Cliente.resx">
       <DependentUpon>Cliente.cs</DependentUpon>
