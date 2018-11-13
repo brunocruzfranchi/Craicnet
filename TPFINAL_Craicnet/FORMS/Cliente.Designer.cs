@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cliente));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.clienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -44,15 +44,6 @@
             this.cerrarSesiónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.split_alquilar = new System.Windows.Forms.SplitContainer();
             this.grid_peliculas_cliente = new System.Windows.Forms.DataGridView();
-            this.NombreColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DirectorColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PrecioColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PuntajeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GeneroColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.AñoColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ActoresColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sinopsisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cPeliculaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gbox_alquilar = new System.Windows.Forms.GroupBox();
             this.btn_Promociones = new System.Windows.Forms.Button();
             this.btn_alquilar = new System.Windows.Forms.Button();
@@ -96,6 +87,21 @@
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.cPeliculasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.txt_NombreBuscar = new System.Windows.Forms.TextBox();
+            this.txt_DirectorBuscar = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.btn_Buscar = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
+            this.NombreColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DirectorColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PrecioColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PuntajeColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GeneroColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.AñoColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ActoresColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sinopsisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cPeliculaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cPeliculaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.split_alquilar)).BeginInit();
@@ -103,7 +109,6 @@
             this.split_alquilar.Panel2.SuspendLayout();
             this.split_alquilar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid_peliculas_cliente)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cPeliculaBindingSource)).BeginInit();
             this.gbox_alquilar.SuspendLayout();
             this.gbox_cliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.split_graficos)).BeginInit();
@@ -119,6 +124,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grid_alquiladas_usuario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cPeliculasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cPeliculaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cPeliculaBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -222,91 +228,15 @@
             this.grid_peliculas_cliente.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.grid_peliculas_cliente_ColumnHeaderMouseClick);
             this.grid_peliculas_cliente.SelectionChanged += new System.EventHandler(this.grid_peliculas_cliente_SelectionChanged);
             // 
-            // NombreColumn
-            // 
-            this.NombreColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.NombreColumn.DataPropertyName = "Nombre";
-            this.NombreColumn.FillWeight = 20F;
-            this.NombreColumn.HeaderText = "Pelicula";
-            this.NombreColumn.Name = "NombreColumn";
-            this.NombreColumn.ReadOnly = true;
-            this.NombreColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // DirectorColumn
-            // 
-            this.DirectorColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.DirectorColumn.DataPropertyName = "Director";
-            this.DirectorColumn.FillWeight = 15F;
-            this.DirectorColumn.HeaderText = "Director";
-            this.DirectorColumn.Name = "DirectorColumn";
-            this.DirectorColumn.ReadOnly = true;
-            this.DirectorColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // PrecioColumn
-            // 
-            this.PrecioColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.PrecioColumn.DataPropertyName = "Precio";
-            this.PrecioColumn.FillWeight = 10F;
-            this.PrecioColumn.HeaderText = "Precio";
-            this.PrecioColumn.Name = "PrecioColumn";
-            this.PrecioColumn.ReadOnly = true;
-            this.PrecioColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // PuntajeColumn
-            // 
-            this.PuntajeColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.PuntajeColumn.DataPropertyName = "Puntaje";
-            this.PuntajeColumn.FillWeight = 13F;
-            this.PuntajeColumn.HeaderText = "Me gusto";
-            this.PuntajeColumn.Name = "PuntajeColumn";
-            this.PuntajeColumn.ReadOnly = true;
-            this.PuntajeColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // GeneroColumn
-            // 
-            this.GeneroColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.GeneroColumn.DataPropertyName = "Genero";
-            this.GeneroColumn.FillWeight = 15F;
-            this.GeneroColumn.HeaderText = "Genero";
-            this.GeneroColumn.Name = "GeneroColumn";
-            this.GeneroColumn.ReadOnly = true;
-            this.GeneroColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // AñoColumn
-            // 
-            this.AñoColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.AñoColumn.DataPropertyName = "Año";
-            this.AñoColumn.FillWeight = 10F;
-            this.AñoColumn.HeaderText = "Año";
-            this.AñoColumn.Name = "AñoColumn";
-            this.AñoColumn.ReadOnly = true;
-            this.AñoColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // ActoresColumn
-            // 
-            this.ActoresColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ActoresColumn.DataPropertyName = "Actores";
-            this.ActoresColumn.FillWeight = 18F;
-            this.ActoresColumn.HeaderText = "Actores";
-            this.ActoresColumn.Name = "ActoresColumn";
-            this.ActoresColumn.ReadOnly = true;
-            this.ActoresColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            // 
-            // sinopsisDataGridViewTextBoxColumn
-            // 
-            this.sinopsisDataGridViewTextBoxColumn.DataPropertyName = "Sinopsis";
-            this.sinopsisDataGridViewTextBoxColumn.HeaderText = "Sinopsis";
-            this.sinopsisDataGridViewTextBoxColumn.Name = "sinopsisDataGridViewTextBoxColumn";
-            this.sinopsisDataGridViewTextBoxColumn.ReadOnly = true;
-            this.sinopsisDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // cPeliculaBindingSource
-            // 
-            this.cPeliculaBindingSource.DataSource = typeof(TPFINAL_Craicnet.cPelicula);
-            // 
             // gbox_alquilar
             // 
             this.gbox_alquilar.AutoSize = true;
+            this.gbox_alquilar.Controls.Add(this.label12);
+            this.gbox_alquilar.Controls.Add(this.btn_Buscar);
+            this.gbox_alquilar.Controls.Add(this.label11);
+            this.gbox_alquilar.Controls.Add(this.label5);
+            this.gbox_alquilar.Controls.Add(this.txt_DirectorBuscar);
+            this.gbox_alquilar.Controls.Add(this.txt_NombreBuscar);
             this.gbox_alquilar.Controls.Add(this.btn_Promociones);
             this.gbox_alquilar.Controls.Add(this.btn_alquilar);
             this.gbox_alquilar.Controls.Add(this.txt_sinopsis);
@@ -334,18 +264,19 @@
             // 
             // btn_Promociones
             // 
-            this.btn_Promociones.Location = new System.Drawing.Point(784, 1147);
+            this.btn_Promociones.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Promociones.Location = new System.Drawing.Point(784, 843);
             this.btn_Promociones.Name = "btn_Promociones";
             this.btn_Promociones.Size = new System.Drawing.Size(336, 138);
             this.btn_Promociones.TabIndex = 23;
-            this.btn_Promociones.Text = "button1";
+            this.btn_Promociones.Text = "Promociones";
             this.btn_Promociones.UseVisualStyleBackColor = true;
             this.btn_Promociones.Click += new System.EventHandler(this.btn_Promociones_Click);
             // 
             // btn_alquilar
             // 
             this.btn_alquilar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_alquilar.Location = new System.Drawing.Point(733, 136);
+            this.btn_alquilar.Location = new System.Drawing.Point(717, 494);
             this.btn_alquilar.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.btn_alquilar.Name = "btn_alquilar";
             this.btn_alquilar.Size = new System.Drawing.Size(403, 100);
@@ -361,7 +292,7 @@
             this.txt_sinopsis.Multiline = true;
             this.txt_sinopsis.Name = "txt_sinopsis";
             this.txt_sinopsis.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txt_sinopsis.Size = new System.Drawing.Size(681, 655);
+            this.txt_sinopsis.Size = new System.Drawing.Size(650, 244);
             this.txt_sinopsis.TabIndex = 21;
             // 
             // txt_año_cliente
@@ -382,10 +313,10 @@
             // 
             // txt_precio_cliente
             // 
-            this.txt_precio_cliente.Location = new System.Drawing.Point(803, 706);
+            this.txt_precio_cliente.Location = new System.Drawing.Point(937, 138);
             this.txt_precio_cliente.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.txt_precio_cliente.Name = "txt_precio_cliente";
-            this.txt_precio_cliente.Size = new System.Drawing.Size(281, 38);
+            this.txt_precio_cliente.Size = new System.Drawing.Size(214, 38);
             this.txt_precio_cliente.TabIndex = 18;
             // 
             // txt_director_cliente
@@ -419,7 +350,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label10.Location = new System.Drawing.Point(795, 632);
+            this.label10.Location = new System.Drawing.Point(754, 138);
             this.label10.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(123, 39);
@@ -571,18 +502,18 @@
             // 
             // chart1
             // 
-            chartArea3.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.chart1.Legends.Add(legend3);
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(128, 732);
             this.chart1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chart1.Name = "chart1";
             this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Excel;
-            series3.ChartArea = "ChartArea1";
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            this.chart1.Series.Add(series3);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
             this.chart1.Size = new System.Drawing.Size(1219, 701);
             this.chart1.TabIndex = 0;
             this.chart1.Text = "chart1";
@@ -644,18 +575,18 @@
             // 
             // chart2
             // 
-            chartArea4.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.chart2.Legends.Add(legend4);
+            chartArea2.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chart2.Legends.Add(legend2);
             this.chart2.Location = new System.Drawing.Point(155, 732);
             this.chart2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chart2.Name = "chart2";
             this.chart2.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Bright;
-            series4.ChartArea = "ChartArea1";
-            series4.Legend = "Legend1";
-            series4.Name = "Series1";
-            this.chart2.Series.Add(series4);
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chart2.Series.Add(series2);
             this.chart2.Size = new System.Drawing.Size(1219, 701);
             this.chart2.TabIndex = 0;
             this.chart2.Text = "chart2";
@@ -810,6 +741,140 @@
             this.statusStrip1.TabIndex = 4;
             this.statusStrip1.Text = "statusStrip1";
             // 
+            // txt_NombreBuscar
+            // 
+            this.txt_NombreBuscar.Location = new System.Drawing.Point(366, 1087);
+            this.txt_NombreBuscar.Name = "txt_NombreBuscar";
+            this.txt_NombreBuscar.Size = new System.Drawing.Size(307, 38);
+            this.txt_NombreBuscar.TabIndex = 24;
+            // 
+            // txt_DirectorBuscar
+            // 
+            this.txt_DirectorBuscar.Location = new System.Drawing.Point(366, 1187);
+            this.txt_DirectorBuscar.Name = "txt_DirectorBuscar";
+            this.txt_DirectorBuscar.Size = new System.Drawing.Size(307, 38);
+            this.txt_DirectorBuscar.TabIndex = 25;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(116, 1087);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(115, 32);
+            this.label5.TabIndex = 26;
+            this.label5.Text = "Nombre";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(117, 1187);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(114, 32);
+            this.label11.TabIndex = 27;
+            this.label11.Text = "Director";
+            // 
+            // btn_Buscar
+            // 
+            this.btn_Buscar.Location = new System.Drawing.Point(493, 1299);
+            this.btn_Buscar.Name = "btn_Buscar";
+            this.btn_Buscar.Size = new System.Drawing.Size(207, 73);
+            this.btn_Buscar.TabIndex = 28;
+            this.btn_Buscar.Text = "Buscar";
+            this.btn_Buscar.UseVisualStyleBackColor = true;
+            this.btn_Buscar.Click += new System.EventHandler(this.btn_Buscar_Click);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(67, 935);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(199, 46);
+            this.label12.TabIndex = 29;
+            this.label12.Text = "Busqueda";
+            // 
+            // NombreColumn
+            // 
+            this.NombreColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.NombreColumn.DataPropertyName = "Nombre";
+            this.NombreColumn.FillWeight = 20F;
+            this.NombreColumn.HeaderText = "Pelicula";
+            this.NombreColumn.Name = "NombreColumn";
+            this.NombreColumn.ReadOnly = true;
+            this.NombreColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // DirectorColumn
+            // 
+            this.DirectorColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.DirectorColumn.DataPropertyName = "Director";
+            this.DirectorColumn.FillWeight = 15F;
+            this.DirectorColumn.HeaderText = "Director";
+            this.DirectorColumn.Name = "DirectorColumn";
+            this.DirectorColumn.ReadOnly = true;
+            this.DirectorColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // PrecioColumn
+            // 
+            this.PrecioColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.PrecioColumn.DataPropertyName = "Precio";
+            this.PrecioColumn.FillWeight = 10F;
+            this.PrecioColumn.HeaderText = "Precio";
+            this.PrecioColumn.Name = "PrecioColumn";
+            this.PrecioColumn.ReadOnly = true;
+            this.PrecioColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // PuntajeColumn
+            // 
+            this.PuntajeColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.PuntajeColumn.DataPropertyName = "Puntaje";
+            this.PuntajeColumn.FillWeight = 13F;
+            this.PuntajeColumn.HeaderText = "Me gusto";
+            this.PuntajeColumn.Name = "PuntajeColumn";
+            this.PuntajeColumn.ReadOnly = true;
+            this.PuntajeColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // GeneroColumn
+            // 
+            this.GeneroColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.GeneroColumn.DataPropertyName = "Genero";
+            this.GeneroColumn.FillWeight = 15F;
+            this.GeneroColumn.HeaderText = "Genero";
+            this.GeneroColumn.Name = "GeneroColumn";
+            this.GeneroColumn.ReadOnly = true;
+            this.GeneroColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // AñoColumn
+            // 
+            this.AñoColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.AñoColumn.DataPropertyName = "Año";
+            this.AñoColumn.FillWeight = 10F;
+            this.AñoColumn.HeaderText = "Año";
+            this.AñoColumn.Name = "AñoColumn";
+            this.AñoColumn.ReadOnly = true;
+            this.AñoColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // ActoresColumn
+            // 
+            this.ActoresColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ActoresColumn.DataPropertyName = "Actores";
+            this.ActoresColumn.FillWeight = 18F;
+            this.ActoresColumn.HeaderText = "Actores";
+            this.ActoresColumn.Name = "ActoresColumn";
+            this.ActoresColumn.ReadOnly = true;
+            this.ActoresColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
+            // 
+            // sinopsisDataGridViewTextBoxColumn
+            // 
+            this.sinopsisDataGridViewTextBoxColumn.DataPropertyName = "Sinopsis";
+            this.sinopsisDataGridViewTextBoxColumn.HeaderText = "Sinopsis";
+            this.sinopsisDataGridViewTextBoxColumn.Name = "sinopsisDataGridViewTextBoxColumn";
+            this.sinopsisDataGridViewTextBoxColumn.ReadOnly = true;
+            this.sinopsisDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // cPeliculaBindingSource
+            // 
+            this.cPeliculaBindingSource.DataSource = typeof(TPFINAL_Craicnet.cPelicula);
+            // 
             // cPeliculaBindingSource1
             // 
             this.cPeliculaBindingSource1.DataSource = typeof(TPFINAL_Craicnet.cPelicula);
@@ -837,7 +902,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.split_alquilar)).EndInit();
             this.split_alquilar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grid_peliculas_cliente)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cPeliculaBindingSource)).EndInit();
             this.gbox_alquilar.ResumeLayout(false);
             this.gbox_alquilar.PerformLayout();
             this.gbox_cliente.ResumeLayout(false);
@@ -857,6 +921,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grid_alquiladas_usuario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cPeliculasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cPeliculaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cPeliculaBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -931,5 +996,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn sinopsisDataGridViewTextBoxColumn;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.Button btn_Promociones;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button btn_Buscar;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txt_DirectorBuscar;
+        private System.Windows.Forms.TextBox txt_NombreBuscar;
     }
 }

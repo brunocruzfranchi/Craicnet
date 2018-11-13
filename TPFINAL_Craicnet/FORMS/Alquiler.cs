@@ -85,8 +85,8 @@ namespace TPFINAL_Craicnet.FORMS
            // n_dias++;
            //}
             txt_n_dias.Clear();
-            txt_n_dias.Text = (dateTimePicker1.Value - DateTime.Today).TotalDays.ToString();
-            txt_PrecioTotal.Text = ((dateTimePicker1.Value - DateTime.Today).TotalDays * int.Parse(txt_Precio.Text)).ToString();
+            txt_n_dias.Text = (dateTimePicker1.Value - DateTime.Today).Days.ToString();
+            txt_PrecioTotal.Text = ((dateTimePicker1.Value - DateTime.Today).Days * int.Parse(txt_Precio.Text)).ToString();
             
 
         }

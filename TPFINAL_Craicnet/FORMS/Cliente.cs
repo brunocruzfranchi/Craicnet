@@ -333,5 +333,10 @@ namespace TPFINAL_Craicnet
             Promociones promociones = new Promociones(Cliente_Activo);
             promociones.Show(this);
         }
+
+        private void btn_Buscar_Click(object sender, EventArgs e)
+        {
+            //find o find all??
+        }
     }
 }
