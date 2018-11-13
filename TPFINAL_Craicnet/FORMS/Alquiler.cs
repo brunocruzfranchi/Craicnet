@@ -76,15 +76,18 @@ namespace TPFINAL_Craicnet.FORMS
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
            
-             int n_dias = 1;
-            DateTime aux_date = DateTime.Today;
-            while(aux_date.Equals(dateTimePicker1.Value))
-            {
-                aux_date.AddDays(1);
-                n_dias++;
-            }
-            txt_n_dias.Text = n_dias.ToString();
-            txt_PrecioTotal.Text = (n_dias * int.Parse(txt_Precio.Text)).ToString();
+            
+
+           // n_dias = int.Parse(dateTimePicker1.Value.Subtract(DateTime.Today).ToString());
+           //  while(!aux_date.Equals(dateTimePicker1.Value))
+           // {
+           //   aux_date.AddDays(1);
+           // n_dias++;
+           //}
+            txt_n_dias.Clear();
+            txt_n_dias.Text = (dateTimePicker1.Value - DateTime.Today).TotalDays.ToString();
+            txt_PrecioTotal.Text = ((dateTimePicker1.Value - DateTime.Today).TotalDays * int.Parse(txt_Precio.Text)).ToString();
+            
 
         }
     }
