@@ -44,7 +44,20 @@ namespace TPFINAL_Craicnet
                 this.Fecha_Dev = date;
             }
 
-            public string Nombre { get; set; }
+        public cPelicula(string nombre, string actores, double precio, string director, string genero, string año, string sinopsis)
+        {
+            this.Nombre = nombre;
+            this.Actores = actores;
+            this.Precio = precio;
+            this.Director = director;
+            this.Puntaje = 0;
+            this.Genero = genero;
+            this.Año = año;
+            this.Sinopsis = sinopsis;
+            this.Fecha_Dev = DateTime.MinValue;
+        }
+
+        public string Nombre { get; set; }
             public string Actores { get; set; }
             public double Precio { get; set; }
             public Int32 Puntaje { get; set; }
@@ -75,6 +88,11 @@ namespace TPFINAL_Craicnet
 
                 return pelicula;
             }
+
+        public bool Pelicula_Vencida()
+        {
+            return (DateTime.Compare(Fecha_Dev, DateTime.Today) < 0);
+        }
     }
 
 }

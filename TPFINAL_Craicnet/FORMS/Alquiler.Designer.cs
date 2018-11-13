@@ -69,6 +69,7 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(501, 38);
             this.dateTimePicker1.TabIndex = 2;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // txt_n_dias
             // 
@@ -76,6 +77,7 @@
             this.txt_n_dias.Name = "txt_n_dias";
             this.txt_n_dias.Size = new System.Drawing.Size(188, 38);
             this.txt_n_dias.TabIndex = 3;
+            this.txt_n_dias.Enter += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // txt_PrecioTotal
             // 

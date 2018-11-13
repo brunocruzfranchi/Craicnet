@@ -27,7 +27,7 @@ namespace TPFINAL_Craicnet
         {
             InitializeComponent();
             this.Height = 700;
-            this.Width = 1000;
+            this.Width = 1200;
             this.CenterToScreen();
             Cliente_Activo = null;
         }
@@ -36,7 +36,7 @@ namespace TPFINAL_Craicnet
         {
             InitializeComponent();
             this.Height = 700;
-            this.Width = 1000;
+            this.Width = 1200;
             this.CenterToScreen();
             Cliente_Activo = cliente;
         }
@@ -84,8 +84,12 @@ namespace TPFINAL_Craicnet
                     split_alquilar.Visible = false;
                     split_graficos.Visible = false;
                     split_usuario.Visible = true;
-                    //Se tendrian que ver unicamente las que estan en promocion
-                }
+            //Se tendrian que ver unicamente las alquiladas
+                  foreach (cPelicula peli in Cliente_Activo.peliculas_alquiladas)
+                        if (peli.Pelicula_Vencida())
+                             Cliente_Activo.peliculas_alquiladas.Remove(peli);
+                                            
+                  }
 
                 private void cerrarSesiónToolStripMenuItem_Click(object sender, EventArgs e)
                 {

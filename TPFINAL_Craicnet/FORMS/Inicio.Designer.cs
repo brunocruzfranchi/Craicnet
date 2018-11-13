@@ -115,6 +115,7 @@
             this.txt_contraseña.PasswordChar = '*';
             this.txt_contraseña.Size = new System.Drawing.Size(705, 38);
             this.txt_contraseña.TabIndex = 7;
+            this.txt_contraseña.Enter += new System.EventHandler(this.btn_iniciar_sesion_Click);
             this.txt_contraseña.MouseLeave += new System.EventHandler(this.txt_contraseña_MouseLeave);
             this.txt_contraseña.MouseHover += new System.EventHandler(this.txt_contraseña_MouseHover);
             // 
