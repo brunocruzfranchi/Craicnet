@@ -158,6 +158,14 @@ namespace TPFINAL_Craicnet
             private void txt_usuario_MouseHover(object sender, EventArgs e)
             {
                 toolStripStatus.Text = "Ingrese su DNI";
+
+            Timer tiempo = new Timer();
+
+            tiempo.Start();
+
+            tiempo.Stop();
+
+            int lalala = tiempo.Interval;
             }
 
             private void txt_usuario_MouseLeave(object sender, EventArgs e)
