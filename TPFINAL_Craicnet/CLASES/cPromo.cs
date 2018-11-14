@@ -45,10 +45,10 @@ namespace TPFINAL_Craicnet.CLASES
             Fecha_limite = DateTime.Today.AddDays(3);
         }
 
-        public cPromo(string nombre, int d, string date)
-        {
-            this.Pelicula= 
-        }
+        //public cPromo(string nombre, int d, string date)
+        //{
+            
+        //}
 
         public float PrecioPromo()
         {

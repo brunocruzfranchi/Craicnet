@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,28 +14,10 @@ namespace TPFINAL_Craicnet
 {
     public partial class Inicio : Form
     {
-        //Tabla Hash previa
-        /* static Hashtable GetHashtable_admin()
-         {
-             // Create and return new Hashtable.
-             Hashtable admin = new Hashtable();
-             admin.Add("admin1", "1234");
-             admin.Add("admin", "12346");
-             admin.Add("ad_bruno", " ");
-             return admin;
-         }
 
-         static Hashtable GetHashtable_cliente()
-         {
-             // Create and return new Hashtable.
-             Hashtable cliente = new Hashtable();
+        public static List<cPelicula> lista_peliculas = new List<cPelicula>();
+        public static DataTable peliculas = new DataTable();
 
-             cliente.Add("cliente", "1234");
-             cliente.Add("cliente1", "12346");
-             cliente.Add("cl_juli", " ");
-             return cliente;
-         }
-         */
         //Tabla Hash nueva
         HashExt Tabla_Usuarios;
         public const string Clave_verificacion = "ULTRAVIOLETA";
@@ -53,10 +36,12 @@ namespace TPFINAL_Craicnet
             cUsuario admin = new cUsuario("41394723", " ", true);
             Tabla_Usuarios.Agregar(cliente);
             Tabla_Usuarios.Agregar(admin);
-        }
 
-        // TODO: VER ALGUNA FORMA DE PODER MANDAR EL USUARIO CUANDO ESTE LISTA LA TABLA HASH PARA PODER USARLO DE ALGUNA FORMA 
-        //       COMO POR EJEMPLO, PONER EN LISTA CUALES SON LAS PELICULAS QUE TIENE ALQUILADA.    
+            lista_peliculas = new Importar().ReadCSV(AppDomain.CurrentDomain.BaseDirectory + "\\Peliculas-CSV.csv");
+
+            peliculas = ToDataTable<cPelicula>(lista_peliculas);
+
+        }
 
         //Buttons 
         private void btn_iniciar_sesion_Click(object sender, EventArgs e)
@@ -73,7 +58,7 @@ namespace TPFINAL_Craicnet
                 {
                     if (usuario_ingresando.Admin)
                     {
-                        Administrador admin = new Administrador(usuario_ingresando);
+                        Administrador admin = new Administrador(usuario_ingresando, lista_peliculas, peliculas);
                         admin.Show(this);
                         this.Hide();
                     }
@@ -96,61 +81,6 @@ namespace TPFINAL_Craicnet
                 return;
             }
           
-                
-
-           /* if (cbox_tipo.Text == "Administrador")
-            {
-                Hashtable users_admin = GetHashtable_admin();
-                if (users_admin.ContainsKey(txt_usuario.Text))
-                {
-                    if ((string)users_admin[txt_usuario.Text] == txt_contraseña.Text)
-                    {
-                        Administrador admin = new Administrador();
-                        admin.Show(this);
-                        this.Hide();
-                    }
-                    else
-                        MessageBox.Show("Contraseña incorrecta");
-                }
-                else
-                    MessageBox.Show("Usuario Incorrecto");
-            }
-            else {
-
-                if (cbox_tipo.Text == "Cliente")
-                {
-                    Hashtable users_cliente = GetHashtable_cliente();
-                    if (users_cliente.ContainsKey(txt_usuario.Text))
-                    {
-
-                        if ((string)users_cliente[txt_usuario.Text] == txt_contraseña.Text)
-                        {
-                            Cliente cliente = new Cliente();
-                            cliente.Show(this);
-                            this.Hide();
-                        }
-                        else
-                            MessageBox.Show("Contraseña incorrecta");
-                    }
-                    else
-                        MessageBox.Show("Usuario Incorrecto");
-                }
-                else
-                {
-                    MessageBox.Show("No ha seleccionado tipo de usuario {admin,cleinte}");
-                }
-
-                 /* 
-                    cUsuario esteUsuario = new cUsuario();
-                    cCliente esto = esteUsuario as cCliente;
-                    if (esto != null)
-                    {
-                    }     
-                 */
-            //}
-
-
-
         }
 
         //Status Strip
@@ -256,7 +186,40 @@ namespace TPFINAL_Craicnet
             }
         }
 
-        
+        /// <summary>
+        /// ToDataTable me ayuda a convertir lo que una variable list
+        /// a una DataTable. Esto me ayuda para poder facilitarme hacer las 
+        /// funciones de Ordenar, Agregar , etc.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="items"></param>
+        /// <returns></returns>
+        public static DataTable ToDataTable<T>(List<T> items)
+        {
+            DataTable dataTable = new DataTable(typeof(T).Name);
+
+            //Get all the properties
+            PropertyInfo[] Props = typeof(T).GetProperties(BindingFlags.Public | BindingFlags.Instance);
+            foreach (PropertyInfo prop in Props)
+            {
+                //Defining type of data column gives proper data table 
+                var type = (prop.PropertyType.IsGenericType && prop.PropertyType.GetGenericTypeDefinition() == typeof(Nullable<>) ? Nullable.GetUnderlyingType(prop.PropertyType) : prop.PropertyType);
+                //Setting column names as Property names
+                dataTable.Columns.Add(prop.Name, type);
+            }
+            foreach (T item in items)
+            {
+                var values = new object[Props.Length];
+                for (int i = 0; i < Props.Length; i++)
+                {
+                    //inserting property values to datatable rows
+                    values[i] = Props[i].GetValue(item, null);
+                }
+                dataTable.Rows.Add(values);
+            }
+            //put a breakpoint here and check datatable
+            return dataTable;
+        }
 
     }
 }

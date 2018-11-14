@@ -141,3 +141,5 @@ C:\Users\alumnos.ALUMNOS\Desktop\Craicnet-Craicnet\TPFINAL_Craicnet\obj\Debug\TP
 C:\Users\alumnos.ALUMNOS\Desktop\Craicnet-Craicnet\TPFINAL_Craicnet\obj\Debug\TPFINAL_Craicnet.csproj.GenerateResource.Cache
 C:\Users\alumnos.ALUMNOS\Desktop\Craicnet-Craicnet\TPFINAL_Craicnet\obj\Debug\TPFINAL_Craicnet.exe
 C:\Users\alumnos.ALUMNOS\Desktop\Craicnet-Craicnet\TPFINAL_Craicnet\obj\Debug\TPFINAL_Craicnet.pdb
+C:\Users\bruno\Documents\Craicnet\TPFINAL_Craicnet\obj\Debug\TPFINAL_Craicnet.FORMS.Alquiler.resources
+C:\Users\bruno\Documents\Craicnet\TPFINAL_Craicnet\obj\Debug\TPFINAL_Craicnet.FORMS.Promociones.resources

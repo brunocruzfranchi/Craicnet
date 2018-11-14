@@ -134,17 +134,17 @@
             this.splitContainer1.Panel2.Controls.Add(this.label_Usuario);
             this.splitContainer1.Panel2.Controls.Add(this.label_Contraseña);
             this.splitContainer1.Panel2.Controls.Add(this.btn_iniciar_sesion);
-            this.splitContainer1.Size = new System.Drawing.Size(303, 307);
-            this.splitContainer1.SplitterDistance = 182;
+            this.splitContainer1.Size = new System.Drawing.Size(594, 558);
+            this.splitContainer1.SplitterDistance = 330;
             this.splitContainer1.TabIndex = 8;
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.LightCyan;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pictureBox1.Location = new System.Drawing.Point(0, -73);
+            this.pictureBox1.Location = new System.Drawing.Point(0, 75);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(303, 255);
+            this.pictureBox1.Size = new System.Drawing.Size(594, 255);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -173,14 +173,14 @@
             this.splitContainer2.Panel2.Controls.Add(this.label2);
             this.splitContainer2.Panel2.Controls.Add(this.label3);
             this.splitContainer2.Panel2.Controls.Add(this.label1);
-            this.splitContainer2.Size = new System.Drawing.Size(508, 307);
-            this.splitContainer2.SplitterDistance = 303;
+            this.splitContainer2.Size = new System.Drawing.Size(997, 558);
+            this.splitContainer2.SplitterDistance = 594;
             this.splitContainer2.TabIndex = 9;
             // 
             // txt_UsuarioNuevo
             // 
             this.txt_UsuarioNuevo.Location = new System.Drawing.Point(147, 221);
-            this.txt_UsuarioNuevo.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.txt_UsuarioNuevo.Margin = new System.Windows.Forms.Padding(1);
             this.txt_UsuarioNuevo.Name = "txt_UsuarioNuevo";
             this.txt_UsuarioNuevo.Size = new System.Drawing.Size(188, 20);
             this.txt_UsuarioNuevo.TabIndex = 17;
@@ -286,9 +286,9 @@
             this.StatusStrip_Inicio.ImageScalingSize = new System.Drawing.Size(40, 40);
             this.StatusStrip_Inicio.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatus});
-            this.StatusStrip_Inicio.Location = new System.Drawing.Point(0, 285);
+            this.StatusStrip_Inicio.Location = new System.Drawing.Point(0, 536);
             this.StatusStrip_Inicio.Name = "StatusStrip_Inicio";
-            this.StatusStrip_Inicio.Size = new System.Drawing.Size(508, 22);
+            this.StatusStrip_Inicio.Size = new System.Drawing.Size(997, 22);
             this.StatusStrip_Inicio.TabIndex = 10;
             this.StatusStrip_Inicio.Text = "statusStrip1";
             // 
@@ -301,7 +301,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(508, 307);
+            this.ClientSize = new System.Drawing.Size(997, 558);
             this.Controls.Add(this.StatusStrip_Inicio);
             this.Controls.Add(this.splitContainer2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

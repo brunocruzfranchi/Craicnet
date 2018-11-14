@@ -15,8 +15,8 @@ namespace TPFINAL_Craicnet
     public partial class Administrador : Form
     {
         //Propiedades
-
-        List<cPelicula> lista_peliculas = new List<cPelicula>();
+        public List<cPelicula> lista_peliculas = new List<cPelicula>();
+        public DataTable peliculas = new DataTable();
         public cUsuario Admin_Activo;
 
         //Cliente Form 
@@ -26,29 +26,17 @@ namespace TPFINAL_Craicnet
             InitializeComponent();
         }
 
-        public Administrador(cUsuario admin)
+        public Administrador(cUsuario admin, List<cPelicula> lista, DataTable table)
         {
             InitializeComponent();
+            lista_peliculas = lista;
+            peliculas = table;
             Admin_Activo = admin;
         }
 
         private void Administrador_Load(object sender, EventArgs e)
         {
-            /*
-            var source = new BindingSource();
-            lista_peliculas = new Importar().ReadCSV("C:\\Users\\bruno\\Desktop\\Craicnet-Craicnet\\Craicnet-Craicnet\\Craicnet-Craicnet\\Peliculas-CSV.csv");
-            source.DataSource = lista_peliculas;
-            grid_peliculas.DataSource = source;
-            */
-                  
-            lista_peliculas = new Importar().ReadCSV(AppDomain.CurrentDomain.BaseDirectory + "\\Peliculas-CSV.csv");
-
-            DataTable peliculas = new DataTable();
-
-            peliculas = ToDataTable<cPelicula>(lista_peliculas);
-
             grid_peliculas.DataSource = peliculas;
-
         }
 
         //Menu Strip
@@ -74,41 +62,6 @@ namespace TPFINAL_Craicnet
                     }
 
         //DataGrid Funciones
-
-                    /// <summary>
-                    /// ToDataTable me ayuda a convertir lo que una variable list
-                    /// a una DataTable. Esto me ayuda para poder facilitarme hacer las 
-                    /// funciones de Ordenar, Agregar , etc.
-                    /// </summary>
-                    /// <typeparam name="T"></typeparam>
-                    /// <param name="items"></param>
-                    /// <returns></returns>
-                    public static DataTable ToDataTable<T>(List<T> items)
-                    {
-                        DataTable dataTable = new DataTable(typeof(T).Name);
-
-                        //Get all the properties
-                        PropertyInfo[] Props = typeof(T).GetProperties(BindingFlags.Public | BindingFlags.Instance);
-                        foreach (PropertyInfo prop in Props)
-                        {
-                            //Defining type of data column gives proper data table 
-                            var type = (prop.PropertyType.IsGenericType && prop.PropertyType.GetGenericTypeDefinition() == typeof(Nullable<>) ? Nullable.GetUnderlyingType(prop.PropertyType) : prop.PropertyType);
-                            //Setting column names as Property names
-                            dataTable.Columns.Add(prop.Name, type);
-                        }
-                        foreach (T item in items)
-                        {
-                            var values = new object[Props.Length];
-                            for (int i = 0; i < Props.Length; i++)
-                            {
-                                //inserting property values to datatable rows
-                                values[i] = Props[i].GetValue(item, null);
-                            }
-                            dataTable.Rows.Add(values);
-                        }
-                        //put a breakpoint here and check datatable
-                        return dataTable;
-                    }
 
                     /// <summary>
                     /// Esta funcion me permite hacer que aparezca los iconos de 
@@ -156,12 +109,12 @@ namespace TPFINAL_Craicnet
                                 {
                                     if (sortOrder == SortOrder.Ascending)
                                     {
-                                        peliculas = ToDataTable<cPelicula>(lista_peliculas.OrderBy(x => x.Nombre).ToList());
+                                        peliculas = Inicio.ToDataTable<cPelicula>(lista_peliculas.OrderBy(x => x.Nombre).ToList());
                                         grid_peliculas.DataSource = peliculas;
                                     }
                                     else
                                     {
-                                        peliculas = ToDataTable<cPelicula>(lista_peliculas.OrderByDescending(x => x.Nombre).ToList());
+                                        peliculas = Inicio.ToDataTable<cPelicula>(lista_peliculas.OrderByDescending(x => x.Nombre).ToList());
                                         grid_peliculas.DataSource = peliculas;
                                     }
                                     break;
@@ -170,12 +123,12 @@ namespace TPFINAL_Craicnet
                                 {
                                     if (sortOrder == SortOrder.Ascending)
                                     {
-                                        peliculas = ToDataTable<cPelicula>(lista_peliculas.OrderBy(x => x.Precio).ToList());
+                                        peliculas = Inicio.ToDataTable<cPelicula>(lista_peliculas.OrderBy(x => x.Precio).ToList());
                                         grid_peliculas.DataSource = peliculas;
                                     }
                                     else
                                     {
-                                        peliculas = ToDataTable<cPelicula>(lista_peliculas.OrderByDescending(x => x.Precio).ToList());
+                                        peliculas = Inicio.ToDataTable<cPelicula>(lista_peliculas.OrderByDescending(x => x.Precio).ToList());
                                         grid_peliculas.DataSource = peliculas;
                                     }
                                     break;
@@ -184,12 +137,12 @@ namespace TPFINAL_Craicnet
                                 {
                                     if (sortOrder == SortOrder.Ascending)
                                     {
-                                        peliculas = ToDataTable<cPelicula>(lista_peliculas.OrderBy(x => x.Puntaje).ToList());
+                                        peliculas = Inicio.ToDataTable<cPelicula>(lista_peliculas.OrderBy(x => x.Puntaje).ToList());
                                         grid_peliculas.DataSource = peliculas;
                                     }
                                     else
                                     {
-                                        peliculas = ToDataTable<cPelicula>(lista_peliculas.OrderByDescending(x => x.Puntaje).ToList());
+                                        peliculas = Inicio.ToDataTable<cPelicula>(lista_peliculas.OrderByDescending(x => x.Puntaje).ToList());
                                         grid_peliculas.DataSource = peliculas;
                                     }
                                     break;
@@ -198,12 +151,12 @@ namespace TPFINAL_Craicnet
                                 {
                                     if (sortOrder == SortOrder.Ascending)
                                     {
-                                        peliculas = ToDataTable<cPelicula>(lista_peliculas.OrderBy(x => x.Genero).ToList());
+                                        peliculas = Inicio.ToDataTable<cPelicula>(lista_peliculas.OrderBy(x => x.Genero).ToList());
                                         grid_peliculas.DataSource = peliculas;
                                     }
                                     else
                                     {
-                                        peliculas = ToDataTable<cPelicula>(lista_peliculas.OrderByDescending(x => x.Genero).ToList());
+                                        peliculas = Inicio.ToDataTable<cPelicula>(lista_peliculas.OrderByDescending(x => x.Genero).ToList());
                                         grid_peliculas.DataSource = peliculas;
                                     }
                                     break;
@@ -212,12 +165,12 @@ namespace TPFINAL_Craicnet
                                 {
                                     if (sortOrder == SortOrder.Ascending)
                                     {
-                                        peliculas = ToDataTable<cPelicula>(lista_peliculas.OrderBy(x => x.Año).ToList());
+                                        peliculas = Inicio.ToDataTable<cPelicula>(lista_peliculas.OrderBy(x => x.Año).ToList());
                                         grid_peliculas.DataSource = peliculas;
                                     }
                                     else
                                     {
-                                        peliculas = ToDataTable<cPelicula>(lista_peliculas.OrderByDescending(x => x.Año).ToList());
+                                        peliculas = Inicio.ToDataTable<cPelicula>(lista_peliculas.OrderByDescending(x => x.Año).ToList());
                                         grid_peliculas.DataSource = peliculas;
                                     }
                                     break;
@@ -226,12 +179,12 @@ namespace TPFINAL_Craicnet
                                 {
                                     if (sortOrder == SortOrder.Ascending)
                                     {
-                                        peliculas = ToDataTable<cPelicula>(lista_peliculas.OrderBy(x => x.Director).ToList());
+                                        peliculas = Inicio.ToDataTable<cPelicula>(lista_peliculas.OrderBy(x => x.Director).ToList());
                                         grid_peliculas.DataSource = peliculas;
                                     }
                                     else
                                     {
-                                        peliculas = ToDataTable<cPelicula>(lista_peliculas.OrderByDescending(x => x.Director).ToList());
+                                        peliculas = Inicio.ToDataTable<cPelicula>(lista_peliculas.OrderByDescending(x => x.Director).ToList());
                                         grid_peliculas.DataSource = peliculas;
                                     }
                                     break;
@@ -240,12 +193,12 @@ namespace TPFINAL_Craicnet
                                 {
                                     if (sortOrder == SortOrder.Ascending)
                                     {
-                                        peliculas = ToDataTable<cPelicula>(lista_peliculas.OrderBy(x => x.Actores).ToList());
+                                        peliculas = Inicio.ToDataTable<cPelicula>(lista_peliculas.OrderBy(x => x.Actores).ToList());
                                         grid_peliculas.DataSource = peliculas;
                                     }
                                     else
                                     {
-                                        peliculas = ToDataTable<cPelicula>(lista_peliculas.OrderByDescending(x => x.Actores).ToList());
+                                        peliculas = Inicio.ToDataTable<cPelicula>(lista_peliculas.OrderByDescending(x => x.Actores).ToList());
                                         grid_peliculas.DataSource = peliculas;
                                     }
                                     break;
@@ -329,7 +282,7 @@ namespace TPFINAL_Craicnet
 
                         lista_peliculas.Add(peli_aux);
 
-                        peliculas = ToDataTable<cPelicula>(lista_peliculas);
+                        peliculas = Inicio.ToDataTable<cPelicula>(lista_peliculas);
 
                         grid_peliculas.DataSource = peliculas;
 
@@ -341,6 +294,14 @@ namespace TPFINAL_Craicnet
 
                     private void btn_eliminar_Click(object sender, EventArgs e)
                     {
+                        cPelicula eliminar = lista_peliculas.Find(x => x.Nombre.Contains(txt_pelicula.Text));
+                        if (lista_peliculas.Remove(eliminar))
+                            MessageBox.Show("La pelicula " + eliminar.Nombre + " ha sido eliminada correctamente.");
+                        else
+                            MessageBox.Show("La pelicula no ha sido eliminada");
+
+                        peliculas = Inicio.ToDataTable<cPelicula>(lista_peliculas);
+                        grid_peliculas.DataSource = peliculas;
 
                     }
 

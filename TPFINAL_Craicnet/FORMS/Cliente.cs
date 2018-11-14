@@ -66,7 +66,6 @@ namespace TPFINAL_Craicnet
                 {
                     gbox_alquilar.Visible = true;
                     split_alquilar.Visible = true;
-                    split_graficos.Visible = false;
                     split_usuario.Visible = false;
                 }
 
@@ -74,7 +73,6 @@ namespace TPFINAL_Craicnet
                 {
                     gbox_alquilar.Visible = false;
                     split_alquilar.Visible = false;
-                    split_graficos.Visible = true;
                     split_usuario.Visible = false;
                 }
 
@@ -82,7 +80,6 @@ namespace TPFINAL_Craicnet
                 {
                     gbox_alquilar.Visible = false;
                     split_alquilar.Visible = false;
-                    split_graficos.Visible = false;
                     split_usuario.Visible = true;
             //Se tendrian que ver unicamente las alquiladas
                   foreach (cPelicula peli in Cliente_Activo.peliculas_alquiladas)
