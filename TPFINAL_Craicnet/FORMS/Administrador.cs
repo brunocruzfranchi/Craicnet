@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
 using System.Reflection;
+using TPFINAL_Craicnet.FORMS;
 
 namespace TPFINAL_Craicnet
 {
@@ -24,6 +25,9 @@ namespace TPFINAL_Craicnet
         public Administrador()
         {
             InitializeComponent();
+            this.Width = 1200;
+            this.Height = 700;
+            this.CenterToScreen();
         }
 
         public Administrador(cUsuario admin, List<cPelicula> lista, DataTable table)
@@ -32,6 +36,9 @@ namespace TPFINAL_Craicnet
             lista_peliculas = lista;
             peliculas = table;
             Admin_Activo = admin;
+            this.Width = 1200;
+            this.Height = 700;
+            this.CenterToScreen();
         }
 
         private void Administrador_Load(object sender, EventArgs e)
@@ -358,5 +365,10 @@ namespace TPFINAL_Craicnet
                         btn_editar.Enabled = false;
                     }
 
+        private void estadísticasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Estadisticas estadisticas = new Estadisticas(lista_peliculas);
+            estadisticas.Show(this);
+        }
     }
 }

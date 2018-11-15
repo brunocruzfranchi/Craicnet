@@ -34,6 +34,8 @@ namespace TPFINAL_Craicnet
             Tabla_Usuarios = new HashExt();
             cUsuario cliente = new cUsuario("41292443", " ", false);
             cUsuario admin = new cUsuario("41394723", " ", true);
+            cUsuario julieta_admin = new cUsuario("412924433", " ", true);
+            Tabla_Usuarios.Agregar(julieta_admin);
             Tabla_Usuarios.Agregar(cliente);
             Tabla_Usuarios.Agregar(admin);
 
@@ -221,5 +223,9 @@ namespace TPFINAL_Craicnet
             return dataTable;
         }
 
+        private void splitContainer2_Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

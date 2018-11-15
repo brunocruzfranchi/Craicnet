@@ -30,6 +30,13 @@ namespace TPFINAL_Craicnet
             this.Width = 1200;
             this.CenterToScreen();
             Cliente_Activo = null;
+            txt_actor_cliente.ReadOnly = true;
+            txt_anio_cliente.ReadOnly = true;
+            txt_director_cliente.ReadOnly = true;
+            txt_genero_cliente.ReadOnly = true;
+            txt_pelicula_cliente.ReadOnly = true;
+            txt_precio_cliente.ReadOnly = true;
+            
         }
 
         public Cliente(cUsuario cliente)
@@ -39,6 +46,12 @@ namespace TPFINAL_Craicnet
             this.Width = 1200;
             this.CenterToScreen();
             Cliente_Activo = cliente;
+            txt_actor_cliente.ReadOnly = true;
+            txt_anio_cliente.ReadOnly = true;
+            txt_director_cliente.ReadOnly = true;
+            txt_genero_cliente.ReadOnly = true;
+            txt_pelicula_cliente.ReadOnly = true;
+            txt_precio_cliente.ReadOnly = true;
         }
 
         public void Cliente_Load(object sender, EventArgs e)
@@ -291,15 +304,16 @@ namespace TPFINAL_Craicnet
                         break;
                     }
 
-                    if (cell != null)
+                    if (cell != null&& !rbtn_buscar.Checked)
                     {
                         DataGridViewRow row = cell.OwningRow;
                         txt_pelicula_cliente.Text = row.Cells[0].Value.ToString();
                         txt_director_cliente.Text = row.Cells[1].Value.ToString();
                         txt_precio_cliente.Text = row.Cells[2].Value.ToString();
                         txt_genero_cliente.Text = row.Cells[4].Value.ToString();
-                        txt_año_cliente.Text = row.Cells[5].Value.ToString();
+                        txt_anio_cliente.Text = row.Cells[5].Value.ToString();
                         txt_sinopsis.Text = row.Cells[7].Value.ToString();
+                       
                     }
             
                  }
@@ -333,7 +347,67 @@ namespace TPFINAL_Craicnet
 
         private void btn_Buscar_Click(object sender, EventArgs e)
         {
-            //find o find all??
+
+            BindingList<cPelicula> filtered = new BindingList<cPelicula>(lista_peliculas);
+            if(!string.IsNullOrWhiteSpace(txt_pelicula_cliente.Text))
+            filtered.Where(obj => obj.Nombre.Contains(txt_pelicula_cliente.Text));
+            if (!string.IsNullOrWhiteSpace(txt_actor_cliente.Text))
+                filtered.Where(obj => obj.Nombre.Contains(txt_actor_cliente.Text));
+            if (!string.IsNullOrWhiteSpace(txt_precio_cliente.Text))
+                filtered.Where(obj => obj.Nombre.Contains(txt_precio_cliente.Text));
+            if (!string.IsNullOrWhiteSpace(txt_director_cliente.Text))
+                filtered.Where(obj => obj.Nombre.Contains(txt_director_cliente.Text));
+            if (!string.IsNullOrWhiteSpace(txt_anio_cliente.Text))
+                filtered.Where(obj => obj.Nombre.Contains(txt_anio_cliente.Text));
+
+            if (!string.IsNullOrWhiteSpace(txt_genero_cliente.Text))
+                filtered.Where(obj => obj.Nombre.Contains(txt_genero_cliente.Text));
+
+            grid_peliculas_cliente.DataSource = filtered;
+            grid_peliculas_cliente.EndEdit();
+           grid_peliculas_cliente.ResetBindings();
+        }
+
+        private void btn_Restaurar_Click(object sender, EventArgs e)
+        {
+            grid_peliculas_cliente.DataSource = lista_peliculas;
+
+        }
+
+        private void rbtn_buscar_CheckedChanged(object sender, EventArgs e)
+        {
+            if(rbtn_buscar.Checked)
+            {
+                rbtn_Alquiler.Checked = false;
+                btn_alquilar.Enabled = false;
+                btn_Restaurar.Enabled = true;
+                btn_Buscar.Enabled = true;
+                txt_actor_cliente.ReadOnly = false;
+                txt_actor_cliente.Clear();
+                txt_anio_cliente.ReadOnly = !true;
+                txt_director_cliente.ReadOnly = !true;
+                txt_genero_cliente.ReadOnly = !true;
+                txt_pelicula_cliente.ReadOnly = !true;
+                txt_precio_cliente.ReadOnly = !true;
+                txt_anio_cliente.Clear();
+                txt_director_cliente.Clear();
+                txt_genero_cliente.Clear();
+                txt_pelicula_cliente.Clear();
+                txt_precio_cliente.Clear();
+            }
+            else
+            {
+                rbtn_Alquiler.Checked = true;
+                btn_alquilar.Enabled = true;
+                btn_Restaurar.Enabled = !true;
+                btn_Buscar.Enabled = !true;
+                txt_actor_cliente.ReadOnly = true;
+                txt_anio_cliente.ReadOnly = true;
+                txt_director_cliente.ReadOnly = true;
+                txt_genero_cliente.ReadOnly = true;
+                txt_pelicula_cliente.ReadOnly = true;
+                txt_precio_cliente.ReadOnly = true;
+            }
         }
     }
 }

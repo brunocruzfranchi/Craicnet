@@ -19,19 +19,23 @@ namespace TPFINAL_Craicnet
 
             public cPelicula()
             {
-                this.Nombre = " ";
-                this.Actores = " ";
-                this.Precio = 0;
-                this.Director = " ";
-                this.Puntaje = 0;
-                this.Genero = " ";
-                this.Año = " ";
-                this.Sinopsis = " ";
-                Fecha_Dev = DateTime.MinValue;
+            this.Nombre = " ";
+            this.Actores = " ";
+            this.Precio = 0;
+            this.Director = " ";
+            this.Puntaje = 0;
+            this.Genero = " ";
+            this.Año = " ";
+            this.Sinopsis = " ";
+            Fecha_Dev = DateTime.MinValue;
+            this.Alq_Mes = 0;
+            this.Vistos_Mes = 0;
+            this.Alq_Anio = 0;
+            this.Vistos_Anio = 0;
             
             }
 
-            public cPelicula(string nombre, string actores, double precio, string director, string genero, string año, string sinopsis,DateTime date)
+            public cPelicula(string nombre, string actores, double precio, string director, string genero, string año, string sinopsis,DateTime date, int alqm, int vim, int alqa, int via)
             {
                 this.Nombre = nombre;
                 this.Actores = actores;
@@ -42,8 +46,11 @@ namespace TPFINAL_Craicnet
                 this.Año = año;
                 this.Sinopsis = sinopsis;
                 this.Fecha_Dev = date;
+                this.Alq_Mes = alqm;
+                this.Vistos_Mes = vim;
+                this.Alq_Anio = alqa;
+                this.Vistos_Anio = via;
             }
-
         public cPelicula(string nombre, string actores, double precio, string director, string genero, string año, string sinopsis)
         {
             this.Nombre = nombre;
@@ -55,6 +62,27 @@ namespace TPFINAL_Craicnet
             this.Año = año;
             this.Sinopsis = sinopsis;
             this.Fecha_Dev = DateTime.MinValue;
+            this.Alq_Mes = 0;
+            this.Vistos_Mes = 0;
+            this.Alq_Anio =0;
+            this.Vistos_Anio = 0;
+        }
+
+        public cPelicula(string nombre, string actores, double precio, string director, string genero, string año, string sinopsis,int alqm, int vim, int alqa, int via)
+        {
+            this.Nombre = nombre;
+            this.Actores = actores;
+            this.Precio = precio;
+            this.Director = director;
+            this.Puntaje = 0;
+            this.Genero = genero;
+            this.Año = año;
+            this.Sinopsis = sinopsis;
+            this.Fecha_Dev = DateTime.MinValue;
+            this.Alq_Mes = alqm;
+            this.Vistos_Mes = vim;
+            this.Alq_Anio = alqa;
+            this.Vistos_Anio = via;
         }
 
         public string Nombre { get; set; }
@@ -66,7 +94,10 @@ namespace TPFINAL_Craicnet
             public string Año { get; set; }
             public string Sinopsis { get; set; }
             public DateTime Fecha_Dev { get; set; }
-
+            public int Alq_Mes { get; set; }
+            public int Vistos_Mes { get; set; }
+            public int Alq_Anio { get; set; }
+            public int Vistos_Anio { get; set; }
 
         internal static cPelicula FromString(string linea)
             {
