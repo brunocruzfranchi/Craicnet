@@ -368,6 +368,7 @@ namespace TPFINAL_Craicnet
         private void estadísticasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Estadisticas estadisticas = new Estadisticas(lista_peliculas);
+            cPelicula.Actualizar(lista_peliculas);
             estadisticas.Show(this);
         }
     }

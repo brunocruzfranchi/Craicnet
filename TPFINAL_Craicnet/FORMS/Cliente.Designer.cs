@@ -84,6 +84,7 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.cPeliculasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cPeliculaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.btn_VerPelicula = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.split_alquilar)).BeginInit();
             this.split_alquilar.Panel1.SuspendLayout();
@@ -551,6 +552,7 @@
             // 
             // split_usuario.Panel1
             // 
+            this.split_usuario.Panel1.Controls.Add(this.btn_VerPelicula);
             this.split_usuario.Panel1.Controls.Add(this.label4);
             this.split_usuario.Panel1.Controls.Add(this.pictureBox1);
             // 
@@ -696,6 +698,16 @@
             // 
             this.cPeliculaBindingSource1.DataSource = typeof(TPFINAL_Craicnet.cPelicula);
             // 
+            // btn_VerPelicula
+            // 
+            this.btn_VerPelicula.Location = new System.Drawing.Point(199, 1056);
+            this.btn_VerPelicula.Name = "btn_VerPelicula";
+            this.btn_VerPelicula.Size = new System.Drawing.Size(193, 70);
+            this.btn_VerPelicula.TabIndex = 2;
+            this.btn_VerPelicula.Text = "Ver";
+            this.btn_VerPelicula.UseVisualStyleBackColor = true;
+            this.btn_VerPelicula.Click += new System.EventHandler(this.btn_VerPelicula_Click);
+            // 
             // Cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
@@ -705,6 +717,7 @@
             this.Controls.Add(this.split_usuario);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.statusStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.Name = "Cliente";
@@ -797,5 +810,6 @@
         private System.Windows.Forms.Button btn_Restaurar;
         private System.Windows.Forms.RadioButton rbtn_Alquiler;
         private System.Windows.Forms.RadioButton rbtn_buscar;
+        private System.Windows.Forms.Button btn_VerPelicula;
     }
 }

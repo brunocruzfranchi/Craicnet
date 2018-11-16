@@ -98,6 +98,12 @@ namespace TPFINAL_Craicnet
             public int Vistos_Mes { get; set; }
             public int Alq_Anio { get; set; }
             public int Vistos_Anio { get; set; }
+            public static DateTime Ult_Act { get; set; }
+
+        static cPelicula()
+        {
+            Ult_Act = DateTime.Now;
+        }
 
         internal static cPelicula FromString(string linea)
             {
@@ -124,6 +130,33 @@ namespace TPFINAL_Craicnet
         {
             return (DateTime.Compare(Fecha_Dev, DateTime.Today) < 0);
         }
+       static public void Actualizar(List<cPelicula> lista)
+        {
+            if (DateTime.Now.Year != Ult_Act.Year)
+            {
+                foreach (cPelicula pelicula in lista)
+                {
+                    pelicula.Alq_Anio = 0;
+                    pelicula.Alq_Mes = 0;
+                    pelicula.Vistos_Anio = 0;
+                    pelicula.Vistos_Mes = 0;
+                }
+
+            }
+            else
+                if (DateTime.Now.Month != Ult_Act.Year)
+            {
+                foreach (cPelicula pelicula in lista)
+                {
+                    pelicula.Alq_Mes = 0;
+
+                    pelicula.Vistos_Mes = 0;
+                }
+            }
+
+            Ult_Act = DateTime.Now;
+        }
     }
+}
 
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Alquiler));
             this.btn_Aceptar = new System.Windows.Forms.Button();
             this.btn_Cancelar = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -157,8 +158,10 @@
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.btn_Cancelar);
             this.Controls.Add(this.btn_Aceptar);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Alquiler";
             this.Text = "Alquiler";
+            this.Load += new System.EventHandler(this.Alquiler_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

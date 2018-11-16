@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Promociones));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Promociones_Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_alquiler_promo = new System.Windows.Forms.Button();
@@ -80,6 +81,7 @@
             this.Controls.Add(this.txt_NombrePromo);
             this.Controls.Add(this.btn_alquiler_promo);
             this.Controls.Add(this.dataGridView1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Promociones";
             this.Text = "Promociones";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

@@ -29,11 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Administrador));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.administradorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.agregarEliminarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.promocionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cerrarSesiónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.estadísticasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupbox_agregar = new System.Windows.Forms.GroupBox();
             this.btn_editar = new System.Windows.Forms.Button();
             this.radio_editar = new System.Windows.Forms.RadioButton();
@@ -79,7 +81,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.gbox_agregar = new System.Windows.Forms.GroupBox();
-            this.estadísticasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.groupbox_agregar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.split_promo)).BeginInit();
@@ -101,7 +102,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(16, 5, 0, 5);
-            this.menuStrip1.Size = new System.Drawing.Size(2768, 58);
+            this.menuStrip1.Size = new System.Drawing.Size(2768, 55);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -112,29 +113,36 @@
             this.promocionesToolStripMenuItem,
             this.cerrarSesiónToolStripMenuItem});
             this.administradorToolStripMenuItem.Name = "administradorToolStripMenuItem";
-            this.administradorToolStripMenuItem.Size = new System.Drawing.Size(218, 48);
+            this.administradorToolStripMenuItem.Size = new System.Drawing.Size(218, 45);
             this.administradorToolStripMenuItem.Text = "Administrador";
             // 
             // agregarEliminarToolStripMenuItem
             // 
             this.agregarEliminarToolStripMenuItem.Name = "agregarEliminarToolStripMenuItem";
-            this.agregarEliminarToolStripMenuItem.Size = new System.Drawing.Size(396, 46);
+            this.agregarEliminarToolStripMenuItem.Size = new System.Drawing.Size(354, 46);
             this.agregarEliminarToolStripMenuItem.Text = "Agregar/Eliminar";
             this.agregarEliminarToolStripMenuItem.Click += new System.EventHandler(this.agregarEliminarToolStripMenuItem_Click);
             // 
             // promocionesToolStripMenuItem
             // 
             this.promocionesToolStripMenuItem.Name = "promocionesToolStripMenuItem";
-            this.promocionesToolStripMenuItem.Size = new System.Drawing.Size(396, 46);
+            this.promocionesToolStripMenuItem.Size = new System.Drawing.Size(354, 46);
             this.promocionesToolStripMenuItem.Text = "Promociones";
             this.promocionesToolStripMenuItem.Click += new System.EventHandler(this.promocionesToolStripMenuItem_Click);
             // 
             // cerrarSesiónToolStripMenuItem
             // 
             this.cerrarSesiónToolStripMenuItem.Name = "cerrarSesiónToolStripMenuItem";
-            this.cerrarSesiónToolStripMenuItem.Size = new System.Drawing.Size(396, 46);
+            this.cerrarSesiónToolStripMenuItem.Size = new System.Drawing.Size(354, 46);
             this.cerrarSesiónToolStripMenuItem.Text = "Cerrar Sesión";
             this.cerrarSesiónToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesiónToolStripMenuItem_Click);
+            // 
+            // estadísticasToolStripMenuItem
+            // 
+            this.estadísticasToolStripMenuItem.Name = "estadísticasToolStripMenuItem";
+            this.estadísticasToolStripMenuItem.Size = new System.Drawing.Size(180, 45);
+            this.estadísticasToolStripMenuItem.Text = "Estadísticas";
+            this.estadísticasToolStripMenuItem.Click += new System.EventHandler(this.estadísticasToolStripMenuItem_Click);
             // 
             // groupbox_agregar
             // 
@@ -164,7 +172,7 @@
             this.groupbox_agregar.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.groupbox_agregar.Name = "groupbox_agregar";
             this.groupbox_agregar.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.groupbox_agregar.Size = new System.Drawing.Size(1005, 1278);
+            this.groupbox_agregar.Size = new System.Drawing.Size(1005, 1281);
             this.groupbox_agregar.TabIndex = 0;
             this.groupbox_agregar.TabStop = false;
             this.groupbox_agregar.Text = "Agregar/Eliminar";
@@ -395,7 +403,7 @@
             // 
             this.split_promo.Panel2.Controls.Add(this.groupbox_agregar);
             this.split_promo.Panel2.Controls.Add(this.gbox_promocion);
-            this.split_promo.Size = new System.Drawing.Size(2752, 1278);
+            this.split_promo.Size = new System.Drawing.Size(2752, 1281);
             this.split_promo.SplitterDistance = 1736;
             this.split_promo.SplitterWidth = 11;
             this.split_promo.TabIndex = 1;
@@ -421,7 +429,7 @@
             this.grid_peliculas.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.grid_peliculas.Name = "grid_peliculas";
             this.grid_peliculas.ReadOnly = true;
-            this.grid_peliculas.Size = new System.Drawing.Size(1736, 1278);
+            this.grid_peliculas.Size = new System.Drawing.Size(1736, 1281);
             this.grid_peliculas.TabIndex = 0;
             this.grid_peliculas.SelectionChanged += new System.EventHandler(this.grid_peliculas_SelectionChanged);
             // 
@@ -519,7 +527,7 @@
             this.gbox_promocion.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.gbox_promocion.Name = "gbox_promocion";
             this.gbox_promocion.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.gbox_promocion.Size = new System.Drawing.Size(1005, 1278);
+            this.gbox_promocion.Size = new System.Drawing.Size(1005, 1281);
             this.gbox_promocion.TabIndex = 1;
             this.gbox_promocion.TabStop = false;
             this.gbox_promocion.Text = "Promoción";
@@ -641,20 +649,13 @@
             this.gbox_agregar.AutoSize = true;
             this.gbox_agregar.Controls.Add(this.split_promo);
             this.gbox_agregar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gbox_agregar.Location = new System.Drawing.Point(0, 58);
+            this.gbox_agregar.Location = new System.Drawing.Point(0, 55);
             this.gbox_agregar.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.gbox_agregar.Name = "gbox_agregar";
             this.gbox_agregar.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.gbox_agregar.Size = new System.Drawing.Size(2768, 1323);
+            this.gbox_agregar.Size = new System.Drawing.Size(2768, 1326);
             this.gbox_agregar.TabIndex = 2;
             this.gbox_agregar.TabStop = false;
-            // 
-            // estadísticasToolStripMenuItem
-            // 
-            this.estadísticasToolStripMenuItem.Name = "estadísticasToolStripMenuItem";
-            this.estadísticasToolStripMenuItem.Size = new System.Drawing.Size(180, 48);
-            this.estadísticasToolStripMenuItem.Text = "Estadísticas";
-            this.estadísticasToolStripMenuItem.Click += new System.EventHandler(this.estadísticasToolStripMenuItem_Click);
             // 
             // Administrador
             // 
@@ -663,6 +664,7 @@
             this.ClientSize = new System.Drawing.Size(2768, 1381);
             this.Controls.Add(this.gbox_agregar);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.Name = "Administrador";

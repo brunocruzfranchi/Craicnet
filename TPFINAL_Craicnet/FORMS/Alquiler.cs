@@ -64,6 +64,8 @@ namespace TPFINAL_Craicnet.FORMS
         {
             Pelicula_Alquilada.Fecha_Dev = dateTimePicker1.Value.Date;
             Cliente_que_alquila.peliculas_alquiladas.Add(Pelicula_Alquilada);
+            Pelicula_Alquilada.Alq_Anio++;
+            Pelicula_Alquilada.Alq_Mes++;
             MessageBox.Show("Pelicula alquilada");
             this.Close();
         }
@@ -88,6 +90,11 @@ namespace TPFINAL_Craicnet.FORMS
             txt_n_dias.Text = (dateTimePicker1.Value - DateTime.Today).Days.ToString();
             txt_PrecioTotal.Text = ((dateTimePicker1.Value - DateTime.Today).Days * int.Parse(txt_Precio.Text)).ToString();
             
+
+        }
+
+        private void Alquiler_Load(object sender, EventArgs e)
+        {
 
         }
     }

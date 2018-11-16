@@ -324,7 +324,7 @@ namespace TPFINAL_Craicnet
         {            
             FORMS.Alquiler alquiler = new FORMS.Alquiler(lista_peliculas.Find(x => x.Nombre.Contains(txt_pelicula_cliente.Text)), Cliente_Activo);
             alquiler.Show(this);
-            //MessageBox.Show("Película alquilada");
+            cPelicula.Actualizar(lista_peliculas);
             //falta sumar alquiler
 
         }
@@ -408,6 +408,11 @@ namespace TPFINAL_Craicnet
                 txt_pelicula_cliente.ReadOnly = true;
                 txt_precio_cliente.ReadOnly = true;
             }
+        }
+
+        private void btn_VerPelicula_Click(object sender, EventArgs e)
+        {
+            //actualizar y sumar a pelicula
         }
     }
 }

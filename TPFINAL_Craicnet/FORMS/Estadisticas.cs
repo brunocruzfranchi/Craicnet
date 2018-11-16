@@ -34,5 +34,10 @@ namespace TPFINAL_Craicnet.FORMS
         {
 
         }
+
+        private void rbtn_mensual_alq_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
