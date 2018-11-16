@@ -179,6 +179,7 @@
             // 
             // btn_editar
             // 
+            this.btn_editar.Enabled = false;
             this.btn_editar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold);
             this.btn_editar.Location = new System.Drawing.Point(392, 1083);
             this.btn_editar.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
@@ -271,6 +272,7 @@
             // 
             // btn_eliminar
             // 
+            this.btn_eliminar.Enabled = false;
             this.btn_eliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_eliminar.Location = new System.Drawing.Point(661, 1083);
             this.btn_eliminar.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);

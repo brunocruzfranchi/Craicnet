@@ -358,7 +358,7 @@ namespace TPFINAL_Craicnet
                         txt_genero.Enabled = false;
                         txt_año.Enabled = false;
                         txt_actores.Enabled = false;
-                        txt_sinopsis.Enabled = true;
+                        txt_sinopsis.Enabled = false;
 
                         btn_Agregar.Enabled = false;
                         btn_eliminar.Enabled = true;
