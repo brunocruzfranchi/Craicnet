@@ -36,11 +36,11 @@
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Estadisticas));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chart_alq = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label1 = new System.Windows.Forms.Label();
             this.rbtn_anual_alq = new System.Windows.Forms.RadioButton();
             this.rbtn_mensual_alq = new System.Windows.Forms.RadioButton();
-            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chart_vistos = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label2 = new System.Windows.Forms.Label();
             this.rbtn_anual_vist = new System.Windows.Forms.RadioButton();
             this.rbtn_mensual_vist = new System.Windows.Forms.RadioButton();
@@ -48,8 +48,8 @@
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart_alq)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart_vistos)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -60,14 +60,14 @@
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.chart1);
+            this.splitContainer1.Panel1.Controls.Add(this.chart_alq);
             this.splitContainer1.Panel1.Controls.Add(this.label1);
             this.splitContainer1.Panel1.Controls.Add(this.rbtn_anual_alq);
             this.splitContainer1.Panel1.Controls.Add(this.rbtn_mensual_alq);
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.chart2);
+            this.splitContainer1.Panel2.Controls.Add(this.chart_vistos);
             this.splitContainer1.Panel2.Controls.Add(this.label2);
             this.splitContainer1.Panel2.Controls.Add(this.rbtn_anual_vist);
             this.splitContainer1.Panel2.Controls.Add(this.rbtn_mensual_vist);
@@ -75,21 +75,23 @@
             this.splitContainer1.SplitterDistance = 925;
             this.splitContainer1.TabIndex = 0;
             // 
-            // chart1
+            // chart_alq
             // 
             chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
+            this.chart_alq.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(141, 533);
-            this.chart1.Name = "chart1";
+            this.chart_alq.Legends.Add(legend1);
+            this.chart_alq.Location = new System.Drawing.Point(114, 395);
+            this.chart_alq.Name = "chart_alq";
+            this.chart_alq.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(620, 447);
-            this.chart1.TabIndex = 3;
-            this.chart1.Text = "chart1";
+            series1.Name = "Alq_mes";
+            this.chart_alq.Series.Add(series1);
+            this.chart_alq.Size = new System.Drawing.Size(695, 622);
+            this.chart_alq.TabIndex = 3;
+            this.chart_alq.Text = "chart1";
+            this.chart_alq.Click += new System.EventHandler(this.chart_alq_Click);
             // 
             // label1
             // 
@@ -103,7 +105,7 @@
             // rbtn_anual_alq
             // 
             this.rbtn_anual_alq.AutoSize = true;
-            this.rbtn_anual_alq.Location = new System.Drawing.Point(585, 169);
+            this.rbtn_anual_alq.Location = new System.Drawing.Point(525, 169);
             this.rbtn_anual_alq.Name = "rbtn_anual_alq";
             this.rbtn_anual_alq.Size = new System.Drawing.Size(126, 36);
             this.rbtn_anual_alq.TabIndex = 1;
@@ -123,21 +125,23 @@
             this.rbtn_mensual_alq.UseVisualStyleBackColor = true;
             this.rbtn_mensual_alq.CheckedChanged += new System.EventHandler(this.rbtn_mensual_alq_CheckedChanged);
             // 
-            // chart2
+            // chart_vistos
             // 
             chartArea2.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea2);
+            this.chart_vistos.ChartAreas.Add(chartArea2);
             legend2.Name = "Legend1";
-            this.chart2.Legends.Add(legend2);
-            this.chart2.Location = new System.Drawing.Point(147, 554);
-            this.chart2.Name = "chart2";
+            this.chart_vistos.Legends.Add(legend2);
+            this.chart_vistos.Location = new System.Drawing.Point(88, 409);
+            this.chart_vistos.Name = "chart_vistos";
+            this.chart_vistos.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Bright;
             series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             series2.Legend = "Legend1";
             series2.Name = "Series1";
-            this.chart2.Series.Add(series2);
-            this.chart2.Size = new System.Drawing.Size(591, 379);
-            this.chart2.TabIndex = 3;
-            this.chart2.Text = "chart2";
+            this.chart_vistos.Series.Add(series2);
+            this.chart_vistos.Size = new System.Drawing.Size(684, 622);
+            this.chart_vistos.TabIndex = 3;
+            this.chart_vistos.Text = "chart2";
             // 
             // label2
             // 
@@ -186,8 +190,8 @@
             this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart_alq)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart_vistos)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -195,11 +199,11 @@
         #endregion
 
         private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart_alq;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RadioButton rbtn_anual_alq;
         private System.Windows.Forms.RadioButton rbtn_mensual_alq;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart_vistos;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.RadioButton rbtn_anual_vist;
         private System.Windows.Forms.RadioButton rbtn_mensual_vist;

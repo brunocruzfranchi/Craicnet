@@ -53,6 +53,7 @@ namespace TPFINAL_Craicnet
             }
         public cPelicula(string nombre, string actores, double precio, string director, string genero, string año, string sinopsis)
         {
+            Random rnd = new Random();
             this.Nombre = nombre;
             this.Actores = actores;
             this.Precio = precio;
@@ -62,10 +63,10 @@ namespace TPFINAL_Craicnet
             this.Año = año;
             this.Sinopsis = sinopsis;
             this.Fecha_Dev = DateTime.MinValue;
-            this.Alq_Mes = 0;
-            this.Vistos_Mes = 0;
-            this.Alq_Anio =0;
-            this.Vistos_Anio = 0;
+            this.Alq_Mes = rnd.Next(5,500) ;
+            this.Vistos_Mes = rnd.Next(5, 500);
+            this.Alq_Anio = rnd.Next(5, 500);
+            this.Vistos_Anio = rnd.Next(5, 500);
         }
 
         public cPelicula(string nombre, string actores, double precio, string director, string genero, string año, string sinopsis,int alqm, int vim, int alqa, int via)
@@ -156,6 +157,76 @@ namespace TPFINAL_Craicnet
 
             Ult_Act = DateTime.Now;
         }
+
+        public static List<cPelicula> Quicksort_AlqMes(List<cPelicula> list)
+          {
+              if (list.Count <= 1) return list;
+              int pivotPosition = list.Count / 2;
+              cPelicula pivotValue = list[pivotPosition];
+              list.RemoveAt(pivotPosition);
+              List<cPelicula> smaller = new List<cPelicula>();
+              List<cPelicula> greater = new List<cPelicula>();
+              foreach (cPelicula item in list)
+              {
+                  if (item.Alq_Mes > pivotValue.Alq_Mes)
+                  {
+                      smaller.Add(item);
+                  }
+                  else
+                  {
+                      greater.Add(item);
+                  }
+              }
+              List<cPelicula> sorted=Quicksort_AlqMes(smaller);
+              sorted.Add(pivotValue);
+              sorted.AddRange(Quicksort_AlqMes(greater));
+              return sorted;
+          }
+
+      /*  int MyPartition(List<cPelicula> list, int left, int right)
+        {
+            cPelicula pivot = list[left];
+
+            while (true)
+            {
+                while (list[left] < pivot)
+                    left++;
+
+                while (list[right] > pivot)
+                    right--;
+
+                if (list[right] == pivot && list[left] == pivot)
+                    left++;
+
+                if (left < right)
+                {
+                    int temp = list[left];
+                    list[left] = list[right];
+                    list[right] = temp;
+                }
+                else
+                {
+                    return right;
+                }
+            }
+        }
+
+        void MyQuickSort(List<int> list, int left, int right)
+        {
+            if (list == null || list.Count <= 1)
+                return;
+
+            if (left < right)
+            {
+                int pivotIdx = MyPartition(list, left, right);
+
+                if (pivotIdx > 1)
+                    MyQuickSort(list, left, pivotIdx - 1);
+
+                if (pivotIdx + 1 < right)
+                    MyQuickSort(list, pivotIdx + 1, right);
+            }
+        }*/
     }
 }
 
