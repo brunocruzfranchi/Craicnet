@@ -24,7 +24,7 @@ namespace TPFINAL_Craicnet
         }
         public string Id { get; set; }
         public string Password { get; set; }
-        public bool Admin { get; set; }//la idea es eliminarlo y usar algun tipo de dynamic cast
+        public bool Admin { get; set; }
         public List<cPelicula> peliculas_alquiladas { get; set; }
     }
 }

@@ -43,7 +43,7 @@ namespace TPFINAL_Craicnet.FORMS
 
         private void rbtn_mensual_alq_CheckedChanged(object sender, EventArgs e)
         {
-            cPelicula.Quicksort_AlqMes(lista_peliculas);
+            lista_peliculas=cPelicula.Quicksort_AlqMes(lista_peliculas);
             for (int i = 0; i < N_CHART; i++)
             {
                 //list_aux_alq.Add(lista_peliculas[i]);
@@ -57,6 +57,16 @@ namespace TPFINAL_Craicnet.FORMS
         private void chart_alq_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void rbtn_anual_alq_CheckedChanged(object sender, EventArgs e)
+        {
+            lista_peliculas = cPelicula.Quicksort_AlqAño(lista_peliculas);
+            for (int i = 0; i < N_CHART; i++)
+            {
+                //list_aux_alq.Add(lista_peliculas[i]);
+                chart_alq.Series["Alq_mes"].Points.AddXY(lista_peliculas[i].Nombre, lista_peliculas[i].Alq_Mes);
+            }
         }
     }
 }

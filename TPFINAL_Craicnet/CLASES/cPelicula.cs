@@ -164,69 +164,93 @@ namespace TPFINAL_Craicnet
               int pivotPosition = list.Count / 2;
               cPelicula pivotValue = list[pivotPosition];
               list.RemoveAt(pivotPosition);
-              List<cPelicula> smaller = new List<cPelicula>();
               List<cPelicula> greater = new List<cPelicula>();
+              List<cPelicula> smaller = new List<cPelicula>();
               foreach (cPelicula item in list)
               {
                   if (item.Alq_Mes > pivotValue.Alq_Mes)
                   {
-                      smaller.Add(item);
+                      greater.Add(item);
                   }
                   else
                   {
-                      greater.Add(item);
+                      smaller.Add(item);
                   }
               }
-              List<cPelicula> sorted=Quicksort_AlqMes(smaller);
+              List<cPelicula> sorted=Quicksort_AlqMes(greater);
               sorted.Add(pivotValue);
-              sorted.AddRange(Quicksort_AlqMes(greater));
+              sorted.AddRange(Quicksort_AlqMes(smaller));
               return sorted;
           }
-
-      /*  int MyPartition(List<cPelicula> list, int left, int right)
+        public static List<cPelicula> Quicksort_AlqAño(List<cPelicula> list)
         {
-            cPelicula pivot = list[left];
-
-            while (true)
+            if (list.Count <= 1) return list;
+            int pivotPosition = list.Count / 2;
+            cPelicula pivotValue = list[pivotPosition];
+            list.RemoveAt(pivotPosition);
+            List<cPelicula> greater = new List<cPelicula>();
+            List<cPelicula> smaller = new List<cPelicula>();
+            foreach (cPelicula item in list)
             {
-                while (list[left] < pivot)
-                    left++;
-
-                while (list[right] > pivot)
-                    right--;
-
-                if (list[right] == pivot && list[left] == pivot)
-                    left++;
-
-                if (left < right)
+                if (item.Alq_Anio > pivotValue.Alq_Anio)
                 {
-                    int temp = list[left];
-                    list[left] = list[right];
-                    list[right] = temp;
+                    greater.Add(item);
                 }
                 else
                 {
-                    return right;
+                    smaller.Add(item);
                 }
             }
+            List<cPelicula> sorted = Quicksort_AlqAño(greater);
+            sorted.Add(pivotValue);
+            sorted.AddRange(Quicksort_AlqAño(smaller));
+            return sorted;
         }
 
-        void MyQuickSort(List<int> list, int left, int right)
-        {
-            if (list == null || list.Count <= 1)
-                return;
+        /*  int MyPartition(List<cPelicula> list, int left, int right)
+          {
+              cPelicula pivot = list[left];
 
-            if (left < right)
-            {
-                int pivotIdx = MyPartition(list, left, right);
+              while (true)
+              {
+                  while (list[left] < pivot)
+                      left++;
 
-                if (pivotIdx > 1)
-                    MyQuickSort(list, left, pivotIdx - 1);
+                  while (list[right] > pivot)
+                      right--;
 
-                if (pivotIdx + 1 < right)
-                    MyQuickSort(list, pivotIdx + 1, right);
-            }
-        }*/
+                  if (list[right] == pivot && list[left] == pivot)
+                      left++;
+
+                  if (left < right)
+                  {
+                      int temp = list[left];
+                      list[left] = list[right];
+                      list[right] = temp;
+                  }
+                  else
+                  {
+                      return right;
+                  }
+              }
+          }
+
+          void MyQuickSort(List<int> list, int left, int right)
+          {
+              if (list == null || list.Count <= 1)
+                  return;
+
+              if (left < right)
+              {
+                  int pivotIdx = MyPartition(list, left, right);
+
+                  if (pivotIdx > 1)
+                      MyQuickSort(list, left, pivotIdx - 1);
+
+                  if (pivotIdx + 1 < right)
+                      MyQuickSort(list, pivotIdx + 1, right);
+              }
+          }*/
     }
 }
 

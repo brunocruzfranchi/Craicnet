@@ -81,14 +81,14 @@
             this.chart_alq.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chart_alq.Legends.Add(legend1);
-            this.chart_alq.Location = new System.Drawing.Point(114, 395);
+            this.chart_alq.Location = new System.Drawing.Point(76, 360);
             this.chart_alq.Name = "chart_alq";
             this.chart_alq.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.SeaGreen;
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
             series1.Name = "Alq_mes";
             this.chart_alq.Series.Add(series1);
-            this.chart_alq.Size = new System.Drawing.Size(695, 622);
+            this.chart_alq.Size = new System.Drawing.Size(753, 639);
             this.chart_alq.TabIndex = 3;
             this.chart_alq.Text = "chart1";
             this.chart_alq.Click += new System.EventHandler(this.chart_alq_Click);
@@ -112,6 +112,7 @@
             this.rbtn_anual_alq.TabStop = true;
             this.rbtn_anual_alq.Text = "Anual";
             this.rbtn_anual_alq.UseVisualStyleBackColor = true;
+            this.rbtn_anual_alq.CheckedChanged += new System.EventHandler(this.rbtn_anual_alq_CheckedChanged);
             // 
             // rbtn_mensual_alq
             // 
@@ -131,7 +132,7 @@
             this.chart_vistos.ChartAreas.Add(chartArea2);
             legend2.Name = "Legend1";
             this.chart_vistos.Legends.Add(legend2);
-            this.chart_vistos.Location = new System.Drawing.Point(88, 409);
+            this.chart_vistos.Location = new System.Drawing.Point(102, 395);
             this.chart_vistos.Name = "chart_vistos";
             this.chart_vistos.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Bright;
             series2.ChartArea = "ChartArea1";
