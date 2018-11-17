@@ -348,24 +348,23 @@ namespace TPFINAL_Craicnet
         private void btn_Buscar_Click(object sender, EventArgs e)
         {
 
-            BindingList<cPelicula> filtered = new BindingList<cPelicula>(lista_peliculas);
-            if(!string.IsNullOrWhiteSpace(txt_pelicula_cliente.Text))
-            filtered.Where(obj => obj.Nombre.Contains(txt_pelicula_cliente.Text));
-            if (!string.IsNullOrWhiteSpace(txt_actor_cliente.Text))
-                filtered.Where(obj => obj.Nombre.Contains(txt_actor_cliente.Text));
+            BindingList<cPelicula> filtered = new BindingList<cPelicula>(lista_peliculas.Where(obj => (obj.Nombre.Contains(txt_pelicula_cliente.Text)&& obj.Actores.Contains(txt_actor_cliente.Text)&& obj.Precio.ToString().Contains(txt_precio_cliente.Text)&& obj.Director.Contains(txt_director_cliente.Text)&& obj.Año.Contains(txt_anio_cliente.Text)&& obj.Genero.Contains(txt_genero_cliente.Text))).ToList());
+           /* if(!string.IsNullOrWhiteSpace(txt_pelicula_cliente.Text))
+             filtered.Where(obj => obj.Nombre.Contains(txt_pelicula_cliente.Text)).ToList();
+           if (!string.IsNullOrWhiteSpace(txt_actor_cliente.Text))
+               filtered.Where(obj => obj.Actores.Contains(txt_actor_cliente.Text));
             if (!string.IsNullOrWhiteSpace(txt_precio_cliente.Text))
-                filtered.Where(obj => obj.Nombre.Contains(txt_precio_cliente.Text));
+                filtered.Where(obj => obj.Precio.ToString().Contains(txt_precio_cliente.Text));
             if (!string.IsNullOrWhiteSpace(txt_director_cliente.Text))
-                filtered.Where(obj => obj.Nombre.Contains(txt_director_cliente.Text));
+                filtered.Where(obj => obj.Director.Contains(txt_director_cliente.Text));
             if (!string.IsNullOrWhiteSpace(txt_anio_cliente.Text))
-                filtered.Where(obj => obj.Nombre.Contains(txt_anio_cliente.Text));
-
+                filtered.Where(obj => obj.Año.Contains(txt_anio_cliente.Text));
             if (!string.IsNullOrWhiteSpace(txt_genero_cliente.Text))
-                filtered.Where(obj => obj.Nombre.Contains(txt_genero_cliente.Text));
+                filtered.Where(obj => obj.Genero.Contains(txt_genero_cliente.Text));*/
 
             grid_peliculas_cliente.DataSource = filtered;
             grid_peliculas_cliente.EndEdit();
-           grid_peliculas_cliente.ResetBindings();
+            grid_peliculas_cliente.ResetBindings();
         }
 
         private void btn_Restaurar_Click(object sender, EventArgs e)

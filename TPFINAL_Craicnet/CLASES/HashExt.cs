@@ -108,7 +108,7 @@ namespace TPFINAL_Craicnet
             BaldesMAX = BaldesMAX * 2;
             for (int i = 0; i < BaldesMAX; i++)
                 Lista_nueva[i] = new cBaldeExt();
-
+            
             foreach (cBaldeExt balde in T_Hash) //Agrego todos a mi nueva lista
                 foreach (KeyValuePair<int, cUsuario> pair in balde.Lista)
                     Lista_nueva[FuncionHash(pair.Key)].Agregar(pair);

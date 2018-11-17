@@ -70,6 +70,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.gbox_cliente = new System.Windows.Forms.GroupBox();
             this.split_usuario = new System.Windows.Forms.SplitContainer();
+            this.btn_VerPelicula = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.grid_alquiladas_usuario = new System.Windows.Forms.DataGridView();
@@ -84,7 +85,6 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.cPeliculasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cPeliculaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.btn_VerPelicula = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.split_alquilar)).BeginInit();
             this.split_alquilar.Panel1.SuspendLayout();
@@ -162,7 +162,7 @@
             // split_alquilar.Panel2
             // 
             this.split_alquilar.Panel2.Controls.Add(this.gbox_alquilar);
-            this.split_alquilar.Size = new System.Drawing.Size(3125, 0);
+            this.split_alquilar.Size = new System.Drawing.Size(3125, 1584);
             this.split_alquilar.SplitterDistance = 1861;
             this.split_alquilar.SplitterWidth = 11;
             this.split_alquilar.TabIndex = 0;
@@ -191,7 +191,7 @@
             this.grid_peliculas_cliente.Name = "grid_peliculas_cliente";
             this.grid_peliculas_cliente.ReadOnly = true;
             this.grid_peliculas_cliente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.grid_peliculas_cliente.Size = new System.Drawing.Size(1861, 0);
+            this.grid_peliculas_cliente.Size = new System.Drawing.Size(1861, 1584);
             this.grid_peliculas_cliente.TabIndex = 1;
             this.grid_peliculas_cliente.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.grid_peliculas_cliente_ColumnHeaderMouseClick);
             this.grid_peliculas_cliente.SelectionChanged += new System.EventHandler(this.grid_peliculas_cliente_SelectionChanged);
@@ -307,7 +307,7 @@
             this.gbox_alquilar.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.gbox_alquilar.Name = "gbox_alquilar";
             this.gbox_alquilar.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.gbox_alquilar.Size = new System.Drawing.Size(1253, 0);
+            this.gbox_alquilar.Size = new System.Drawing.Size(1253, 1584);
             this.gbox_alquilar.TabIndex = 0;
             this.gbox_alquilar.TabStop = false;
             this.gbox_alquilar.Text = "Alquilar";
@@ -533,12 +533,12 @@
             // 
             this.gbox_cliente.AutoSize = true;
             this.gbox_cliente.Controls.Add(this.split_alquilar);
-            this.gbox_cliente.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.gbox_cliente.Location = new System.Drawing.Point(0, 1617);
+            this.gbox_cliente.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gbox_cliente.Location = new System.Drawing.Point(0, 55);
             this.gbox_cliente.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.gbox_cliente.Name = "gbox_cliente";
             this.gbox_cliente.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.gbox_cliente.Size = new System.Drawing.Size(3141, 45);
+            this.gbox_cliente.Size = new System.Drawing.Size(3141, 1629);
             this.gbox_cliente.TabIndex = 1;
             this.gbox_cliente.TabStop = false;
             this.gbox_cliente.Enter += new System.EventHandler(this.gbox_cliente_Enter);
@@ -559,11 +559,21 @@
             // split_usuario.Panel2
             // 
             this.split_usuario.Panel2.Controls.Add(this.grid_alquiladas_usuario);
-            this.split_usuario.Size = new System.Drawing.Size(3141, 1607);
+            this.split_usuario.Size = new System.Drawing.Size(3141, 1629);
             this.split_usuario.SplitterDistance = 1413;
             this.split_usuario.SplitterWidth = 11;
             this.split_usuario.TabIndex = 3;
             this.split_usuario.Visible = false;
+            // 
+            // btn_VerPelicula
+            // 
+            this.btn_VerPelicula.Location = new System.Drawing.Point(199, 1056);
+            this.btn_VerPelicula.Name = "btn_VerPelicula";
+            this.btn_VerPelicula.Size = new System.Drawing.Size(193, 70);
+            this.btn_VerPelicula.TabIndex = 2;
+            this.btn_VerPelicula.Text = "Ver";
+            this.btn_VerPelicula.UseVisualStyleBackColor = true;
+            this.btn_VerPelicula.Click += new System.EventHandler(this.btn_VerPelicula_Click);
             // 
             // label4
             // 
@@ -608,7 +618,7 @@
             this.grid_alquiladas_usuario.Name = "grid_alquiladas_usuario";
             this.grid_alquiladas_usuario.ReadOnly = true;
             this.grid_alquiladas_usuario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grid_alquiladas_usuario.Size = new System.Drawing.Size(1717, 1607);
+            this.grid_alquiladas_usuario.Size = new System.Drawing.Size(1717, 1629);
             this.grid_alquiladas_usuario.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
@@ -687,10 +697,10 @@
             // statusStrip1
             // 
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(40, 40);
-            this.statusStrip1.Location = new System.Drawing.Point(0, 1662);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 1636);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Padding = new System.Windows.Forms.Padding(3, 0, 37, 0);
-            this.statusStrip1.Size = new System.Drawing.Size(3141, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(3141, 48);
             this.statusStrip1.TabIndex = 4;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -698,25 +708,15 @@
             // 
             this.cPeliculaBindingSource1.DataSource = typeof(TPFINAL_Craicnet.cPelicula);
             // 
-            // btn_VerPelicula
-            // 
-            this.btn_VerPelicula.Location = new System.Drawing.Point(199, 1056);
-            this.btn_VerPelicula.Name = "btn_VerPelicula";
-            this.btn_VerPelicula.Size = new System.Drawing.Size(193, 70);
-            this.btn_VerPelicula.TabIndex = 2;
-            this.btn_VerPelicula.Text = "Ver";
-            this.btn_VerPelicula.UseVisualStyleBackColor = true;
-            this.btn_VerPelicula.Click += new System.EventHandler(this.btn_VerPelicula_Click);
-            // 
             // Cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(3141, 1684);
-            this.Controls.Add(this.gbox_cliente);
-            this.Controls.Add(this.split_usuario);
-            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.statusStrip1);
+            this.Controls.Add(this.split_usuario);
+            this.Controls.Add(this.gbox_cliente);
+            this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
