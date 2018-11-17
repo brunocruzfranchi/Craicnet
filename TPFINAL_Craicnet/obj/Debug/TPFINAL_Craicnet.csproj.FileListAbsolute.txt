@@ -144,3 +144,4 @@ C:\Users\alumnos.ALUMNOS\Desktop\Craicnet-Craicnet\TPFINAL_Craicnet\obj\Debug\TP
 C:\Users\bruno\Documents\Craicnet\TPFINAL_Craicnet\obj\Debug\TPFINAL_Craicnet.FORMS.Alquiler.resources
 C:\Users\bruno\Documents\Craicnet\TPFINAL_Craicnet\obj\Debug\TPFINAL_Craicnet.FORMS.Promociones.resources
 D:\Previous\Universidad\2018\2018 - 2do cuatrimestre\LP2\TP Final\Craicnet\TPFINAL_Craicnet\obj\Debug\TPFINAL_Craicnet.FORMS.Estadisticas.resources
+C:\Users\bruno\Documents\Craicnet\TPFINAL_Craicnet\obj\Debug\TPFINAL_Craicnet.FORMS.Estadisticas.resources
