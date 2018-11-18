@@ -112,7 +112,8 @@ namespace TPFINAL_Craicnet
             foreach (cBaldeExt balde in T_Hash) //Agrego todos a mi nueva lista
                 foreach (KeyValuePair<int, cUsuario> pair in balde.Lista)
                     Lista_nueva[FuncionHash(pair.Key)].Agregar(pair);
-
+            /*T_Hash = new List<cBaldeExt>();*/
+           // Lista_nueva.CopyTo(T_Hash);
             T_Hash = Lista_nueva;  //liberar memoria??
         }
 

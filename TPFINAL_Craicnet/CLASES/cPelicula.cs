@@ -19,6 +19,7 @@ namespace TPFINAL_Craicnet
 
             public cPelicula()
             {
+            Random rnd = new Random();
             this.Nombre = " ";
             this.Actores = " ";
             this.Precio = 0;
@@ -28,12 +29,12 @@ namespace TPFINAL_Craicnet
             this.Año = " ";
             this.Sinopsis = " ";
             Fecha_Dev = DateTime.MinValue;
-            this.Alq_Mes = 0;
-            this.Vistos_Mes = 0;
-            this.Alq_Anio = 0;
-            this.Vistos_Anio = 0;
-            
-            }
+            this.Alq_Mes = rnd.Next(5, 500);
+            this.Vistos_Mes = rnd.Next(5, 500);
+            this.Alq_Anio = rnd.Next(5, 500);
+            this.Vistos_Anio = rnd.Next(5, 500);
+
+        }
 
             public cPelicula(string nombre, string actores, double precio, string director, string genero, string año, string sinopsis,DateTime date, int alqm, int vim, int alqa, int via)
             {
@@ -205,6 +206,55 @@ namespace TPFINAL_Craicnet
             sorted.Add(pivotValue);
             sorted.AddRange(Quicksort_AlqAño(smaller));
             return sorted;
+        }
+
+        public static List<cPelicula> BubbleSort_VistMes(List<cPelicula> list)
+        {
+            cPelicula aux = new cPelicula();
+            int cont_camb = 0;
+
+            for (int i = 0; i < list.Count()-1; i++)
+            {
+                cont_camb = 0;
+                for (int j = 0; j < list.Count() - 1; j++)
+                {
+                    if (list[j].Vistos_Mes < list[j + 1].Vistos_Mes)
+                    {
+                        aux = list[j + 1];
+                        list[j + 1] = list[j];
+                        list[j] = aux;
+                        cont_camb++;
+                    }
+                }
+
+               if (cont_camb==0) break;
+            }
+
+            return list;
+        }
+        public static List<cPelicula> BubbleSort_VistAño(List<cPelicula> list)
+        {
+            cPelicula aux = new cPelicula();
+            int cont_camb = 0;
+
+            for (int i = 0; i < list.Count() - 1; i++)
+            {
+                cont_camb = 0;
+                for (int j = 0; j < list.Count() - 1; j++)
+                {
+                    if (list[j].Vistos_Anio < list[j + 1].Vistos_Anio)
+                    {
+                        aux = list[j + 1];
+                        list[j + 1] = list[j];
+                        list[j] = aux;
+                        cont_camb++;
+                    }
+                }
+
+                if (cont_camb == 0) break;
+            }
+
+            return list;
         }
 
         /*  int MyPartition(List<cPelicula> list, int left, int right)

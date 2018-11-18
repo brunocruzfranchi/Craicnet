@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
+using static System.Windows.Forms.Timer;
 
 namespace TPFINAL_Craicnet.FORMS
 {
@@ -43,12 +45,6 @@ namespace TPFINAL_Craicnet.FORMS
 
         private void rbtn_mensual_alq_CheckedChanged(object sender, EventArgs e)
         {
-            lista_peliculas=cPelicula.Quicksort_AlqMes(lista_peliculas);
-            for (int i = 0; i < N_CHART; i++)
-            {
-                //list_aux_alq.Add(lista_peliculas[i]);
-                chart_alq.Series["Alq_mes"].Points.AddXY(lista_peliculas[i].Nombre, lista_peliculas[i].Alq_Mes);
-            }
             
             
             
@@ -61,12 +57,110 @@ namespace TPFINAL_Craicnet.FORMS
 
         private void rbtn_anual_alq_CheckedChanged(object sender, EventArgs e)
         {
-            lista_peliculas = cPelicula.Quicksort_AlqAño(lista_peliculas);
-            for (int i = 0; i < N_CHART; i++)
+           
+        }
+
+        private void combo_alq_SelectedValueChanged(object sender, EventArgs e)
+        {
+           
+            if (combo_alq.SelectedItem.ToString()=="Anual")
             {
-                //list_aux_alq.Add(lista_peliculas[i]);
-                chart_alq.Series["Alq_mes"].Points.AddXY(lista_peliculas[i].Nombre, lista_peliculas[i].Alq_Mes);
+                lista_peliculas = cPelicula.Quicksort_AlqAño(lista_peliculas);
+                chart_alq.Series["Alq_mes"].Points.Clear();
+                
+                for (int i = 0; i < N_CHART; i++)
+                {
+                    chart_alq.Series["Alq_mes"].Points.AddXY(lista_peliculas[i].Nombre, lista_peliculas[i].Alq_Anio);
+                    /* x.Add(lista_peliculas[i].Nombre);
+                     y.Add(lista_peliculas[i].Alq_Anio);*/
+                }
+                // chart_alq.Series["Alq_mes"].Points.AddXY(lista_peliculas[i].Nombre, lista_peliculas[i].Alq_Mes);
+                //chart_alq.Series["Alq_mes"].Points.AddXY(x,y);
+                chart_alq.Titles.Clear();
+                chart_alq.Titles.Add("Alquiler Anual");
             }
+            else
+            {
+                lista_peliculas = cPelicula.Quicksort_AlqMes(lista_peliculas);
+                chart_alq.Series["Alq_mes"].Points.Clear();
+                for (int i = 0; i < N_CHART; i++)
+                           chart_alq.Series["Alq_mes"].Points.AddXY(lista_peliculas[i].Nombre, lista_peliculas[i].Alq_Mes);
+                //list_aux_alq.Add(lista_peliculas[i]);
+                chart_alq.Titles.Clear();
+                chart_alq.Titles.Add("Alquiler Mensual");
+            }
+        }
+
+        private void combo_anual_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (combo_vistos.SelectedItem.ToString() == "Anual")
+            {
+                lista_peliculas = cPelicula.BubbleSort_VistAño(lista_peliculas);
+                chart_vistos.Series["Vistos"].Points.Clear();
+
+                for (int i = 0; i < N_CHART; i++)
+                {
+                    chart_vistos.Series["Vistos"].Points.AddXY(lista_peliculas[i].Nombre, lista_peliculas[i].Vistos_Anio);
+                   
+                }
+                
+                chart_vistos.Titles.Clear();
+                chart_vistos.Titles.Add("Vistos Anual");
+            }
+            else
+            {
+                lista_peliculas = cPelicula.BubbleSort_VistMes(lista_peliculas);
+                chart_vistos.Series["Vistos"].Points.Clear();
+                for (int i = 0; i < N_CHART; i++)
+                    chart_vistos.Series["Vistos"].Points.AddXY(lista_peliculas[i].Nombre, lista_peliculas[i].Vistos_Mes);
+                
+                chart_vistos.Titles.Clear();
+                chart_vistos.Titles.Add("Vistos Mensual");
+            }
+
+
+        }
+
+        private void combo_anual_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chart_vistos_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_cmp_Click(object sender, EventArgs e)
+        {
+            Timer bubble = new Timer();
+            Timer quick = new Timer();
+
+            if(combo_cmp.SelectedValue.ToString()=="Mensual")
+            {
+                bubble.Start();
+                lista_peliculas = cPelicula.BubbleSort_VistMes(lista_peliculas);
+                bubble.Stop();
+                quick.Start();
+                lista_peliculas = cPelicula.Quicksort_AlqMes(lista_peliculas);
+                quick.Stop();
+            }
+            else
+            {
+                bubble.Start();
+                lista_peliculas = cPelicula.BubbleSort_VistAño(lista_peliculas);
+                bubble.Stop();
+                quick.Start();
+                lista_peliculas = cPelicula.Quicksort_AlqAño(lista_peliculas);
+                quick.Stop();
+            }
+
+            MessageBox.Show(bubble.Interval.ToString(), quick.Interval.ToString());
         }
     }
 }
