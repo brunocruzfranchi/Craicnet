@@ -141,13 +141,13 @@ namespace TPFINAL_Craicnet.FORMS
             Timer bubble = new Timer();
             Timer quick = new Timer();
 
-            if(combo_cmp.SelectedValue.ToString()=="Mensual")
-            {
+            if(combo_cmp.SelectedItem.ToString()=="Anual")
+                {
                 bubble.Start();
                 lista_peliculas = cPelicula.BubbleSort_VistMes(lista_peliculas);
                 bubble.Stop();
                 quick.Start();
-                lista_peliculas = cPelicula.Quicksort_AlqMes(lista_peliculas);
+                lista_peliculas = cPelicula.Quicksort_AlqMes(lista_peliculas); //chequear quicksort
                 quick.Stop();
             }
             else
@@ -160,7 +160,9 @@ namespace TPFINAL_Craicnet.FORMS
                 quick.Stop();
             }
 
-            MessageBox.Show(bubble.Interval.ToString(), quick.Interval.ToString());
+            MessageBox.Show(bubble.Interval.ToString(), quick.Interval.ToString()); //!!!! mirar bien como imprimir bien
+            bubble.Dispose();
+            quick.Dispose();
         }
     }
 }

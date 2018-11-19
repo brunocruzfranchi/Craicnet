@@ -54,7 +54,7 @@ namespace TPFINAL_Craicnet
             }
         public cPelicula(string nombre, string actores, double precio, string director, string genero, string año, string sinopsis)
         {
-            Random rnd = new Random();
+            
             this.Nombre = nombre;
             this.Actores = actores;
             this.Precio = precio;
@@ -64,10 +64,11 @@ namespace TPFINAL_Craicnet
             this.Año = año;
             this.Sinopsis = sinopsis;
             this.Fecha_Dev = DateTime.MinValue;
-            this.Alq_Mes = rnd.Next(5,500) ;
-            this.Vistos_Mes = rnd.Next(5, 500);
-            this.Alq_Anio = rnd.Next(5, 500);
-            this.Vistos_Anio = rnd.Next(5, 500);
+            this.Alq_Mes = ca;
+            this.Vistos_Mes = ca;
+            this.Alq_Anio = ca;
+            this.Vistos_Anio = ca;
+            ca++; 
         }
 
         public cPelicula(string nombre, string actores, double precio, string director, string genero, string año, string sinopsis,int alqm, int vim, int alqa, int via)
@@ -101,10 +102,13 @@ namespace TPFINAL_Craicnet
             public int Alq_Anio { get; set; }
             public int Vistos_Anio { get; set; }
             public static DateTime Ult_Act { get; set; }
+        static int ca { get; set; }
+
 
         static cPelicula()
         {
             Ult_Act = DateTime.Now;
+            ca = 0;
         }
 
         internal static cPelicula FromString(string linea)
