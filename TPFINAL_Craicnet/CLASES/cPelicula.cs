@@ -36,7 +36,7 @@ namespace TPFINAL_Craicnet
 
         }
 
-            public cPelicula(string nombre, string actores, double precio, string director, string genero, string año, string sinopsis,DateTime date, int alqm, int vim, int alqa, int via)
+        public cPelicula(string nombre, string actores, double precio, string director, string genero, string año, string sinopsis,DateTime date, int alqm, int vim, int alqa, int via)
             {
                 this.Nombre = nombre;
                 this.Actores = actores;

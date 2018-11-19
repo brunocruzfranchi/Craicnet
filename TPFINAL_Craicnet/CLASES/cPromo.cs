@@ -32,6 +32,24 @@ namespace TPFINAL_Craicnet.CLASES
             Porcentaje_Descuento = d/100;
             Fecha_limite = date;
         }
+
+        internal static object FromString(string linea)
+        {
+            cPelicula pelicula = new cPelicula();
+            cPromo promo = new cPromo();
+        
+            string[] datos = linea.Split(';');
+
+            pelicula = Inicio.lista_peliculas.Find(x => x.Nombre.Contains(datos[0]));
+
+            promo.Porcentaje_Descuento = float.Parse(datos[1]);
+            promo.Fecha_limite = DateTime.Parse(datos[2]);
+
+            datos = null;
+
+            return pelicula;
+        }
+
         public cPromo(cPelicula peli, float d)
         {
             Pelicula = peli;
@@ -46,8 +64,7 @@ namespace TPFINAL_Craicnet.CLASES
         }
 
         //public cPromo(string nombre, int d, string date)
-        //{
-            
+        //{   
         //}
 
         public float PrecioPromo()
