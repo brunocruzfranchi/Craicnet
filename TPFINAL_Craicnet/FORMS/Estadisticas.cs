@@ -65,7 +65,8 @@ namespace TPFINAL_Craicnet.FORMS
            
             if (combo_alq.SelectedItem.ToString()=="Anual")
             {
-              //  lista_peliculas = cPelicula.QuickSort_AlqAnio(lista_peliculas);
+                
+               lista_peliculas = cPelicula.QuickSort_AlqAnio(lista_peliculas);
                 chart_alq.Series["Alq_mes"].Points.Clear();
                 
                 for (int i = 0; i < N_CHART; i++)
@@ -81,7 +82,7 @@ namespace TPFINAL_Craicnet.FORMS
             }
             else
             {
-               // lista_peliculas = cPelicula.QuickSort_AlqMes(lista_peliculas.AsEnumerable());
+                lista_peliculas = cPelicula.QuickSort_AlqMes(lista_peliculas);
                 chart_alq.Series["Alq_mes"].Points.Clear();
                 for (int i = 0; i < N_CHART; i++)
                            chart_alq.Series["Alq_mes"].Points.AddXY(lista_peliculas[i].Nombre, lista_peliculas[i].Alq_Mes);
@@ -147,7 +148,7 @@ namespace TPFINAL_Craicnet.FORMS
                 lista_peliculas = cPelicula.BubbleSort_VistMes(lista_peliculas);
                 bubble.Stop();
                 quick.Start();
-                lista_peliculas = cPelicula.Quicksort_AlqMes(lista_peliculas); //chequear quicksort
+                lista_peliculas = cPelicula.QuickSort_AlqMes(lista_peliculas); //chequear quicksort
                 quick.Stop();
             }
             else
@@ -156,7 +157,7 @@ namespace TPFINAL_Craicnet.FORMS
                 lista_peliculas = cPelicula.BubbleSort_VistAño(lista_peliculas);
                 bubble.Stop();
                 quick.Start();
-                lista_peliculas = cPelicula.Quicksort_AlqAño(lista_peliculas);
+                lista_peliculas = cPelicula.QuickSort_AlqAnio(lista_peliculas);
                 quick.Stop();
             }
 

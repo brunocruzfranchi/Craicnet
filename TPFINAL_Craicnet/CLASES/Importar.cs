@@ -21,11 +21,11 @@ namespace TPFINAL_Craicnet
 
         }
 
-        public List<cPromo> ReadCSV_promo(String filename)
+      /*  public List<cPromo> ReadCSV_promo(String filename)
         {
             List<cPromo> lista_peliculas = File.ReadAllLines(filename).Skip(1).Select(v => cPromo.FromString(v)).ToList();
 
             return lista_peliculas;
-        }
+        }*/
     }
 }
