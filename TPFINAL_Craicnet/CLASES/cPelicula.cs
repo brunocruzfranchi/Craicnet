@@ -52,6 +52,7 @@ namespace TPFINAL_Craicnet
                 this.Alq_Anio = alqa;
                 this.Vistos_Anio = via;
             }
+
         public cPelicula(string nombre, string actores, double precio, string director, string genero, string año, string sinopsis)
         {
             
@@ -88,7 +89,7 @@ namespace TPFINAL_Craicnet
             this.Vistos_Anio = via;
         }
 
-        public string Nombre { get; set; }
+            public string Nombre { get; set; }
             public string Actores { get; set; }
             public double Precio { get; set; }
             public Int32 Puntaje { get; set; }
@@ -102,7 +103,7 @@ namespace TPFINAL_Craicnet
             public int Alq_Anio { get; set; }
             public int Vistos_Anio { get; set; }
             public static DateTime Ult_Act { get; set; }
-        static int ca { get; set; }
+            static int ca { get; set; }
 
 
         static cPelicula()
@@ -125,6 +126,11 @@ namespace TPFINAL_Craicnet
                 pelicula.Actores = datos[5];
                 pelicula.Puntaje = Int32.Parse(datos[6]);
                 pelicula.Sinopsis = datos[7];
+                pelicula.Vistos_Mes = Int32.Parse(datos[8]);
+                pelicula.Alq_Mes = Int32.Parse(datos[8]);
+                pelicula.Vistos_Anio = Int32.Parse(datos[8]);
+                pelicula.Alq_Anio = Int32.Parse(datos[8]);
+
                // pelicula.Fecha_Dev=DateTime.Parse(datos[8]);
 
                 datos = null;
@@ -136,7 +142,8 @@ namespace TPFINAL_Craicnet
         {
             return (DateTime.Compare(Fecha_Dev, DateTime.Today) < 0);
         }
-       static public void Actualizar(List<cPelicula> lista)
+
+        static public void Actualizar(List<cPelicula> lista)
         {
             if (DateTime.Now.Year != Ult_Act.Year)
             {
@@ -155,7 +162,6 @@ namespace TPFINAL_Craicnet
                 foreach (cPelicula pelicula in lista)
                 {
                     pelicula.Alq_Mes = 0;
-
                     pelicula.Vistos_Mes = 0;
                 }
             }
@@ -163,61 +169,65 @@ namespace TPFINAL_Craicnet
             Ult_Act = DateTime.Now;
         }
 
-       /* public static List<cPelicula> Quicksort_AlqMes(List<cPelicula> list)
-          {
-              if (list.Count <= 1) return list;
-              int pivotPosition = list.Count / 2;
-              cPelicula pivotValue = list[pivotPosition];
-              list.RemoveAt(pivotPosition);
-              List<cPelicula> greater = new List<cPelicula>();
-              List<cPelicula> smaller = new List<cPelicula>();
-              foreach (cPelicula item in list)
-              {
-                  if (item.Alq_Mes > pivotValue.Alq_Mes)
-                  {
-                      greater.Add(item);
-                  }
-                  else
-                  {
-                      smaller.Add(item);
-                  }
-              }
-              List<cPelicula> sorted=Quicksort_AlqMes(greater);
-              sorted.Add(pivotValue);
-              sorted.AddRange(Quicksort_AlqMes(smaller));
-              return sorted;
-          }
-        public static List<cPelicula> Quicksort_AlqAño(List<cPelicula> list)
-        {
-            if (list.Count <= 1) return list;
-            int pivotPosition = list.Count / 2;
-            cPelicula pivotValue = list[pivotPosition];
-            list.RemoveAt(pivotPosition);
-            List<cPelicula> greater = new List<cPelicula>();
-            List<cPelicula> smaller = new List<cPelicula>();
-            foreach (cPelicula item in list)
-            {
-                if (item.Alq_Anio > pivotValue.Alq_Anio)
-                {
-                    greater.Add(item);
-                }
-                else
-                {
-                    smaller.Add(item);
-                }
-            }
-            List<cPelicula> sorted = Quicksort_AlqAño(greater);
-            sorted.Add(pivotValue);
-            sorted.AddRange(Quicksort_AlqAño(smaller));
-            return sorted;
-        }*/
-       public static List<cPelicula> QuickSort_AlqAnio(List<cPelicula> i)
+        /* public static List<cPelicula> Quicksort_AlqMes(List<cPelicula> list)
+           {
+               if (list.Count <= 1) return list;
+               int pivotPosition = list.Count / 2;
+               cPelicula pivotValue = list[pivotPosition];
+               list.RemoveAt(pivotPosition);
+               List<cPelicula> greater = new List<cPelicula>();
+               List<cPelicula> smaller = new List<cPelicula>();
+               foreach (cPelicula item in list)
+               {
+                   if (item.Alq_Mes > pivotValue.Alq_Mes)
+                   {
+                       greater.Add(item);
+                   }
+                   else
+                   {
+                       smaller.Add(item);
+                   }
+               }
+               List<cPelicula> sorted=Quicksort_AlqMes(greater);
+               sorted.Add(pivotValue);
+               sorted.AddRange(Quicksort_AlqMes(smaller));
+               return sorted;
+           }
+         public static List<cPelicula> Quicksort_AlqAño(List<cPelicula> list)
+         {
+             if (list.Count <= 1) return list;
+             int pivotPosition = list.Count / 2;
+             cPelicula pivotValue = list[pivotPosition];
+             list.RemoveAt(pivotPosition);
+             List<cPelicula> greater = new List<cPelicula>();
+             List<cPelicula> smaller = new List<cPelicula>();
+             foreach (cPelicula item in list)
+             {
+                 if (item.Alq_Anio > pivotValue.Alq_Anio)
+                 {
+                     greater.Add(item);
+                 }
+                 else
+                 {
+                     smaller.Add(item);
+                 }
+             }
+             List<cPelicula> sorted = Quicksort_AlqAño(greater);
+             sorted.Add(pivotValue);
+             sorted.AddRange(Quicksort_AlqAño(smaller));
+             return sorted;
+         }*/
+
+        public static List<cPelicula> QuickSort_AlqAnio(List<cPelicula> i)
         {
             if (!i.Any())
                 return i;
             var p = (i.First().Alq_Anio + i.Last().Alq_Anio) / 2;//whichever pivot method you choose
-        return QuickSort_AlqAnio(i.Where(x => x.Alq_Anio < p).ToList()).Concat(i.Where(x => x.Alq_Anio == p).Concat(QuickSort_AlqAnio(i.Where(x => x.Alq_Anio > p).ToList()))).ToList();
+
+            return QuickSort_AlqAnio(i.Where(x => x.Alq_Anio < p).ToList()).
+                Concat(i.Where(x => x.Alq_Anio == p).Concat(QuickSort_AlqAnio(i.Where(x => x.Alq_Anio > p).ToList()))).ToList();
         }
+
         public static List<cPelicula> QuickSort_AlqMes(List<cPelicula> i)
         {
             if (!i.Any())
@@ -225,6 +235,7 @@ namespace TPFINAL_Craicnet
             var p = (i.First().Alq_Mes + i.Last().Alq_Mes) / 2;//whichever pivot method you choose
             return QuickSort_AlqMes(i.Where(x => x.Alq_Mes < p).ToList()).Concat(i.Where(x => x.Alq_Mes == p).Concat(QuickSort_AlqMes(i.Where(x => x.Alq_Mes > p).ToList()))).ToList();
         }
+
         public static List<cPelicula> BubbleSort_VistMes(List<cPelicula> list)
         {
             cPelicula aux = new cPelicula();
@@ -249,6 +260,7 @@ namespace TPFINAL_Craicnet
 
             return list;
         }
+
         public static List<cPelicula> BubbleSort_VistAño(List<cPelicula> list)
         {
             cPelicula aux = new cPelicula();

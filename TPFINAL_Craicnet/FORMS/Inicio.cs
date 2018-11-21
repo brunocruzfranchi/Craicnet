@@ -9,14 +9,17 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TPFINAL_Craicnet.CLASES;
 
 namespace TPFINAL_Craicnet
 {
     public partial class Inicio : Form
     {
-
+        
         public static List<cPelicula> lista_peliculas = new List<cPelicula>();
+        public static List<cPromo> lista_promociones = new List<cPromo>();
         public static DataTable peliculas = new DataTable();
+        public static DataTable promociones = new DataTable();
 
         //Tabla Hash nueva
         HashExt Tabla_Usuarios;
@@ -40,8 +43,10 @@ namespace TPFINAL_Craicnet
             Tabla_Usuarios.Agregar(admin);
 
             lista_peliculas = new Importar().ReadCSV(AppDomain.CurrentDomain.BaseDirectory + "\\Peliculas-CSV.csv");
+            lista_promociones = new Importar().ReadCSV_promo(AppDomain.CurrentDomain.BaseDirectory + "\\Peliculas-Promo-CSV.csv");
 
             peliculas = ToDataTable<cPelicula>(lista_peliculas);
+            promociones = ToDataTable<cPromo>(lista_promociones);
 
         }
 
@@ -60,7 +65,7 @@ namespace TPFINAL_Craicnet
                 {
                     if (usuario_ingresando.Admin)
                     {
-                        Administrador admin = new Administrador(usuario_ingresando, lista_peliculas, peliculas);
+                        Administrador admin = new Administrador(usuario_ingresando, lista_peliculas, peliculas, lista_promociones, promociones);
                         admin.Show(this);
                         this.Hide();
                     }

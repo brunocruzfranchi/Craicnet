@@ -348,7 +348,12 @@ namespace TPFINAL_Craicnet
         private void btn_Buscar_Click(object sender, EventArgs e)
         {
 
-            BindingList<cPelicula> filtered = new BindingList<cPelicula>(lista_peliculas.Where(obj => (obj.Nombre.Contains(txt_pelicula_cliente.Text)&& obj.Actores.Contains(txt_actor_cliente.Text)&& obj.Precio.ToString().Contains(txt_precio_cliente.Text)&& obj.Director.Contains(txt_director_cliente.Text)&& obj.Año.Contains(txt_anio_cliente.Text)&& obj.Genero.Contains(txt_genero_cliente.Text))).ToList());
+            BindingList<cPelicula> filtered = new BindingList<cPelicula>(lista_peliculas.Where(obj => (obj.Nombre.Contains(txt_pelicula_cliente.Text) && 
+                                                                         obj.Actores.Contains(txt_actor_cliente.Text) && 
+                                                                         obj.Precio.ToString().Contains(txt_precio_cliente.Text) && 
+                                                                         obj.Director.Contains(txt_director_cliente.Text) && 
+                                                                         obj.Año.Contains(txt_anio_cliente.Text) &&
+                                                                         obj.Genero.Contains(txt_genero_cliente.Text))).ToList());
            
             /*
              *if(!string.IsNullOrWhiteSpace(txt_pelicula_cliente.Text))

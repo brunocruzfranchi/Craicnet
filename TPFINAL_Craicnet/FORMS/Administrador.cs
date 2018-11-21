@@ -10,6 +10,9 @@ using System.Windows.Forms;
 using System.Data.OleDb;
 using System.Reflection;
 using TPFINAL_Craicnet.FORMS;
+using TPFINAL_Craicnet.CLASES;
+using CsvHelper;
+using System.IO;
 
 namespace TPFINAL_Craicnet
 {
@@ -17,7 +20,9 @@ namespace TPFINAL_Craicnet
     {
         //Propiedades
         public List<cPelicula> lista_peliculas = new List<cPelicula>();
+        public List<cPromo> lista_promociones = new List<cPromo>();
         public DataTable peliculas = new DataTable();
+        public DataTable peliculas_promo = new DataTable();
         public cUsuario Admin_Activo;
 
         //Cliente Form 
@@ -30,11 +35,15 @@ namespace TPFINAL_Craicnet
             this.CenterToScreen();
         }
 
-        public Administrador(cUsuario admin, List<cPelicula> lista, DataTable table)
+        public Administrador(cUsuario admin, List<cPelicula> lista, DataTable table, List<cPromo> promociones, DataTable table_promo)
         {
             InitializeComponent();
+
             lista_peliculas = lista;
             peliculas = table;
+            lista_promociones = promociones;
+            peliculas_promo = table_promo;
+
             Admin_Activo = admin;
             this.Width = 1200;
             this.Height = 700;
@@ -44,6 +53,7 @@ namespace TPFINAL_Craicnet
         private void Administrador_Load(object sender, EventArgs e)
         {
             grid_peliculas.DataSource = peliculas;
+            Grid_promociones.DataSource = peliculas_promo;
         }
 
         //Menu Strip
@@ -68,16 +78,23 @@ namespace TPFINAL_Craicnet
                         this.Close();
                     }
 
+                    private void estadísticasToolStripMenuItem_Click(object sender, EventArgs e)
+                    {
+                        Estadisticas estadisticas = new Estadisticas(lista_peliculas);
+                        cPelicula.Actualizar(lista_peliculas);
+                        estadisticas.Show(this);
+                    }
+
         //DataGrid Funciones
 
-                    /// <summary>
-                    /// Esta funcion me permite hacer que aparezca los iconos de 
-                    /// flechas en el header de las columnas y con esto hacer el
-                    /// tipo de orden segun la flecha. 
-                    /// </summary>
-                    /// <param name="sender"></param>
-                    /// <param name="e"></param>
-                    private void grid_peliculas_cliente_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        /// <summary>
+        /// Esta funcion me permite hacer que aparezca los iconos de 
+        /// flechas en el header de las columnas y con esto hacer el
+        /// tipo de orden segun la flecha. 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void grid_peliculas_cliente_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
                     {
                         DataGridView grid = (DataGridView)sender;
                         SortOrder so = SortOrder.None;
@@ -256,7 +273,15 @@ namespace TPFINAL_Craicnet
 
                     private void btn_promocion_Click(object sender, EventArgs e)
                     {
-            
+                        cPelicula peli_aux = lista_peliculas.Find(x => x.Nombre.Contains(txt_pelicula_promo.Text));
+                        cPromo promo_aux = new cPromo(peli_aux, txt_descuento_promo.Text.ToString(), fecha_limiteDateTimePicker.Value.Date.ToString());
+                        lista_peliculas.Remove(peli_aux);
+                        lista_promociones.Add(promo_aux);
+                        peliculas = Inicio.ToDataTable<cPelicula>(lista_peliculas);
+                        grid_peliculas.DataSource = peliculas;
+
+                        peliculas_promo = Inicio.ToDataTable<cPromo>(lista_promociones);
+                        Grid_promociones.DataSource = peliculas_promo;
                     }
 
                     private void btn_Agregar_Click(object sender, EventArgs e)
@@ -365,11 +390,22 @@ namespace TPFINAL_Craicnet
                         btn_editar.Enabled = false;
                     }
 
-        private void estadísticasToolStripMenuItem_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            Estadisticas estadisticas = new Estadisticas(lista_peliculas);
-            cPelicula.Actualizar(lista_peliculas);
-            estadisticas.Show(this);
+/*
+            using (var sw = new StreamWriter(AppDomain.CurrentDomain.BaseDirectory + "\\hola.csv"))
+            {
+
+                var writer = new CsvWriter(sw);
+                writer.WriteHeader(typeof(cPromo));
+
+                foreach (cPromo s in cPromoBindingSource.DataSource as List<cPromo>)
+                {
+                    writer.WriteRecord(s);
+                }
+
+    */
+            }
         }
     }
 }

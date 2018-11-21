@@ -75,6 +75,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CLASES\cPromo.cs" />
+    <Compile Include="CsvExport.cs" />
     <Compile Include="FORMS\Administrador.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,6 +148,7 @@
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\cPelicula.datasource" />
+    <None Include="Properties\DataSources\TPFINAL_Craicnet.CLASES.cPromo.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
