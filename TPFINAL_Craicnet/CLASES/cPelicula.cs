@@ -163,7 +163,7 @@ namespace TPFINAL_Craicnet
             Ult_Act = DateTime.Now;
         }
 
-        public static List<cPelicula> Quicksort_AlqMes(List<cPelicula> list)
+       /* public static List<cPelicula> Quicksort_AlqMes(List<cPelicula> list)
           {
               if (list.Count <= 1) return list;
               int pivotPosition = list.Count / 2;
@@ -210,8 +210,21 @@ namespace TPFINAL_Craicnet
             sorted.Add(pivotValue);
             sorted.AddRange(Quicksort_AlqAño(smaller));
             return sorted;
+        }*/
+       public static IEnumerable<cPelicula> QuickSort_AlqAnio(IEnumerable<cPelicula> i)
+        {
+            if (!i.Any())
+                return i;
+            var p = (i.First().Alq_Anio + i.Last().Alq_Anio) / 2;//whichever pivot method you choose
+        return QuickSort_AlqAnio(i.Where(x => x.Alq_Anio < p)).Concat(i.Where(x => x.Alq_Anio == p).Concat(QuickSort_AlqAnio(i.Where(x => x.Alq_Anio > p))));
         }
-
+        public static IEnumerable<cPelicula> QuickSort_AlqMes(IEnumerable<cPelicula> i)
+        {
+            if (!i.Any())
+                return i;
+            var p = (i.First().Alq_Mes + i.Last().Alq_Mes) / 2;//whichever pivot method you choose
+            return QuickSort_AlqMes(i.Where(x => x.Alq_Mes < p)).Concat(i.Where(x => x.Alq_Mes == p).Concat(QuickSort_AlqMes(i.Where(x => x.Alq_Mes > p))));
+        }
         public static List<cPelicula> BubbleSort_VistMes(List<cPelicula> list)
         {
             cPelicula aux = new cPelicula();
