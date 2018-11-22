@@ -98,6 +98,7 @@
             this.vistosAnioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cPromoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gbox_promocion = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.txt_descuento_promo = new System.Windows.Forms.TextBox();
             this.nombreTextBox1 = new System.Windows.Forms.TextBox();
             this.precioTextBox1 = new System.Windows.Forms.TextBox();
@@ -118,7 +119,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.gbox_agregar = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
             fecha_limiteLabel = new System.Windows.Forms.Label();
             nombreLabel1 = new System.Windows.Forms.Label();
             precioLabel1 = new System.Windows.Forms.Label();
@@ -309,6 +309,7 @@
             this.btn_editar.TabIndex = 24;
             this.btn_editar.Text = "Editar";
             this.btn_editar.UseVisualStyleBackColor = true;
+            this.btn_editar.Click += new System.EventHandler(this.btn_editar_Click);
             // 
             // radio_editar
             // 
@@ -504,8 +505,8 @@
             // 
             // split_promo.Panel2
             // 
-            this.split_promo.Panel2.Controls.Add(this.gbox_promocion);
             this.split_promo.Panel2.Controls.Add(this.groupbox_agregar);
+            this.split_promo.Panel2.Controls.Add(this.gbox_promocion);
             this.split_promo.Size = new System.Drawing.Size(1152, 561);
             this.split_promo.SplitterDistance = 726;
             this.split_promo.TabIndex = 1;
@@ -672,6 +673,7 @@
             this.Grid_promociones.ReadOnly = true;
             this.Grid_promociones.Size = new System.Drawing.Size(712, 529);
             this.Grid_promociones.TabIndex = 1;
+            this.Grid_promociones.SelectionChanged += new System.EventHandler(this.Grid_promociones_SelectionChanged);
             // 
             // nombreDataGridViewTextBoxColumn
             // 
@@ -837,6 +839,16 @@
             this.gbox_promocion.Text = "Promoción";
             this.gbox_promocion.Visible = false;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(135, 450);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 74;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // txt_descuento_promo
             // 
             this.txt_descuento_promo.Location = new System.Drawing.Point(149, 279);
@@ -929,6 +941,7 @@
             // 
             // txt_precio_promo
             // 
+            this.txt_precio_promo.Enabled = false;
             this.txt_precio_promo.Location = new System.Drawing.Point(148, 246);
             this.txt_precio_promo.Name = "txt_precio_promo";
             this.txt_precio_promo.Size = new System.Drawing.Size(188, 20);
@@ -1010,16 +1023,6 @@
             this.gbox_agregar.Size = new System.Drawing.Size(1158, 580);
             this.gbox_agregar.TabIndex = 2;
             this.gbox_agregar.TabStop = false;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(135, 450);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 74;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Administrador
             // 

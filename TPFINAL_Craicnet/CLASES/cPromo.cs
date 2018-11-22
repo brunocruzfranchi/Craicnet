@@ -9,6 +9,7 @@ namespace TPFINAL_Craicnet.CLASES
     public class cPromo
     {
         public float Porcentaje_Descuento { get; set; }
+
         public cPelicula Pelicula { get; set; }
         public DateTime Fecha_limite { get; set; }
 
@@ -81,8 +82,10 @@ namespace TPFINAL_Craicnet.CLASES
             cPromo promo = new cPromo();
         
             string[] datos = linea.Split(';');
+            //TODO:
 
             pelicula = Inicio.lista_peliculas.Find(x => x.Nombre.Contains(datos[0]));
+
             promo.Nombre = datos[0];
             promo.Genero = datos[1];
             promo.Director = datos[2];

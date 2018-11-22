@@ -19,10 +19,11 @@ namespace TPFINAL_Craicnet
     public partial class Administrador : Form
     {
         //Propiedades
-        public List<cPelicula> lista_peliculas = new List<cPelicula>();
+        /*public List<cPelicula> lista_peliculas = new List<cPelicula>();
         public List<cPromo> lista_promociones = new List<cPromo>();
         public DataTable peliculas = new DataTable();
         public DataTable peliculas_promo = new DataTable();
+        */
         public cUsuario Admin_Activo;
 
         //Cliente Form 
@@ -35,11 +36,11 @@ namespace TPFINAL_Craicnet
             this.CenterToScreen();
         }
 
-        public Administrador(cUsuario admin, List<cPelicula> lista, DataTable table, List<cPromo> promociones, DataTable table_promo)
+        /*public Administrador(cUsuario admin, List<cPelicula> lista, DataTable table, List<cPromo> promociones, DataTable table_promo)
         {
             InitializeComponent();
 
-            lista_peliculas = lista;
+            lista_peliculas = Inicio.lista_peliculas;
             peliculas = table;
             lista_promociones = promociones;
             peliculas_promo = table_promo;
@@ -48,12 +49,21 @@ namespace TPFINAL_Craicnet
             this.Width = 1200;
             this.Height = 700;
             this.CenterToScreen();
+        }*/
+
+        public Administrador(cUsuario admin)
+        {
+            InitializeComponent();
+            Admin_Activo = admin;
+            this.Width = 1200;
+            this.Height = 700;
+            this.CenterToScreen();
         }
 
         private void Administrador_Load(object sender, EventArgs e)
         {
-            grid_peliculas.DataSource = peliculas;
-            Grid_promociones.DataSource = peliculas_promo;
+            grid_peliculas.DataSource = Inicio.peliculas;
+            Grid_promociones.DataSource = Inicio.promociones;
         }
 
         //Menu Strip
@@ -80,8 +90,8 @@ namespace TPFINAL_Craicnet
 
                     private void estadísticasToolStripMenuItem_Click(object sender, EventArgs e)
                     {
-                        Estadisticas estadisticas = new Estadisticas(lista_peliculas);
-                        cPelicula.Actualizar(lista_peliculas);
+                        Estadisticas estadisticas = new Estadisticas(Inicio.lista_peliculas);
+                        cPelicula.Actualizar(Inicio.lista_peliculas);
                         estadisticas.Show(this);
                     }
 
@@ -133,12 +143,12 @@ namespace TPFINAL_Craicnet
                                 {
                                     if (sortOrder == SortOrder.Ascending)
                                     {
-                                        peliculas = Inicio.ToDataTable<cPelicula>(lista_peliculas.OrderBy(x => x.Nombre).ToList());
+                                        peliculas = Inicio.ToDataTable<cPelicula>(Inicio.lista_peliculas.OrderBy(x => x.Nombre).ToList());
                                         grid_peliculas.DataSource = peliculas;
                                     }
                                     else
                                     {
-                                        peliculas = Inicio.ToDataTable<cPelicula>(lista_peliculas.OrderByDescending(x => x.Nombre).ToList());
+                                        peliculas = Inicio.ToDataTable<cPelicula>(Inicio.lista_peliculas.OrderByDescending(x => x.Nombre).ToList());
                                         grid_peliculas.DataSource = peliculas;
                                     }
                                     break;
@@ -147,12 +157,12 @@ namespace TPFINAL_Craicnet
                                 {
                                     if (sortOrder == SortOrder.Ascending)
                                     {
-                                        peliculas = Inicio.ToDataTable<cPelicula>(lista_peliculas.OrderBy(x => x.Precio).ToList());
+                                        peliculas = Inicio.ToDataTable<cPelicula>(Inicio.lista_peliculas.OrderBy(x => x.Precio).ToList());
                                         grid_peliculas.DataSource = peliculas;
                                     }
                                     else
                                     {
-                                        peliculas = Inicio.ToDataTable<cPelicula>(lista_peliculas.OrderByDescending(x => x.Precio).ToList());
+                                        peliculas = Inicio.ToDataTable<cPelicula>(Inicio.lista_peliculas.OrderByDescending(x => x.Precio).ToList());
                                         grid_peliculas.DataSource = peliculas;
                                     }
                                     break;
@@ -161,12 +171,12 @@ namespace TPFINAL_Craicnet
                                 {
                                     if (sortOrder == SortOrder.Ascending)
                                     {
-                                        peliculas = Inicio.ToDataTable<cPelicula>(lista_peliculas.OrderBy(x => x.Puntaje).ToList());
+                                        peliculas = Inicio.ToDataTable<cPelicula>(Inicio.lista_peliculas.OrderBy(x => x.Puntaje).ToList());
                                         grid_peliculas.DataSource = peliculas;
                                     }
                                     else
                                     {
-                                        peliculas = Inicio.ToDataTable<cPelicula>(lista_peliculas.OrderByDescending(x => x.Puntaje).ToList());
+                                        peliculas = Inicio.ToDataTable<cPelicula>(Inicio.lista_peliculas.OrderByDescending(x => x.Puntaje).ToList());
                                         grid_peliculas.DataSource = peliculas;
                                     }
                                     break;
@@ -175,12 +185,12 @@ namespace TPFINAL_Craicnet
                                 {
                                     if (sortOrder == SortOrder.Ascending)
                                     {
-                                        peliculas = Inicio.ToDataTable<cPelicula>(lista_peliculas.OrderBy(x => x.Genero).ToList());
+                                        peliculas = Inicio.ToDataTable<cPelicula>(Inicio.lista_peliculas.OrderBy(x => x.Genero).ToList());
                                         grid_peliculas.DataSource = peliculas;
                                     }
                                     else
                                     {
-                                        peliculas = Inicio.ToDataTable<cPelicula>(lista_peliculas.OrderByDescending(x => x.Genero).ToList());
+                                        peliculas = Inicio.ToDataTable<cPelicula>(Inicio.lista_peliculas.OrderByDescending(x => x.Genero).ToList());
                                         grid_peliculas.DataSource = peliculas;
                                     }
                                     break;
@@ -189,12 +199,12 @@ namespace TPFINAL_Craicnet
                                 {
                                     if (sortOrder == SortOrder.Ascending)
                                     {
-                                        peliculas = Inicio.ToDataTable<cPelicula>(lista_peliculas.OrderBy(x => x.Año).ToList());
+                                        peliculas = Inicio.ToDataTable<cPelicula>(Inicio.lista_peliculas.OrderBy(x => x.Año).ToList());
                                         grid_peliculas.DataSource = peliculas;
                                     }
                                     else
                                     {
-                                        peliculas = Inicio.ToDataTable<cPelicula>(lista_peliculas.OrderByDescending(x => x.Año).ToList());
+                                        peliculas = Inicio.ToDataTable<cPelicula>(Inicio.lista_peliculas.OrderByDescending(x => x.Año).ToList());
                                         grid_peliculas.DataSource = peliculas;
                                     }
                                     break;
@@ -203,12 +213,12 @@ namespace TPFINAL_Craicnet
                                 {
                                     if (sortOrder == SortOrder.Ascending)
                                     {
-                                        peliculas = Inicio.ToDataTable<cPelicula>(lista_peliculas.OrderBy(x => x.Director).ToList());
+                                        peliculas = Inicio.ToDataTable<cPelicula>(Inicio.lista_peliculas.OrderBy(x => x.Director).ToList());
                                         grid_peliculas.DataSource = peliculas;
                                     }
                                     else
                                     {
-                                        peliculas = Inicio.ToDataTable<cPelicula>(lista_peliculas.OrderByDescending(x => x.Director).ToList());
+                                        peliculas = Inicio.ToDataTable<cPelicula>(Inicio.lista_peliculas.OrderByDescending(x => x.Director).ToList());
                                         grid_peliculas.DataSource = peliculas;
                                     }
                                     break;
@@ -217,12 +227,12 @@ namespace TPFINAL_Craicnet
                                 {
                                     if (sortOrder == SortOrder.Ascending)
                                     {
-                                        peliculas = Inicio.ToDataTable<cPelicula>(lista_peliculas.OrderBy(x => x.Actores).ToList());
+                                        peliculas = Inicio.ToDataTable<cPelicula>(Inicio.lista_peliculas.OrderBy(x => x.Actores).ToList());
                                         grid_peliculas.DataSource = peliculas;
                                     }
                                     else
                                     {
-                                        peliculas = Inicio.ToDataTable<cPelicula>(lista_peliculas.OrderByDescending(x => x.Actores).ToList());
+                                        peliculas = Inicio.ToDataTable<cPelicula>(Inicio.lista_peliculas.OrderByDescending(x => x.Actores).ToList());
                                         grid_peliculas.DataSource = peliculas;
                                     }
                                     break;
@@ -250,21 +260,54 @@ namespace TPFINAL_Craicnet
                         if(cell != null)
                         {
                             DataGridViewRow row = cell.OwningRow;
+                            cPelicula aux = Inicio.lista_peliculas.Find(x => x.Nombre.Equals(row.Cells[0].Value.ToString()));
+                            
                             if (radio_editar.Checked == true|| radio_eliminar.Checked == true)
                             {
-                                txt_pelicula.Text = row.Cells[0].Value.ToString();
-                                txt_director.Text = row.Cells[1].Value.ToString();
-                                txt_precio.Text = row.Cells[2].Value.ToString();
-                                txt_genero.Text = row.Cells[4].Value.ToString();
-                                txt_año.Text = row.Cells[5].Value.ToString();
-                                txt_actores.Text = row.Cells[6].Value.ToString();
-                                txt_sinopsis.Text = row.Cells[7].Value.ToString();
+                                txt_pelicula.Text = aux.Nombre.ToString();
+                                txt_director.Text = aux.Director.ToString();
+                                txt_precio.Text = aux.Precio.ToString();
+                                txt_genero.Text = aux.Genero.ToString();
+                                txt_año.Text = aux.Año.ToString();
+                                txt_actores.Text = aux.Actores.ToString();
+                                txt_sinopsis.Text = aux.Sinopsis.ToString();                            
                             }else{
-                            txt_pelicula_promo.Text = row.Cells[0].Value.ToString();
-                            txt_director_promo.Text = row.Cells[1].Value.ToString();
-                            txt_precio_promo.Text = row.Cells[2].Value.ToString();
-                            txt_genero_promo.Text = row.Cells[4].Value.ToString();
-                            txt_año_promo.Text = row.Cells[5].Value.ToString();
+
+                            txt_pelicula_promo.Text = aux.Nombre.ToString();
+                            txt_director_promo.Text = aux.Director.ToString();
+                            txt_precio_promo.Text = aux.Precio.ToString();
+                            txt_genero_promo.Text = aux.Genero.ToString();
+                            txt_año_promo.Text = aux.Año.ToString();
+
+                }
+                        }
+                    }
+
+                    private void Grid_promociones_SelectionChanged(object sender, EventArgs e)
+                    {
+                        DataGridViewCell cell = null;
+
+                        foreach (DataGridViewCell selectedCell in Grid_promociones.SelectedCells)
+                        {
+                            cell = selectedCell;
+                            break;
+                        }
+
+                        if (cell != null)
+                        {
+                            DataGridViewRow row = cell.OwningRow;
+
+                            if (radio_editar.Checked == true || radio_eliminar.Checked == true)
+                            {
+                                cPromo aux = Inicio.lista_promociones.Find(x => x.Nombre.Equals(row.Cells[0].Value.ToString()));
+                                txt_pelicula.Text = aux.Nombre.ToString(); ;
+                                txt_director.Text = aux.Director.ToString();
+                                txt_precio.Text = aux.Precio_descuento.ToString();
+                                txt_genero.Text = aux.Genero.ToString();
+                                txt_año.Text = aux.Año.ToString();
+                                txt_actores.Text = aux.Actores.ToString();
+                                txt_sinopsis.Text = aux.Sinopsis.ToString();
+
                             }
                         }
                     }
@@ -273,15 +316,15 @@ namespace TPFINAL_Craicnet
 
                     private void btn_promocion_Click(object sender, EventArgs e)
                     {
-                        cPelicula peli_aux = lista_peliculas.Find(x => x.Nombre.Contains(txt_pelicula_promo.Text));
+                        cPelicula peli_aux = Inicio.lista_peliculas.Find(x => x.Nombre.Contains(txt_pelicula_promo.Text));
                         cPromo promo_aux = new cPromo(peli_aux, txt_descuento_promo.Text.ToString(), fecha_limiteDateTimePicker.Value.Date.ToString());
-                        lista_peliculas.Remove(peli_aux);
-                        lista_promociones.Add(promo_aux);
-                        peliculas = Inicio.ToDataTable<cPelicula>(lista_peliculas);
-                        grid_peliculas.DataSource = peliculas;
+                        Inicio.lista_peliculas.Remove(peli_aux);
+                        Inicio.lista_promociones.Add(promo_aux);
+                        Inicio.peliculas = Inicio.ToDataTable<cPelicula>(Inicio.lista_peliculas);
+                        grid_peliculas.DataSource = Inicio.peliculas;
 
-                        peliculas_promo = Inicio.ToDataTable<cPromo>(lista_promociones);
-                        Grid_promociones.DataSource = peliculas_promo;
+                        Inicio.promociones = Inicio.ToDataTable<cPromo>(Inicio.lista_promociones);
+                        Grid_promociones.DataSource = Inicio.promociones;
                     }
 
                     private void btn_Agregar_Click(object sender, EventArgs e)
@@ -312,9 +355,9 @@ namespace TPFINAL_Craicnet
 
                         cPelicula peli_aux = new cPelicula(txt_pelicula.Text.ToString(), txt_actores.Text.ToString(), double.Parse(txt_precio.Text.ToString()), txt_director.Text.ToString(), txt_genero.Text.ToString(), txt_año.Text.ToString(), txt_sinopsis.Text.ToString());
 
-                        lista_peliculas.Add(peli_aux);
+                        Inicio.lista_peliculas.Add(peli_aux);
 
-                        peliculas = Inicio.ToDataTable<cPelicula>(lista_peliculas);
+                        peliculas = Inicio.ToDataTable<cPelicula>(Inicio.lista_peliculas);
 
                         grid_peliculas.DataSource = peliculas;
 
@@ -326,14 +369,14 @@ namespace TPFINAL_Craicnet
 
                     private void btn_eliminar_Click(object sender, EventArgs e)
                     {
-                        cPelicula eliminar = lista_peliculas.Find(x => x.Nombre.Contains(txt_pelicula.Text));
-                        if (lista_peliculas.Remove(eliminar))
+                        cPelicula eliminar = Inicio.lista_peliculas.Find(x => x.Nombre.Contains(txt_pelicula.Text));
+                        if (Inicio.lista_peliculas.Remove(eliminar))
                             MessageBox.Show("La pelicula " + eliminar.Nombre + " ha sido eliminada correctamente.");
                         else
                             MessageBox.Show("La pelicula no ha sido eliminada");
 
-                        peliculas = Inicio.ToDataTable<cPelicula>(lista_peliculas);
-                        grid_peliculas.DataSource = peliculas;
+                        Inicio.peliculas = Inicio.ToDataTable<cPelicula>(Inicio.lista_peliculas);
+                        grid_peliculas.DataSource = Inicio.peliculas;
 
                     }
 
@@ -390,7 +433,7 @@ namespace TPFINAL_Craicnet
                         btn_editar.Enabled = false;
                     }
 
-        private void button1_Click(object sender, EventArgs e)
+                    private void button1_Click(object sender, EventArgs e)
         {
 /*
             using (var sw = new StreamWriter(AppDomain.CurrentDomain.BaseDirectory + "\\hola.csv"))
@@ -405,7 +448,39 @@ namespace TPFINAL_Craicnet
                 }
 
     */
-            }
+            
+        }
+
+                    private void btn_editar_Click(object sender, EventArgs e)
+                    {
+                        if (MessageBox.Show("Esta seguro que quiere editar esta pelicula?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        {
+                            if(tabControl1.SelectedTab.Text == "Peliculas") {
+
+                            //TODO: Ver la forma de buscar el titulo de la pelicula en la lista y luego hacer el cambio de los datos
+                                                                                   
+                            Inicio.lista_peliculas.FirstOrDefault(x => x.Nombre.Equals("")).Precio = 10;   
+                            
+                            //if(peli != null)
+                            //{
+                                
+                            //}
+
+                            Inicio.peliculas = Inicio.ToDataTable(Inicio.lista_peliculas);
+
+                            grid_peliculas.DataSource = Inicio.peliculas;
+
+                            }
+                               
+                            if (tabControl1.SelectedTab.Text == "Promociones") { 
+
+                            }
+                                
+                        }
+                        else
+                        {
+                            MessageBox.Show("No se ha realizado el cambio");
+                        }
         }
     }
 }
