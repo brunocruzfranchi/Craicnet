@@ -259,8 +259,8 @@ namespace TPFINAL_Craicnet
 
                         if(cell != null)
                         {
-                            DataGridViewRow row = cell.OwningRow;
-                            cPelicula aux = Inicio.lista_peliculas.Find(x => x.Nombre.Equals(row.Cells[0].Value.ToString()));
+                            DataGridViewRow row_pelicula = cell.OwningRow;
+                            cPelicula aux = Inicio.lista_peliculas.Find(x => x.Nombre.Equals(row_pelicula.Cells[0].Value.ToString()));
                             
                             if (radio_editar.Checked == true|| radio_eliminar.Checked == true)
                             {
@@ -279,7 +279,7 @@ namespace TPFINAL_Craicnet
                             txt_genero_promo.Text = aux.Genero.ToString();
                             txt_año_promo.Text = aux.Año.ToString();
 
-                }
+                            }
                         }
                     }
 
@@ -295,11 +295,11 @@ namespace TPFINAL_Craicnet
 
                         if (cell != null)
                         {
-                            DataGridViewRow row = cell.OwningRow;
+                            DataGridViewRow row_promociones = cell.OwningRow;
 
                             if (radio_editar.Checked == true || radio_eliminar.Checked == true)
                             {
-                                cPromo aux = Inicio.lista_promociones.Find(x => x.Nombre.Equals(row.Cells[0].Value.ToString()));
+                                cPromo aux = Inicio.lista_promociones.Find(x => x.Nombre.Equals(row_promociones.Cells[0].Value.ToString()));
                                 txt_pelicula.Text = aux.Nombre.ToString(); ;
                                 txt_director.Text = aux.Director.ToString();
                                 txt_precio.Text = aux.Precio_descuento.ToString();
@@ -434,24 +434,24 @@ namespace TPFINAL_Craicnet
                     }
 
                     private void button1_Click(object sender, EventArgs e)
-        {
-/*
-            using (var sw = new StreamWriter(AppDomain.CurrentDomain.BaseDirectory + "\\hola.csv"))
-            {
+                    {
+                        /*
+                        using (var sw = new StreamWriter(AppDomain.CurrentDomain.BaseDirectory + "\\hola.csv"))
+                        {
 
-                var writer = new CsvWriter(sw);
-                writer.WriteHeader(typeof(cPromo));
+                            var writer = new CsvWriter(sw);
+                            writer.WriteHeader(typeof(cPromo));
 
-                foreach (cPromo s in cPromoBindingSource.DataSource as List<cPromo>)
-                {
-                    writer.WriteRecord(s);
-                }
+                            foreach (cPromo s in cPromoBindingSource.DataSource as List<cPromo>)
+                            {
+                                writer.WriteRecord(s);
+                            }
 
-    */
+                        */
             
-        }
+                    }
 
-                    private void btn_editar_Click(object sender, EventArgs e)
+                    public void btn_editar_Click(object sender, EventArgs e)
                     {
                         if (MessageBox.Show("Esta seguro que quiere editar esta pelicula?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                         {
@@ -459,16 +459,16 @@ namespace TPFINAL_Craicnet
 
                             //TODO: Ver la forma de buscar el titulo de la pelicula en la lista y luego hacer el cambio de los datos
                                                                                    
-                            Inicio.lista_peliculas.FirstOrDefault(x => x.Nombre.Equals("")).Precio = 10;   
+                            //Inicio.lista_peliculas.FirstOrDefault();   
                             
                             //if(peli != null)
                             //{
                                 
                             //}
 
-                            Inicio.peliculas = Inicio.ToDataTable(Inicio.lista_peliculas);
+                            //Inicio.peliculas = Inicio.ToDataTable(Inicio.lista_peliculas);
 
-                            grid_peliculas.DataSource = Inicio.peliculas;
+                            //grid_peliculas.DataSource = Inicio.peliculas;
 
                             }
                                
