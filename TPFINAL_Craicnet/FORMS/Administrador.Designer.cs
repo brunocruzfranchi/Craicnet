@@ -30,12 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.Label fecha_limiteLabel;
-            System.Windows.Forms.Label nombreLabel1;
-            System.Windows.Forms.Label precioLabel1;
-            System.Windows.Forms.Label puntajeLabel1;
-            System.Windows.Forms.Label sinopsisLabel1;
-            System.Windows.Forms.Label vistos_AnioLabel1;
-            System.Windows.Forms.Label vistos_MesLabel1;
             System.Windows.Forms.Label label3;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Administrador));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -45,6 +39,10 @@
             this.cerrarSesiónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.estadísticasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupbox_agregar = new System.Windows.Forms.GroupBox();
+            this.txt_descuento = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.dateTimePicker_fecha_limite = new System.Windows.Forms.DateTimePicker();
+            this.label4 = new System.Windows.Forms.Label();
             this.btn_editar = new System.Windows.Forms.Button();
             this.radio_editar = new System.Windows.Forms.RadioButton();
             this.txt_sinopsis = new System.Windows.Forms.TextBox();
@@ -69,6 +67,24 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPeliculas = new System.Windows.Forms.TabPage();
             this.grid_peliculas = new System.Windows.Forms.DataGridView();
+            this.tabPromociones = new System.Windows.Forms.TabPage();
+            this.Grid_promociones = new System.Windows.Forms.DataGridView();
+            this.gbox_agregar = new System.Windows.Forms.GroupBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txt_pelicula_promo = new System.Windows.Forms.TextBox();
+            this.txt_director_promo = new System.Windows.Forms.TextBox();
+            this.txt_precio_promo = new System.Windows.Forms.TextBox();
+            this.txt_genero_promo = new System.Windows.Forms.TextBox();
+            this.txt_año_promo = new System.Windows.Forms.TextBox();
+            this.btn_promocion = new System.Windows.Forms.Button();
+            this.fecha_limiteDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.txt_descuento_promo = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.gbox_promocion = new System.Windows.Forms.GroupBox();
             this.NombreColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DirectorColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PrecioColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -78,8 +94,6 @@
             this.ActoresColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sinopsisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cPeliculaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tabPromociones = new System.Windows.Forms.TabPage();
-            this.Grid_promociones = new System.Windows.Forms.DataGridView();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.directorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.generoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -97,39 +111,7 @@
             this.alqAnioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vistosAnioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cPromoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.gbox_promocion = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.txt_descuento_promo = new System.Windows.Forms.TextBox();
-            this.nombreTextBox1 = new System.Windows.Forms.TextBox();
-            this.precioTextBox1 = new System.Windows.Forms.TextBox();
-            this.puntajeTextBox1 = new System.Windows.Forms.TextBox();
-            this.sinopsisTextBox1 = new System.Windows.Forms.TextBox();
-            this.vistos_AnioTextBox1 = new System.Windows.Forms.TextBox();
-            this.vistos_MesTextBox1 = new System.Windows.Forms.TextBox();
-            this.fecha_limiteDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.btn_promocion = new System.Windows.Forms.Button();
-            this.txt_año_promo = new System.Windows.Forms.TextBox();
-            this.txt_genero_promo = new System.Windows.Forms.TextBox();
-            this.txt_precio_promo = new System.Windows.Forms.TextBox();
-            this.txt_director_promo = new System.Windows.Forms.TextBox();
-            this.txt_pelicula_promo = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.gbox_agregar = new System.Windows.Forms.GroupBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.dateTimePicker_fecha_limite = new System.Windows.Forms.DateTimePicker();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txt_descuento = new System.Windows.Forms.TextBox();
             fecha_limiteLabel = new System.Windows.Forms.Label();
-            nombreLabel1 = new System.Windows.Forms.Label();
-            precioLabel1 = new System.Windows.Forms.Label();
-            puntajeLabel1 = new System.Windows.Forms.Label();
-            sinopsisLabel1 = new System.Windows.Forms.Label();
-            vistos_AnioLabel1 = new System.Windows.Forms.Label();
-            vistos_MesLabel1 = new System.Windows.Forms.Label();
             label3 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.groupbox_agregar.SuspendLayout();
@@ -140,87 +122,13 @@
             this.tabControl1.SuspendLayout();
             this.tabPeliculas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid_peliculas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cPeliculaBindingSource)).BeginInit();
             this.tabPromociones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Grid_promociones)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cPromoBindingSource)).BeginInit();
-            this.gbox_promocion.SuspendLayout();
             this.gbox_agregar.SuspendLayout();
+            this.gbox_promocion.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cPeliculaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cPromoBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // fecha_limiteLabel
-            // 
-            fecha_limiteLabel.AutoSize = true;
-            fecha_limiteLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            fecha_limiteLabel.Location = new System.Drawing.Point(45, 315);
-            fecha_limiteLabel.Name = "fecha_limiteLabel";
-            fecha_limiteLabel.Size = new System.Drawing.Size(87, 17);
-            fecha_limiteLabel.TabIndex = 27;
-            fecha_limiteLabel.Text = "Fecha limite:";
-            // 
-            // nombreLabel1
-            // 
-            nombreLabel1.AutoSize = true;
-            nombreLabel1.Location = new System.Drawing.Point(38, 650);
-            nombreLabel1.Name = "nombreLabel1";
-            nombreLabel1.Size = new System.Drawing.Size(47, 13);
-            nombreLabel1.TabIndex = 60;
-            nombreLabel1.Text = "Nombre:";
-            // 
-            // precioLabel1
-            // 
-            precioLabel1.AutoSize = true;
-            precioLabel1.Location = new System.Drawing.Point(38, 676);
-            precioLabel1.Name = "precioLabel1";
-            precioLabel1.Size = new System.Drawing.Size(40, 13);
-            precioLabel1.TabIndex = 62;
-            precioLabel1.Text = "Precio:";
-            // 
-            // puntajeLabel1
-            // 
-            puntajeLabel1.AutoSize = true;
-            puntajeLabel1.Location = new System.Drawing.Point(38, 702);
-            puntajeLabel1.Name = "puntajeLabel1";
-            puntajeLabel1.Size = new System.Drawing.Size(46, 13);
-            puntajeLabel1.TabIndex = 64;
-            puntajeLabel1.Text = "Puntaje:";
-            // 
-            // sinopsisLabel1
-            // 
-            sinopsisLabel1.AutoSize = true;
-            sinopsisLabel1.Location = new System.Drawing.Point(38, 728);
-            sinopsisLabel1.Name = "sinopsisLabel1";
-            sinopsisLabel1.Size = new System.Drawing.Size(49, 13);
-            sinopsisLabel1.TabIndex = 66;
-            sinopsisLabel1.Text = "Sinopsis:";
-            // 
-            // vistos_AnioLabel1
-            // 
-            vistos_AnioLabel1.AutoSize = true;
-            vistos_AnioLabel1.Location = new System.Drawing.Point(38, 754);
-            vistos_AnioLabel1.Name = "vistos_AnioLabel1";
-            vistos_AnioLabel1.Size = new System.Drawing.Size(62, 13);
-            vistos_AnioLabel1.TabIndex = 68;
-            vistos_AnioLabel1.Text = "Vistos Anio:";
-            // 
-            // vistos_MesLabel1
-            // 
-            vistos_MesLabel1.AutoSize = true;
-            vistos_MesLabel1.Location = new System.Drawing.Point(38, 780);
-            vistos_MesLabel1.Name = "vistos_MesLabel1";
-            vistos_MesLabel1.Size = new System.Drawing.Size(61, 13);
-            vistos_MesLabel1.TabIndex = 70;
-            vistos_MesLabel1.Text = "Vistos Mes:";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            label3.Location = new System.Drawing.Point(55, 280);
-            label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(76, 17);
-            label3.TabIndex = 72;
-            label3.Text = "Descuento";
             // 
             // menuStrip1
             // 
@@ -247,21 +155,21 @@
             // agregarEliminarToolStripMenuItem
             // 
             this.agregarEliminarToolStripMenuItem.Name = "agregarEliminarToolStripMenuItem";
-            this.agregarEliminarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.agregarEliminarToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.agregarEliminarToolStripMenuItem.Text = "Agregar/Eliminar";
             this.agregarEliminarToolStripMenuItem.Click += new System.EventHandler(this.agregarEliminarToolStripMenuItem_Click);
             // 
             // promocionesToolStripMenuItem
             // 
             this.promocionesToolStripMenuItem.Name = "promocionesToolStripMenuItem";
-            this.promocionesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.promocionesToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.promocionesToolStripMenuItem.Text = "Promociones";
             this.promocionesToolStripMenuItem.Click += new System.EventHandler(this.promocionesToolStripMenuItem_Click);
             // 
             // cerrarSesiónToolStripMenuItem
             // 
             this.cerrarSesiónToolStripMenuItem.Name = "cerrarSesiónToolStripMenuItem";
-            this.cerrarSesiónToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cerrarSesiónToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.cerrarSesiónToolStripMenuItem.Text = "Cerrar Sesión";
             this.cerrarSesiónToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesiónToolStripMenuItem_Click);
             // 
@@ -305,6 +213,42 @@
             this.groupbox_agregar.Size = new System.Drawing.Size(422, 640);
             this.groupbox_agregar.TabIndex = 0;
             this.groupbox_agregar.TabStop = false;
+            // 
+            // txt_descuento
+            // 
+            this.txt_descuento.Enabled = false;
+            this.txt_descuento.Location = new System.Drawing.Point(141, 194);
+            this.txt_descuento.Name = "txt_descuento";
+            this.txt_descuento.Size = new System.Drawing.Size(200, 20);
+            this.txt_descuento.TabIndex = 28;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label5.Location = new System.Drawing.Point(44, 194);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(76, 17);
+            this.label5.TabIndex = 27;
+            this.label5.Text = "Descuento";
+            // 
+            // dateTimePicker_fecha_limite
+            // 
+            this.dateTimePicker_fecha_limite.Enabled = false;
+            this.dateTimePicker_fecha_limite.Location = new System.Drawing.Point(141, 231);
+            this.dateTimePicker_fecha_limite.Name = "dateTimePicker_fecha_limite";
+            this.dateTimePicker_fecha_limite.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker_fecha_limite.TabIndex = 26;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label4.Location = new System.Drawing.Point(34, 231);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(88, 17);
+            this.label4.TabIndex = 25;
+            this.label4.Text = "Fecha Limite";
             // 
             // btn_editar
             // 
@@ -512,8 +456,8 @@
             // 
             // split_promo.Panel2
             // 
-            this.split_promo.Panel2.Controls.Add(this.groupbox_agregar);
             this.split_promo.Panel2.Controls.Add(this.gbox_promocion);
+            this.split_promo.Panel2.Controls.Add(this.groupbox_agregar);
             this.split_promo.Size = new System.Drawing.Size(1152, 640);
             this.split_promo.SplitterDistance = 726;
             this.split_promo.TabIndex = 1;
@@ -528,6 +472,7 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(726, 640);
             this.tabControl1.TabIndex = 0;
+            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
             // tabPeliculas
             // 
@@ -539,7 +484,6 @@
             this.tabPeliculas.TabIndex = 0;
             this.tabPeliculas.Text = "Peliculas";
             this.tabPeliculas.UseVisualStyleBackColor = true;
-            this.tabPeliculas.Click += new System.EventHandler(this.tabPeliculas_Click);
             // 
             // grid_peliculas
             // 
@@ -564,6 +508,234 @@
             this.grid_peliculas.Size = new System.Drawing.Size(712, 608);
             this.grid_peliculas.TabIndex = 0;
             this.grid_peliculas.SelectionChanged += new System.EventHandler(this.grid_peliculas_SelectionChanged);
+            // 
+            // tabPromociones
+            // 
+            this.tabPromociones.Controls.Add(this.Grid_promociones);
+            this.tabPromociones.Location = new System.Drawing.Point(4, 22);
+            this.tabPromociones.Name = "tabPromociones";
+            this.tabPromociones.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPromociones.Size = new System.Drawing.Size(718, 614);
+            this.tabPromociones.TabIndex = 1;
+            this.tabPromociones.Text = "Promociones";
+            this.tabPromociones.UseVisualStyleBackColor = true;
+            // 
+            // Grid_promociones
+            // 
+            this.Grid_promociones.AllowUserToAddRows = false;
+            this.Grid_promociones.AllowUserToDeleteRows = false;
+            this.Grid_promociones.AutoGenerateColumns = false;
+            this.Grid_promociones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Grid_promociones.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.nombreDataGridViewTextBoxColumn,
+            this.directorDataGridViewTextBoxColumn,
+            this.generoDataGridViewTextBoxColumn,
+            this.añoDataGridViewTextBoxColumn,
+            this.preciodescuentoDataGridViewTextBoxColumn,
+            this.porcentajeDescuentoDataGridViewTextBoxColumn,
+            this.fechalimiteDataGridViewTextBoxColumn,
+            this.actoresDataGridViewTextBoxColumn,
+            this.precioDataGridViewTextBoxColumn,
+            this.puntajeDataGridViewTextBoxColumn,
+            this.sinopsisDataGridViewTextBoxColumn1,
+            this.fechaDevDataGridViewTextBoxColumn,
+            this.alqMesDataGridViewTextBoxColumn,
+            this.vistosMesDataGridViewTextBoxColumn,
+            this.alqAnioDataGridViewTextBoxColumn,
+            this.vistosAnioDataGridViewTextBoxColumn});
+            this.Grid_promociones.DataSource = this.cPromoBindingSource;
+            this.Grid_promociones.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Grid_promociones.Location = new System.Drawing.Point(3, 3);
+            this.Grid_promociones.Name = "Grid_promociones";
+            this.Grid_promociones.ReadOnly = true;
+            this.Grid_promociones.Size = new System.Drawing.Size(712, 608);
+            this.Grid_promociones.TabIndex = 1;
+            this.Grid_promociones.SelectionChanged += new System.EventHandler(this.Grid_promociones_SelectionChanged);
+            // 
+            // gbox_agregar
+            // 
+            this.gbox_agregar.AutoSize = true;
+            this.gbox_agregar.Controls.Add(this.split_promo);
+            this.gbox_agregar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gbox_agregar.Location = new System.Drawing.Point(0, 24);
+            this.gbox_agregar.Name = "gbox_agregar";
+            this.gbox_agregar.Size = new System.Drawing.Size(1158, 659);
+            this.gbox_agregar.TabIndex = 2;
+            this.gbox_agregar.TabStop = false;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label9.Location = new System.Drawing.Point(71, 103);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(57, 17);
+            this.label9.TabIndex = 5;
+            this.label9.Text = "Pelicula";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label8.Location = new System.Drawing.Point(71, 141);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(58, 17);
+            this.label8.TabIndex = 6;
+            this.label8.Text = "Director";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label7.Location = new System.Drawing.Point(72, 178);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(56, 17);
+            this.label7.TabIndex = 7;
+            this.label7.Text = "Genero";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label6.Location = new System.Drawing.Point(95, 212);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(33, 17);
+            this.label6.TabIndex = 8;
+            this.label6.Text = "Año";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label10.Location = new System.Drawing.Point(80, 247);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(48, 17);
+            this.label10.TabIndex = 9;
+            this.label10.Text = "Precio";
+            // 
+            // txt_pelicula_promo
+            // 
+            this.txt_pelicula_promo.Enabled = false;
+            this.txt_pelicula_promo.Location = new System.Drawing.Point(148, 102);
+            this.txt_pelicula_promo.Name = "txt_pelicula_promo";
+            this.txt_pelicula_promo.Size = new System.Drawing.Size(188, 20);
+            this.txt_pelicula_promo.TabIndex = 10;
+            // 
+            // txt_director_promo
+            // 
+            this.txt_director_promo.Enabled = false;
+            this.txt_director_promo.Location = new System.Drawing.Point(148, 143);
+            this.txt_director_promo.Name = "txt_director_promo";
+            this.txt_director_promo.Size = new System.Drawing.Size(188, 20);
+            this.txt_director_promo.TabIndex = 11;
+            // 
+            // txt_precio_promo
+            // 
+            this.txt_precio_promo.Enabled = false;
+            this.txt_precio_promo.Location = new System.Drawing.Point(148, 246);
+            this.txt_precio_promo.Name = "txt_precio_promo";
+            this.txt_precio_promo.Size = new System.Drawing.Size(188, 20);
+            this.txt_precio_promo.TabIndex = 12;
+            // 
+            // txt_genero_promo
+            // 
+            this.txt_genero_promo.Enabled = false;
+            this.txt_genero_promo.Location = new System.Drawing.Point(148, 178);
+            this.txt_genero_promo.Name = "txt_genero_promo";
+            this.txt_genero_promo.Size = new System.Drawing.Size(188, 20);
+            this.txt_genero_promo.TabIndex = 13;
+            // 
+            // txt_año_promo
+            // 
+            this.txt_año_promo.Enabled = false;
+            this.txt_año_promo.Location = new System.Drawing.Point(148, 211);
+            this.txt_año_promo.Name = "txt_año_promo";
+            this.txt_año_promo.Size = new System.Drawing.Size(188, 20);
+            this.txt_año_promo.TabIndex = 14;
+            // 
+            // btn_promocion
+            // 
+            this.btn_promocion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btn_promocion.Location = new System.Drawing.Point(54, 368);
+            this.btn_promocion.Name = "btn_promocion";
+            this.btn_promocion.Size = new System.Drawing.Size(285, 35);
+            this.btn_promocion.TabIndex = 15;
+            this.btn_promocion.Text = "Poner en promoción";
+            this.btn_promocion.UseVisualStyleBackColor = true;
+            this.btn_promocion.Click += new System.EventHandler(this.btn_promocion_Click);
+            // 
+            // fecha_limiteDateTimePicker
+            // 
+            this.fecha_limiteDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.cPromoBindingSource, "Fecha_limite", true));
+            this.fecha_limiteDateTimePicker.Location = new System.Drawing.Point(149, 312);
+            this.fecha_limiteDateTimePicker.Name = "fecha_limiteDateTimePicker";
+            this.fecha_limiteDateTimePicker.Size = new System.Drawing.Size(187, 20);
+            this.fecha_limiteDateTimePicker.TabIndex = 28;
+            // 
+            // fecha_limiteLabel
+            // 
+            fecha_limiteLabel.AutoSize = true;
+            fecha_limiteLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            fecha_limiteLabel.Location = new System.Drawing.Point(45, 315);
+            fecha_limiteLabel.Name = "fecha_limiteLabel";
+            fecha_limiteLabel.Size = new System.Drawing.Size(87, 17);
+            fecha_limiteLabel.TabIndex = 27;
+            fecha_limiteLabel.Text = "Fecha limite:";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            label3.Location = new System.Drawing.Point(55, 280);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(76, 17);
+            label3.TabIndex = 72;
+            label3.Text = "Descuento";
+            // 
+            // txt_descuento_promo
+            // 
+            this.txt_descuento_promo.Location = new System.Drawing.Point(149, 279);
+            this.txt_descuento_promo.Name = "txt_descuento_promo";
+            this.txt_descuento_promo.Size = new System.Drawing.Size(187, 20);
+            this.txt_descuento_promo.TabIndex = 73;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(135, 450);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 74;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // gbox_promocion
+            // 
+            this.gbox_promocion.AutoSize = true;
+            this.gbox_promocion.Controls.Add(this.button1);
+            this.gbox_promocion.Controls.Add(this.txt_descuento_promo);
+            this.gbox_promocion.Controls.Add(label3);
+            this.gbox_promocion.Controls.Add(fecha_limiteLabel);
+            this.gbox_promocion.Controls.Add(this.fecha_limiteDateTimePicker);
+            this.gbox_promocion.Controls.Add(this.btn_promocion);
+            this.gbox_promocion.Controls.Add(this.txt_año_promo);
+            this.gbox_promocion.Controls.Add(this.txt_genero_promo);
+            this.gbox_promocion.Controls.Add(this.txt_precio_promo);
+            this.gbox_promocion.Controls.Add(this.txt_director_promo);
+            this.gbox_promocion.Controls.Add(this.txt_pelicula_promo);
+            this.gbox_promocion.Controls.Add(this.label10);
+            this.gbox_promocion.Controls.Add(this.label6);
+            this.gbox_promocion.Controls.Add(this.label7);
+            this.gbox_promocion.Controls.Add(this.label8);
+            this.gbox_promocion.Controls.Add(this.label9);
+            this.gbox_promocion.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gbox_promocion.Location = new System.Drawing.Point(0, 0);
+            this.gbox_promocion.Name = "gbox_promocion";
+            this.gbox_promocion.Size = new System.Drawing.Size(422, 640);
+            this.gbox_promocion.TabIndex = 1;
+            this.gbox_promocion.TabStop = false;
+            this.gbox_promocion.Text = "Promoción";
+            this.gbox_promocion.Visible = false;
             // 
             // NombreColumn
             // 
@@ -639,50 +811,6 @@
             // cPeliculaBindingSource
             // 
             this.cPeliculaBindingSource.DataSource = typeof(TPFINAL_Craicnet.cPelicula);
-            // 
-            // tabPromociones
-            // 
-            this.tabPromociones.Controls.Add(this.Grid_promociones);
-            this.tabPromociones.Location = new System.Drawing.Point(4, 22);
-            this.tabPromociones.Name = "tabPromociones";
-            this.tabPromociones.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPromociones.Size = new System.Drawing.Size(718, 614);
-            this.tabPromociones.TabIndex = 1;
-            this.tabPromociones.Text = "Promociones";
-            this.tabPromociones.UseVisualStyleBackColor = true;
-            this.tabPromociones.Click += new System.EventHandler(this.tabPromociones_Click);
-            // 
-            // Grid_promociones
-            // 
-            this.Grid_promociones.AllowUserToAddRows = false;
-            this.Grid_promociones.AllowUserToDeleteRows = false;
-            this.Grid_promociones.AutoGenerateColumns = false;
-            this.Grid_promociones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Grid_promociones.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.nombreDataGridViewTextBoxColumn,
-            this.directorDataGridViewTextBoxColumn,
-            this.generoDataGridViewTextBoxColumn,
-            this.añoDataGridViewTextBoxColumn,
-            this.preciodescuentoDataGridViewTextBoxColumn,
-            this.porcentajeDescuentoDataGridViewTextBoxColumn,
-            this.fechalimiteDataGridViewTextBoxColumn,
-            this.actoresDataGridViewTextBoxColumn,
-            this.precioDataGridViewTextBoxColumn,
-            this.puntajeDataGridViewTextBoxColumn,
-            this.sinopsisDataGridViewTextBoxColumn1,
-            this.fechaDevDataGridViewTextBoxColumn,
-            this.alqMesDataGridViewTextBoxColumn,
-            this.vistosMesDataGridViewTextBoxColumn,
-            this.alqAnioDataGridViewTextBoxColumn,
-            this.vistosAnioDataGridViewTextBoxColumn});
-            this.Grid_promociones.DataSource = this.cPromoBindingSource;
-            this.Grid_promociones.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Grid_promociones.Location = new System.Drawing.Point(3, 3);
-            this.Grid_promociones.Name = "Grid_promociones";
-            this.Grid_promociones.ReadOnly = true;
-            this.Grid_promociones.Size = new System.Drawing.Size(712, 608);
-            this.Grid_promociones.TabIndex = 1;
-            this.Grid_promociones.SelectionChanged += new System.EventHandler(this.Grid_promociones_SelectionChanged);
             // 
             // nombreDataGridViewTextBoxColumn
             // 
@@ -808,267 +936,6 @@
             // 
             this.cPromoBindingSource.DataSource = typeof(TPFINAL_Craicnet.CLASES.cPromo);
             // 
-            // gbox_promocion
-            // 
-            this.gbox_promocion.AutoSize = true;
-            this.gbox_promocion.Controls.Add(this.button1);
-            this.gbox_promocion.Controls.Add(this.txt_descuento_promo);
-            this.gbox_promocion.Controls.Add(label3);
-            this.gbox_promocion.Controls.Add(nombreLabel1);
-            this.gbox_promocion.Controls.Add(this.nombreTextBox1);
-            this.gbox_promocion.Controls.Add(precioLabel1);
-            this.gbox_promocion.Controls.Add(this.precioTextBox1);
-            this.gbox_promocion.Controls.Add(puntajeLabel1);
-            this.gbox_promocion.Controls.Add(this.puntajeTextBox1);
-            this.gbox_promocion.Controls.Add(sinopsisLabel1);
-            this.gbox_promocion.Controls.Add(this.sinopsisTextBox1);
-            this.gbox_promocion.Controls.Add(vistos_AnioLabel1);
-            this.gbox_promocion.Controls.Add(this.vistos_AnioTextBox1);
-            this.gbox_promocion.Controls.Add(vistos_MesLabel1);
-            this.gbox_promocion.Controls.Add(this.vistos_MesTextBox1);
-            this.gbox_promocion.Controls.Add(fecha_limiteLabel);
-            this.gbox_promocion.Controls.Add(this.fecha_limiteDateTimePicker);
-            this.gbox_promocion.Controls.Add(this.btn_promocion);
-            this.gbox_promocion.Controls.Add(this.txt_año_promo);
-            this.gbox_promocion.Controls.Add(this.txt_genero_promo);
-            this.gbox_promocion.Controls.Add(this.txt_precio_promo);
-            this.gbox_promocion.Controls.Add(this.txt_director_promo);
-            this.gbox_promocion.Controls.Add(this.txt_pelicula_promo);
-            this.gbox_promocion.Controls.Add(this.label10);
-            this.gbox_promocion.Controls.Add(this.label6);
-            this.gbox_promocion.Controls.Add(this.label7);
-            this.gbox_promocion.Controls.Add(this.label8);
-            this.gbox_promocion.Controls.Add(this.label9);
-            this.gbox_promocion.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gbox_promocion.Location = new System.Drawing.Point(0, 0);
-            this.gbox_promocion.Name = "gbox_promocion";
-            this.gbox_promocion.Size = new System.Drawing.Size(422, 640);
-            this.gbox_promocion.TabIndex = 1;
-            this.gbox_promocion.TabStop = false;
-            this.gbox_promocion.Text = "Promoción";
-            this.gbox_promocion.Visible = false;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(135, 450);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 74;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // txt_descuento_promo
-            // 
-            this.txt_descuento_promo.Location = new System.Drawing.Point(149, 279);
-            this.txt_descuento_promo.Name = "txt_descuento_promo";
-            this.txt_descuento_promo.Size = new System.Drawing.Size(187, 20);
-            this.txt_descuento_promo.TabIndex = 73;
-            // 
-            // nombreTextBox1
-            // 
-            this.nombreTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cPromoBindingSource, "Pelicula.Nombre", true));
-            this.nombreTextBox1.Location = new System.Drawing.Point(107, 647);
-            this.nombreTextBox1.Name = "nombreTextBox1";
-            this.nombreTextBox1.Size = new System.Drawing.Size(200, 20);
-            this.nombreTextBox1.TabIndex = 61;
-            // 
-            // precioTextBox1
-            // 
-            this.precioTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cPromoBindingSource, "Pelicula.Precio", true));
-            this.precioTextBox1.Location = new System.Drawing.Point(107, 673);
-            this.precioTextBox1.Name = "precioTextBox1";
-            this.precioTextBox1.Size = new System.Drawing.Size(200, 20);
-            this.precioTextBox1.TabIndex = 63;
-            // 
-            // puntajeTextBox1
-            // 
-            this.puntajeTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cPromoBindingSource, "Pelicula.Puntaje", true));
-            this.puntajeTextBox1.Location = new System.Drawing.Point(107, 699);
-            this.puntajeTextBox1.Name = "puntajeTextBox1";
-            this.puntajeTextBox1.Size = new System.Drawing.Size(200, 20);
-            this.puntajeTextBox1.TabIndex = 65;
-            // 
-            // sinopsisTextBox1
-            // 
-            this.sinopsisTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cPromoBindingSource, "Pelicula.Sinopsis", true));
-            this.sinopsisTextBox1.Location = new System.Drawing.Point(107, 725);
-            this.sinopsisTextBox1.Name = "sinopsisTextBox1";
-            this.sinopsisTextBox1.Size = new System.Drawing.Size(200, 20);
-            this.sinopsisTextBox1.TabIndex = 67;
-            // 
-            // vistos_AnioTextBox1
-            // 
-            this.vistos_AnioTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cPromoBindingSource, "Pelicula.Vistos_Anio", true));
-            this.vistos_AnioTextBox1.Location = new System.Drawing.Point(107, 751);
-            this.vistos_AnioTextBox1.Name = "vistos_AnioTextBox1";
-            this.vistos_AnioTextBox1.Size = new System.Drawing.Size(200, 20);
-            this.vistos_AnioTextBox1.TabIndex = 69;
-            // 
-            // vistos_MesTextBox1
-            // 
-            this.vistos_MesTextBox1.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cPromoBindingSource, "Pelicula.Vistos_Mes", true));
-            this.vistos_MesTextBox1.Location = new System.Drawing.Point(107, 777);
-            this.vistos_MesTextBox1.Name = "vistos_MesTextBox1";
-            this.vistos_MesTextBox1.Size = new System.Drawing.Size(200, 20);
-            this.vistos_MesTextBox1.TabIndex = 71;
-            // 
-            // fecha_limiteDateTimePicker
-            // 
-            this.fecha_limiteDateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.cPromoBindingSource, "Fecha_limite", true));
-            this.fecha_limiteDateTimePicker.Location = new System.Drawing.Point(149, 312);
-            this.fecha_limiteDateTimePicker.Name = "fecha_limiteDateTimePicker";
-            this.fecha_limiteDateTimePicker.Size = new System.Drawing.Size(187, 20);
-            this.fecha_limiteDateTimePicker.TabIndex = 28;
-            // 
-            // btn_promocion
-            // 
-            this.btn_promocion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_promocion.Location = new System.Drawing.Point(54, 368);
-            this.btn_promocion.Name = "btn_promocion";
-            this.btn_promocion.Size = new System.Drawing.Size(285, 35);
-            this.btn_promocion.TabIndex = 15;
-            this.btn_promocion.Text = "Poner en promoción";
-            this.btn_promocion.UseVisualStyleBackColor = true;
-            this.btn_promocion.Click += new System.EventHandler(this.btn_promocion_Click);
-            // 
-            // txt_año_promo
-            // 
-            this.txt_año_promo.Enabled = false;
-            this.txt_año_promo.Location = new System.Drawing.Point(148, 211);
-            this.txt_año_promo.Name = "txt_año_promo";
-            this.txt_año_promo.Size = new System.Drawing.Size(188, 20);
-            this.txt_año_promo.TabIndex = 14;
-            // 
-            // txt_genero_promo
-            // 
-            this.txt_genero_promo.Enabled = false;
-            this.txt_genero_promo.Location = new System.Drawing.Point(148, 178);
-            this.txt_genero_promo.Name = "txt_genero_promo";
-            this.txt_genero_promo.Size = new System.Drawing.Size(188, 20);
-            this.txt_genero_promo.TabIndex = 13;
-            // 
-            // txt_precio_promo
-            // 
-            this.txt_precio_promo.Enabled = false;
-            this.txt_precio_promo.Location = new System.Drawing.Point(148, 246);
-            this.txt_precio_promo.Name = "txt_precio_promo";
-            this.txt_precio_promo.Size = new System.Drawing.Size(188, 20);
-            this.txt_precio_promo.TabIndex = 12;
-            // 
-            // txt_director_promo
-            // 
-            this.txt_director_promo.Enabled = false;
-            this.txt_director_promo.Location = new System.Drawing.Point(148, 143);
-            this.txt_director_promo.Name = "txt_director_promo";
-            this.txt_director_promo.Size = new System.Drawing.Size(188, 20);
-            this.txt_director_promo.TabIndex = 11;
-            // 
-            // txt_pelicula_promo
-            // 
-            this.txt_pelicula_promo.Enabled = false;
-            this.txt_pelicula_promo.Location = new System.Drawing.Point(148, 102);
-            this.txt_pelicula_promo.Name = "txt_pelicula_promo";
-            this.txt_pelicula_promo.Size = new System.Drawing.Size(188, 20);
-            this.txt_pelicula_promo.TabIndex = 10;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label10.Location = new System.Drawing.Point(80, 247);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(48, 17);
-            this.label10.TabIndex = 9;
-            this.label10.Text = "Precio";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label6.Location = new System.Drawing.Point(95, 212);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(33, 17);
-            this.label6.TabIndex = 8;
-            this.label6.Text = "Año";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label7.Location = new System.Drawing.Point(72, 178);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(56, 17);
-            this.label7.TabIndex = 7;
-            this.label7.Text = "Genero";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label8.Location = new System.Drawing.Point(71, 141);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(58, 17);
-            this.label8.TabIndex = 6;
-            this.label8.Text = "Director";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label9.Location = new System.Drawing.Point(71, 103);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(57, 17);
-            this.label9.TabIndex = 5;
-            this.label9.Text = "Pelicula";
-            // 
-            // gbox_agregar
-            // 
-            this.gbox_agregar.AutoSize = true;
-            this.gbox_agregar.Controls.Add(this.split_promo);
-            this.gbox_agregar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gbox_agregar.Location = new System.Drawing.Point(0, 24);
-            this.gbox_agregar.Name = "gbox_agregar";
-            this.gbox_agregar.Size = new System.Drawing.Size(1158, 659);
-            this.gbox_agregar.TabIndex = 2;
-            this.gbox_agregar.TabStop = false;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label4.Location = new System.Drawing.Point(34, 231);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(88, 17);
-            this.label4.TabIndex = 25;
-            this.label4.Text = "Fecha Limite";
-            // 
-            // dateTimePicker_fecha_limite
-            // 
-            this.dateTimePicker_fecha_limite.Enabled = false;
-            this.dateTimePicker_fecha_limite.Location = new System.Drawing.Point(141, 231);
-            this.dateTimePicker_fecha_limite.Name = "dateTimePicker_fecha_limite";
-            this.dateTimePicker_fecha_limite.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker_fecha_limite.TabIndex = 26;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label5.Location = new System.Drawing.Point(44, 194);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(76, 17);
-            this.label5.TabIndex = 27;
-            this.label5.Text = "Descuento";
-            // 
-            // txt_descuento
-            // 
-            this.txt_descuento.Enabled = false;
-            this.txt_descuento.Location = new System.Drawing.Point(141, 194);
-            this.txt_descuento.Name = "txt_descuento";
-            this.txt_descuento.Size = new System.Drawing.Size(200, 20);
-            this.txt_descuento.TabIndex = 28;
-            // 
             // Administrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1093,13 +960,13 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPeliculas.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grid_peliculas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cPeliculaBindingSource)).EndInit();
             this.tabPromociones.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Grid_promociones)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cPromoBindingSource)).EndInit();
+            this.gbox_agregar.ResumeLayout(false);
             this.gbox_promocion.ResumeLayout(false);
             this.gbox_promocion.PerformLayout();
-            this.gbox_agregar.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.cPeliculaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cPromoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1120,24 +987,12 @@
         private System.Windows.Forms.TextBox txt_pelicula;
         public System.Windows.Forms.GroupBox groupbox_agregar;
         private System.Windows.Forms.Button btn_Agregar;
-        private System.Windows.Forms.GroupBox gbox_promocion;
-        private System.Windows.Forms.TextBox txt_año_promo;
-        private System.Windows.Forms.TextBox txt_genero_promo;
-        private System.Windows.Forms.TextBox txt_precio_promo;
-        private System.Windows.Forms.TextBox txt_director_promo;
-        private System.Windows.Forms.TextBox txt_pelicula_promo;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btn_eliminar;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Button btn_promocion;
         private System.Windows.Forms.ToolStripMenuItem cerrarSesiónToolStripMenuItem;
         private System.Windows.Forms.DataGridView grid_peliculas;
         private System.Windows.Forms.BindingSource cPeliculaBindingSource;
@@ -1179,18 +1034,24 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn alqAnioDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn vistosAnioDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource cPromoBindingSource;
-        private System.Windows.Forms.TextBox txt_descuento_promo;
-        private System.Windows.Forms.TextBox nombreTextBox1;
-        private System.Windows.Forms.TextBox precioTextBox1;
-        private System.Windows.Forms.TextBox puntajeTextBox1;
-        private System.Windows.Forms.TextBox sinopsisTextBox1;
-        private System.Windows.Forms.TextBox vistos_AnioTextBox1;
-        private System.Windows.Forms.TextBox vistos_MesTextBox1;
-        private System.Windows.Forms.DateTimePicker fecha_limiteDateTimePicker;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox txt_descuento;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker dateTimePicker_fecha_limite;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.GroupBox gbox_promocion;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox txt_descuento_promo;
+        private System.Windows.Forms.DateTimePicker fecha_limiteDateTimePicker;
+        private System.Windows.Forms.Button btn_promocion;
+        private System.Windows.Forms.TextBox txt_año_promo;
+        private System.Windows.Forms.TextBox txt_genero_promo;
+        private System.Windows.Forms.TextBox txt_precio_promo;
+        private System.Windows.Forms.TextBox txt_director_promo;
+        private System.Windows.Forms.TextBox txt_pelicula_promo;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
     }
 }

@@ -170,3 +170,4 @@ C:\Users\bruno\Documents\Craicnet\TPFINAL_Craicnet\obj\Debug\TPFINAL_Craicnet.cs
 C:\Users\bruno\Documents\Craicnet\TPFINAL_Craicnet\obj\Debug\TPFINAL_Craicnet.csproj.CopyComplete
 C:\Users\bruno\Documents\Craicnet\TPFINAL_Craicnet\obj\Debug\TPFINAL_Craicnet.exe
 C:\Users\bruno\Documents\Craicnet\TPFINAL_Craicnet\obj\Debug\TPFINAL_Craicnet.pdb
+C:\Users\bruno\Documents\Craicnet\TPFINAL_Craicnet\obj\Debug\TPFINAL_Craicnet.csprojAssemblyReference.cache

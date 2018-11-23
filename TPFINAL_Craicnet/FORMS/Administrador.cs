@@ -32,11 +32,7 @@ namespace TPFINAL_Craicnet
          * */
 
         //Propiedades
-        /*public List<cPelicula> lista_peliculas = new List<cPelicula>();
-        public List<cPromo> lista_promociones = new List<cPromo>();
-        public DataTable peliculas = new DataTable();
-        public DataTable peliculas_promo = new DataTable();
-        */
+
         public cUsuario Admin_Activo;
 
         //Cliente Form 
@@ -262,6 +258,8 @@ namespace TPFINAL_Craicnet
                     /// <param name="e"></param>
                     private void grid_peliculas_SelectionChanged(object sender, EventArgs e)
                     {
+                        txt_descuento.Enabled = false;
+                        dateTimePicker_fecha_limite.Enabled = false;
                         DataGridViewCell cell = null;
 
                         foreach(DataGridViewCell selectedCell in grid_peliculas.SelectedCells)
@@ -299,6 +297,8 @@ namespace TPFINAL_Craicnet
 
                     private void Grid_promociones_SelectionChanged(object sender, EventArgs e)
                     {
+                        txt_descuento.Enabled = true;
+                        dateTimePicker_fecha_limite.Enabled = true;
                         DataGridViewCell cell = null;
 
                         foreach (DataGridViewCell selectedCell in Grid_promociones.SelectedCells)
@@ -321,6 +321,8 @@ namespace TPFINAL_Craicnet
                                 txt_año.Text = aux.Año.ToString();
                                 txt_actores.Text = aux.Actores.ToString();
                                 txt_sinopsis.Text = aux.Sinopsis.ToString();
+                                txt_descuento.Text = aux.Porcentaje_Descuento.ToString();
+                                dateTimePicker_fecha_limite.Value = aux.Fecha_limite;
 
                             }
                         }
@@ -391,7 +393,6 @@ namespace TPFINAL_Craicnet
                         txt_año.Enabled = true;
                         txt_actores.Enabled = true;
                         txt_sinopsis.Enabled = true;
-
                         btn_Agregar.Enabled = false;
                         btn_eliminar.Enabled = false;
                         btn_editar.Enabled = true;
@@ -459,7 +460,7 @@ namespace TPFINAL_Craicnet
                                 peli.Precio = Int32.Parse(txt_precio.Text.ToString());
                                 peli.Genero = txt_genero.Text.ToString();
                                 peli.Año = txt_año.Text.ToString();
-                                peli.Actores = txt_actores.ToString();
+                                peli.Actores = txt_actores.Text.ToString();
                                 peli.Sinopsis = txt_sinopsis.Text.ToString();
                             }
 
@@ -478,7 +479,7 @@ namespace TPFINAL_Craicnet
                                 peli.Precio = Int32.Parse(txt_precio.Text.ToString());
                                 peli.Genero = txt_genero.Text.ToString();
                                 peli.Año = txt_año.Text.ToString();
-                                peli.Actores = txt_actores.ToString();
+                                peli.Actores = txt_actores.Text.ToString();
                                 peli.Sinopsis = txt_sinopsis.Text.ToString();
                                 peli.Fecha_limite = dateTimePicker_fecha_limite.Value.Date;
                             }
@@ -552,36 +553,37 @@ namespace TPFINAL_Craicnet
                         return " ";
                     }
 
-        public void UpdateGridPelicula()
-        {
-            Inicio.peliculas = Inicio.ToDataTable<cPelicula>(Inicio.lista_peliculas);
+                    public void UpdateGridPelicula()
+                    {
+                        Inicio.peliculas = Inicio.ToDataTable<cPelicula>(Inicio.lista_peliculas);
 
-            grid_peliculas.DataSource = Inicio.peliculas;
-        }
+                        grid_peliculas.DataSource = Inicio.peliculas;
+                    }
 
-        public void UpdateGridPromociones()
-        {
-            Inicio.promociones = Inicio.ToDataTable<cPromo>(Inicio.lista_promociones);
+                    public void UpdateGridPromociones()
+                    {
+                        Inicio.promociones = Inicio.ToDataTable<cPromo>(Inicio.lista_promociones);
 
-            Grid_promociones.DataSource = Inicio.promociones;
-        }
+                        Grid_promociones.DataSource = Inicio.promociones;
+                    }
 
-        private void tabPeliculas_Click(object sender, EventArgs e)
-        {
-            if(radio_editar.Checked)
-            {
-                txt_descuento.Enabled = false;
-                dateTimePicker_fecha_limite.Enabled = false;
-            }
-        }
+                    private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+                    {
+            
+                        if (tabControl1.SelectedTab == tabControl1.TabPages["Peliculas"]) { 
 
-        private void tabPromociones_Click(object sender, EventArgs e)
-        {
-            if(radio_editar.Checked)
-            {
-                txt_descuento.Enabled = true;
-                dateTimePicker_fecha_limite.Enabled = true;
-            }
-        }
+                                txt_descuento.Enabled = false;
+                                dateTimePicker_fecha_limite.Enabled = false;
+
+                        }
+
+                        if (tabControl1.SelectedTab == tabControl1.TabPages["Promociones"]) { 
+                            if (radio_editar.Checked == true)
+                            {
+                                txt_descuento.Enabled = true;
+                                dateTimePicker_fecha_limite.Enabled = true;
+                            }
+                        }
+                    }
     }
 }
