@@ -26,7 +26,8 @@ namespace TPFINAL_Craicnet
          *       Ver que tal le va a Juli en la parte de Estadisticas.
          *       Ver si el flujo de la informacion, listas, etc, esta bien hecha
          *          - Esto lo puedo hacer mañana directamente en el xCode de la mac
-         *          
+         *       Arreglar la parte de Promociones: ç
+         *              No se esta poniendo en 0 los textbox del group box 
          *       
          * */
 
@@ -481,7 +482,9 @@ namespace TPFINAL_Craicnet
                                 peli.Sinopsis = txt_sinopsis.Text.ToString();
                                 peli.Fecha_limite = dateTimePicker_fecha_limite.Value.Date;
                             }
+                            peli.Update_datos();
                             UpdateGridPromociones();
+                           
                             }
                                 
                         }

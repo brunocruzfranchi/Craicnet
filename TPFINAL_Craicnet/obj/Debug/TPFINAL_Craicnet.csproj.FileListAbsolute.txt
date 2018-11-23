@@ -22,18 +22,6 @@ D:/Previous/Universidad/2018/2018 - 2do cuatrimestre/LP2/TP Final/Craicnet/TPFIN
 D:/Previous/Universidad/2018/2018 - 2do cuatrimestre/LP2/TP Final/Craicnet/TPFINAL_Craicnet/obj/Debug/TPFINAL_Craicnet.csproj.CoreCompileInputs.cache
 D:/Previous/Universidad/2018/2018 - 2do cuatrimestre/LP2/TP Final/Craicnet/TPFINAL_Craicnet/obj/Debug/TPFINAL_Craicnet.exe
 D:/Previous/Universidad/2018/2018 - 2do cuatrimestre/LP2/TP Final/Craicnet/TPFINAL_Craicnet/obj/Debug/TPFINAL_Craicnet.pdb
-C:/Users/bruno/Documents/Craicnet/TPFINAL_Craicnet/obj/Debug/TPFINAL_Craicnet.csprojAssemblyReference.cache
-C:/Users/bruno/Documents/Craicnet/TPFINAL_Craicnet/obj/Debug/TPFINAL_Craicnet.Administrador.resources
-C:/Users/bruno/Documents/Craicnet/TPFINAL_Craicnet/obj/Debug/TPFINAL_Craicnet.Cliente.resources
-C:/Users/bruno/Documents/Craicnet/TPFINAL_Craicnet/obj/Debug/TPFINAL_Craicnet.Inicio.resources
-C:/Users/bruno/Documents/Craicnet/TPFINAL_Craicnet/obj/Debug/TPFINAL_Craicnet.Properties.Resources.resources
-C:/Users/bruno/Documents/Craicnet/TPFINAL_Craicnet/obj/Debug/TPFINAL_Craicnet.csproj.GenerateResource.cache
-C:/Users/bruno/Documents/Craicnet/TPFINAL_Craicnet/obj/Debug/TPFINAL_Craicnet.csproj.CoreCompileInputs.cache
-C:/Users/bruno/Documents/Craicnet/TPFINAL_Craicnet/obj/Debug/TPFINAL_Craicnet.exe
-C:/Users/bruno/Documents/Craicnet/TPFINAL_Craicnet/obj/Debug/TPFINAL_Craicnet.pdb
-C:/Users/bruno/Documents/Craicnet/TPFINAL_Craicnet/bin/Debug/TPFINAL_Craicnet.exe.config
-C:/Users/bruno/Documents/Craicnet/TPFINAL_Craicnet/bin/Debug/TPFINAL_Craicnet.exe
-C:/Users/bruno/Documents/Craicnet/TPFINAL_Craicnet/bin/Debug/TPFINAL_Craicnet.pdb
 C:/Users/alumnos.ALUMNOS/Downloads/Craicnet-Craicnet/Craicnet-Craicnet/TPFINAL_Craicnet/bin/Debug/TPFINAL_Craicnet.exe.config
 C:/Users/alumnos.ALUMNOS/Downloads/Craicnet-Craicnet/Craicnet-Craicnet/TPFINAL_Craicnet/bin/Debug/TPFINAL_Craicnet.exe
 C:/Users/alumnos.ALUMNOS/Downloads/Craicnet-Craicnet/Craicnet-Craicnet/TPFINAL_Craicnet/bin/Debug/TPFINAL_Craicnet.pdb
@@ -70,13 +58,6 @@ C:/Users/bruno/Desktop/Craicnet-Craicnet/Craicnet-Craicnet/Craicnet-Craicnet/TPF
 C:/Users/bruno/Desktop/Craicnet-Craicnet/Craicnet-Craicnet/Craicnet-Craicnet/TPFINAL_Craicnet/obj/Debug/TPFINAL_Craicnet.csproj.CopyComplete
 C:/Users/bruno/Desktop/Craicnet-Craicnet/Craicnet-Craicnet/Craicnet-Craicnet/TPFINAL_Craicnet/obj/Debug/TPFINAL_Craicnet.exe
 C:/Users/bruno/Desktop/Craicnet-Craicnet/Craicnet-Craicnet/Craicnet-Craicnet/TPFINAL_Craicnet/obj/Debug/TPFINAL_Craicnet.pdb
-C:/Users/bruno/Documents/Craicnet/TPFINAL_Craicnet/bin/Debug/CsvHelper.dll
-C:/Users/bruno/Documents/Craicnet/TPFINAL_Craicnet/bin/Debug/ExcelDataReader.DataSet.dll
-C:/Users/bruno/Documents/Craicnet/TPFINAL_Craicnet/bin/Debug/ExcelDataReader.dll
-C:/Users/bruno/Documents/Craicnet/TPFINAL_Craicnet/bin/Debug/CsvHelper.xml
-C:/Users/bruno/Documents/Craicnet/TPFINAL_Craicnet/bin/Debug/ExcelDataReader.xml
-C:/Users/bruno/Documents/Craicnet/TPFINAL_Craicnet/bin/Debug/ExcelDataReader.DataSet.xml
-C:/Users/bruno/Documents/Craicnet/TPFINAL_Craicnet/obj/Debug/TPFINAL_Craicnet.csproj.CopyComplete
 C:/Users/alumnos.ALUMNOS/Downloads/Craicnet-Craicnet/TPFINAL_Craicnet/obj/Debug/TPFINAL_Craicnet.csprojResolveAssemblyReference.cache
 C:/Users/alumnos.ALUMNOS/Downloads/Craicnet-Craicnet/TPFINAL_Craicnet/obj/Debug/TPFINAL_Craicnet.Administrador.resources
 C:/Users/alumnos.ALUMNOS/Downloads/Craicnet-Craicnet/TPFINAL_Craicnet/obj/Debug/TPFINAL_Craicnet.Cliente.resources
@@ -141,10 +122,7 @@ C:/Users/alumnos.ALUMNOS/Desktop/Craicnet-Craicnet/TPFINAL_Craicnet/obj/Debug/TP
 C:/Users/alumnos.ALUMNOS/Desktop/Craicnet-Craicnet/TPFINAL_Craicnet/obj/Debug/TPFINAL_Craicnet.csproj.GenerateResource.Cache
 C:/Users/alumnos.ALUMNOS/Desktop/Craicnet-Craicnet/TPFINAL_Craicnet/obj/Debug/TPFINAL_Craicnet.exe
 C:/Users/alumnos.ALUMNOS/Desktop/Craicnet-Craicnet/TPFINAL_Craicnet/obj/Debug/TPFINAL_Craicnet.pdb
-C:/Users/bruno/Documents/Craicnet/TPFINAL_Craicnet/obj/Debug/TPFINAL_Craicnet.FORMS.Alquiler.resources
-C:/Users/bruno/Documents/Craicnet/TPFINAL_Craicnet/obj/Debug/TPFINAL_Craicnet.FORMS.Promociones.resources
 D:/Previous/Universidad/2018/2018 - 2do cuatrimestre/LP2/TP Final/Craicnet/TPFINAL_Craicnet/obj/Debug/TPFINAL_Craicnet.FORMS.Estadisticas.resources
-C:/Users/bruno/Documents/Craicnet/TPFINAL_Craicnet/obj/Debug/TPFINAL_Craicnet.FORMS.Estadisticas.resources
 C:/Users/alumnos.ALUMNOS/Downloads/Craicnet-Craicnet/TPFINAL_Craicnet/obj/Debug/TPFINAL_Craicnet.FORMS.Alquiler.resources
 C:/Users/alumnos.ALUMNOS/Downloads/Craicnet-Craicnet/TPFINAL_Craicnet/obj/Debug/TPFINAL_Craicnet.FORMS.Estadisticas.resources
 C:/Users/alumnos.ALUMNOS/Downloads/Craicnet-Craicnet/TPFINAL_Craicnet/obj/Debug/TPFINAL_Craicnet.FORMS.Promociones.resources
@@ -171,3 +149,24 @@ C:/Users/alumnos.ALUMNOS/Downloads/Craicnet-Craicnet/TPFINAL_Craicnet/obj/Debug/
 /Users/brunocruzfranchi/Documents/Craicnet/TPFINAL_Craicnet/obj/Debug/TPFINAL_Craicnet.csproj.CopyComplete
 /Users/brunocruzfranchi/Documents/Craicnet/TPFINAL_Craicnet/obj/Debug/TPFINAL_Craicnet.exe
 /Users/brunocruzfranchi/Documents/Craicnet/TPFINAL_Craicnet/obj/Debug/TPFINAL_Craicnet.pdb
+C:\Users\bruno\Documents\Craicnet\TPFINAL_Craicnet\bin\Debug\TPFINAL_Craicnet.exe.config
+C:\Users\bruno\Documents\Craicnet\TPFINAL_Craicnet\bin\Debug\TPFINAL_Craicnet.exe
+C:\Users\bruno\Documents\Craicnet\TPFINAL_Craicnet\bin\Debug\TPFINAL_Craicnet.pdb
+C:\Users\bruno\Documents\Craicnet\TPFINAL_Craicnet\bin\Debug\CsvHelper.dll
+C:\Users\bruno\Documents\Craicnet\TPFINAL_Craicnet\bin\Debug\ExcelDataReader.DataSet.dll
+C:\Users\bruno\Documents\Craicnet\TPFINAL_Craicnet\bin\Debug\ExcelDataReader.dll
+C:\Users\bruno\Documents\Craicnet\TPFINAL_Craicnet\bin\Debug\CsvHelper.xml
+C:\Users\bruno\Documents\Craicnet\TPFINAL_Craicnet\bin\Debug\ExcelDataReader.xml
+C:\Users\bruno\Documents\Craicnet\TPFINAL_Craicnet\bin\Debug\ExcelDataReader.DataSet.xml
+C:\Users\bruno\Documents\Craicnet\TPFINAL_Craicnet\obj\Debug\TPFINAL_Craicnet.Administrador.resources
+C:\Users\bruno\Documents\Craicnet\TPFINAL_Craicnet\obj\Debug\TPFINAL_Craicnet.FORMS.Alquiler.resources
+C:\Users\bruno\Documents\Craicnet\TPFINAL_Craicnet\obj\Debug\TPFINAL_Craicnet.Cliente.resources
+C:\Users\bruno\Documents\Craicnet\TPFINAL_Craicnet\obj\Debug\TPFINAL_Craicnet.FORMS.Estadisticas.resources
+C:\Users\bruno\Documents\Craicnet\TPFINAL_Craicnet\obj\Debug\TPFINAL_Craicnet.Inicio.resources
+C:\Users\bruno\Documents\Craicnet\TPFINAL_Craicnet\obj\Debug\TPFINAL_Craicnet.FORMS.Promociones.resources
+C:\Users\bruno\Documents\Craicnet\TPFINAL_Craicnet\obj\Debug\TPFINAL_Craicnet.Properties.Resources.resources
+C:\Users\bruno\Documents\Craicnet\TPFINAL_Craicnet\obj\Debug\TPFINAL_Craicnet.csproj.GenerateResource.cache
+C:\Users\bruno\Documents\Craicnet\TPFINAL_Craicnet\obj\Debug\TPFINAL_Craicnet.csproj.CoreCompileInputs.cache
+C:\Users\bruno\Documents\Craicnet\TPFINAL_Craicnet\obj\Debug\TPFINAL_Craicnet.csproj.CopyComplete
+C:\Users\bruno\Documents\Craicnet\TPFINAL_Craicnet\obj\Debug\TPFINAL_Craicnet.exe
+C:\Users\bruno\Documents\Craicnet\TPFINAL_Craicnet\obj\Debug\TPFINAL_Craicnet.pdb
