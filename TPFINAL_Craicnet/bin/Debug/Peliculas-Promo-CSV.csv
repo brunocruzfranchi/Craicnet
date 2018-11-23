@@ -1,7 +1,14 @@
-Nombre;Genero;Director;Precio;Año;Actores;Puntaje;Sinopsis;VistosMes;VistosAnio;AlqMes;AlqAnio;Descuento;Fecha Limite
-007 - 21 Casino Royale;James Bond;Martin Campbell;25;2006;Daniel Craig, Judi Dench, Jeffrey Wright, Eva Green, Mads Mikkelsen, Giancarlo Giannini;32; - - -;600;7045;245;3725;0,25;21/12/2018
-007 - 22 Quantum of Solace (Ein Quantum Trost);James Bond;Marc Forster;26;2008;Daniel Craig, Olga Kurylenko, Mathieu Amalric, Gemma Arterton, Judi Dench, Jeffrey Wright, Giancarlo Giannini, Jesper Christensen, Anatole Taubman, Joaquín Cosio ;33; - - -;524;5136;471;1634;0,25;22/12/2018
-007 - 23 Skyfall;James Bond;Sam Mendes;30;2012;Daniel Craig, Javier Bardem, Judi Dench, Ralph Fiennes, Helen McCrory, Ben Whishaw, Naomie Harris;3; - - -;556;3264;287;861;0,25;23/12/2018
-007 - 24 Spectre;James Bond;Sam Mendes;25;2015;Daniel Craig, Monica Bellucci, Dave Bautista, Léa Seydoux, Ralph Fiennes, Ben Whishaw, Naomie Harris, Christoph Waltz;76; - - -;195;8627;168;5450;0,25;24/12/2018
-Star Wars I - The Phantom Menace;Sci-Fi;George Lucas;35;1999;Ewan McGregor, Natalie Portman, Ian McDiarmid, Samuel L. Jackson, Liam Neeson, Jake Lloyd, C-3P0, R2-D2;62; - - -;950;4900;845;1703;0,25;25/12/2018
-Star Wars II - Attack of the Clones;Sci-Fi;George Lucas;30;2002;Ewan McGregor, Natalie Portman, Ian McDiarmid, Samuel L. Jackson, Hayden Christensen, Christopher Lee;36; - - -;998;2843;994;4620;0,25;26/12/2018
+Nombre;Genero;Director;Precio;A–o;Actores;Puntaje;Sinopsis;VistosMes;VistosAnio;AlqMes;AlqAnio;Descuento;Fecha Limite
+007 - 21 Casino Royale;James Bond;Martin Campbell;45;2006;Daniel Craig, Judi Dench, Jeffrey Wright, Eva Green, Mads Mikkelsen, Giancarlo Giannini;8; - - -;826;5432;779;9937;0,25;21/12/2018
+007 - 22 Quantum of Solace (Ein Quantum Trost);James Bond;Marc Forster;38;2008;Daniel Craig, Olga Kurylenko, Mathieu Amalric, Gemma Arterton, Judi Dench, Jeffrey Wright, Giancarlo Giannini, Jesper Christensen, Anatole Taubman, Joaqu’n Cosio ;3; - - -;572;5975;35;2221;0,35;22/12/2018
+007 - 23 Skyfall;James Bond;Sam Mendes;37;2012;Daniel Craig, Javier Bardem, Judi Dench, Ralph Fiennes, Helen McCrory, Ben Whishaw, Naomie Harris;7; - - -;415;1687;271;4628;0,25;23/12/2018
+007 - 24 Spectre;James Bond;Sam Mendes;38;2015;Daniel Craig, Monica Bellucci, Dave Bautista, LŽa Seydoux, Ralph Fiennes, Ben Whishaw, Naomie Harris, Christoph Waltz;7; - - -;382;8737;41;9123;0,4;24/12/2018
+Star Wars I - The Phantom Menace;Sci-Fi;George Lucas;42;1999;Ewan McGregor, Natalie Portman, Ian McDiarmid, Samuel L. Jackson, Liam Neeson, Jake Lloyd, C-3P0, R2-D2;4; - - -;917;3563;239;3232;0,15;25/12/2018
+Star Wars II - Attack of the Clones;Sci-Fi;George Lucas;39;2002;Ewan McGregor, Natalie Portman, Ian McDiarmid, Samuel L. Jackson, Hayden Christensen, Christopher Lee;4; - - -;521;9948;431;7932;0,25;26/12/2018
+Star Wars III - Revenge of the Sith;Sci-Fi;George Lucas;30;2005;Ewan McGregor, Natalie Portman, Ian McDiarmid, Samuel L. Jackson, Hayden Christensen;9; - - -;404;3501;362;4535;0,5;27/12/2018
+;;;;;;;;;;;;;
+;;;;;;;;;;;;;
+;;;;;;;;;;;;;
+;;;;;;;;;;;;;
+;;;;;;;;;;;;;
+;;;;;;;;;;;;;
