@@ -11,6 +11,7 @@ namespace TPFINAL_Craicnet.CLASES
         public float Porcentaje_Descuento { get; set; }
 
         public cPelicula Pelicula { get; set; }
+
         public DateTime Fecha_limite { get; set; }
 
         //----------------------------------------------//
@@ -37,7 +38,6 @@ namespace TPFINAL_Craicnet.CLASES
             Pelicula=null;
             Porcentaje_Descuento = 0.0F;
             Fecha_limite = DateTime.Today;
-            
         }
 
         public cPromo(cPelicula peli, float d, DateTime date)
@@ -113,6 +113,7 @@ namespace TPFINAL_Craicnet.CLASES
             Porcentaje_Descuento = d;
             Fecha_limite = DateTime.Today.AddDays(3);
         }
+
         public cPromo(cPelicula peli, int d)
         {
             Pelicula = peli;
@@ -129,5 +130,26 @@ namespace TPFINAL_Craicnet.CLASES
         {
             return (Pelicula.Precio - Porcentaje_Descuento * Pelicula.Precio).ToString();
         }
+
+        /*public void Update_datos()
+        {
+            Pelicula = pelicula;
+
+            this.Nombre = pelicula.Nombre;
+            this.Genero = pelicula.Genero;
+            this.Director = pelicula.Director;
+            this.Precio = pelicula.Precio;
+            this.Año = pelicula.Año;
+            this.Actores = pelicula.Actores;
+            this.Puntaje = pelicula.Puntaje;
+            this.Sinopsis = pelicula.Sinopsis;
+            this.Vistos_Mes = pelicula.Vistos_Mes;
+            this.Alq_Mes = pelicula.Alq_Mes;
+            this.Vistos_Anio = pelicula.Vistos_Anio;
+            this.Alq_Anio = pelicula.Alq_Anio;
+            this.Porcentaje_Descuento = float.Parse(descuento);
+            this.Fecha_limite = DateTime.Parse(fechalimite);
+            this.Precio_descuento = (double)(this.Precio - this.Porcentaje_Descuento * this.Precio);
+        }*/
     }
 }

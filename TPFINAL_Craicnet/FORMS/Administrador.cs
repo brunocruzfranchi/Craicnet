@@ -18,6 +18,18 @@ namespace TPFINAL_Craicnet
 {
     public partial class Administrador : Form
     {
+        /*
+         * TODO: Cambiar todos las actualizaciones de los grid y las listas, por las nuevas funciones
+         *       VER COMO GUARDAR LA FOKING LISTAS EN UN CSV
+         *       Ver si la interfaz esta bien hecha, y que se la pueda usar bien 
+         *       Poner muchos MessageBox indicando problemas o algo por el estilo, tipo un throw exception
+         *       Ver que tal le va a Juli en la parte de Estadisticas.
+         *       Ver si el flujo de la informacion, listas, etc, esta bien hecha
+         *          - Esto lo puedo hacer mañana directamente en el xCode de la mac
+         *          
+         *       
+         * */
+
         //Propiedades
         /*public List<cPelicula> lista_peliculas = new List<cPelicula>();
         public List<cPromo> lista_promociones = new List<cPromo>();
@@ -97,34 +109,34 @@ namespace TPFINAL_Craicnet
 
         //DataGrid Funciones
 
-        /// <summary>
-        /// Esta funcion me permite hacer que aparezca los iconos de 
-        /// flechas en el header de las columnas y con esto hacer el
-        /// tipo de orden segun la flecha. 
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void grid_peliculas_cliente_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-                    {
-                        DataGridView grid = (DataGridView)sender;
-                        SortOrder so = SortOrder.None;
+                    /// <summary>
+                    /// Esta funcion me permite hacer que aparezca los iconos de 
+                    /// flechas en el header de las columnas y con esto hacer el
+                    /// tipo de orden segun la flecha. 
+                    /// </summary>
+                    /// <param name="sender"></param>
+                    /// <param name="e"></param>
+                    private void grid_peliculas_cliente_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+                                {
+                                    DataGridView grid = (DataGridView)sender;
+                                    SortOrder so = SortOrder.None;
 
-                        //Elijo el tipo de orden que quiero
+                                    //Elijo el tipo de orden que quiero
 
-                        if (grid.Columns[e.ColumnIndex].HeaderCell.SortGlyphDirection == SortOrder.None ||
-                            grid.Columns[e.ColumnIndex].HeaderCell.SortGlyphDirection == SortOrder.Ascending)
-                        {
-                            so = SortOrder.Descending;
-                        }
-                        else
-                        {
-                            so = SortOrder.Ascending;
-                        }
+                                    if (grid.Columns[e.ColumnIndex].HeaderCell.SortGlyphDirection == SortOrder.None ||
+                                        grid.Columns[e.ColumnIndex].HeaderCell.SortGlyphDirection == SortOrder.Ascending)
+                                    {
+                                        so = SortOrder.Descending;
+                                    }
+                                    else
+                                    {
+                                        so = SortOrder.Ascending;
+                                    }
 
-                        Sort(grid.Columns[e.ColumnIndex].Name, so); //Envio a mi funcion la flecha que aparece en el header junto con la columna seleccionada
+                                    Sort(grid.Columns[e.ColumnIndex].Name, so); //Envio a mi funcion la flecha que aparece en el header junto con la columna seleccionada
 
-                        grid.Columns[e.ColumnIndex].HeaderCell.SortGlyphDirection = so;  //Envio que tipo de flecha deberia aparecer 
-                    }
+                                    grid.Columns[e.ColumnIndex].HeaderCell.SortGlyphDirection = so;  //Envio que tipo de flecha deberia aparecer 
+                                }
 
                     /// <summary>
                     /// Ahora en la funcion Sort lo que pasa es que al haberme mandado el nombre de la columna y el tipo de orden que quiero
@@ -260,6 +272,7 @@ namespace TPFINAL_Craicnet
                         if(cell != null)
                         {
                             DataGridViewRow row_pelicula = cell.OwningRow;
+
                             cPelicula aux = Inicio.lista_peliculas.Find(x => x.Nombre.Equals(row_pelicula.Cells[0].Value.ToString()));
                             
                             if (radio_editar.Checked == true|| radio_eliminar.Checked == true)
@@ -302,7 +315,7 @@ namespace TPFINAL_Craicnet
                                 cPromo aux = Inicio.lista_promociones.Find(x => x.Nombre.Equals(row_promociones.Cells[0].Value.ToString()));
                                 txt_pelicula.Text = aux.Nombre.ToString(); ;
                                 txt_director.Text = aux.Director.ToString();
-                                txt_precio.Text = aux.Precio_descuento.ToString();
+                                txt_precio.Text = aux.Precio.ToString();
                                 txt_genero.Text = aux.Genero.ToString();
                                 txt_año.Text = aux.Año.ToString();
                                 txt_actores.Text = aux.Actores.ToString();
@@ -329,42 +342,11 @@ namespace TPFINAL_Craicnet
 
                     private void btn_Agregar_Click(object sender, EventArgs e)
                     {
-                        /*
-                        //Agregar las filas al DataRow y asignar el valor correspondiente. 
-                        DataTable aux = new DataTable();
-                        aux = grid_peliculas.DataSource as DataTable;
-
-                        DataRow datarow;
-                        datarow = aux.NewRow(); //Agrega una nueva linea a la Data Table 
-
-                        datarow["Nombre"] = txt_pelicula.Text;
-                        datarow["Director"] = txt_director.Text;
-                        datarow["Precio"] = txt_precio.Text;
-                        datarow["Genero"] = txt_genero.Text;
-                        datarow["Año"] = txt_año.Text;
-                        datarow["Actores"] = txt_actores.Text;
-
-                        cPelicula peli_aux = new cPelicula(txt_pelicula.Text.ToString(), txt_actores.Text.ToString(), double.Parse(txt_precio.Text.ToString()), txt_director.Text.ToString(), txt_genero.Text.ToString(), txt_año.Text.ToString(), txt_sinopsis.Text.ToString());
-
-                        lista_peliculas.Add(peli_aux);
-
-                        //Esto se encargará de agregar la fila.
-                        */
-
-                        DataTable peliculas = new DataTable();
-
                         cPelicula peli_aux = new cPelicula(txt_pelicula.Text.ToString(), txt_actores.Text.ToString(), double.Parse(txt_precio.Text.ToString()), txt_director.Text.ToString(), txt_genero.Text.ToString(), txt_año.Text.ToString(), txt_sinopsis.Text.ToString());
 
                         Inicio.lista_peliculas.Add(peli_aux);
 
-                        peliculas = Inicio.ToDataTable<cPelicula>(Inicio.lista_peliculas);
-
-                        grid_peliculas.DataSource = peliculas;
-
-                        //TODO: Ver como puedo mejorar la parte de agregado
-                        //      Esto lo puedo hacer creandome una peli_aux, le agrego los datos, lo guardo en mi lista
-                        //      Y luego puedo actualizar la DataGrid o dejarlo como estaba;
-                        //      Puedo agregar para que salga un mensaje diciendo:  Pelicula Agreaga y los datos o algo parecido
+                        UpdateGridPelicula();
                     }
 
                     private void btn_eliminar_Click(object sender, EventArgs e)
@@ -453,26 +435,58 @@ namespace TPFINAL_Craicnet
 
                     public void btn_editar_Click(object sender, EventArgs e)
                     {
+                         /**
+                          * TODO: 
+                          *      Promociones: Ver que al afectar el precio de la pelicula en la lista de promociones, 
+                          *                   tambien se vea afectada la lista comun. Pero seria mejor que no esten en la lista de peliculas comun
+                          *                   ya que se deben estar en la parte de promociones. LESTO
+                          *                   Comprobar que al cambiar el precio, este se vea afectado por el descuento existente. 
+                          *                   Hacer un txt de decuento para que si el administrador desee cambiar el descuento q lo pueda hacer
+                          *                   
+                          *                   
+                          *      Comunes: Ver que se actualicen bien.
+                          * 
+                          * */
+
+
                         if (MessageBox.Show("Esta seguro que quiere editar esta pelicula?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                         {
                             if(tabControl1.SelectedTab.Text == "Peliculas") {
-
-                            //TODO: Ver la forma de buscar el titulo de la pelicula en la lista y luego hacer el cambio de los datos
-                                                                                   
-                            //Inicio.lista_peliculas.FirstOrDefault();   
+                                                                                
+                            var peli = Inicio.lista_peliculas.Find(x => x.Nombre.Contains(ObtenerNombre(sender,e, "Peliculas")));
                             
-                            //if(peli != null)
-                            //{
-                                
-                            //}
+                            if(peli != null)
+                            {
+                                peli.Nombre = txt_pelicula.Text.ToString();
+                                peli.Director = txt_director.Text.ToString();
+                                peli.Precio = Int32.Parse(txt_precio.Text.ToString());
+                                peli.Genero = txt_genero.Text.ToString();
+                                peli.Año = txt_año.Text.ToString();
+                                peli.Actores = txt_actores.ToString();
+                                peli.Sinopsis = txt_sinopsis.Text.ToString();
+                            }
 
-                            //Inicio.peliculas = Inicio.ToDataTable(Inicio.lista_peliculas);
-
-                            //grid_peliculas.DataSource = Inicio.peliculas;
+                            UpdateGridPelicula();
 
                             }
                                
-                            if (tabControl1.SelectedTab.Text == "Promociones") { 
+                            if (tabControl1.SelectedTab.Text == "Promociones") {
+
+                            var peli = Inicio.lista_promociones.Find(x => x.Nombre.Contains(ObtenerNombre(sender,e, "Promociones")));
+                            
+                            if(peli != null)
+                            {
+                                peli.Nombre = txt_pelicula.Text.ToString();
+                                peli.Director = txt_director.Text.ToString();
+                                peli.Precio = Int32.Parse(txt_precio.Text.ToString());
+                                peli.Genero = txt_genero.Text.ToString();
+                                peli.Año = txt_año.Text.ToString();
+                                peli.Actores = txt_actores.ToString();
+                                peli.Sinopsis = txt_sinopsis.Text.ToString();
+                            }
+
+
+                            UpdateGridPromociones();
 
                             }
                                 
@@ -481,6 +495,78 @@ namespace TPFINAL_Craicnet
                         {
                             MessageBox.Show("No se ha realizado el cambio");
                         }
+                    }
+
+                    public string ObtenerNombre(object sender, EventArgs e, string grid) {
+
+                        string nombre;
+
+                        DataGridViewCell cell = null;
+
+                        if (grid == "Peliculas") { 
+                     
+                        cPelicula aux = new cPelicula();
+
+                        foreach (DataGridViewCell selectedCell in grid_peliculas.SelectedCells)
+                        {
+                            cell = selectedCell;
+                            break;
+                        }
+
+                        if (cell != null)
+                        {
+                            DataGridViewRow row_pelicula = cell.OwningRow;
+
+                            aux = Inicio.lista_peliculas.Find(x => x.Nombre.Equals(row_pelicula.Cells[0].Value.ToString()));
+
+                        }
+
+                        nombre = aux.Nombre;
+
+                            return nombre;
+                        }
+
+                        if (grid == "Promociones")
+                        {
+
+                            cPromo aux = new cPromo();
+
+                            foreach (DataGridViewCell selectedCell in Grid_promociones.SelectedCells)
+                            {
+                                cell = selectedCell;
+                                break;
+                            }
+
+                            if (cell != null)
+                            {
+                                DataGridViewRow row_pelicula = cell.OwningRow;
+
+                                aux = Inicio.lista_promociones.Find(x => x.Nombre.Equals(row_pelicula.Cells[0].Value.ToString()));
+
+                            }
+
+                            nombre = aux.Nombre;
+
+                            return nombre;
+                        }
+
+                        MessageBox.Show("No se ha podido encontrar la Pelicula seleccionada");
+
+                        return " ";
+                    }
+
+        public void UpdateGridPelicula()
+        {
+            Inicio.peliculas = Inicio.ToDataTable<cPelicula>(Inicio.lista_peliculas);
+
+            grid_peliculas.DataSource = Inicio.peliculas;
+        }
+
+        public void UpdateGridPromociones()
+        {
+            Inicio.promociones = Inicio.ToDataTable<cPromo>(Inicio.lista_promociones);
+
+            Grid_promociones.DataSource = Inicio.promociones;
         }
     }
 }
