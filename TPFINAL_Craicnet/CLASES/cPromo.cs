@@ -14,7 +14,7 @@ namespace TPFINAL_Craicnet.CLASES
 
         public DateTime Fecha_limite { get; set; }
 
-        //----------------------------------------------//
+        //----------------Propiedades--------------------//
         public string Nombre { get; set; }
         public string Actores { get; set; }
         public double Precio { get; set; }
@@ -30,7 +30,6 @@ namespace TPFINAL_Craicnet.CLASES
         public int Alq_Anio { get; set; }
         public int Vistos_Anio { get; set; }
         public static DateTime Ult_Act { get; set; }
-        static int ca { get; set; }
         //----------------------------------------------//
 
         public cPromo()
@@ -78,7 +77,7 @@ namespace TPFINAL_Craicnet.CLASES
         internal static cPromo FromString(string linea)
         {
             cPromo promo = new cPromo();
-        
+
             string[] datos = linea.Split(';');
 
             //pelicula = Inicio.lista_peliculas.Find(x => x.Nombre.Contains(datos[0]));
