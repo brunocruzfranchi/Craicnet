@@ -479,7 +479,7 @@ namespace TPFINAL_Craicnet
                                 peli.Año = txt_año.Text.ToString();
                                 peli.Actores = txt_actores.ToString();
                                 peli.Sinopsis = txt_sinopsis.Text.ToString();
-                peli.Fecha_limite = dateTimePicker_fecha_limite.Value.Date;
+                                peli.Fecha_limite = dateTimePicker_fecha_limite.Value.Date;
                             }
                             UpdateGridPromociones();
                             }

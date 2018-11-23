@@ -15,6 +15,7 @@ namespace TPFINAL_Craicnet.CLASES
         public DateTime Fecha_limite { get; set; }
 
         //----------------Propiedades--------------------//
+
         public string Nombre { get; set; }
         public string Actores { get; set; }
         public double Precio { get; set; }
@@ -30,7 +31,10 @@ namespace TPFINAL_Craicnet.CLASES
         public int Alq_Anio { get; set; }
         public int Vistos_Anio { get; set; }
         public static DateTime Ult_Act { get; set; }
+
         //----------------------------------------------//
+
+        //Constructores
 
         public cPromo()
         {
@@ -74,6 +78,23 @@ namespace TPFINAL_Craicnet.CLASES
             Fecha_limite = date;
         }
 
+        public cPromo(cPelicula peli, float d)
+        {
+            Pelicula = peli;
+            Porcentaje_Descuento = d;
+            Fecha_limite = DateTime.Today.AddDays(3);
+        }
+
+        public cPromo(cPelicula peli, int d)
+        {
+            Pelicula = peli;
+            Porcentaje_Descuento = d / 100;
+            Fecha_limite = DateTime.Today.AddDays(3);
+        }
+
+
+        //Funciones
+
         internal static cPromo FromString(string linea)
         {
             cPromo promo = new cPromo();
@@ -104,49 +125,41 @@ namespace TPFINAL_Craicnet.CLASES
             return promo;
         }
 
-        public cPromo(cPelicula peli, float d)
-        {
-            Pelicula = peli;
-            Porcentaje_Descuento = d;
-            Fecha_limite = DateTime.Today.AddDays(3);
-        }
-
-        public cPromo(cPelicula peli, int d)
-        {
-            Pelicula = peli;
-            Porcentaje_Descuento = d/100;
-            Fecha_limite = DateTime.Today.AddDays(3);
-        }
 
         public float PrecioPromo()
         {
-            return float.Parse((Pelicula.Precio - Porcentaje_Descuento * Pelicula.Precio).ToString());
+            return float.Parse((this.Precio - this.Porcentaje_Descuento * this.Precio).ToString());
+            //return float.Parse((Pelicula.Precio - Porcentaje_Descuento * Pelicula.Precio).ToString());
         }
 
         public string PrecioPromo_String()
         {
-            return (Pelicula.Precio - Porcentaje_Descuento * Pelicula.Precio).ToString();
+            return (this.Precio - this.Porcentaje_Descuento * this.Precio).ToString();
         }
 
-        /*public void Update_datos()
+        public void Update_datos()
         {
-            Pelicula = pelicula;
 
-            this.Nombre = pelicula.Nombre;
-            this.Genero = pelicula.Genero;
-            this.Director = pelicula.Director;
-            this.Precio = pelicula.Precio;
-            this.Año = pelicula.Año;
-            this.Actores = pelicula.Actores;
-            this.Puntaje = pelicula.Puntaje;
-            this.Sinopsis = pelicula.Sinopsis;
-            this.Vistos_Mes = pelicula.Vistos_Mes;
-            this.Alq_Mes = pelicula.Alq_Mes;
-            this.Vistos_Anio = pelicula.Vistos_Anio;
-            this.Alq_Anio = pelicula.Alq_Anio;
-            this.Porcentaje_Descuento = float.Parse(descuento);
-            this.Fecha_limite = DateTime.Parse(fechalimite);
+            /*
+             * Una vez hecho el cambio en una pelicula proveniente de la lista promocion
+             * tengo que pasar los datos a mi variable Pelicula para que luego de que deje
+             * de estar en promocion se pase unicamente los datos necesarios
+            */
+
+            Pelicula.Nombre = this.Nombre;
+            Pelicula.Genero = this.Genero;
+            Pelicula.Director = this.Director;
+            Pelicula.Precio = this.Precio;
+            Pelicula.Año = this.Año;
+            Pelicula.Actores = this.Actores;
+            Pelicula.Sinopsis = this.Sinopsis;
+            Pelicula.Puntaje = this.Puntaje;
+            Pelicula.Alq_Anio = this.Alq_Anio;
+            Pelicula.Alq_Mes = this.Alq_Mes;
+            Pelicula.Vistos_Mes = this.Vistos_Mes;
+            Pelicula.Vistos_Anio = this.Vistos_Anio;
+
             this.Precio_descuento = (double)(this.Precio - this.Porcentaje_Descuento * this.Precio);
-        }*/
+        }
     }
 }
