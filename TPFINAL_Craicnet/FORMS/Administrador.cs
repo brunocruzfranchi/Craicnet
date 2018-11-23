@@ -333,11 +333,8 @@ namespace TPFINAL_Craicnet
                         cPromo promo_aux = new cPromo(peli_aux, txt_descuento_promo.Text.ToString(), fecha_limiteDateTimePicker.Value.Date.ToString());
                         Inicio.lista_peliculas.Remove(peli_aux);
                         Inicio.lista_promociones.Add(promo_aux);
-                        Inicio.peliculas = Inicio.ToDataTable<cPelicula>(Inicio.lista_peliculas);
-                        grid_peliculas.DataSource = Inicio.peliculas;
-
-                        Inicio.promociones = Inicio.ToDataTable<cPromo>(Inicio.lista_promociones);
-                        Grid_promociones.DataSource = Inicio.promociones;
+                        UpdateGridPelicula();
+                        UpdateGridPromociones();
                     }
 
                     private void btn_Agregar_Click(object sender, EventArgs e)
@@ -357,8 +354,7 @@ namespace TPFINAL_Craicnet
                         else
                             MessageBox.Show("La pelicula no ha sido eliminada");
 
-                        Inicio.peliculas = Inicio.ToDataTable<cPelicula>(Inicio.lista_peliculas);
-                        grid_peliculas.DataSource = Inicio.peliculas;
+                        UpdateGridPelicula();
 
                     }
 
@@ -483,11 +479,9 @@ namespace TPFINAL_Craicnet
                                 peli.Año = txt_año.Text.ToString();
                                 peli.Actores = txt_actores.ToString();
                                 peli.Sinopsis = txt_sinopsis.Text.ToString();
+                peli.Fecha_limite = dateTimePicker_fecha_limite.Value.Date;
                             }
-
-
                             UpdateGridPromociones();
-
                             }
                                 
                         }
@@ -567,6 +561,24 @@ namespace TPFINAL_Craicnet
             Inicio.promociones = Inicio.ToDataTable<cPromo>(Inicio.lista_promociones);
 
             Grid_promociones.DataSource = Inicio.promociones;
+        }
+
+        private void tabPeliculas_Click(object sender, EventArgs e)
+        {
+            if(radio_editar.Checked)
+            {
+                txt_descuento.Enabled = false;
+                dateTimePicker_fecha_limite.Enabled = false;
+            }
+        }
+
+        private void tabPromociones_Click(object sender, EventArgs e)
+        {
+            if(radio_editar.Checked)
+            {
+                txt_descuento.Enabled = true;
+                dateTimePicker_fecha_limite.Enabled = true;
+            }
         }
     }
 }

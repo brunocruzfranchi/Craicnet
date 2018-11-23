@@ -77,15 +77,13 @@ namespace TPFINAL_Craicnet.CLASES
 
         internal static cPromo FromString(string linea)
         {
-            cPelicula pelicula = new cPelicula();
-
             cPromo promo = new cPromo();
         
             string[] datos = linea.Split(';');
-            //TODO:
 
-            pelicula = Inicio.lista_peliculas.Find(x => x.Nombre.Contains(datos[0]));
+            //pelicula = Inicio.lista_peliculas.Find(x => x.Nombre.Contains(datos[0]));
 
+            promo.Pelicula = cPelicula.FromString(linea);
             promo.Nombre = datos[0];
             promo.Genero = datos[1];
             promo.Director = datos[2];

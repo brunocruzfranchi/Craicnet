@@ -127,13 +127,13 @@ namespace TPFINAL_Craicnet
                 pelicula.Puntaje = Int32.Parse(datos[6]);
                 pelicula.Sinopsis = datos[7];
                 pelicula.Vistos_Mes = Int32.Parse(datos[8]);
-                pelicula.Alq_Mes = Int32.Parse(datos[8]);
-                pelicula.Vistos_Anio = Int32.Parse(datos[8]);
-                pelicula.Alq_Anio = Int32.Parse(datos[8]);
+                pelicula.Alq_Mes = Int32.Parse(datos[9]);
+                pelicula.Vistos_Anio = Int32.Parse(datos[10]);
+                pelicula.Alq_Anio = Int32.Parse(datos[11]);
 
-               // pelicula.Fecha_Dev=DateTime.Parse(datos[8]);
+            // pelicula.Fecha_Dev=DateTime.Parse(datos[8]);
 
-                datos = null;
+            datos = null;
 
                 return pelicula;
             }
