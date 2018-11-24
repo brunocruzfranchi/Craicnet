@@ -31,12 +31,12 @@ namespace TPFINAL_Craicnet
         public int Alq_Anio { get; set; }
         public int Vistos_Anio { get; set; }
         public static DateTime Ult_Act { get; set; }
-        static int ca { get; set; }
+        //static int ca { get; set; }
 
         //Constructores
             public cPelicula()
             {
-            Random rnd = new Random();
+            //Random rnd = new Random();
             this.Nombre = " ";
             this.Actores = " ";
             this.Precio = 0;
@@ -46,13 +46,14 @@ namespace TPFINAL_Craicnet
             this.Año = " ";
             this.Sinopsis = " ";
             Fecha_Dev = DateTime.MinValue;
-            this.Alq_Mes = rnd.Next(5, 500);
-            this.Vistos_Mes = rnd.Next(5, 500);
-            this.Alq_Anio = rnd.Next(5, 500);
-            this.Vistos_Anio = rnd.Next(5, 500);
+            //this.Alq_Mes = rnd.Next(5, 500);
+            this.Alq_Mes = 0;
+            this.Vistos_Mes = 0;
+            this.Alq_Anio = 0;
+            this.Vistos_Anio = 0;
 
             }
-
+            
             public cPelicula(string nombre, string actores, double precio, string director, string genero, string año, string sinopsis, DateTime date, int alqm, int vim, int alqa, int via)
             {
                 this.Nombre = nombre;
@@ -88,7 +89,7 @@ namespace TPFINAL_Craicnet
                 this.Vistos_Anio = ca;
                 ca++;
             }
-
+            
             public cPelicula(string nombre, string actores, double precio, string director, string genero, string año, string sinopsis,int alqm, int vim, int alqa, int via)
             {
                 this.Nombre = nombre;
@@ -105,11 +106,11 @@ namespace TPFINAL_Craicnet
                 this.Alq_Anio = alqa;
                 this.Vistos_Anio = via;
             }
-
+            
             static cPelicula()
             {
                 Ult_Act = DateTime.Now;
-                ca = 0;
+                //ca = 0;
             }
 
 

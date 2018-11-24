@@ -89,6 +89,7 @@ namespace TPFINAL_Craicnet.FORMS
                 //list_aux_alq.Add(lista_peliculas[i]);
                 chart_alq.Titles.Clear();
                 chart_alq.Titles.Add("Alquiler Mensual");
+                int a = lista_peliculas[0].Alq_Mes;
             }
         }
 
