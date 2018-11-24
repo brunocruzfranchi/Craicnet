@@ -65,7 +65,7 @@ namespace TPFINAL_Craicnet
                 {
                     if (usuario_ingresando.Admin)
                     {
-                        Administrador admin = new Administrador(usuario_ingresando/*, lista_peliculas, peliculas, lista_promociones, promociones*/);
+                        Administrador admin = new Administrador(usuario_ingresando);
                         admin.Show(this);
                         this.Hide();
                     }

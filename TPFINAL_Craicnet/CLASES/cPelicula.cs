@@ -83,11 +83,10 @@ namespace TPFINAL_Craicnet
                 this.Año = año;
                 this.Sinopsis = sinopsis;
                 this.Fecha_Dev = DateTime.MinValue;
-                this.Alq_Mes = ca;
-                this.Vistos_Mes = ca;
-                this.Alq_Anio = ca;
-                this.Vistos_Anio = ca;
-                ca++;
+                this.Alq_Mes = 0;
+                this.Vistos_Mes = 0;
+                this.Alq_Anio = 0;
+                this.Vistos_Anio = 0;
             }
             
             public cPelicula(string nombre, string actores, double precio, string director, string genero, string año, string sinopsis,int alqm, int vim, int alqa, int via)
@@ -110,9 +109,7 @@ namespace TPFINAL_Craicnet
             static cPelicula()
             {
                 Ult_Act = DateTime.Now;
-                //ca = 0;
             }
-
 
         //Funciones
 
@@ -145,7 +142,7 @@ namespace TPFINAL_Craicnet
                 return (DateTime.Compare(Fecha_Dev, DateTime.Today) < 0);
             }
 
-            static public void Actualizar(List<cPelicula> lista)
+            /*static public void Actualizar(List<cPelicula> lista)
             {
                 if (DateTime.Now.Year != Ult_Act.Year)
                 {
@@ -169,7 +166,7 @@ namespace TPFINAL_Craicnet
                 }
 
                 Ult_Act = DateTime.Now;
-            }
+            }*/
 
         /* public static List<cPelicula> Quicksort_AlqMes(List<cPelicula> list)
            {

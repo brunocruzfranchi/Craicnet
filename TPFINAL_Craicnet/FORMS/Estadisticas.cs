@@ -67,6 +67,7 @@ namespace TPFINAL_Craicnet.FORMS
             {
                 
                lista_peliculas = cPelicula.QuickSort_AlqAnio(lista_peliculas);
+
                 chart_alq.Series["Alq_mes"].Points.Clear();
                 
                 for (int i = 0; i < N_CHART; i++)
@@ -78,18 +79,24 @@ namespace TPFINAL_Craicnet.FORMS
                 // chart_alq.Series["Alq_mes"].Points.AddXY(lista_peliculas[i].Nombre, lista_peliculas[i].Alq_Mes);
                 //chart_alq.Series["Alq_mes"].Points.AddXY(x,y);
                 chart_alq.Titles.Clear();
+
                 chart_alq.Titles.Add("Alquiler Anual");
+
             }
             else
             {
                 lista_peliculas = cPelicula.QuickSort_AlqMes(lista_peliculas);
+
                 chart_alq.Series["Alq_mes"].Points.Clear();
+
                 for (int i = 0; i < N_CHART; i++)
                            chart_alq.Series["Alq_mes"].Points.AddXY(lista_peliculas[i].Nombre, lista_peliculas[i].Alq_Mes);
+
                 //list_aux_alq.Add(lista_peliculas[i]);
+
                 chart_alq.Titles.Clear();
+
                 chart_alq.Titles.Add("Alquiler Mensual");
-                int a = lista_peliculas[0].Alq_Mes;
             }
         }
 
@@ -98,6 +105,7 @@ namespace TPFINAL_Craicnet.FORMS
             if (combo_vistos.SelectedItem.ToString() == "Anual")
             {
                 lista_peliculas = cPelicula.BubbleSort_VistAño(lista_peliculas);
+
                 chart_vistos.Series["Vistos"].Points.Clear();
 
                 for (int i = 0; i < N_CHART; i++)
@@ -107,16 +115,20 @@ namespace TPFINAL_Craicnet.FORMS
                 }
                 
                 chart_vistos.Titles.Clear();
+
                 chart_vistos.Titles.Add("Vistos Anual");
             }
             else
             {
                 lista_peliculas = cPelicula.BubbleSort_VistMes(lista_peliculas);
+
                 chart_vistos.Series["Vistos"].Points.Clear();
+
                 for (int i = 0; i < N_CHART; i++)
                     chart_vistos.Series["Vistos"].Points.AddXY(lista_peliculas[i].Nombre, lista_peliculas[i].Vistos_Mes);
                 
                 chart_vistos.Titles.Clear();
+
                 chart_vistos.Titles.Add("Vistos Mensual");
             }
 
