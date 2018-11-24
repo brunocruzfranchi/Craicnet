@@ -45,7 +45,7 @@ namespace TPFINAL_Craicnet
             this.Genero = " ";
             this.Año = " ";
             this.Sinopsis = " ";
-            Fecha_Dev = DateTime.MinValue;
+            this.Fecha_Dev = DateTime.Now;
             //this.Alq_Mes = rnd.Next(5, 500);
             this.Alq_Mes = 0;
             this.Vistos_Mes = 0;
@@ -82,7 +82,7 @@ namespace TPFINAL_Craicnet
                 this.Genero = genero;
                 this.Año = año;
                 this.Sinopsis = sinopsis;
-                this.Fecha_Dev = DateTime.MinValue;
+                this.Fecha_Dev = DateTime.Now;
                 this.Alq_Mes = 0;
                 this.Vistos_Mes = 0;
                 this.Alq_Anio = 0;
@@ -142,21 +142,21 @@ namespace TPFINAL_Craicnet
                 return (DateTime.Compare(Fecha_Dev, DateTime.Today) < 0);
             }
 
-            /*static public void Actualizar(List<cPelicula> lista)
+            static public void Actualizar(List<cPelicula> lista)
             {
-                if (DateTime.Now.Year != Ult_Act.Year)
+            if (DateTime.Now.Year != Ult_Act.Year)
+            {
+                foreach (cPelicula pelicula in lista)
                 {
-                    foreach (cPelicula pelicula in lista)
-                    {
-                        pelicula.Alq_Anio = 0;
-                        pelicula.Alq_Mes = 0;
-                        pelicula.Vistos_Anio = 0;
-                        pelicula.Vistos_Mes = 0;
-                    }
-
+                    pelicula.Alq_Anio = 0;
+                    pelicula.Alq_Mes = 0;
+                    pelicula.Vistos_Anio = 0;
+                    pelicula.Vistos_Mes = 0;
                 }
-                else
-                    if (DateTime.Now.Month != Ult_Act.Year)
+
+            }
+            else
+                if (DateTime.Now.Month != Ult_Act.Month)
                 {
                     foreach (cPelicula pelicula in lista)
                     {
@@ -166,7 +166,7 @@ namespace TPFINAL_Craicnet
                 }
 
                 Ult_Act = DateTime.Now;
-            }*/
+            }
 
         /* public static List<cPelicula> Quicksort_AlqMes(List<cPelicula> list)
            {

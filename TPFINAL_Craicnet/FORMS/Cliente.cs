@@ -324,7 +324,7 @@ namespace TPFINAL_Craicnet
         {            
             FORMS.Alquiler alquiler = new FORMS.Alquiler(lista_peliculas.Find(x => x.Nombre.Contains(txt_pelicula_cliente.Text)), Cliente_Activo);
             alquiler.Show(this);
-            //cPelicula.Actualizar(lista_peliculas);
+            cPelicula.Actualizar(lista_peliculas);
             //falta sumar alquiler
 
         }
