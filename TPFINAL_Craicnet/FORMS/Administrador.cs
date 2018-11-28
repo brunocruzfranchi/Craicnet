@@ -77,28 +77,58 @@ namespace TPFINAL_Craicnet
 
         private void Administrador_FormClosing(object sender, FormClosingEventArgs e)
         {
-            using (StreamWriter theWriter = new StreamWriter(Application.StartupPath + "\\Temp_Peliculas.csv"))
+            if (MessageBox.Show("Quiere guardar los cambios hechos?", "Confirmar", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                theWriter.WriteLine("Nombre;Genero;Director;Precio;Año;Actores;Puntaje;Sinopsis;VistosMes;VistosAnio;AlqMes;AlqAnio");
-
-                foreach (cPelicula curPelicula in Inicio.lista_peliculas)
+                using (StreamWriter theWriter = new StreamWriter(Application.StartupPath + "\\Temp_Peliculas.csv"))
                 {
-                    theWriter.Write(curPelicula.Nombre + ";" + curPelicula.Genero + ";" + curPelicula.Director + ";" + 
-                                    curPelicula.Precio + ";" + curPelicula.Año + ";" + curPelicula.Actores + ";" + 
-                                    curPelicula.Puntaje + ";" + curPelicula.Sinopsis + ";" + curPelicula.Vistos_Mes + ";" +
-                                    curPelicula.Vistos_Anio + ";" + curPelicula.Alq_Mes + ";");
-                    theWriter.WriteLine(curPelicula.Alq_Anio);
+                    theWriter.WriteLine("Nombre;Genero;Director;Precio;Año;Actores;Puntaje;Sinopsis;VistosMes;VistosAnio;AlqMes;AlqAnio");
+
+                    foreach (cPelicula curPelicula in Inicio.lista_peliculas)
+                    {
+                        theWriter.Write(curPelicula.Nombre + ";" + curPelicula.Genero + ";" + curPelicula.Director + ";" +
+                                        curPelicula.Precio + ";" + curPelicula.Año + ";" + curPelicula.Actores + ";" +
+                                        curPelicula.Puntaje + ";" + curPelicula.Sinopsis + ";" + curPelicula.Vistos_Mes + ";" +
+                                        curPelicula.Vistos_Anio + ";" + curPelicula.Alq_Mes + ";");
+                        theWriter.WriteLine(curPelicula.Alq_Anio);
+                    }
+
                 }
 
+                using (StreamWriter theWriter = new StreamWriter(Application.StartupPath + "\\Temp_Promociones.csv"))
+                {
+                    theWriter.WriteLine("Nombre;Genero;Director;Precio;A–o;Actores;Puntaje;Sinopsis;VistosMes;VistosAnio;AlqMes;AlqAnio;Descuento;Fecha Limite");
+
+                    foreach (cPromo curPelicula in Inicio.lista_promociones)
+                    {
+                        theWriter.Write(curPelicula.Nombre + ";" + curPelicula.Genero + ";" + curPelicula.Director + ";" +
+                                        curPelicula.Precio + ";" + curPelicula.Año + ";" + curPelicula.Actores + ";" +
+                                        curPelicula.Puntaje + ";" + curPelicula.Sinopsis + ";" + curPelicula.Vistos_Mes + ";" +
+                                        curPelicula.Vistos_Anio + ";" + curPelicula.Alq_Mes + ";" + curPelicula.Alq_Anio
+                                        + ";" + curPelicula.Porcentaje_Descuento + ";");
+                        theWriter.WriteLine(curPelicula.Fecha_limite.Date);
+                    }
+
+                }
+
+                File.Delete(Application.StartupPath + "\\Peliculas-CSV.csv");
+
+                File.Move(Application.StartupPath + "\\Temp_Peliculas.csv", Application.StartupPath + "\\Peliculas-CSV.csv");
+
+
+                File.Delete(Application.StartupPath + "\\Peliculas-Promo-CSV.csv");
+
+                File.Move(Application.StartupPath + "\\Temp_Promociones.csv", Application.StartupPath + "\\Peliculas-Promo-CSV.csv");
+            }
+            else
+            {
+                MessageBox.Show("No se ha realizado ningun cambio");
             }
 
-            File.Delete(Application.StartupPath + "\\Peliculas-CSV.csv");
-            File.Move(Application.StartupPath + "\\Temp_Peliculas.csv", Application.StartupPath + "\\Peliculas-CSV.csv");
         }
 
         //Menu Strip
 
-        private void promocionesToolStripMenuItem_Click(object sender, EventArgs e)
+                    private void promocionesToolStripMenuItem_Click(object sender, EventArgs e)
                     {
                         grid_peliculas.Visible = true;
                         groupbox_agregar.Visible = false;
@@ -382,22 +412,54 @@ namespace TPFINAL_Craicnet
 
                     private void btn_Agregar_Click(object sender, EventArgs e)
                     {
-                        cPelicula peli_aux = new cPelicula(txt_pelicula.Text.ToString(), txt_actores.Text.ToString(), double.Parse(txt_precio.Text.ToString()), txt_director.Text.ToString(), txt_genero.Text.ToString(), txt_año.Text.ToString(), txt_sinopsis.Text.ToString());
+                        if (string.IsNullOrWhiteSpace(txt_pelicula.Text) || string.IsNullOrWhiteSpace(txt_actores.Text) ||
+                            string.IsNullOrWhiteSpace(txt_precio.Text) || string.IsNullOrWhiteSpace(txt_director.Text) ||
+                            string.IsNullOrWhiteSpace(txt_genero.Text) || string.IsNullOrWhiteSpace(txt_año.Text) ||
+                            string.IsNullOrWhiteSpace(txt_sinopsis.Text)) {
+                            
+                        
+                            MessageBox.Show("Debe ingresar todos los datos de la pelicula para poder agregarla");
+
+                        }       
+                        else{
+
+                        cPelicula peli_aux = new cPelicula(txt_pelicula.Text.ToString(), txt_actores.Text.ToString(),
+                                                                   double.Parse(txt_precio.Text.ToString()), txt_director.Text.ToString(),
+                                                                    txt_genero.Text.ToString(), txt_año.Text.ToString(),
+                                                                    txt_sinopsis.Text.ToString());
 
                         Inicio.lista_peliculas.Add(peli_aux);
 
                         UpdateGridPelicula();
+
+                        }
                     }
 
                     private void btn_eliminar_Click(object sender, EventArgs e)
                     {
-                        cPelicula eliminar = Inicio.lista_peliculas.Find(x => x.Nombre.Contains(txt_pelicula.Text));
-                        if (Inicio.lista_peliculas.Remove(eliminar))
+                        if (tabControl1.SelectedTab.Text == "Peliculas") {
+
+                            cPelicula eliminar = Inicio.lista_peliculas.Find(x => x.Nombre.Contains(txt_pelicula.Text));
+                            if (Inicio.lista_peliculas.Remove(eliminar))
+                                MessageBox.Show("La pelicula " + eliminar.Nombre + " ha sido eliminada correctamente.");
+                            else
+                                MessageBox.Show("La pelicula no ha sido eliminada");
+
+                            UpdateGridPelicula();
+
+                        }
+
+                        if (tabControl1.SelectedTab.Text == "Promociones") {
+                        cPromo eliminar = Inicio.lista_promociones.Find(x => x.Nombre.Contains(txt_pelicula.Text));
+                        if (Inicio.lista_promociones.Remove(eliminar))
                             MessageBox.Show("La pelicula " + eliminar.Nombre + " ha sido eliminada correctamente.");
                         else
                             MessageBox.Show("La pelicula no ha sido eliminada");
 
-                        UpdateGridPelicula();
+                        UpdateGridPromociones();
+
+                        }
+
 
                     }
 
