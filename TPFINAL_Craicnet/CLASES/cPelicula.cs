@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TPFINAL_Craicnet.CLASES;
 
 namespace TPFINAL_Craicnet
 {
@@ -153,6 +154,13 @@ namespace TPFINAL_Craicnet
                     pelicula.Vistos_Anio = 0;
                     pelicula.Vistos_Mes = 0;
                 }
+                foreach (cPromo promo in Inicio.lista_promociones)
+                {
+                    promo.Pelicula.Alq_Anio = 0;
+                    promo.Pelicula.Alq_Mes = 0;
+                    promo.Pelicula.Vistos_Anio = 0;
+                    promo.Pelicula.Vistos_Mes = 0;
+                }
 
             }
             else
@@ -163,7 +171,14 @@ namespace TPFINAL_Craicnet
                         pelicula.Alq_Mes = 0;
                         pelicula.Vistos_Mes = 0;
                     }
+                foreach (cPromo promo in Inicio.lista_promociones)
+                {
+                    promo.Pelicula.Alq_Anio = 0;
+                    promo.Pelicula.Alq_Mes = 0;
+                    promo.Pelicula.Vistos_Anio = 0;
+                    promo.Pelicula.Vistos_Mes = 0;
                 }
+            }
 
                 Ult_Act = DateTime.Now;
             }

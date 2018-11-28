@@ -40,14 +40,15 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btn_Aceptar
             // 
-            this.btn_Aceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Aceptar.Location = new System.Drawing.Point(964, 799);
+            this.btn_Aceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Aceptar.Location = new System.Drawing.Point(933, 410);
             this.btn_Aceptar.Name = "btn_Aceptar";
-            this.btn_Aceptar.Size = new System.Drawing.Size(317, 73);
+            this.btn_Aceptar.Size = new System.Drawing.Size(238, 56);
             this.btn_Aceptar.TabIndex = 0;
             this.btn_Aceptar.Text = "Aceptar";
             this.btn_Aceptar.UseVisualStyleBackColor = true;
@@ -55,10 +56,10 @@
             // 
             // btn_Cancelar
             // 
-            this.btn_Cancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Cancelar.Location = new System.Drawing.Point(1322, 799);
+            this.btn_Cancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Cancelar.Location = new System.Drawing.Point(1260, 410);
             this.btn_Cancelar.Name = "btn_Cancelar";
-            this.btn_Cancelar.Size = new System.Drawing.Size(317, 73);
+            this.btn_Cancelar.Size = new System.Drawing.Size(230, 56);
             this.btn_Cancelar.TabIndex = 1;
             this.btn_Cancelar.Text = "Cancelar";
             this.btn_Cancelar.UseVisualStyleBackColor = true;
@@ -66,7 +67,7 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(1072, 310);
+            this.dateTimePicker1.Location = new System.Drawing.Point(822, 108);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(501, 38);
             this.dateTimePicker1.TabIndex = 2;
@@ -74,7 +75,7 @@
             // 
             // txt_n_dias
             // 
-            this.txt_n_dias.Location = new System.Drawing.Point(1343, 560);
+            this.txt_n_dias.Location = new System.Drawing.Point(1260, 201);
             this.txt_n_dias.Name = "txt_n_dias";
             this.txt_n_dias.ReadOnly = true;
             this.txt_n_dias.Size = new System.Drawing.Size(188, 38);
@@ -83,7 +84,7 @@
             // 
             // txt_PrecioTotal
             // 
-            this.txt_PrecioTotal.Location = new System.Drawing.Point(1343, 656);
+            this.txt_PrecioTotal.Location = new System.Drawing.Point(1260, 293);
             this.txt_PrecioTotal.Name = "txt_PrecioTotal";
             this.txt_PrecioTotal.ReadOnly = true;
             this.txt_PrecioTotal.Size = new System.Drawing.Size(188, 38);
@@ -91,7 +92,7 @@
             // 
             // txt_Nombre
             // 
-            this.txt_Nombre.Location = new System.Drawing.Point(274, 206);
+            this.txt_Nombre.Location = new System.Drawing.Point(227, 195);
             this.txt_Nombre.Name = "txt_Nombre";
             this.txt_Nombre.ReadOnly = true;
             this.txt_Nombre.Size = new System.Drawing.Size(562, 38);
@@ -100,7 +101,7 @@
             // 
             // txt_Precio
             // 
-            this.txt_Precio.Location = new System.Drawing.Point(274, 345);
+            this.txt_Precio.Location = new System.Drawing.Point(227, 293);
             this.txt_Precio.Name = "txt_Precio";
             this.txt_Precio.ReadOnly = true;
             this.txt_Precio.Size = new System.Drawing.Size(562, 38);
@@ -109,7 +110,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(81, 209);
+            this.label1.Location = new System.Drawing.Point(64, 195);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(117, 32);
             this.label1.TabIndex = 7;
@@ -118,7 +119,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(81, 348);
+            this.label2.Location = new System.Drawing.Point(64, 299);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(96, 32);
             this.label2.TabIndex = 8;
@@ -127,26 +128,37 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(1066, 560);
+            this.label3.Location = new System.Drawing.Point(927, 201);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(159, 32);
             this.label3.TabIndex = 9;
             this.label3.Text = "Nro de días";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(1066, 662);
+            this.label4.Location = new System.Drawing.Point(927, 293);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(158, 32);
             this.label4.TabIndex = 10;
             this.label4.Text = "Precio total";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(408, 114);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(282, 32);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "Fecha de Devolución";
+            // 
             // Alquiler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1670, 956);
+            this.ClientSize = new System.Drawing.Size(1623, 617);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -180,5 +192,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }

@@ -37,5 +37,10 @@ namespace TPFINAL_Craicnet.FORMS
             FORMS.Alquiler alquiler = new FORMS.Alquiler(lista_peliculas_promo.Find(x => x.Pelicula.Nombre.Contains(txt_NombrePromo.Text)), Alquilador);
             alquiler.Show(this);
         }
+
+        private void Promociones_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

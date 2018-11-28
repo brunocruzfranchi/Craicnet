@@ -61,6 +61,7 @@ namespace TPFINAL_Craicnet
             grid_promociones_cliente.DataSource = Inicio.promociones;
             pict_like.Image = Image.FromFile(AppDomain.CurrentDomain.BaseDirectory + "like.png");
             label3.Hide();
+            split_alquilar.BringToFront();
         }
 
         //Menu Strip
@@ -269,6 +270,7 @@ namespace TPFINAL_Craicnet
                         txt_genero_cliente.Text = row.Cells[4].Value.ToString();
                         txt_anio_cliente.Text = row.Cells[5].Value.ToString();
                         txt_sinopsis.Text = row.Cells[7].Value.ToString();
+                        txt_actor_cliente.Text = row.Cells[6].Value.ToString();
                        
                     }
             
@@ -287,24 +289,35 @@ namespace TPFINAL_Craicnet
                     if (cell != null&& !rbtn_buscar.Checked)
                     {
                         DataGridViewRow row = cell.OwningRow;
-                        txt_pelicula_cliente.Text = row.Cells[0].Value.ToString();
-                        txt_director_cliente.Text = row.Cells[1].Value.ToString();
-                        txt_precio_cliente.Text = row.Cells[2].Value.ToString();
-                        txt_genero_cliente.Text = row.Cells[4].Value.ToString();
-                        txt_anio_cliente.Text = row.Cells[5].Value.ToString();
+                        txt_pelicula_cliente.Text = row.Cells[2].Value.ToString();
+                        txt_director_cliente.Text = row.Cells[7].Value.ToString();
+                        txt_precio_cliente.Text = row.Cells[5].Value.ToString();
+                        txt_genero_cliente.Text = row.Cells[8].Value.ToString();
+                        txt_anio_cliente.Text = row.Cells[9].Value.ToString();
                         txt_sinopsis.Text = row.Cells[7].Value.ToString();
-                       
-                    }
+                        txt_actor_cliente.Text = row.Cells[10].Value.ToString();
+                txt_sinopsis.Text = row.Cells[11].Value.ToString();
+            }
 
                 }
 
         //Buttons 
 
         private void btn_alquilar_Click(object sender, EventArgs e)
-        {            
-            FORMS.Alquiler alquiler = new FORMS.Alquiler(Inicio.lista_peliculas.Find(x => x.Nombre.Contains(txt_pelicula_cliente.Text)), Cliente_Activo);
-            alquiler.Show(this);
-            cPelicula.Actualizar(Inicio.lista_peliculas);
+        {
+            if (tab_Peliculas.SelectedTab == tabp_peliculas)
+            {
+                FORMS.Alquiler alquiler = new FORMS.Alquiler(Inicio.lista_peliculas.Find(x => x.Nombre.Contains(txt_pelicula_cliente.Text)), Cliente_Activo);
+                cPelicula.Actualizar(Inicio.lista_peliculas);
+                alquiler.Show(this);
+            }
+            if (tab_Peliculas.SelectedTab == tabp_promo)
+            {
+                FORMS.Alquiler alquiler = new FORMS.Alquiler(Inicio.lista_promociones.Find(x => x.Nombre.Contains(txt_pelicula_cliente.Text)), Cliente_Activo);
+                cPelicula.Actualizar(Inicio.lista_peliculas);
+                alquiler.Show(this);
+            }
+          
             //falta sumar alquiler
 
         }
@@ -327,32 +340,59 @@ namespace TPFINAL_Craicnet
 
         private void btn_Buscar_Click(object sender, EventArgs e)
         {
+            if (tab_Peliculas.SelectedTab == tabp_peliculas)
+            {
+                BindingList<cPelicula> filtered = new BindingList<cPelicula>(Inicio.lista_peliculas.Where(obj => (obj.Nombre.Contains(txt_pelicula_cliente.Text) &&
+                                                                             obj.Actores.Contains(txt_actor_cliente.Text) &&
+                                                                             obj.Precio.ToString().Contains(txt_precio_cliente.Text) &&
+                                                                             obj.Director.Contains(txt_director_cliente.Text) &&
+                                                                             obj.Año.Contains(txt_anio_cliente.Text) &&
+                                                                             obj.Genero.Contains(txt_genero_cliente.Text))).ToList());
+                grid_peliculas_cliente.DataSource = filtered;
+                grid_peliculas_cliente.EndEdit();
+                grid_peliculas_cliente.ResetBindings();
 
-            BindingList<cPelicula> filtered = new BindingList<cPelicula>(Inicio.lista_peliculas.Where(obj => (obj.Nombre.Contains(txt_pelicula_cliente.Text) && 
-                                                                         obj.Actores.Contains(txt_actor_cliente.Text) && 
-                                                                         obj.Precio.ToString().Contains(txt_precio_cliente.Text) && 
-                                                                         obj.Director.Contains(txt_director_cliente.Text) && 
-                                                                         obj.Año.Contains(txt_anio_cliente.Text) &&
-                                                                         obj.Genero.Contains(txt_genero_cliente.Text))).ToList());
+            }
+            if (tab_Peliculas.SelectedTab == tabp_promo)
+            {
+                BindingList<cPromo> filtered = new BindingList<cPromo>(Inicio.lista_promociones.Where(obj => (obj.Nombre.Contains(txt_pelicula_cliente.Text) &&
+                                                                             obj.Actores.Contains(txt_actor_cliente.Text) &&
+                                                                             obj.Precio.ToString().Contains(txt_precio_cliente.Text) &&
+                                                                             obj.Director.Contains(txt_director_cliente.Text) &&
+                                                                             obj.Año.Contains(txt_anio_cliente.Text) &&
+                                                                             obj.Genero.Contains(txt_genero_cliente.Text))).ToList());
+                grid_promociones_cliente.DataSource = filtered;
+                grid_promociones_cliente.EndEdit();
+                grid_promociones_cliente.ResetBindings();
+            }
+            if (tab_Peliculas.SelectedTab == tabp_alq)
+            {
+                BindingList<cPelicula> filtered = new BindingList<cPelicula>(Cliente_Activo.peliculas_alquiladas.Where(obj => (obj.Nombre.Contains(txt_pelicula_cliente.Text) &&
+                                                                             obj.Actores.Contains(txt_actor_cliente.Text) &&
+                                                                             obj.Precio.ToString().Contains(txt_precio_cliente.Text) &&
+                                                                             obj.Director.Contains(txt_director_cliente.Text) &&
+                                                                             obj.Año.Contains(txt_anio_cliente.Text) &&
+                                                                             obj.Genero.Contains(txt_genero_cliente.Text))).ToList());
+                grid_peliculas_cliente.DataSource = filtered;
+                grid_peliculas_cliente.EndEdit();
+                grid_peliculas_cliente.ResetBindings();
+
+            }
+
+            /*   *if(!string.IsNullOrWhiteSpace(txt_pelicula_cliente.Text))
+              filtered.Where(obj => obj.Nombre.Contains(txt_pelicula_cliente.Text)).ToList();
+            if (!string.IsNullOrWhiteSpace(txt_actor_cliente.Text))
+                filtered.Where(obj => obj.Actores.Contains(txt_actor_cliente.Text));
+             if (!string.IsNullOrWhiteSpace(txt_precio_cliente.Text))
+                 filtered.Where(obj => obj.Precio.ToString().Contains(txt_precio_cliente.Text));
+             if (!string.IsNullOrWhiteSpace(txt_director_cliente.Text))
+                 filtered.Where(obj => obj.Director.Contains(txt_director_cliente.Text));
+             if (!string.IsNullOrWhiteSpace(txt_anio_cliente.Text))
+                 filtered.Where(obj => obj.Año.Contains(txt_anio_cliente.Text));
+             if (!string.IsNullOrWhiteSpace(txt_genero_cliente.Text))
+                 filtered.Where(obj => obj.Genero.Contains(txt_genero_cliente.Text));*/
+
            
-            /*
-             *if(!string.IsNullOrWhiteSpace(txt_pelicula_cliente.Text))
-             filtered.Where(obj => obj.Nombre.Contains(txt_pelicula_cliente.Text)).ToList();
-           if (!string.IsNullOrWhiteSpace(txt_actor_cliente.Text))
-               filtered.Where(obj => obj.Actores.Contains(txt_actor_cliente.Text));
-            if (!string.IsNullOrWhiteSpace(txt_precio_cliente.Text))
-                filtered.Where(obj => obj.Precio.ToString().Contains(txt_precio_cliente.Text));
-            if (!string.IsNullOrWhiteSpace(txt_director_cliente.Text))
-                filtered.Where(obj => obj.Director.Contains(txt_director_cliente.Text));
-            if (!string.IsNullOrWhiteSpace(txt_anio_cliente.Text))
-                filtered.Where(obj => obj.Año.Contains(txt_anio_cliente.Text));
-            if (!string.IsNullOrWhiteSpace(txt_genero_cliente.Text))
-                filtered.Where(obj => obj.Genero.Contains(txt_genero_cliente.Text));
-                */
-
-            grid_peliculas_cliente.DataSource = filtered;
-            grid_peliculas_cliente.EndEdit();
-            grid_peliculas_cliente.ResetBindings();
         }
 
         private void btn_Restaurar_Click(object sender, EventArgs e)
@@ -409,24 +449,27 @@ namespace TPFINAL_Craicnet
 
         private void tab_Peliculas_Selected(object sender, TabControlEventArgs e)
         {
-            
-        }
-
-        private void tab_Peliculas_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (tab_Peliculas.SelectedIndex == 0)
+            if (tab_Peliculas.SelectedTab == tabp_peliculas )
             {
                 split_alquilar.Show();
                 groupBox_cliente.Hide();
             }
-            if (tab_Peliculas.SelectedIndex == 1)
+            if (tab_Peliculas.SelectedTab == tabp_promo)
             {
-
+                split_alquilar.Show();
+                groupBox_cliente.Hide();
             }
-            if (tab_Peliculas.SelectedIndex == 2)
+            if (tab_Peliculas.SelectedTab == tabp_alq)
             {
-
+                // split_alquilar.Hide();
+                groupBox_cliente.Show();
+                groupBox_cliente.BringToFront();
             }
+        }
+
+        private void tab_Peliculas_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

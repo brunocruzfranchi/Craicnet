@@ -25,14 +25,24 @@ namespace TPFINAL_Craicnet.FORMS
         }
         public Alquiler(cPelicula peli, cUsuario cliente)
         {
+            bool EsPromo = false;
             InitializeComponent();
-            this.Width = 1000;
-            this.Height = 700;
+            this.Width = 165*4;
+            this.Height = 70*4;
             this.CenterToScreen();
             this.Pelicula_Alquilada = peli;
             this.Cliente_que_alquila = cliente;
             txt_Nombre.Text = Pelicula_Alquilada.Nombre;
-            txt_Precio.Text = Pelicula_Alquilada.Precio.ToString();
+            foreach (cPromo promo in Inicio.lista_promociones)
+            {
+                if (promo.Pelicula == Pelicula_Alquilada)
+                {
+                    txt_Precio.Text = promo.Precio_descuento.ToString();
+                    EsPromo = true;
+                }
+            }
+            if(!EsPromo)
+                txt_Precio.Text = Pelicula_Alquilada.Precio.ToString();
             txt_n_dias.Text = DateTime.Compare( dateTimePicker1.Value, DateTime.Today).ToString();
             txt_PrecioTotal.Text = (int.Parse(txt_n_dias.Text) * int.Parse(txt_Precio.Text)).ToString();
         }
@@ -94,6 +104,11 @@ namespace TPFINAL_Craicnet.FORMS
         }
 
         private void Alquiler_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
         {
 
         }
