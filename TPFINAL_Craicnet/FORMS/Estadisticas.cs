@@ -155,27 +155,31 @@ namespace TPFINAL_Craicnet.FORMS
         {
             Stopwatch bubble = new Stopwatch();
             Stopwatch quick = new Stopwatch();
+            long bubble_tiempo = 0, quick_tiempo=0;
 
-            if (combo_cmp.SelectedItem.ToString()=="Anual")
+            if (combo_cmp.SelectedItem.ToString()=="Mes")
                 {
                 bubble.Start();
                 lista_peliculas = cPelicula.BubbleSort_VistMes(lista_peliculas);
                 bubble.Stop();
-                long bubble_tiempo = bubble.ElapsedTicks;
+                bubble_tiempo = bubble.ElapsedTicks;
                 quick.Start();
                 lista_peliculas = cPelicula.QuickSort_AlqMes(lista_peliculas); //chequear quicksort
                 quick.Stop();
-                long quick_tiempo = bubble.ElapsedTicks;
+                quick_tiempo = bubble.ElapsedTicks;
             }
             else
             {
                 bubble.Start();
                 lista_peliculas = cPelicula.BubbleSort_VistAño(lista_peliculas);
                 bubble.Stop();
+                bubble_tiempo = bubble.ElapsedTicks;
                 quick.Start();
                 lista_peliculas = cPelicula.QuickSort_AlqAnio(lista_peliculas);
                 quick.Stop();
             }
+
+            MessageBox.Show("Tiempo de ejecución Bubble Sort: " + bubble_tiempo.ToString() + " Ticks. Tiempo de ejecución QuickSort: " + quick_tiempo.ToString() + " Ticks. El algoritmo QuickSort fue un " + ((quick_tiempo * 100 / bubble_tiempo)-100).ToString() + "% más eficiente.", "Comparación eficiencias");
 
             //MessageBox.Show(bubble.Interval.ToString(), quick.Interval.ToString()); //!!!! mirar bien como imprimir bien
             //bubble.Dispose();
