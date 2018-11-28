@@ -75,9 +75,30 @@ namespace TPFINAL_Craicnet
             Grid_promociones.DataSource = Inicio.promociones;
         }
 
+        private void Administrador_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            using (StreamWriter theWriter = new StreamWriter(Application.StartupPath + "\\Temp_Peliculas.csv"))
+            {
+                theWriter.WriteLine("Nombre;Genero;Director;Precio;Año;Actores;Puntaje;Sinopsis;VistosMes;VistosAnio;AlqMes;AlqAnio");
+
+                foreach (cPelicula curPelicula in Inicio.lista_peliculas)
+                {
+                    theWriter.Write(curPelicula.Nombre + ";" + curPelicula.Genero + ";" + curPelicula.Director + ";" + 
+                                    curPelicula.Precio + ";" + curPelicula.Año + ";" + curPelicula.Actores + ";" + 
+                                    curPelicula.Puntaje + ";" + curPelicula.Sinopsis + ";" + curPelicula.Vistos_Mes + ";" +
+                                    curPelicula.Vistos_Anio + ";" + curPelicula.Alq_Mes + ";");
+                    theWriter.WriteLine(curPelicula.Alq_Anio);
+                }
+
+            }
+
+            File.Delete(Application.StartupPath + "\\Peliculas-CSV.csv");
+            File.Move(Application.StartupPath + "\\Temp_Peliculas.csv", Application.StartupPath + "\\Peliculas-CSV.csv");
+        }
+
         //Menu Strip
 
-                    private void promocionesToolStripMenuItem_Click(object sender, EventArgs e)
+        private void promocionesToolStripMenuItem_Click(object sender, EventArgs e)
                     {
                         grid_peliculas.Visible = true;
                         groupbox_agregar.Visible = false;
@@ -258,8 +279,8 @@ namespace TPFINAL_Craicnet
                     /// <param name="e"></param>
                     private void grid_peliculas_SelectionChanged(object sender, EventArgs e)
                     {
-                        txt_descuento.Enabled = false;
-                        dateTimePicker_fecha_limite.Enabled = false;
+                        //txt_descuento.Enabled = false;
+                        //dateTimePicker_fecha_limite.Enabled = false;
                         DataGridViewCell cell = null;
 
                         foreach(DataGridViewCell selectedCell in grid_peliculas.SelectedCells)
@@ -297,8 +318,8 @@ namespace TPFINAL_Craicnet
 
                     private void Grid_promociones_SelectionChanged(object sender, EventArgs e)
                     {
-                        txt_descuento.Enabled = true;
-                        dateTimePicker_fecha_limite.Enabled = true;
+                        //txt_descuento.Enabled = true;
+                        //dateTimePicker_fecha_limite.Enabled = true;
                         DataGridViewCell cell = null;
 
                         foreach (DataGridViewCell selectedCell in Grid_promociones.SelectedCells)
@@ -328,6 +349,25 @@ namespace TPFINAL_Craicnet
                         }
                     }
 
+                    private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+                    {
+            
+                        if (tabControl1.SelectedTab == tabControl1.TabPages[0]) { 
+
+                                txt_descuento.Enabled = false;
+                                dateTimePicker_fecha_limite.Enabled = false;
+
+                        }
+
+                        if (tabControl1.SelectedTab == tabControl1.TabPages[1]) { 
+                            if (radio_editar.Checked == true)
+                            {
+                                txt_descuento.Enabled = true;
+                                dateTimePicker_fecha_limite.Enabled = true;
+                            }
+                        }
+                    }
+    
         //Buttons 
 
                     private void btn_promocion_Click(object sender, EventArgs e)
@@ -361,77 +401,7 @@ namespace TPFINAL_Craicnet
 
                     }
 
-                    private void radio_agregar_CheckedChanged(object sender, EventArgs e)
-                    {
-                        txt_pelicula.Enabled = true;
-                        txt_director.Enabled = true;
-                        txt_precio.Enabled = true;
-                        txt_genero.Enabled = true;
-                        txt_año.Enabled = true;
-                        txt_actores.Enabled = true;
-                        txt_sinopsis.Enabled = true;
-
-                        btn_Agregar.Enabled = true;
-                        btn_eliminar.Enabled = false;
-                        btn_editar.Enabled = false;
-
-                        txt_pelicula.Text = "";
-                        txt_director.Text = "";
-                        txt_precio.Text = "";
-                        txt_genero.Text = "";
-                        txt_año.Text = "";
-                        txt_actores.Text = "";
-                        txt_sinopsis.Text = "";
-                    }
-
-                    private void radio_editar_CheckedChanged(object sender, EventArgs e)
-                    {
-                        txt_pelicula.Enabled = true;
-                        txt_director.Enabled = true;
-                        txt_precio.Enabled = true;
-                        txt_genero.Enabled = true;
-                        txt_año.Enabled = true;
-                        txt_actores.Enabled = true;
-                        txt_sinopsis.Enabled = true;
-                        btn_Agregar.Enabled = false;
-                        btn_eliminar.Enabled = false;
-                        btn_editar.Enabled = true;
-                    }
-
-                    private void radio_eliminar_CheckedChanged(object sender, EventArgs e)
-                    {
-                        txt_pelicula.Enabled = false;
-                        txt_director.Enabled = false;
-                        txt_precio.Enabled = false;
-                        txt_genero.Enabled = false;
-                        txt_año.Enabled = false;
-                        txt_actores.Enabled = false;
-                        txt_sinopsis.Enabled = false;
-
-                        btn_Agregar.Enabled = false;
-                        btn_eliminar.Enabled = true;
-                        btn_editar.Enabled = false;
-                    }
-
-                    private void button1_Click(object sender, EventArgs e)
-                    {
-                       
-                        using (var sw = new StreamWriter(AppDomain.CurrentDomain.BaseDirectory + "\\hola.csv"))
-                        {
-
-                            var writer = new CsvWriter(sw);
-
-                            writer.WriteHeader(typeof(cPromo));
-
-                            foreach (cPromo s in cPromoBindingSource.DataSource as List<cPromo>)
-                            {
-                                writer.WriteRecord(s);
-                            }
-
-                        }
-                    }
-
-        public void btn_editar_Click(object sender, EventArgs e)
+                    public void btn_editar_Click(object sender, EventArgs e)
                     {
                          /**
                           * TODO: 
@@ -494,6 +464,63 @@ namespace TPFINAL_Craicnet
                             MessageBox.Show("No se ha realizado el cambio");
                         }
                     }
+
+        //RadioButtons
+
+                    private void radio_agregar_CheckedChanged(object sender, EventArgs e)
+                    {
+                        txt_pelicula.Enabled = true;
+                        txt_director.Enabled = true;
+                        txt_precio.Enabled = true;
+                        txt_genero.Enabled = true;
+                        txt_año.Enabled = true;
+                        txt_actores.Enabled = true;
+                        txt_sinopsis.Enabled = true;
+
+                        btn_Agregar.Enabled = true;
+                        btn_eliminar.Enabled = false;
+                        btn_editar.Enabled = false;
+
+                        txt_pelicula.Text = "";
+                        txt_director.Text = "";
+                        txt_precio.Text = "";
+                        txt_genero.Text = "";
+                        txt_año.Text = "";
+                        txt_actores.Text = "";
+                        txt_sinopsis.Text = "";
+                    }
+
+                    private void radio_editar_CheckedChanged(object sender, EventArgs e)
+                    {
+                        txt_pelicula.Enabled = true;
+                        txt_director.Enabled = true;
+                        txt_precio.Enabled = true;
+                        txt_genero.Enabled = true;
+                        txt_año.Enabled = true;
+                        txt_actores.Enabled = true;
+                        txt_sinopsis.Enabled = true;
+                        btn_Agregar.Enabled = false;
+                        btn_eliminar.Enabled = false;
+                        btn_editar.Enabled = true;
+                    }
+
+                    private void radio_eliminar_CheckedChanged(object sender, EventArgs e)
+                    {
+                        txt_pelicula.Enabled = false;
+                        txt_director.Enabled = false;
+                        txt_precio.Enabled = false;
+                        txt_genero.Enabled = false;
+                        txt_año.Enabled = false;
+                        txt_actores.Enabled = false;
+                        txt_sinopsis.Enabled = false;
+
+                        btn_Agregar.Enabled = false;
+                        btn_eliminar.Enabled = true;
+                        btn_editar.Enabled = false;
+                    }
+
+
+        //Funciones
 
                     public string ObtenerNombre(object sender, EventArgs e, string grid) {
 
@@ -567,23 +594,5 @@ namespace TPFINAL_Craicnet
                         Grid_promociones.DataSource = Inicio.promociones;
                     }
 
-                    private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
-                    {
-            
-                        if (tabControl1.SelectedTab == tabControl1.TabPages["Peliculas"]) { 
-
-                                txt_descuento.Enabled = false;
-                                dateTimePicker_fecha_limite.Enabled = false;
-
-                        }
-
-                        if (tabControl1.SelectedTab == tabControl1.TabPages["Promociones"]) { 
-                            if (radio_editar.Checked == true)
-                            {
-                                txt_descuento.Enabled = true;
-                                dateTimePicker_fecha_limite.Enabled = true;
-                            }
-                        }
-                    }
     }
 }
