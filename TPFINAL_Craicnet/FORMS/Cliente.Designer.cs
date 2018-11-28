@@ -69,6 +69,14 @@
             this.vistosAnioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cPromoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.groupBox_cliente = new System.Windows.Forms.GroupBox();
+            this.btn_VerPelicula = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.pic_unlike = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pict_like = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.gbox_alquilar = new System.Windows.Forms.GroupBox();
             this.rbtn_Alquiler = new System.Windows.Forms.RadioButton();
             this.rbtn_buscar = new System.Windows.Forms.RadioButton();
@@ -91,14 +99,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.groupBox_cliente = new System.Windows.Forms.GroupBox();
-            this.btn_VerPelicula = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.pic_unlike = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.pict_like = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.gbox_cliente = new System.Windows.Forms.GroupBox();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.cPeliculasBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -115,11 +115,11 @@
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid_promociones_cliente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cPromoBindingSource)).BeginInit();
-            this.gbox_alquilar.SuspendLayout();
             this.groupBox_cliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_unlike)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pict_like)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.gbox_alquilar.SuspendLayout();
             this.gbox_cliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cPeliculasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cPeliculaBindingSource1)).BeginInit();
@@ -132,8 +132,7 @@
             this.clienteToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(16, 5, 0, 5);
-            this.menuStrip1.Size = new System.Drawing.Size(2933, 55);
+            this.menuStrip1.Size = new System.Drawing.Size(849, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -144,36 +143,35 @@
             this.alquiladasToolStripMenuItem,
             this.cerrarSesiónToolStripMenuItem});
             this.clienteToolStripMenuItem.Name = "clienteToolStripMenuItem";
-            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(122, 45);
+            this.clienteToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
             this.clienteToolStripMenuItem.Text = "Cliente";
             this.clienteToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // alquilerToolStripMenuItem
             // 
             this.alquilerToolStripMenuItem.Name = "alquilerToolStripMenuItem";
-            this.alquilerToolStripMenuItem.Size = new System.Drawing.Size(307, 46);
+            this.alquilerToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.alquilerToolStripMenuItem.Text = "Alquiler";
             this.alquilerToolStripMenuItem.Click += new System.EventHandler(this.alquilerToolStripMenuItem_Click);
             // 
             // alquiladasToolStripMenuItem
             // 
             this.alquiladasToolStripMenuItem.Name = "alquiladasToolStripMenuItem";
-            this.alquiladasToolStripMenuItem.Size = new System.Drawing.Size(307, 46);
+            this.alquiladasToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.alquiladasToolStripMenuItem.Text = "Perfil";
             this.alquiladasToolStripMenuItem.Click += new System.EventHandler(this.alquiladasToolStripMenuItem_Click);
             // 
             // cerrarSesiónToolStripMenuItem
             // 
             this.cerrarSesiónToolStripMenuItem.Name = "cerrarSesiónToolStripMenuItem";
-            this.cerrarSesiónToolStripMenuItem.Size = new System.Drawing.Size(307, 46);
+            this.cerrarSesiónToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.cerrarSesiónToolStripMenuItem.Text = "Cerrar Sesión";
             this.cerrarSesiónToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesiónToolStripMenuItem_Click);
             // 
             // split_alquilar
             // 
             this.split_alquilar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.split_alquilar.Location = new System.Drawing.Point(8, 38);
-            this.split_alquilar.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.split_alquilar.Location = new System.Drawing.Point(3, 16);
             this.split_alquilar.Name = "split_alquilar";
             // 
             // split_alquilar.Panel1
@@ -184,9 +182,8 @@
             // 
             this.split_alquilar.Panel2.Controls.Add(this.groupBox_cliente);
             this.split_alquilar.Panel2.Controls.Add(this.gbox_alquilar);
-            this.split_alquilar.Size = new System.Drawing.Size(2917, 1276);
-            this.split_alquilar.SplitterDistance = 1735;
-            this.split_alquilar.SplitterWidth = 11;
+            this.split_alquilar.Size = new System.Drawing.Size(843, 271);
+            this.split_alquilar.SplitterDistance = 501;
             this.split_alquilar.TabIndex = 0;
             // 
             // tab_Peliculas
@@ -197,9 +194,10 @@
             this.tab_Peliculas.Controls.Add(this.tabPage3);
             this.tab_Peliculas.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tab_Peliculas.Location = new System.Drawing.Point(0, 0);
+            this.tab_Peliculas.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.tab_Peliculas.Name = "tab_Peliculas";
             this.tab_Peliculas.SelectedIndex = 0;
-            this.tab_Peliculas.Size = new System.Drawing.Size(1735, 1276);
+            this.tab_Peliculas.Size = new System.Drawing.Size(501, 271);
             this.tab_Peliculas.TabIndex = 2;
             this.tab_Peliculas.SelectedIndexChanged += new System.EventHandler(this.tab_Peliculas_SelectedIndexChanged);
             this.tab_Peliculas.Selected += new System.Windows.Forms.TabControlEventHandler(this.tab_Peliculas_Selected);
@@ -207,10 +205,11 @@
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.grid_peliculas_cliente);
-            this.tabPage1.Location = new System.Drawing.Point(10, 48);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1715, 1218);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.tabPage1.Size = new System.Drawing.Size(493, 245);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -234,12 +233,11 @@
             this.sinopsisDataGridViewTextBoxColumn});
             this.grid_peliculas_cliente.DataSource = this.cPeliculaBindingSource;
             this.grid_peliculas_cliente.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grid_peliculas_cliente.Location = new System.Drawing.Point(3, 3);
-            this.grid_peliculas_cliente.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.grid_peliculas_cliente.Location = new System.Drawing.Point(1, 1);
             this.grid_peliculas_cliente.Name = "grid_peliculas_cliente";
             this.grid_peliculas_cliente.ReadOnly = true;
             this.grid_peliculas_cliente.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.grid_peliculas_cliente.Size = new System.Drawing.Size(1709, 1212);
+            this.grid_peliculas_cliente.Size = new System.Drawing.Size(491, 243);
             this.grid_peliculas_cliente.TabIndex = 1;
             this.grid_peliculas_cliente.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.grid_peliculas_cliente_ColumnHeaderMouseClick);
             this.grid_peliculas_cliente.SelectionChanged += new System.EventHandler(this.grid_peliculas_cliente_SelectionChanged);
@@ -329,10 +327,11 @@
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.grid_promociones_cliente);
-            this.tabPage2.Location = new System.Drawing.Point(10, 48);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1715, 1218);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.tabPage2.Size = new System.Drawing.Size(643, 517);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -363,11 +362,12 @@
             this.vistosAnioDataGridViewTextBoxColumn});
             this.grid_promociones_cliente.DataSource = this.cPromoBindingSource;
             this.grid_promociones_cliente.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grid_promociones_cliente.Location = new System.Drawing.Point(3, 3);
+            this.grid_promociones_cliente.Location = new System.Drawing.Point(1, 1);
+            this.grid_promociones_cliente.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.grid_promociones_cliente.Name = "grid_promociones_cliente";
             this.grid_promociones_cliente.ReadOnly = true;
             this.grid_promociones_cliente.RowTemplate.Height = 40;
-            this.grid_promociones_cliente.Size = new System.Drawing.Size(1709, 1212);
+            this.grid_promociones_cliente.Size = new System.Drawing.Size(641, 515);
             this.grid_promociones_cliente.TabIndex = 0;
             this.grid_promociones_cliente.SelectionChanged += new System.EventHandler(this.grid_promociones_cliente_SelectionChanged);
             // 
@@ -504,13 +504,101 @@
             // 
             // tabPage3
             // 
-            this.tabPage3.Location = new System.Drawing.Point(10, 48);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1715, 1218);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.tabPage3.Size = new System.Drawing.Size(643, 517);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "tabPage3";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // groupBox_cliente
+            // 
+            this.groupBox_cliente.Controls.Add(this.btn_VerPelicula);
+            this.groupBox_cliente.Controls.Add(this.textBox1);
+            this.groupBox_cliente.Controls.Add(this.pic_unlike);
+            this.groupBox_cliente.Controls.Add(this.label3);
+            this.groupBox_cliente.Controls.Add(this.pict_like);
+            this.groupBox_cliente.Controls.Add(this.pictureBox1);
+            this.groupBox_cliente.Controls.Add(this.label4);
+            this.groupBox_cliente.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox_cliente.Location = new System.Drawing.Point(0, 0);
+            this.groupBox_cliente.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.groupBox_cliente.Name = "groupBox_cliente";
+            this.groupBox_cliente.Padding = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.groupBox_cliente.Size = new System.Drawing.Size(338, 271);
+            this.groupBox_cliente.TabIndex = 0;
+            this.groupBox_cliente.TabStop = false;
+            this.groupBox_cliente.Text = "groupBox1";
+            // 
+            // btn_VerPelicula
+            // 
+            this.btn_VerPelicula.Location = new System.Drawing.Point(279, 421);
+            this.btn_VerPelicula.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.btn_VerPelicula.Name = "btn_VerPelicula";
+            this.btn_VerPelicula.Size = new System.Drawing.Size(72, 29);
+            this.btn_VerPelicula.TabIndex = 2;
+            this.btn_VerPelicula.Text = "Ver";
+            this.btn_VerPelicula.UseVisualStyleBackColor = true;
+            this.btn_VerPelicula.Click += new System.EventHandler(this.btn_VerPelicula_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(85, 428);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(118, 20);
+            this.textBox1.TabIndex = 3;
+            // 
+            // pic_unlike
+            // 
+            this.pic_unlike.Location = new System.Drawing.Point(359, 331);
+            this.pic_unlike.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.pic_unlike.Name = "pic_unlike";
+            this.pic_unlike.Size = new System.Drawing.Size(55, 62);
+            this.pic_unlike.TabIndex = 5;
+            this.pic_unlike.TabStop = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(137, 331);
+            this.label3.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "label3";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // pict_like
+            // 
+            this.pict_like.Location = new System.Drawing.Point(270, 328);
+            this.pict_like.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.pict_like.Name = "pict_like";
+            this.pict_like.Size = new System.Drawing.Size(53, 62);
+            this.pict_like.TabIndex = 4;
+            this.pict_like.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(89, 34);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(189, 224);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label4.Location = new System.Drawing.Point(62, 328);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(61, 17);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Usuario:";
             // 
             // gbox_alquilar
             // 
@@ -538,10 +626,8 @@
             this.gbox_alquilar.Controls.Add(this.label9);
             this.gbox_alquilar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gbox_alquilar.Location = new System.Drawing.Point(0, 0);
-            this.gbox_alquilar.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.gbox_alquilar.Name = "gbox_alquilar";
-            this.gbox_alquilar.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.gbox_alquilar.Size = new System.Drawing.Size(1171, 1276);
+            this.gbox_alquilar.Size = new System.Drawing.Size(338, 271);
             this.gbox_alquilar.TabIndex = 0;
             this.gbox_alquilar.TabStop = false;
             this.gbox_alquilar.Text = "Alquilar";
@@ -551,10 +637,10 @@
             // 
             this.rbtn_Alquiler.AutoSize = true;
             this.rbtn_Alquiler.Checked = true;
-            this.rbtn_Alquiler.Location = new System.Drawing.Point(779, 81);
-            this.rbtn_Alquiler.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rbtn_Alquiler.Location = new System.Drawing.Point(292, 34);
+            this.rbtn_Alquiler.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.rbtn_Alquiler.Name = "rbtn_Alquiler";
-            this.rbtn_Alquiler.Size = new System.Drawing.Size(149, 36);
+            this.rbtn_Alquiler.Size = new System.Drawing.Size(59, 17);
             this.rbtn_Alquiler.TabIndex = 35;
             this.rbtn_Alquiler.TabStop = true;
             this.rbtn_Alquiler.Text = "Alquilar";
@@ -563,10 +649,10 @@
             // rbtn_buscar
             // 
             this.rbtn_buscar.AutoSize = true;
-            this.rbtn_buscar.Location = new System.Drawing.Point(261, 81);
-            this.rbtn_buscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rbtn_buscar.Location = new System.Drawing.Point(98, 34);
+            this.rbtn_buscar.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.rbtn_buscar.Name = "rbtn_buscar";
-            this.rbtn_buscar.Size = new System.Drawing.Size(140, 36);
+            this.rbtn_buscar.Size = new System.Drawing.Size(58, 17);
             this.rbtn_buscar.TabIndex = 34;
             this.rbtn_buscar.Text = "Buscar";
             this.rbtn_buscar.UseVisualStyleBackColor = true;
@@ -576,10 +662,10 @@
             // 
             this.btn_Restaurar.Enabled = false;
             this.btn_Restaurar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.900001F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Restaurar.Location = new System.Drawing.Point(813, 675);
-            this.btn_Restaurar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_Restaurar.Location = new System.Drawing.Point(305, 283);
+            this.btn_Restaurar.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.btn_Restaurar.Name = "btn_Restaurar";
-            this.btn_Restaurar.Size = new System.Drawing.Size(349, 67);
+            this.btn_Restaurar.Size = new System.Drawing.Size(131, 28);
             this.btn_Restaurar.TabIndex = 33;
             this.btn_Restaurar.Text = "Restaurar";
             this.btn_Restaurar.UseVisualStyleBackColor = true;
@@ -587,19 +673,20 @@
             // 
             // txt_anio_cliente
             // 
-            this.txt_anio_cliente.Location = new System.Drawing.Point(1011, 377);
-            this.txt_anio_cliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_anio_cliente.Location = new System.Drawing.Point(379, 158);
+            this.txt_anio_cliente.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.txt_anio_cliente.Name = "txt_anio_cliente";
-            this.txt_anio_cliente.Size = new System.Drawing.Size(156, 38);
+            this.txt_anio_cliente.Size = new System.Drawing.Size(61, 20);
             this.txt_anio_cliente.TabIndex = 32;
             // 
             // Actor
             // 
             this.Actor.AutoSize = true;
             this.Actor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.900001F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Actor.Location = new System.Drawing.Point(128, 563);
+            this.Actor.Location = new System.Drawing.Point(48, 236);
+            this.Actor.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.Actor.Name = "Actor";
-            this.Actor.Size = new System.Drawing.Size(96, 39);
+            this.Actor.Size = new System.Drawing.Size(41, 17);
             this.Actor.TabIndex = 31;
             this.Actor.Text = "Actor";
             // 
@@ -607,9 +694,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(56, 193);
+            this.label2.Location = new System.Drawing.Point(21, 81);
+            this.label2.Margin = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(139, 38);
+            this.label2.Size = new System.Drawing.Size(64, 16);
             this.label2.TabIndex = 30;
             this.label2.Text = "Pelicula";
             // 
@@ -617,10 +705,10 @@
             // 
             this.btn_Buscar.Enabled = false;
             this.btn_Buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btn_Buscar.Location = new System.Drawing.Point(136, 675);
-            this.btn_Buscar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_Buscar.Location = new System.Drawing.Point(51, 283);
+            this.btn_Buscar.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.btn_Buscar.Name = "btn_Buscar";
-            this.btn_Buscar.Size = new System.Drawing.Size(309, 67);
+            this.btn_Buscar.Size = new System.Drawing.Size(116, 28);
             this.btn_Buscar.TabIndex = 28;
             this.btn_Buscar.Text = "Buscar";
             this.btn_Buscar.UseVisualStyleBackColor = true;
@@ -629,10 +717,10 @@
             // btn_Promociones
             // 
             this.btn_Promociones.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold);
-            this.btn_Promociones.Location = new System.Drawing.Point(813, 1121);
-            this.btn_Promociones.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_Promociones.Location = new System.Drawing.Point(305, 470);
+            this.btn_Promociones.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
             this.btn_Promociones.Name = "btn_Promociones";
-            this.btn_Promociones.Size = new System.Drawing.Size(349, 100);
+            this.btn_Promociones.Size = new System.Drawing.Size(131, 42);
             this.btn_Promociones.TabIndex = 23;
             this.btn_Promociones.Text = "Promociones";
             this.btn_Promociones.UseVisualStyleBackColor = true;
@@ -641,10 +729,9 @@
             // btn_alquilar
             // 
             this.btn_alquilar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_alquilar.Location = new System.Drawing.Point(813, 529);
-            this.btn_alquilar.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.btn_alquilar.Location = new System.Drawing.Point(305, 222);
             this.btn_alquilar.Name = "btn_alquilar";
-            this.btn_alquilar.Size = new System.Drawing.Size(349, 100);
+            this.btn_alquilar.Size = new System.Drawing.Size(131, 42);
             this.btn_alquilar.TabIndex = 22;
             this.btn_alquilar.Text = "Alquilar";
             this.btn_alquilar.UseVisualStyleBackColor = true;
@@ -652,63 +739,56 @@
             // 
             // txt_sinopsis
             // 
-            this.txt_sinopsis.Location = new System.Drawing.Point(120, 909);
-            this.txt_sinopsis.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.txt_sinopsis.Location = new System.Drawing.Point(45, 381);
             this.txt_sinopsis.Multiline = true;
             this.txt_sinopsis.Name = "txt_sinopsis";
             this.txt_sinopsis.ReadOnly = true;
             this.txt_sinopsis.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txt_sinopsis.Size = new System.Drawing.Size(649, 445);
+            this.txt_sinopsis.Size = new System.Drawing.Size(246, 189);
             this.txt_sinopsis.TabIndex = 21;
             // 
             // txt_actor_cliente
             // 
-            this.txt_actor_cliente.Location = new System.Drawing.Point(261, 565);
-            this.txt_actor_cliente.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.txt_actor_cliente.Location = new System.Drawing.Point(98, 237);
             this.txt_actor_cliente.Name = "txt_actor_cliente";
-            this.txt_actor_cliente.Size = new System.Drawing.Size(481, 38);
+            this.txt_actor_cliente.Size = new System.Drawing.Size(183, 20);
             this.txt_actor_cliente.TabIndex = 20;
             // 
             // txt_genero_cliente
             // 
-            this.txt_genero_cliente.Location = new System.Drawing.Point(261, 467);
-            this.txt_genero_cliente.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.txt_genero_cliente.Location = new System.Drawing.Point(98, 196);
             this.txt_genero_cliente.Name = "txt_genero_cliente";
-            this.txt_genero_cliente.Size = new System.Drawing.Size(481, 38);
+            this.txt_genero_cliente.Size = new System.Drawing.Size(183, 20);
             this.txt_genero_cliente.TabIndex = 19;
             // 
             // txt_precio_cliente
             // 
-            this.txt_precio_cliente.Location = new System.Drawing.Point(952, 277);
-            this.txt_precio_cliente.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.txt_precio_cliente.Location = new System.Drawing.Point(357, 116);
             this.txt_precio_cliente.Name = "txt_precio_cliente";
-            this.txt_precio_cliente.Size = new System.Drawing.Size(215, 38);
+            this.txt_precio_cliente.Size = new System.Drawing.Size(83, 20);
             this.txt_precio_cliente.TabIndex = 18;
             // 
             // txt_director_cliente
             // 
-            this.txt_director_cliente.Location = new System.Drawing.Point(261, 372);
-            this.txt_director_cliente.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.txt_director_cliente.Location = new System.Drawing.Point(98, 156);
             this.txt_director_cliente.Name = "txt_director_cliente";
-            this.txt_director_cliente.Size = new System.Drawing.Size(481, 38);
+            this.txt_director_cliente.Size = new System.Drawing.Size(183, 20);
             this.txt_director_cliente.TabIndex = 17;
             // 
             // txt_pelicula_cliente
             // 
-            this.txt_pelicula_cliente.Location = new System.Drawing.Point(261, 277);
-            this.txt_pelicula_cliente.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.txt_pelicula_cliente.Location = new System.Drawing.Point(98, 116);
             this.txt_pelicula_cliente.Name = "txt_pelicula_cliente";
-            this.txt_pelicula_cliente.Size = new System.Drawing.Size(481, 38);
+            this.txt_pelicula_cliente.Size = new System.Drawing.Size(183, 20);
             this.txt_pelicula_cliente.TabIndex = 16;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(64, 818);
-            this.label1.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.label1.Location = new System.Drawing.Point(24, 343);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(149, 38);
+            this.label1.Size = new System.Drawing.Size(68, 16);
             this.label1.TabIndex = 15;
             this.label1.Text = "Sinopsis";
             // 
@@ -716,10 +796,9 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label10.Location = new System.Drawing.Point(795, 277);
-            this.label10.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.label10.Location = new System.Drawing.Point(298, 116);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(123, 39);
+            this.label10.Size = new System.Drawing.Size(52, 17);
             this.label10.TabIndex = 14;
             this.label10.Text = "Precio:";
             // 
@@ -727,10 +806,9 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label6.Location = new System.Drawing.Point(795, 374);
-            this.label6.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.label6.Location = new System.Drawing.Point(298, 157);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(78, 39);
+            this.label6.Size = new System.Drawing.Size(33, 17);
             this.label6.TabIndex = 13;
             this.label6.Text = "Año";
             // 
@@ -738,10 +816,9 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label7.Location = new System.Drawing.Point(96, 472);
-            this.label7.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.label7.Location = new System.Drawing.Point(36, 198);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(130, 39);
+            this.label7.Size = new System.Drawing.Size(56, 17);
             this.label7.TabIndex = 12;
             this.label7.Text = "Genero";
             // 
@@ -749,10 +826,9 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label8.Location = new System.Drawing.Point(91, 374);
-            this.label8.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.label8.Location = new System.Drawing.Point(34, 157);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(136, 39);
+            this.label8.Size = new System.Drawing.Size(58, 17);
             this.label8.TabIndex = 11;
             this.label8.Text = "Director";
             // 
@@ -760,106 +836,20 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label9.Location = new System.Drawing.Point(91, 277);
-            this.label9.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.label9.Location = new System.Drawing.Point(34, 116);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(138, 39);
+            this.label9.Size = new System.Drawing.Size(57, 17);
             this.label9.TabIndex = 10;
             this.label9.Text = "Pelicula";
-            // 
-            // groupBox_cliente
-            // 
-            this.groupBox_cliente.Controls.Add(this.btn_VerPelicula);
-            this.groupBox_cliente.Controls.Add(this.textBox1);
-            this.groupBox_cliente.Controls.Add(this.pic_unlike);
-            this.groupBox_cliente.Controls.Add(this.label3);
-            this.groupBox_cliente.Controls.Add(this.pict_like);
-            this.groupBox_cliente.Controls.Add(this.pictureBox1);
-            this.groupBox_cliente.Controls.Add(this.label4);
-            this.groupBox_cliente.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox_cliente.Location = new System.Drawing.Point(0, 0);
-            this.groupBox_cliente.Name = "groupBox_cliente";
-            this.groupBox_cliente.Size = new System.Drawing.Size(1171, 1276);
-            this.groupBox_cliente.TabIndex = 0;
-            this.groupBox_cliente.TabStop = false;
-            this.groupBox_cliente.Text = "groupBox1";
-            // 
-            // btn_VerPelicula
-            // 
-            this.btn_VerPelicula.Location = new System.Drawing.Point(744, 1005);
-            this.btn_VerPelicula.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_VerPelicula.Name = "btn_VerPelicula";
-            this.btn_VerPelicula.Size = new System.Drawing.Size(192, 69);
-            this.btn_VerPelicula.TabIndex = 2;
-            this.btn_VerPelicula.Text = "Ver";
-            this.btn_VerPelicula.UseVisualStyleBackColor = true;
-            this.btn_VerPelicula.Click += new System.EventHandler(this.btn_VerPelicula_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(227, 1021);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(308, 38);
-            this.textBox1.TabIndex = 3;
-            // 
-            // pic_unlike
-            // 
-            this.pic_unlike.Location = new System.Drawing.Point(958, 790);
-            this.pic_unlike.Name = "pic_unlike";
-            this.pic_unlike.Size = new System.Drawing.Size(146, 147);
-            this.pic_unlike.TabIndex = 5;
-            this.pic_unlike.TabStop = false;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(365, 790);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(93, 32);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "label3";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
-            // 
-            // pict_like
-            // 
-            this.pict_like.Location = new System.Drawing.Point(719, 783);
-            this.pict_like.Name = "pict_like";
-            this.pict_like.Size = new System.Drawing.Size(142, 147);
-            this.pict_like.TabIndex = 4;
-            this.pict_like.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(238, 81);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(504, 534);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label4.Location = new System.Drawing.Point(165, 783);
-            this.label4.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(144, 39);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Usuario:";
             // 
             // gbox_cliente
             // 
             this.gbox_cliente.AutoSize = true;
             this.gbox_cliente.Controls.Add(this.split_alquilar);
             this.gbox_cliente.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gbox_cliente.Location = new System.Drawing.Point(0, 55);
-            this.gbox_cliente.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.gbox_cliente.Location = new System.Drawing.Point(0, 24);
             this.gbox_cliente.Name = "gbox_cliente";
-            this.gbox_cliente.Padding = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.gbox_cliente.Size = new System.Drawing.Size(2933, 1321);
+            this.gbox_cliente.Size = new System.Drawing.Size(849, 290);
             this.gbox_cliente.TabIndex = 1;
             this.gbox_cliente.TabStop = false;
             this.gbox_cliente.Enter += new System.EventHandler(this.gbox_cliente_Enter);
@@ -867,10 +857,9 @@
             // statusStrip1
             // 
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(40, 40);
-            this.statusStrip1.Location = new System.Drawing.Point(0, 1354);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 292);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Padding = new System.Windows.Forms.Padding(3, 0, 37, 0);
-            this.statusStrip1.Size = new System.Drawing.Size(2933, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(849, 22);
             this.statusStrip1.TabIndex = 4;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -880,15 +869,14 @@
             // 
             // Cliente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(2933, 1376);
+            this.ClientSize = new System.Drawing.Size(849, 314);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.gbox_cliente);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
             this.Name = "Cliente";
             this.Text = "Cliente";
             this.Load += new System.EventHandler(this.Cliente_Load);
@@ -906,13 +894,13 @@
             this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grid_promociones_cliente)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cPromoBindingSource)).EndInit();
-            this.gbox_alquilar.ResumeLayout(false);
-            this.gbox_alquilar.PerformLayout();
             this.groupBox_cliente.ResumeLayout(false);
             this.groupBox_cliente.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_unlike)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pict_like)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.gbox_alquilar.ResumeLayout(false);
+            this.gbox_alquilar.PerformLayout();
             this.gbox_cliente.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.cPeliculasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cPeliculaBindingSource1)).EndInit();
