@@ -67,6 +67,24 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPeliculas = new System.Windows.Forms.TabPage();
             this.grid_peliculas = new System.Windows.Forms.DataGridView();
+            this.tabPromociones = new System.Windows.Forms.TabPage();
+            this.Grid_promociones = new System.Windows.Forms.DataGridView();
+            this.gbox_promocion = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.txt_descuento_promo = new System.Windows.Forms.TextBox();
+            this.fecha_limiteDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.btn_promocion = new System.Windows.Forms.Button();
+            this.txt_año_promo = new System.Windows.Forms.TextBox();
+            this.txt_genero_promo = new System.Windows.Forms.TextBox();
+            this.txt_precio_promo = new System.Windows.Forms.TextBox();
+            this.txt_director_promo = new System.Windows.Forms.TextBox();
+            this.txt_pelicula_promo = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.gbox_agregar = new System.Windows.Forms.GroupBox();
             this.NombreColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DirectorColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PrecioColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -76,8 +94,6 @@
             this.ActoresColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sinopsisDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cPeliculaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tabPromociones = new System.Windows.Forms.TabPage();
-            this.Grid_promociones = new System.Windows.Forms.DataGridView();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.directorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.generoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -95,21 +111,6 @@
             this.alqAnioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.vistosAnioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cPromoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.gbox_promocion = new System.Windows.Forms.GroupBox();
-            this.txt_descuento_promo = new System.Windows.Forms.TextBox();
-            this.fecha_limiteDateTimePicker = new System.Windows.Forms.DateTimePicker();
-            this.btn_promocion = new System.Windows.Forms.Button();
-            this.txt_año_promo = new System.Windows.Forms.TextBox();
-            this.txt_genero_promo = new System.Windows.Forms.TextBox();
-            this.txt_precio_promo = new System.Windows.Forms.TextBox();
-            this.txt_director_promo = new System.Windows.Forms.TextBox();
-            this.txt_pelicula_promo = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.gbox_agregar = new System.Windows.Forms.GroupBox();
             fecha_limiteLabel = new System.Windows.Forms.Label();
             label3 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
@@ -121,12 +122,12 @@
             this.tabControl1.SuspendLayout();
             this.tabPeliculas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid_peliculas)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cPeliculaBindingSource)).BeginInit();
             this.tabPromociones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Grid_promociones)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cPromoBindingSource)).BeginInit();
             this.gbox_promocion.SuspendLayout();
             this.gbox_agregar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cPeliculaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cPromoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // fecha_limiteLabel
@@ -498,7 +499,7 @@
             this.tabPeliculas.Controls.Add(this.grid_peliculas);
             this.tabPeliculas.Location = new System.Drawing.Point(4, 22);
             this.tabPeliculas.Name = "tabPeliculas";
-            this.tabPeliculas.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPeliculas.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.tabPeliculas.Size = new System.Drawing.Size(641, 439);
             this.tabPeliculas.TabIndex = 0;
             this.tabPeliculas.Text = "Peliculas";
@@ -528,87 +529,12 @@
             this.grid_peliculas.TabIndex = 0;
             this.grid_peliculas.SelectionChanged += new System.EventHandler(this.grid_peliculas_SelectionChanged);
             // 
-            // NombreColumn
-            // 
-            this.NombreColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.NombreColumn.DataPropertyName = "Nombre";
-            this.NombreColumn.FillWeight = 20F;
-            this.NombreColumn.HeaderText = "Peliculas";
-            this.NombreColumn.Name = "NombreColumn";
-            this.NombreColumn.ReadOnly = true;
-            // 
-            // DirectorColumn
-            // 
-            this.DirectorColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.DirectorColumn.DataPropertyName = "Director";
-            this.DirectorColumn.FillWeight = 15F;
-            this.DirectorColumn.HeaderText = "Director";
-            this.DirectorColumn.Name = "DirectorColumn";
-            this.DirectorColumn.ReadOnly = true;
-            // 
-            // PrecioColumn
-            // 
-            this.PrecioColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.PrecioColumn.DataPropertyName = "Precio";
-            this.PrecioColumn.FillWeight = 10F;
-            this.PrecioColumn.HeaderText = "Precio";
-            this.PrecioColumn.Name = "PrecioColumn";
-            this.PrecioColumn.ReadOnly = true;
-            // 
-            // PuntajeColumn
-            // 
-            this.PuntajeColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.PuntajeColumn.DataPropertyName = "Puntaje";
-            this.PuntajeColumn.FillWeight = 13F;
-            this.PuntajeColumn.HeaderText = "Me Gusta";
-            this.PuntajeColumn.Name = "PuntajeColumn";
-            this.PuntajeColumn.ReadOnly = true;
-            // 
-            // GeneroColumn
-            // 
-            this.GeneroColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.GeneroColumn.DataPropertyName = "Genero";
-            this.GeneroColumn.FillWeight = 15F;
-            this.GeneroColumn.HeaderText = "Genero";
-            this.GeneroColumn.Name = "GeneroColumn";
-            this.GeneroColumn.ReadOnly = true;
-            // 
-            // añoColumn
-            // 
-            this.añoColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.añoColumn.DataPropertyName = "Año";
-            this.añoColumn.FillWeight = 10F;
-            this.añoColumn.HeaderText = "Año";
-            this.añoColumn.Name = "añoColumn";
-            this.añoColumn.ReadOnly = true;
-            // 
-            // ActoresColumn
-            // 
-            this.ActoresColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.ActoresColumn.DataPropertyName = "Actores";
-            this.ActoresColumn.FillWeight = 18F;
-            this.ActoresColumn.HeaderText = "Actores";
-            this.ActoresColumn.Name = "ActoresColumn";
-            this.ActoresColumn.ReadOnly = true;
-            // 
-            // sinopsisDataGridViewTextBoxColumn
-            // 
-            this.sinopsisDataGridViewTextBoxColumn.DataPropertyName = "Sinopsis";
-            this.sinopsisDataGridViewTextBoxColumn.HeaderText = "Sinopsis";
-            this.sinopsisDataGridViewTextBoxColumn.Name = "sinopsisDataGridViewTextBoxColumn";
-            this.sinopsisDataGridViewTextBoxColumn.ReadOnly = true;
-            this.sinopsisDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // cPeliculaBindingSource
-            // 
-            this.cPeliculaBindingSource.DataSource = typeof(TPFINAL_Craicnet.cPelicula);
-            // 
             // tabPromociones
             // 
             this.tabPromociones.Controls.Add(this.Grid_promociones);
             this.tabPromociones.Location = new System.Drawing.Point(4, 22);
             this.tabPromociones.Name = "tabPromociones";
-            this.tabPromociones.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPromociones.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.tabPromociones.Size = new System.Drawing.Size(641, 439);
             this.tabPromociones.TabIndex = 1;
             this.tabPromociones.Text = "Promociones";
@@ -646,133 +572,10 @@
             this.Grid_promociones.TabIndex = 1;
             this.Grid_promociones.SelectionChanged += new System.EventHandler(this.Grid_promociones_SelectionChanged);
             // 
-            // nombreDataGridViewTextBoxColumn
-            // 
-            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
-            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
-            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // directorDataGridViewTextBoxColumn
-            // 
-            this.directorDataGridViewTextBoxColumn.DataPropertyName = "Director";
-            this.directorDataGridViewTextBoxColumn.HeaderText = "Director";
-            this.directorDataGridViewTextBoxColumn.Name = "directorDataGridViewTextBoxColumn";
-            this.directorDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // generoDataGridViewTextBoxColumn
-            // 
-            this.generoDataGridViewTextBoxColumn.DataPropertyName = "Genero";
-            this.generoDataGridViewTextBoxColumn.HeaderText = "Genero";
-            this.generoDataGridViewTextBoxColumn.Name = "generoDataGridViewTextBoxColumn";
-            this.generoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // añoDataGridViewTextBoxColumn
-            // 
-            this.añoDataGridViewTextBoxColumn.DataPropertyName = "Año";
-            this.añoDataGridViewTextBoxColumn.HeaderText = "Año";
-            this.añoDataGridViewTextBoxColumn.Name = "añoDataGridViewTextBoxColumn";
-            this.añoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // preciodescuentoDataGridViewTextBoxColumn
-            // 
-            this.preciodescuentoDataGridViewTextBoxColumn.DataPropertyName = "Precio_descuento";
-            this.preciodescuentoDataGridViewTextBoxColumn.HeaderText = "Precio";
-            this.preciodescuentoDataGridViewTextBoxColumn.Name = "preciodescuentoDataGridViewTextBoxColumn";
-            this.preciodescuentoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // porcentajeDescuentoDataGridViewTextBoxColumn
-            // 
-            this.porcentajeDescuentoDataGridViewTextBoxColumn.DataPropertyName = "Porcentaje_Descuento";
-            this.porcentajeDescuentoDataGridViewTextBoxColumn.HeaderText = "Descuento";
-            this.porcentajeDescuentoDataGridViewTextBoxColumn.Name = "porcentajeDescuentoDataGridViewTextBoxColumn";
-            this.porcentajeDescuentoDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // fechalimiteDataGridViewTextBoxColumn
-            // 
-            this.fechalimiteDataGridViewTextBoxColumn.DataPropertyName = "Fecha_limite";
-            this.fechalimiteDataGridViewTextBoxColumn.HeaderText = "Fecha limite";
-            this.fechalimiteDataGridViewTextBoxColumn.Name = "fechalimiteDataGridViewTextBoxColumn";
-            this.fechalimiteDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // actoresDataGridViewTextBoxColumn
-            // 
-            this.actoresDataGridViewTextBoxColumn.DataPropertyName = "Actores";
-            this.actoresDataGridViewTextBoxColumn.HeaderText = "Actores";
-            this.actoresDataGridViewTextBoxColumn.Name = "actoresDataGridViewTextBoxColumn";
-            this.actoresDataGridViewTextBoxColumn.ReadOnly = true;
-            this.actoresDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // precioDataGridViewTextBoxColumn
-            // 
-            this.precioDataGridViewTextBoxColumn.DataPropertyName = "Precio";
-            this.precioDataGridViewTextBoxColumn.HeaderText = "Precio";
-            this.precioDataGridViewTextBoxColumn.Name = "precioDataGridViewTextBoxColumn";
-            this.precioDataGridViewTextBoxColumn.ReadOnly = true;
-            this.precioDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // puntajeDataGridViewTextBoxColumn
-            // 
-            this.puntajeDataGridViewTextBoxColumn.DataPropertyName = "Puntaje";
-            this.puntajeDataGridViewTextBoxColumn.HeaderText = "Puntaje";
-            this.puntajeDataGridViewTextBoxColumn.Name = "puntajeDataGridViewTextBoxColumn";
-            this.puntajeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // sinopsisDataGridViewTextBoxColumn1
-            // 
-            this.sinopsisDataGridViewTextBoxColumn1.DataPropertyName = "Sinopsis";
-            this.sinopsisDataGridViewTextBoxColumn1.HeaderText = "Sinopsis";
-            this.sinopsisDataGridViewTextBoxColumn1.Name = "sinopsisDataGridViewTextBoxColumn1";
-            this.sinopsisDataGridViewTextBoxColumn1.ReadOnly = true;
-            this.sinopsisDataGridViewTextBoxColumn1.Visible = false;
-            // 
-            // fechaDevDataGridViewTextBoxColumn
-            // 
-            this.fechaDevDataGridViewTextBoxColumn.DataPropertyName = "Fecha_Dev";
-            this.fechaDevDataGridViewTextBoxColumn.HeaderText = "Fecha_Dev";
-            this.fechaDevDataGridViewTextBoxColumn.Name = "fechaDevDataGridViewTextBoxColumn";
-            this.fechaDevDataGridViewTextBoxColumn.ReadOnly = true;
-            this.fechaDevDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // alqMesDataGridViewTextBoxColumn
-            // 
-            this.alqMesDataGridViewTextBoxColumn.DataPropertyName = "Alq_Mes";
-            this.alqMesDataGridViewTextBoxColumn.HeaderText = "Alq_Mes";
-            this.alqMesDataGridViewTextBoxColumn.Name = "alqMesDataGridViewTextBoxColumn";
-            this.alqMesDataGridViewTextBoxColumn.ReadOnly = true;
-            this.alqMesDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // vistosMesDataGridViewTextBoxColumn
-            // 
-            this.vistosMesDataGridViewTextBoxColumn.DataPropertyName = "Vistos_Mes";
-            this.vistosMesDataGridViewTextBoxColumn.HeaderText = "Vistos_Mes";
-            this.vistosMesDataGridViewTextBoxColumn.Name = "vistosMesDataGridViewTextBoxColumn";
-            this.vistosMesDataGridViewTextBoxColumn.ReadOnly = true;
-            this.vistosMesDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // alqAnioDataGridViewTextBoxColumn
-            // 
-            this.alqAnioDataGridViewTextBoxColumn.DataPropertyName = "Alq_Anio";
-            this.alqAnioDataGridViewTextBoxColumn.HeaderText = "Alq_Anio";
-            this.alqAnioDataGridViewTextBoxColumn.Name = "alqAnioDataGridViewTextBoxColumn";
-            this.alqAnioDataGridViewTextBoxColumn.ReadOnly = true;
-            this.alqAnioDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // vistosAnioDataGridViewTextBoxColumn
-            // 
-            this.vistosAnioDataGridViewTextBoxColumn.DataPropertyName = "Vistos_Anio";
-            this.vistosAnioDataGridViewTextBoxColumn.HeaderText = "Vistos_Anio";
-            this.vistosAnioDataGridViewTextBoxColumn.Name = "vistosAnioDataGridViewTextBoxColumn";
-            this.vistosAnioDataGridViewTextBoxColumn.ReadOnly = true;
-            this.vistosAnioDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // cPromoBindingSource
-            // 
-            this.cPromoBindingSource.DataSource = typeof(TPFINAL_Craicnet.CLASES.cPromo);
-            // 
             // gbox_promocion
             // 
             this.gbox_promocion.AutoSize = true;
+            this.gbox_promocion.Controls.Add(this.button1);
             this.gbox_promocion.Controls.Add(this.txt_descuento_promo);
             this.gbox_promocion.Controls.Add(label3);
             this.gbox_promocion.Controls.Add(fecha_limiteLabel);
@@ -796,6 +599,15 @@
             this.gbox_promocion.TabStop = false;
             this.gbox_promocion.Text = "Promoción";
             this.gbox_promocion.Visible = false;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(160, 433);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 74;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // txt_descuento_promo
             // 
@@ -924,6 +736,205 @@
             this.gbox_agregar.TabIndex = 2;
             this.gbox_agregar.TabStop = false;
             // 
+            // NombreColumn
+            // 
+            this.NombreColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.NombreColumn.DataPropertyName = "Nombre";
+            this.NombreColumn.FillWeight = 20F;
+            this.NombreColumn.HeaderText = "Peliculas";
+            this.NombreColumn.Name = "NombreColumn";
+            this.NombreColumn.ReadOnly = true;
+            // 
+            // DirectorColumn
+            // 
+            this.DirectorColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.DirectorColumn.DataPropertyName = "Director";
+            this.DirectorColumn.FillWeight = 15F;
+            this.DirectorColumn.HeaderText = "Director";
+            this.DirectorColumn.Name = "DirectorColumn";
+            this.DirectorColumn.ReadOnly = true;
+            // 
+            // PrecioColumn
+            // 
+            this.PrecioColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.PrecioColumn.DataPropertyName = "Precio";
+            this.PrecioColumn.FillWeight = 10F;
+            this.PrecioColumn.HeaderText = "Precio";
+            this.PrecioColumn.Name = "PrecioColumn";
+            this.PrecioColumn.ReadOnly = true;
+            // 
+            // PuntajeColumn
+            // 
+            this.PuntajeColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.PuntajeColumn.DataPropertyName = "Puntaje";
+            this.PuntajeColumn.FillWeight = 13F;
+            this.PuntajeColumn.HeaderText = "Me Gusta";
+            this.PuntajeColumn.Name = "PuntajeColumn";
+            this.PuntajeColumn.ReadOnly = true;
+            // 
+            // GeneroColumn
+            // 
+            this.GeneroColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.GeneroColumn.DataPropertyName = "Genero";
+            this.GeneroColumn.FillWeight = 15F;
+            this.GeneroColumn.HeaderText = "Genero";
+            this.GeneroColumn.Name = "GeneroColumn";
+            this.GeneroColumn.ReadOnly = true;
+            // 
+            // añoColumn
+            // 
+            this.añoColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.añoColumn.DataPropertyName = "Año";
+            this.añoColumn.FillWeight = 10F;
+            this.añoColumn.HeaderText = "Año";
+            this.añoColumn.Name = "añoColumn";
+            this.añoColumn.ReadOnly = true;
+            // 
+            // ActoresColumn
+            // 
+            this.ActoresColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.ActoresColumn.DataPropertyName = "Actores";
+            this.ActoresColumn.FillWeight = 18F;
+            this.ActoresColumn.HeaderText = "Actores";
+            this.ActoresColumn.Name = "ActoresColumn";
+            this.ActoresColumn.ReadOnly = true;
+            // 
+            // sinopsisDataGridViewTextBoxColumn
+            // 
+            this.sinopsisDataGridViewTextBoxColumn.DataPropertyName = "Sinopsis";
+            this.sinopsisDataGridViewTextBoxColumn.HeaderText = "Sinopsis";
+            this.sinopsisDataGridViewTextBoxColumn.Name = "sinopsisDataGridViewTextBoxColumn";
+            this.sinopsisDataGridViewTextBoxColumn.ReadOnly = true;
+            this.sinopsisDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // cPeliculaBindingSource
+            // 
+            this.cPeliculaBindingSource.DataSource = typeof(TPFINAL_Craicnet.cPelicula);
+            // 
+            // nombreDataGridViewTextBoxColumn
+            // 
+            this.nombreDataGridViewTextBoxColumn.DataPropertyName = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.HeaderText = "Nombre";
+            this.nombreDataGridViewTextBoxColumn.Name = "nombreDataGridViewTextBoxColumn";
+            this.nombreDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // directorDataGridViewTextBoxColumn
+            // 
+            this.directorDataGridViewTextBoxColumn.DataPropertyName = "Director";
+            this.directorDataGridViewTextBoxColumn.HeaderText = "Director";
+            this.directorDataGridViewTextBoxColumn.Name = "directorDataGridViewTextBoxColumn";
+            this.directorDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // generoDataGridViewTextBoxColumn
+            // 
+            this.generoDataGridViewTextBoxColumn.DataPropertyName = "Genero";
+            this.generoDataGridViewTextBoxColumn.HeaderText = "Genero";
+            this.generoDataGridViewTextBoxColumn.Name = "generoDataGridViewTextBoxColumn";
+            this.generoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // añoDataGridViewTextBoxColumn
+            // 
+            this.añoDataGridViewTextBoxColumn.DataPropertyName = "Año";
+            this.añoDataGridViewTextBoxColumn.HeaderText = "Año";
+            this.añoDataGridViewTextBoxColumn.Name = "añoDataGridViewTextBoxColumn";
+            this.añoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // preciodescuentoDataGridViewTextBoxColumn
+            // 
+            this.preciodescuentoDataGridViewTextBoxColumn.DataPropertyName = "Precio_descuento";
+            this.preciodescuentoDataGridViewTextBoxColumn.HeaderText = "Precio";
+            this.preciodescuentoDataGridViewTextBoxColumn.Name = "preciodescuentoDataGridViewTextBoxColumn";
+            this.preciodescuentoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // porcentajeDescuentoDataGridViewTextBoxColumn
+            // 
+            this.porcentajeDescuentoDataGridViewTextBoxColumn.DataPropertyName = "Porcentaje_Descuento";
+            this.porcentajeDescuentoDataGridViewTextBoxColumn.HeaderText = "Descuento";
+            this.porcentajeDescuentoDataGridViewTextBoxColumn.Name = "porcentajeDescuentoDataGridViewTextBoxColumn";
+            this.porcentajeDescuentoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // fechalimiteDataGridViewTextBoxColumn
+            // 
+            this.fechalimiteDataGridViewTextBoxColumn.DataPropertyName = "Fecha_limite";
+            this.fechalimiteDataGridViewTextBoxColumn.HeaderText = "Fecha limite";
+            this.fechalimiteDataGridViewTextBoxColumn.Name = "fechalimiteDataGridViewTextBoxColumn";
+            this.fechalimiteDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // actoresDataGridViewTextBoxColumn
+            // 
+            this.actoresDataGridViewTextBoxColumn.DataPropertyName = "Actores";
+            this.actoresDataGridViewTextBoxColumn.HeaderText = "Actores";
+            this.actoresDataGridViewTextBoxColumn.Name = "actoresDataGridViewTextBoxColumn";
+            this.actoresDataGridViewTextBoxColumn.ReadOnly = true;
+            this.actoresDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // precioDataGridViewTextBoxColumn
+            // 
+            this.precioDataGridViewTextBoxColumn.DataPropertyName = "Precio";
+            this.precioDataGridViewTextBoxColumn.HeaderText = "Precio";
+            this.precioDataGridViewTextBoxColumn.Name = "precioDataGridViewTextBoxColumn";
+            this.precioDataGridViewTextBoxColumn.ReadOnly = true;
+            this.precioDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // puntajeDataGridViewTextBoxColumn
+            // 
+            this.puntajeDataGridViewTextBoxColumn.DataPropertyName = "Puntaje";
+            this.puntajeDataGridViewTextBoxColumn.HeaderText = "Puntaje";
+            this.puntajeDataGridViewTextBoxColumn.Name = "puntajeDataGridViewTextBoxColumn";
+            this.puntajeDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // sinopsisDataGridViewTextBoxColumn1
+            // 
+            this.sinopsisDataGridViewTextBoxColumn1.DataPropertyName = "Sinopsis";
+            this.sinopsisDataGridViewTextBoxColumn1.HeaderText = "Sinopsis";
+            this.sinopsisDataGridViewTextBoxColumn1.Name = "sinopsisDataGridViewTextBoxColumn1";
+            this.sinopsisDataGridViewTextBoxColumn1.ReadOnly = true;
+            this.sinopsisDataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // fechaDevDataGridViewTextBoxColumn
+            // 
+            this.fechaDevDataGridViewTextBoxColumn.DataPropertyName = "Fecha_Dev";
+            this.fechaDevDataGridViewTextBoxColumn.HeaderText = "Fecha_Dev";
+            this.fechaDevDataGridViewTextBoxColumn.Name = "fechaDevDataGridViewTextBoxColumn";
+            this.fechaDevDataGridViewTextBoxColumn.ReadOnly = true;
+            this.fechaDevDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // alqMesDataGridViewTextBoxColumn
+            // 
+            this.alqMesDataGridViewTextBoxColumn.DataPropertyName = "Alq_Mes";
+            this.alqMesDataGridViewTextBoxColumn.HeaderText = "Alq_Mes";
+            this.alqMesDataGridViewTextBoxColumn.Name = "alqMesDataGridViewTextBoxColumn";
+            this.alqMesDataGridViewTextBoxColumn.ReadOnly = true;
+            this.alqMesDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // vistosMesDataGridViewTextBoxColumn
+            // 
+            this.vistosMesDataGridViewTextBoxColumn.DataPropertyName = "Vistos_Mes";
+            this.vistosMesDataGridViewTextBoxColumn.HeaderText = "Vistos_Mes";
+            this.vistosMesDataGridViewTextBoxColumn.Name = "vistosMesDataGridViewTextBoxColumn";
+            this.vistosMesDataGridViewTextBoxColumn.ReadOnly = true;
+            this.vistosMesDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // alqAnioDataGridViewTextBoxColumn
+            // 
+            this.alqAnioDataGridViewTextBoxColumn.DataPropertyName = "Alq_Anio";
+            this.alqAnioDataGridViewTextBoxColumn.HeaderText = "Alq_Anio";
+            this.alqAnioDataGridViewTextBoxColumn.Name = "alqAnioDataGridViewTextBoxColumn";
+            this.alqAnioDataGridViewTextBoxColumn.ReadOnly = true;
+            this.alqAnioDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // vistosAnioDataGridViewTextBoxColumn
+            // 
+            this.vistosAnioDataGridViewTextBoxColumn.DataPropertyName = "Vistos_Anio";
+            this.vistosAnioDataGridViewTextBoxColumn.HeaderText = "Vistos_Anio";
+            this.vistosAnioDataGridViewTextBoxColumn.Name = "vistosAnioDataGridViewTextBoxColumn";
+            this.vistosAnioDataGridViewTextBoxColumn.ReadOnly = true;
+            this.vistosAnioDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // cPromoBindingSource
+            // 
+            this.cPromoBindingSource.DataSource = typeof(TPFINAL_Craicnet.CLASES.cPromo);
+            // 
             // Administrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -949,13 +960,13 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPeliculas.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grid_peliculas)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cPeliculaBindingSource)).EndInit();
             this.tabPromociones.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.Grid_promociones)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cPromoBindingSource)).EndInit();
             this.gbox_promocion.ResumeLayout(false);
             this.gbox_promocion.PerformLayout();
             this.gbox_agregar.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.cPeliculaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cPromoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1028,6 +1039,7 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker_fecha_limite;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox gbox_promocion;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox txt_descuento_promo;
         private System.Windows.Forms.DateTimePicker fecha_limiteDateTimePicker;
         private System.Windows.Forms.Button btn_promocion;
