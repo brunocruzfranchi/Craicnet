@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -152,17 +153,19 @@ namespace TPFINAL_Craicnet.FORMS
 
         private void btn_cmp_Click(object sender, EventArgs e)
         {
-            Timer bubble = new Timer();
-            Timer quick = new Timer();
+            Stopwatch bubble = new Stopwatch();
+            Stopwatch quick = new Stopwatch();
 
-            if(combo_cmp.SelectedItem.ToString()=="Anual")
+            if (combo_cmp.SelectedItem.ToString()=="Anual")
                 {
                 bubble.Start();
                 lista_peliculas = cPelicula.BubbleSort_VistMes(lista_peliculas);
                 bubble.Stop();
+                long bubble_tiempo = bubble.ElapsedTicks;
                 quick.Start();
                 lista_peliculas = cPelicula.QuickSort_AlqMes(lista_peliculas); //chequear quicksort
                 quick.Stop();
+                long quick_tiempo = bubble.ElapsedTicks;
             }
             else
             {
@@ -174,9 +177,9 @@ namespace TPFINAL_Craicnet.FORMS
                 quick.Stop();
             }
 
-            MessageBox.Show(bubble.Interval.ToString(), quick.Interval.ToString()); //!!!! mirar bien como imprimir bien
-            bubble.Dispose();
-            quick.Dispose();
+            //MessageBox.Show(bubble.Interval.ToString(), quick.Interval.ToString()); //!!!! mirar bien como imprimir bien
+            //bubble.Dispose();
+            //quick.Dispose();
         }
     }
 }

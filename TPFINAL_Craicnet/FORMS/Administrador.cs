@@ -415,11 +415,12 @@ namespace TPFINAL_Craicnet
 
                     private void button1_Click(object sender, EventArgs e)
                     {
-                        /*
+                       
                         using (var sw = new StreamWriter(AppDomain.CurrentDomain.BaseDirectory + "\\hola.csv"))
                         {
 
                             var writer = new CsvWriter(sw);
+
                             writer.WriteHeader(typeof(cPromo));
 
                             foreach (cPromo s in cPromoBindingSource.DataSource as List<cPromo>)
@@ -427,11 +428,10 @@ namespace TPFINAL_Craicnet
                                 writer.WriteRecord(s);
                             }
 
-                        */
-            
+                        }
                     }
 
-                    public void btn_editar_Click(object sender, EventArgs e)
+        public void btn_editar_Click(object sender, EventArgs e)
                     {
                          /**
                           * TODO: 
