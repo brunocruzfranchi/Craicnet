@@ -1,133 +1,123 @@
 Nombre;Genero;Director;Precio;Año;Actores;Puntaje;Sinopsis;VistosMes;VistosAnio;AlqMes;AlqAnio
-Harry Potter I ;Fantasy;Chris Columbus;30;2001;Daniel Radcliffe, Rupert Grint, Emma Watson, Robbie Coltrane, John Cleese, Warwick Davis;10; - - -;988;977;8201;6940
+Aladdin;Animation;Walt Disney;29;1992;Scott Weinger, Robin Williams, Linda Larkin, Jonathan Freeman;6; - - -;448;364;6043;7821
+Alatriste;Action;Agustin Diaz Yanes;39;2006;Viggo Mortensen, Elena Anaya, Javier Camara, Eduardo Noriega, Blanca Rortillo, Carlos Bardem;4; - - -;788;242;5294;3675
 Anna Karenina;Drama;Bernard Rose;33;1997;Sophie Marceau, Sean Bean, Alfred Molina, Mia Kirshner, James Fox, Georg Solti;4; - - -;976;972;8010;3196
-Eagle Eye;Action;D.J. Caruso;34;2008;Shia LaBeouf, Rosario Dawson, Michelle Monaghan;7; - - -;964;959;6498;6339
-World War Z;Sci-Fi;Marc Forster;25;2013;Brad Pitt, Bryan Cranston, Mireille Enos, James Badge Dale, Elyes Gabel;4; - - -;979;953;7184;4839
-Avatar ;Sci-Fi;James Cameron;41;2009;Sam Worthington, Zoe Saldana, Sigourney Weaver, Stephen Lang, Joel Moore, Giovanni Ribisi, Michelle Rodriguez;4;A�o 2154. Jake Sully (Sam Worthington), un ex-marine condenado a vivir en una silla de ruedas, sigue siendo, a pesar de ello, un aut�ntico guerrero. Precisamente por ello ha sido designado para ir a Pandora, donde algunas empresas est�n extrayendo un mineral extra�o que podr�a resolver la crisis energ�tica de la Tierra. Para contrarrestar la toxicidad de la atm�sfera de Pandora, se ha creado el programa Avatar, gracias al cual los seres humanos mantienen sus conciencias unidas a un avatar: un cuerpo biol�gico controlado de forma remota que puede sobrevivir en el aire letal. Esos cuerpos han sido creados con ADN humano, mezclado con ADN de los nativos de Pandora, los Na'vi. Convertido en avatar, Jake puede caminar otra vez. Su misi�n consiste en infiltrarse entre los Na'vi, que se han convertido en el mayor obst�culo para la extracci�n del mineral. Pero cuando Neytiri, una bella Na'vi (Zoe Saldana), salva la vida de Jake, todo cambia: Jake, tras superar ciertas pruebas, es admitido en su clan. Mientras tanto, los hombres esperan los resultados de la misi�n de Jake.;954;942;7614;3221
-Pirates of the Caribbean I: The Curse of the Black Pearl;Fantasy;Gore Verbinski;42;2003;Johnny Depp, Geoffrey Rush, Orlando Bloom, Keira Knightley, Jack Davenport, Jonathan Pryce;8; - - -;956;937;5780;7718
-Batman Begins;Fantasy;Christopher Nolan;30;2005;Christian Bale, Michael Caine, Liam Neeson, Katie Holmes, Gary Oldman, Morgan Freeman;5; - - -;976;935;4536;6498
-Ocean's 13;Crime;Steven Soderbergh;38;2007;George Clooney, Brad Pitt, Matt Damon, Andy Garcia, Don Cheadle, Bernie Mac, Al Pacino, Ellen Barkin;3; - - -;927;920;6845;5899
-Ratatouille;Animation;Pixar, Walt Disney;32;2007;Stimmen von Patton Oswalt, Brad Garrett, Ian Holm, Brian Dennehy, Janeane Garofalo, Peter O'Toole;5; - - -;979;910;4503;4356
-Terminator 2: Judgment Day;Sci-Fi;James Cameron;44;1991;Arnold Schwarzenegger, Linda Hamilton, Robert Patrick, Edward Furlong, Earl Boen, Joe Morton;10; - - -;949;910;4005;9574
-Resident Evil: Extinction;Horror;Russell Mulcahy;37;2007;Milla Jovovich, Oded Fehr, Ali Larter, Iain Glen, Ashanti, Mike Epps;10; - - -;953;907;1400;5395
-Pirates of the Caribbean II: Dead Man's Chest;Fantasy;Gore Verbinski;27;2006;Johnny Depp, Orlando Bloom, Keira Knightley, Jack Davenport, Bill Nighy, Jonathan Pryce;5; - - -;943;905;8446;7124
-Last Days on Mars, The;Sci-Fi;Ruairi Robinson;44;2013;Liev Schreiber, Romola Garai, Elias Koteas, Olivia Williams, Johnny Harris, Goran Kostic, Tom Cullen, Yusra Warsama;10; - - -;954;884;9870;8049
-Pirates of the Caribbean IV: Fremde Gezeiten;Fantasy;Rob Marshall;42;2011;Johnny Depp, Geoffrey Rush, Penelope Cruz, Ian McShane, Bill Nighy;10; - - -;892;874;9604;8931
-Resident Evil: Apocalypse;Horror;Alexander Witt;32;2004;Milla Jovovich, Sienna Guillory, Oded Fehr, Zack Ward, Razaaq Adoti, Thomas Kretschmann, Sandrine Holt;6; - - -;893;865;9461;7279
-Harry Potter III ;Fantasy;Alfonso Cuar�n;44;2004;Daniel Radcliffe, Rupert Grint, Emma Watson, Robbie Coltrane, Michael Gambon, Gary Oldman, David Thewlis;7; - - -;893;852;3560;5404
-Star Wars IV - A New Hope;Sci-Fi;George Lucas;31;1977;Mark Hamill, Harrison Ford, Carrie Fisher, Peter Cushing, Alec Guinness, C-3P0, R2-D2, Chewbacca, Darth Vader;5; - - -;948;841;1596;6709
-Hangover 3;Comedy;Todd Phillips;31;2013;Zach Galifianakis, Justin Bartha, Bradley Cooper, Ed Helms, Ken Jeong, Heather Graham;10; - - -;868;841;1082;9955
-Rio;Animation;Carlos Saldanha;43;2011;Anne Hathaway, Neil Patrick Harris, Rodrigo Santoro, Jake T. Austin;8; - - -;994;839;7064;9335
-Harry Potter II ;Fantasy;Chris Columbus;30;2002;Daniel Radcliffe, Rupert Grint, Emma Watson, Robbie Coltrane, John Cleese, Richard Harris, Kenneth Branagh;10; - - -;882;838;7365;8590
-Robin Hood;Animation;Walt Disney;41;2010; - - -;5; - - -;868;832;7186;3533
-Night at the Museum 2;Comedy;Shawn Levy;33;2009;Amy Adams, Ben Stiller, Robin Williams, Jonah Hill, Owen Wilson, Bill Hader;4; - - -;950;822;9639;1098
-City of God;Drama;Fernando Meirelles;40;2003;Alexandre Rodrigues, Leandro Firmino da Hora, Phellipe Haagensen, Douglas Silva, Jonathan Haagensen;4; - - -;906;805;6465;3579
-Emma;Comedy;Douglas McGrath;36;1996;Gwyneth Paltrow, Toni Collette, Alan Cumming, Jeremy Northam, Ewan McGregor, Greta Scacchi;5; - - -;854;803;5242;4342
-Mary Poppins;Animation;Robert Stevenson;27;1964;Julie Andrews, Dick Van Dyke, David Tomlinson, Glynis Johns, Hermione Baddeley, Reta Shaw;9; - - -;982;801;2506;1415
-Shutter Island;Drama;Martin Scorsese;39;2010;Leo DiCaprio, Mark Ruffalo, Ben Kingsley, Max von Sydow;4; - - -;937;798;9990;2929
-Lord of the Rings II - The Two Towers;Fantasy;Peter Jackson;35;2002;Elijah Wood, Ian McKellen, Viggo Mortensen, Orlando Bloom, John Rhys-Davies, Cate Blanchett, Liv Tyler, Ch. Lee;5; - - -;975;780;7365;1572
-V for Vendetta;Action;James McTeigue;31;2005;Natalie Portman, Hugo Weaving, Stephen Rea, John Hurt, Rupert Graves, Sinead Cusack;5; - - -;797;779;4222;5410
-Harry Potter VII - Part 2;Fantasy;David Yates;43;2010;Daniel Radcliffe, Rupert Grint, Emma Watson, Ralph Fiennes, Alan Rickman;10; - - -;823;776;4477;2246
-Book of Eli, The;Sci-Fi;Albert Hughes, Allen Hughes;29;2010;Denzel Washington, Gary Oldman, Mila Kunis;7; - - -;790;775;2577;6093
-E.T.;Animation;Steven Spielberg;43;1982;Dee Wallace-Stone, Robert MacNaughton, Drew Barrymore, Peter Coyote, Henry Thomas, Milt Kogan;4; - - -;831;764;3442;9625
-Casablanca;Drama;Michael Curtiz;43;1942;Humphrey Bogart, Ingrid Bergman, Claude Rains, Paul Henreid, Dooley Wilson, Conrad Veidt;6; - - -;936;742;1734;7448
-Cinderella;Animation;Walt Disney;26;1950;Ilene Woods, William Phipps, Eleanor Audley, Verna Felton, James MacDonald;3; - - -;927;739;8812;2282
-Terminator;Sci-Fi;James Cameron;28;1984;Arnold Schwarzenegger, Michael Biehn, Linda Hamilton, Paul Winfield, Lance Henriksen, Rick Rossovich;3; - - -;838;732;3925;3937
-Lord of the Rings III - The Return of the King;Fantasy;Peter Jackson;34;2003;Elijah Wood, Ian McKellen, Viggo Mortensen, Orlando Bloom, John Rhys-Davies, Cate Blanchett, Liv Tyler, Ch. Lee;10; - - -;815;727;5232;6280
-Ocean's 11;Crime;Steven Soderbergh;43;2001;George Clooney, Brad Pitt, Matt Damon, Andy Garcia, Don Cheadle, Elliot Gould, Carl Reiner, Julia Roberts ;7; - - -;929;721;784;3812
-Super 8;Sci-Fi;J. J. Abrams;36;2011;Elle Fanning, Joel Courtney, Ryan Lee, Zach Mills, Riley Griffiths, Gabriel Basso;3; - - -;791;708;8451;7853
-Ghost Ship;Horror;Steve Beck;45;2002;Gabriel Byrne, Julianna Margulies, Ron Eldard, Desmond Harrington, Isaiah Washington, Alex Dimitriades;3; - - -;992;704;6623;2547
-Spider-Man 3;Fantasy;Sam Raimi;44;2007;Tobey Maguire, Kirsten Dunst, Thomas Haden Church, James Franco, Topher Grace, Dylan Baker, Elizabeth Banks;10; - - -;760;702;7026;400
-Daredevil;Fantasy;Mark Steven Johnson;43;2003;Ben Affleck, Michael Clarke Duncan, Colin Farrell, Jon Favreau, Jennifer Garner, Paul Ben-Victor;6; - - -;851;696;6690;8971
-I, Robot;Sci-Fi;Alex Proyas;39;2004;Will Smith, Bridget Moynahan, Alan Tudyk, James Cromwell, Bruce Greenwood, Adrian L. Ricard;8; - - -;835;689;2486;7306
-Resident Evil;Horror;Paul Anderson;28;2002;Milla Jovovich, Michelle Rodriguez, Eric Mabius, James Purefoy, Martin Crewes, Colin Salmon;8; - - -;895;688;3456;7377
-Ice Age 2: The Meltdown;Animation;Carlos Saldanha;40;2006;Stimmen von Ray Romano, John Leguizamo, Denis Leary, Drea de Matteo, Queen Latifah, Seann William Scott;6; - - -;988;680;3453;1690
-Rapunzel;Animation;Walt Disney;30;2010;Matthew Gray Gubler, Mandy Moore, Zachary Levi, David Schwimmer, John Goodman;3; - - -;726;675;4476;6860
-Ocean's 12;Crime;Steven Soderbergh;32;2004;George Clooney, Brad Pitt, Matt Damon, Andy Garcia, Don Cheadle, Bernie Mac, Catherine Zeta-Jones, Julia Roberts;9; - - -;789;671;4240;9046
-Wall-E;Animation;Andrew Stanton;42;2008;Pixar Animation Studios - Fred Willard, Ben Burtt ;8; - - -;856;644;1000;8908
-Mulan II;Animation;Darrell Rooney, Lynne Southerland;45;2012;William Shatner und weitere;4; - - -;701;642;4847;5228
-Happening, The;Sci-Fi;M. Night Shyamalan;39;2008;Mark Wahlberg, Zooey Deschanel, John Leguizamo, Ashlyn Sanchez, Betty Buckley, Spencer Breslin, Robert Bailey Jr.;7; - - -;864;640;1907;3718
-Elysium;Sci-Fi;Neill Blomkamp;37;2013;Matt Damon, Jodie Foster, Sharlto Copley, Alice Braga, Diego Luna, Wagner Moura;7; - - -;859;639;2406;2379
-Hangover;Comedy;Todd Phillips;34;2009;Zach Galifianakis, Justin Bartha, Bradley Cooper, Ed Helms, Ken Jeong, Heather Graham;6; - - -;835;637;8349;1443
-Oblivion;Sci-Fi;Joseph Kosinski;45;2013;Tom Cruise, Morgan Freeman, Olga Kurylenko, Andrea Riseborough, Melissa Leo;6; - - -;695;627;6361;1992
-Cars;Animation;Pixar, Walt Disney;25;2006;Stimmen von Owen Wilson, George Carlin, Bob Costas, Michael Keaton, Cheech Marin, Paul Newman;10; - - -;684;626;7438;3841
-Mission: Impossible III;Action;J. J. Abrams;45;2006;Tom Cruise, Ving Rhames, Sasha Alexander, Billy Crudup, Laurence Fishburne, Philip Seymour Hoffman;3; - - -;800;626;6246;7521
-Star Wars V - The Empire Strikes Back;Sci-Fi;Irvin Kershner;43;1980;Mark Hamill, Harrison Ford, Carrie Fisher, Billy Dee Williams, Anthony Daniels, C-3P0, R2-D2, Darth Vader;4; - - -;767;619;4984;8156
-Tomb Raider (Lara Croft);Fantasy;Simon West;39;2001;Angelina Jolie, Iain Glenn, Jon Voight, Noah Taylor, Daniel Craig, Chrstopher Barrie, Julian Rhind-Tutt;4; - - -;755;619;3853;2431
-Interstellar;Sci-Fi;Christopher Nolan;33;2014;Matthew McConaughey, Anne Hathaway, Jessica Chastain, Wes Bentley, Casey Affleck, John Lithgow, Matt Damon;7; - - -;835;611;3988;8609
-Star Wars VI - Return of the Jedi;Sci-Fi;Richard Marquand;28;1983;Mark Hamill, Harrison Ford, Carrie Fisher, Billy Dee Williams, Anthony Daniels, C-3P0, R2-D2, Darth Vader;4; - - -;652;601;5192;7651
-Matrix Revolutions;Sci-Fi;Wachowski Brothers;38;2003;Keanu Reeves, Carrie-Anne Moss, Laurence Fishburne, Nona Gaye, Monica Bellucci, Hugo Weaving;8; - - -;794;586;8856;5720
-Terminator 3: Rise of the Machines;Sci-Fi;Jonathan Mostow;37;2003;A.Schwarzenegger, Nick Stahl, Claire Danes, Kristanna Loken, David Andrews, Mark Famiglietti, Matthew Bonnar;3; - - -;657;586;8245;6555
-Woman in Black, The;Horror;James Watkins;36;2012;Daniel Radcliffe, Ciar�n Hinds, Janet McTeer, Alisa Khazanova, Shaun Dooley;7; - - -;873;580;5621;8238
-Da Vinci Code, The;Action;Ron Howard;31;2006;Tom Hanks, Audrey Tautou, Ian McKellen, Alfred Molina, Jean Reno, Paul Bettany;7; - - -;815;566;7650;3612
-Big Fish;Fantasy;Tim Burton;32;2003;Ewan McGregor, Albert Finney, Billy Crudup, Jessica Lange, Helena Bonham-Carter, Alison Lohman;3; - - -;586;564;7156;5775
-Red Planet;Sci-Fi;Antony Hoffman;25;2000;Val Kilmer, Benjamin Bratt, Carrie-Anne Moss, Tom Sizemore, Terrence Stamp, Simon Baker;4; - - -;914;561;2807;1221
-Ronin;Action;John Frankenheimer;38;1998;Robert De Niro, Jean Reno, Natascha McElhone, Stellan Skarsgard, Jonathan Pryce, Sean Bean ;4; - - -;663;558;7893;5220
-300;Historical;Zack Snyder;40;2007;Gerard Butler, Vincent Regan, Lena Headey, David Wenham, Michael Fassbender, Rodrigo Santoro;10; - - -;732;557;6013;4559
-Reader, The (Der Vorleser);Drama;Stephen Daldry ;38;2008;Ralph Fiennes, Jeanette Hain, David Kross, Kate Winslet, Bruno Ganz;7; - - -;967;557;5663;4882
-Harry Potter V ;Fantasy;David Yates;36;2007;Daniel Radcliffe, Rupert Grint, Emma Watson, Robbie Coltrane, Ralph Fiennes, Michael Gambon;7; - - -;904;556;8300;1654
-2012;Action;Roland Emmerich;26;2009;John Cusack, Amanda Peet, Chiwetel Ejiofor, Thandie Newton, Oliver Platt, Thomas McCarthy, Woody Harrelson;7; - - -;944;554;5027;1119
-Robin Hood: Prince of Thieves;Historical;Kevin Reynolds;30;1991;Kevin Costner, Morgan Freeman, Mary Elizabeth Mastrantonio, Christian Slater, Alan Rickman, Geraldine McEwan;3; - - -;750;553;3077;4348
-Spider-Man;Fantasy;Sam Raimi;45;2002;Tobey Maguire, Kirsten Dunst, James Franco, Rosemary Harris, Willem Dafoe, Cliff Robertson;6; - - -;566;552;2134;1893
-A Bug's Life ;Animation;John Lasseter;36;1999; - - -;10; - - -;681;538;9242;4333
-Happy Feet;Animation;George Miller;29;2006;Nicole Kidman, Elijah Wood, Hugh Jackman, Robin Williams, Brittany Murphy, Hugo Weaving;3; - - -;905;534;8341;8271
-Ice Age 1;Animation;Chris Wedge;41;2002;Stimmen von Ray Romano, John Leguizamo, Denis Leary, Goran Visnjic, Jack Black, Tara Strong;3; - - -;711;527;5465;4073
-Monster;Drama;Patty Jenkins;39;2003;Charlize Theron, Christina Ricci, Bruce Dern, Scott Wilson, Pruitt Taylor Vince, Lee Tergesen, Annie Corley;5; - - -;781;525;6352;5291
-Underworld II: Evolution;Fantasy;Len Wiseman;37;2006;Kate Beckinsale, Scott Speedman, Tony Curran, Derek Jacobi, Bill Nighy, Steven Mackintosh;10; - - -;957;524;1847;9384
-Poseidon;Action;Wolfgang Petersen;28;2006;Joshua Lucas, Kurt Russell, Emmy Rossum, Jacinda Barrett, Mike Vogel, Richard Dreyfuss;10; - - -;654;507;5360;6875
 Annie;Teenagers;John Huston;40;1982;Albert Finney, Carol Burnett, Ann Reinking, Tim Curry, Bernadette Peters, Aileen Quinn;10; - - -;634;502;9761;1047
-Kill Bill, Volume 2;Action;Quentin Tarantino;42;2004;Uma Thurman, David Carradine, Michael Madsen, Darryl Hannah, Gordon Liu, Michael Parks;5; - - -;580;494;6506;5501
-Iron Man;Sci-Fi;Jon Favreau;35;2008;Robert Downey Jr., Terrence Howard, Gwyneth Paltrow, Jeff Bridges, Samuel L. Jackson, Hilary Swank;5; - - -;635;491;1920;9103
-Fargo;Comedy;Joel & Ethan Coen;30;1996;Frances McDormand, Steve Buscemi, William H. Macy, Peter Stormare, Harve Presnell;8; - - -;508;490;6210;9668
-Unbreakable;Sci-Fi;M. Night Shyamalan;33;2000;Bruce Willis, Samuel L. Jackson, Robin Wright Penn, Spencer Treat Clark, Charlayne Woodard, Eamonn Walker;3; - - -;815;483;934;4858
-Ice Age 3: Dawn of the Dinosaurs;Animation;Carlos Saldanha;37;2009;"Stimmen von Ray Romano, John Leguizamo, Denis Leary, Queen Latifah, Seann William Scott";6; - - -;784;479;4273;5274
-Troy;Historical;Wolfgang Petersen;31;2004;Brad Pitt, Eric Bana, Orlando Bloom, Diane Kruger, Brian Cox, Sean Bean, Brendan Gleeson, Peter O'Toole;3; - - -;680;472;9018;6340
+Apocalypse Now;War;Francis Ford Coppola;39;1979;Marlon Brando, Robert Duvall, Martin Sheen, Frederic Forrest, Albert Hall, Sam Bottoms;8; - - -;462;266;4360;2142
+Avatar ;Sci-Fi;James Cameron;41;2009;Sam Worthington, Zoe Saldana, Sigourney Weaver, Stephen Lang, Joel Moore, Giovanni Ribisi, Michelle Rodriguez;4;A�o 2154. Jake Sully (Sam Worthington), un ex-marine condenado a vivir en una silla de ruedas, sigue siendo, a pesar de ello, un aut�ntico guerrero. Precisamente por ello ha sido designado para ir a Pandora, donde algunas empresas est�n extrayendo un mineral extra�o que podr�a resolver la crisis energ�tica de la Tierra. Para contrarrestar la toxicidad de la atm�sfera de Pandora, se ha creado el programa Avatar, gracias al cual los seres humanos mantienen sus conciencias unidas a un avatar: un cuerpo biol�gico controlado de forma remota que puede sobrevivir en el aire letal. Esos cuerpos han sido creados con ADN humano, mezclado con ADN de los nativos de Pandora, los Na'vi. Convertido en avatar, Jake puede caminar otra vez. Su misi�n consiste en infiltrarse entre los Na'vi, que se han convertido en el mayor obst�culo para la extracci�n del mineral. Pero cuando Neytiri, una bella Na'vi (Zoe Saldana), salva la vida de Jake, todo cambia: Jake, tras superar ciertas pruebas, es admitido en su clan. Mientras tanto, los hombres esperan los resultados de la misi�n de Jake.;954;942;7614;3221
+Batman Begins;Fantasy;Christopher Nolan;30;2005;Christian Bale, Michael Caine, Liam Neeson, Katie Holmes, Gary Oldman, Morgan Freeman;5; - - -;976;935;4536;6498
+Book of Eli, The;Sci-Fi;Albert Hughes, Allen Hughes;29;2010;Denzel Washington, Gary Oldman, Mila Kunis;7; - - -;790;775;2577;6093
 Cars 2;Animation;Pixar, Walt Disney;36;2011;Stimmen von Owen Wilson, John Ratzenberger, Bonnie Hunt, Tony Shalhoub, Cheech Marin, Larry The Cable Guy;3; - - -;483;469;1816;4075
-Underworld I;Fantasy;Len Wiseman;36;2003;Kate Beckinsale, Scott Speedman, Michael Sheen, Shane Brolly, Bill Nighy, Erwin Leder, Sophia Myles;10; - - -;741;465;6869;2611
+Casablanca;Drama;Michael Curtiz;43;1942;Humphrey Bogart, Ingrid Bergman, Claude Rains, Paul Henreid, Dooley Wilson, Conrad Veidt;6; - - -;936;742;1734;7448
+Casanova;Historical;Federico Fellini;36;1976;Donald Sutherland, Tina Aumont, Cicely Browne, Olimpia Carlisi, Adele Angela Lojodice;4; - - -;601;385;8060;1754
+Cloverfield;Sci-Fi;Matt Reeves;36;2008;Lizzy Caplan, Jessica Lucas, T.J. Miller, Michael Stahl-David, Mike Vogel;4; - - -;734;43;8724;8273
+Da Vinci Code, The;Action;Ron Howard;31;2006;Tom Hanks, Audrey Tautou, Ian McKellen, Alfred Molina, Jean Reno, Paul Bettany;7; - - -;815;566;7650;3612
+Daredevil;Fantasy;Mark Steven Johnson;43;2003;Ben Affleck, Michael Clarke Duncan, Colin Farrell, Jon Favreau, Jennifer Garner, Paul Ben-Victor;6; - - -;851;696;6690;8971
+E.T.;Animation;Steven Spielberg;43;1982;Dee Wallace-Stone, Robert MacNaughton, Drew Barrymore, Peter Coyote, Henry Thomas, Milt Kogan;4; - - -;831;764;3442;9625
+Eagle Eye;Action;D.J. Caruso;34;2008;Shia LaBeouf, Rosario Dawson, Michelle Monaghan;7; - - -;964;959;6498;6339
+Elysium;Sci-Fi;Neill Blomkamp;37;2013;Matt Damon, Jodie Foster, Sharlto Copley, Alice Braga, Diego Luna, Wagner Moura;7; - - -;859;639;2406;2379
+Emma;Comedy;Douglas McGrath;36;1996;Gwyneth Paltrow, Toni Collette, Alan Cumming, Jeremy Northam, Ewan McGregor, Greta Scacchi;5; - - -;854;803;5242;4342
+Fantastic Four;Fantasy;Tim Story;31;2005;Ioan Gruffudd, Jessica Alba, Chris Evans, Michael Chiklis, Julian McMahon, Hamish Linklater;8; - - -;289;228;8618;3486
 Fantastic Four: Rise of the Silver Surfer;Fantasy;Tim Story;37;2007;Michael Chiklis, Jessica Alba, Ioan Gruffudd, Chris Evans, Kerry Washington, Andre Braugher;5; - - -;636;455;3759;6479
-Peter Pan (Walt Disney);Animation;Walt Disney;43;2012;Wilfred Jackson, Denis Leary, Hamilton Luske, ...;7; - - -;742;453;3258;8958
+Fargo;Comedy;Joel & Ethan Coen;30;1996;Frances McDormand, Steve Buscemi, William H. Macy, Peter Stormare, Harve Presnell;8; - - -;508;490;6210;9668
+Fast and the Furious;Action;Rob Cohen;33;2001;Paul Walker, Vin Diesel, Michelle Rodriguez, Jordana Brewster, Rick Yune, Chad Lindberg;5; - - -;574;50;7689;5679
+Ghost Rider;Fantasy;Mark Steven Johnson;43;2007;Nicolas Cage, Wes Bentley, Eva Mendes, Sam Elliott, Peter Fonda, Donal Logue;10; - - -;859;311;7895;9867
+Ghost Ship;Horror;Steve Beck;45;2002;Gabriel Byrne, Julianna Margulies, Ron Eldard, Desmond Harrington, Isaiah Washington, Alex Dimitriades;3; - - -;992;704;6623;2547
+Golden Compass, The;Fantasy;Chris Weitz;43;2007;Nicole Kidman, Dakota Blue Richards, Sam Elliott, Eva Green, Daniel Craig, Tom Courtenay;4; - - -;555;349;6716;4633
+Hangover;Comedy;Todd Phillips;34;2009;Zach Galifianakis, Justin Bartha, Bradley Cooper, Ed Helms, Ken Jeong, Heather Graham;6; - - -;835;637;8349;1443
+Hangover 3;Comedy;Todd Phillips;31;2013;Zach Galifianakis, Justin Bartha, Bradley Cooper, Ed Helms, Ken Jeong, Heather Graham;10; - - -;868;841;1082;9955
+Happening, The;Sci-Fi;M. Night Shyamalan;39;2008;Mark Wahlberg, Zooey Deschanel, John Leguizamo, Ashlyn Sanchez, Betty Buckley, Spencer Breslin, Robert Bailey Jr.;7; - - -;864;640;1907;3718
+Happy Feet;Animation;George Miller;29;2006;Nicole Kidman, Elijah Wood, Hugh Jackman, Robin Williams, Brittany Murphy, Hugo Weaving;3; - - -;905;534;8341;8271
+Harry Potter I ;Fantasy;Chris Columbus;30;2001;Daniel Radcliffe, Rupert Grint, Emma Watson, Robbie Coltrane, John Cleese, Warwick Davis;10; - - -;988;977;8201;6940
+Harry Potter II ;Fantasy;Chris Columbus;30;2002;Daniel Radcliffe, Rupert Grint, Emma Watson, Robbie Coltrane, John Cleese, Richard Harris, Kenneth Branagh;10; - - -;882;838;7365;8590
+Harry Potter III ;Fantasy;Alfonso Cuar�n;44;2004;Daniel Radcliffe, Rupert Grint, Emma Watson, Robbie Coltrane, Michael Gambon, Gary Oldman, David Thewlis;7; - - -;893;852;3560;5404
+Harry Potter IV ;Fantasy;Mike Newell;39;2005;Daniel Radcliffe, Rupert Grint, Emma Watson, Eric Sykes, Timothy Spall, David Tennant, Mark Williams;9; - - -;433;225;9273;1399
+Harry Potter V ;Fantasy;David Yates;36;2007;Daniel Radcliffe, Rupert Grint, Emma Watson, Robbie Coltrane, Ralph Fiennes, Michael Gambon;7; - - -;904;556;8300;1654
+Harry Potter VI;Fantasy;David Yates;29;2009;Daniel Radcliffe, Rupert Grint, Emma Watson, Robbie Coltrane, Ralph Fiennes, Michael Gambon;3; - - -;785;205;1634;7790
+Harry Potter VII - Part 1;Fantasy;David Yates;32;2010;Daniel Radcliffe, Rupert Grint, Emma Watson, Ralph Fiennes, Alan Rickman;9; - - -;764;226;2771;4842
+Harry Potter VII - Part 2;Fantasy;David Yates;43;2010;Daniel Radcliffe, Rupert Grint, Emma Watson, Ralph Fiennes, Alan Rickman;10; - - -;823;776;4477;2246
+I am Legend;Action;Francis Lawrence;38;2007;Will Smith, Alice Braga, Dash Mihok, Salli Richardson, Willow Smith, Charlie Tahan;7; - - -;503;91;1974;5505
+I, Robot;Sci-Fi;Alex Proyas;39;2004;Will Smith, Bridget Moynahan, Alan Tudyk, James Cromwell, Bruce Greenwood, Adrian L. Ricard;8; - - -;835;689;2486;7306
+Ice Age 1;Animation;Chris Wedge;41;2002;Stimmen von Ray Romano, John Leguizamo, Denis Leary, Goran Visnjic, Jack Black, Tara Strong;3; - - -;711;527;5465;4073
+Ice Age 2: The Meltdown;Animation;Carlos Saldanha;40;2006;Stimmen von Ray Romano, John Leguizamo, Denis Leary, Drea de Matteo, Queen Latifah, Seann William Scott;6; - - -;988;680;3453;1690
+Ice Age 3: Dawn of the Dinosaurs;Animation;Carlos Saldanha;37;2009;"Stimmen von Ray Romano, John Leguizamo, Denis Leary, Queen Latifah, Seann William Scott";6; - - -;784;479;4273;5274
+Ice Age 4: Continental Drift;Animation;Steve Martino, Mike Thurmeier;33;2012;Aziz Ansari, Joy Behar, Alain Chabat, Ester Dean, Peter Dinklage;6; - - -;341;339;8177;1887
+Interstellar;Sci-Fi;Christopher Nolan;33;2014;Matthew McConaughey, Anne Hathaway, Jessica Chastain, Wes Bentley, Casey Affleck, John Lithgow, Matt Damon;7; - - -;835;611;3988;8609
+Iron Man;Sci-Fi;Jon Favreau;35;2008;Robert Downey Jr., Terrence Howard, Gwyneth Paltrow, Jeff Bridges, Samuel L. Jackson, Hilary Swank;5; - - -;635;491;1920;9103
+Kill Bill, Volume 1;Action;Quentin Tarantino;44;2003;Uma Thurman, David Carradine, Lucy Liu, Daryl Hannah, Vivica A. Fox, Michael Madsen;5; - - -;359;297;8204;9714
+Kill Bill, Volume 2;Action;Quentin Tarantino;42;2004;Uma Thurman, David Carradine, Michael Madsen, Darryl Hannah, Gordon Liu, Michael Parks;5; - - -;580;494;6506;5501
 Kung Fu Panda;Animation;John Stevenson, Mark Osborne;37;2008;Jack Black;9; - - -;849;434;4825;9702
 Lady in the Water;Fantasy;M. Night Shyamalan;38;2006;Paul Giamatti, Bryce Dallas Howard, Mary Beth Hurt, Freddy Rodriguez, Jeffrey Wright, Sarita Choudhury, Bob Balaban;9; - - -;840;431;7339;958
-White House Down;Action;Roland Emmerich;30;2013;Channing Tatum, Jamie Foxx, Maggie Gyllenhaal, Jason Clarke, Richard Jenkins;5; - - -;914;430;2973;3603
-Max Payne;Sci-Fi;John Moore;30;2008;Mark Wahlberg, Mila Kunis, Beau Bridges, Ludacris, Chris O'Donnell, Donal Logue, Amaury Nolasco,;10; - - -;962;413;1450;9998
-Monsters University;Animation;Dan Scanlon;44;2013;Nathan Fillion, John Goodman, Steve Buscemi, John Krasinski, Aubrey Plaza, Helen Mirren;7; - - -;954;386;2797;663
-Casanova;Historical;Federico Fellini;36;1976;Donald Sutherland, Tina Aumont, Cicely Browne, Olimpia Carlisi, Adele Angela Lojodice;4; - - -;601;385;8060;1754
-Rio 2;Animation;Carlos Saldanha;36;2004;Carlinhos Brown, Jake T. Austin, Kristin Chenoweth, Alberto Costa, Amandla Stenberg;4; - - -;929;374;6024;933
-Rambo IV;Action;Sylvester Stallone;44;2007;Sylvester Stallone, Julie Benz, Paul Schulze, Matthew Marsden, Graham McTavish;9; - - -;421;366;9848;6087
-Aladdin;Animation;Walt Disney;29;1992;Scott Weinger, Robin Williams, Linda Larkin, Jonathan Freeman;6; - - -;448;364;6043;7821
-Matrix Reloaded;Sci-Fi;Wachowski Brothers;38;2003;K. Reeves, L. Fishburne, C.A. Moss,  H. Weaving, Jada Pinkett-Smith, Gloria Foster, M. Bellucci, Daniel Bernhardt ;7; - - -;884;364;3527;3241
-Golden Compass, The;Fantasy;Chris Weitz;43;2007;Nicole Kidman, Dakota Blue Richards, Sam Elliott, Eva Green, Daniel Craig, Tom Courtenay;4; - - -;555;349;6716;4633
-Spider-Man 2;Fantasy;Sam Raimi;31;2004;Tobey Maguire, Kirsten Dunst, James Franco, Rosemary Harris, Alfred Molina, Donna Murphy, J.K. Simmons;4; - - -;922;348;9565;3072
-Mission: Impossible II;Action;John Woo;39;2000;Tom Cruise, Dougray Scott, Ving Rhames, Thandie Newton, Anthony Hopkins, Brendan Gleeson;7; - - -;532;346;5711;8999
-Ice Age 4: Continental Drift;Animation;Steve Martino, Mike Thurmeier;33;2012;Aziz Ansari, Joy Behar, Alain Chabat, Ester Dean, Peter Dinklage;6; - - -;341;339;8177;1887
-Shrek;Animation;Adamson & Jenson;39;2001;Stimmen von Mike Myers, Eddie Murphy, Cameron Diaz, John Lithgow, Vincent Cassel;8; - - -;824;338;9689;4162
-Pirates of the Caribbean III: At World's End;Fantasy;Gore Verbinski;30;2007;Johnny Depp, Geoffrey Rush, Orlando Bloom, Keira Knightley, Stellan Skarsgard, Bill Nighy, Chow Yun-Fat;5; - - -;880;334;5769;393
-Mission: Impossible;Action;Brian De Palma;34;1996;Tom Cruise, Jon Voight, Henry Czerny, Emmanuelle Beart, Jean Reno, Ving Rhames;4; - - -;373;314;6292;7493
-Ghost Rider;Fantasy;Mark Steven Johnson;43;2007;Nicolas Cage, Wes Bentley, Eva Mendes, Sam Elliott, Peter Fonda, Donal Logue;10; - - -;859;311;7895;9867
-Kill Bill, Volume 1;Action;Quentin Tarantino;44;2003;Uma Thurman, David Carradine, Lucy Liu, Daryl Hannah, Vivica A. Fox, Michael Madsen;5; - - -;359;297;8204;9714
-Tinker Bell: Secret of the Wings;Animation;Bradley Raymond;37;2012;Stimmen von Megan Hilty, Lucy Hale, Anjelica Huston, Mae Whitman, Lucy Liu;9; - - -;528;289;4389;5872
-Signs;Sci-Fi;M. Night Shyamalan;45;2002;Mel Gibson, Joaquin Phoenix, Rory Culkin, Patricia Kalember, Cherry Jones, Abigail Breslin, M. Night Shyamalan;10; - - -;399;289;1897;6910
-One Way;Crime;Reto Salimbeni;37;2007;Til Schweiger, Lauren Lee Smith, Sebastien Roberts, Michael Clarke Duncan, Eric Roberts;10; - - -;775;288;5768;2702
-Apocalypse Now;War;Francis Ford Coppola;39;1979;Marlon Brando, Robert Duvall, Martin Sheen, Frederic Forrest, Albert Hall, Sam Bottoms;8; - - -;462;266;4360;2142
-Pitch Black;Sci-Fi;David Twohy;28;2000;Vin Diesel, Radha Mitchell, Cole Hauser, Keith David, Lewis Fitz-Gerald, Claudia Black;8; - - -;456;257;6090;2814
-Alatriste;Action;Agustin Diaz Yanes;39;2006;Viggo Mortensen, Elena Anaya, Javier Camara, Eduardo Noriega, Blanca Rortillo, Carlos Bardem;4; - - -;788;242;5294;3675
-Reservoir Dogs;Crime;Quentin Tarantino;37;1992;Harvey Keitel, Tim Roth, Michael Madsen, Christopher Penn, Steve Buscemi, Lawrence Tierney;6; - - -;607;240;9010;4434
-Fantastic Four;Fantasy;Tim Story;31;2005;Ioan Gruffudd, Jessica Alba, Chris Evans, Michael Chiklis, Julian McMahon, Hamish Linklater;8; - - -;289;228;8618;3486
-Harry Potter VII - Part 1;Fantasy;David Yates;32;2010;Daniel Radcliffe, Rupert Grint, Emma Watson, Ralph Fiennes, Alan Rickman;9; - - -;764;226;2771;4842
-Harry Potter IV ;Fantasy;Mike Newell;39;2005;Daniel Radcliffe, Rupert Grint, Emma Watson, Eric Sykes, Timothy Spall, David Tennant, Mark Williams;9; - - -;433;225;9273;1399
-Van Helsing;Fantasy;Stephen Sommers;38;2004;Hugh Jackman, Kate Beckinsale, Richard Roxburgh, David Wenham, Shuler Hensley, Wiil Kemp;9; - - -;979;215;2014;8564
+Last Days on Mars, The;Sci-Fi;Ruairi Robinson;44;2013;Liev Schreiber, Romola Garai, Elias Koteas, Olivia Williams, Johnny Harris, Goran Kostic, Tom Cullen, Yusra Warsama;10; - - -;954;884;9870;8049
 Lord of the Rings I - The Fellowship;Fantasy;Peter Jackson;45;2001;Elijah Wood, Ian McKellen, Viggo Mortensen, Orlando Bloom, John Rhys-Davies, Cate Blanchett, Liv Tyler, Ch. Lee, Sean Bean;5; - - -;230;210;9714;6918
-Harry Potter VI;Fantasy;David Yates;29;2009;Daniel Radcliffe, Rupert Grint, Emma Watson, Robbie Coltrane, Ralph Fiennes, Michael Gambon;3; - - -;785;205;1634;7790
-Monster Inc.;Animation;Pixar, Walt Disney;38;2001;Stimmen von Billy Crystal, John Goodman, Mary Gibbs, Steve Buscemi, James Coburn, Jennifer Tilly;9; - - -;504;190;2982;6716
-Shrek 2;Animation;Adamson & Jenson;37;2004;Stimmen von Mike Myers, Eddie Murphy, Cameron Diaz, Julie Andrews, John Cleese;8; - - -;633;127;7717;5437
-Tarzan 2;Animation;Brian Smith;34;2009; - - -;4; - - -;770;122;2458;2669
-Password Swordfish;Crime;Dominic Sena;33;2001;John Travolta, Hugh Jackman, Halle Berry, Vinnie Jones, Don Cheadle, Camryn Grimes ;10; - - -;264;112;9162;7603
-Batman - The Dark Knight;Fantasy;Christopher Nolan;44;2008;Christian Bale, Heath Ledger, Aaron Eckhart, Michael Caine, Maggie Gyllenhaal, Gary Oldman, Morgan Freeman;10; - - -;821;104;1716;9918
-Mr. and Mrs. Smith;Comedy;Doug Liman;37;2005;Brad Pitt, Angelina Jolie, Vince Vaughn, Adam Brody, Kerry Washington;6; - - -;114;94;4510;1511
-I am Legend;Action;Francis Lawrence;38;2007;Will Smith, Alice Braga, Dash Mihok, Salli Richardson, Willow Smith, Charlie Tahan;7; - - -;503;91;1974;5505
-Fast and the Furious;Action;Rob Cohen;33;2001;Paul Walker, Vin Diesel, Michelle Rodriguez, Jordana Brewster, Rick Yune, Chad Lindberg;5; - - -;574;50;7689;5679
-Dante's Peak;Action;Roger Donaldson;38;1997;Pierce Brosnan, Linda Hamilton, Jamie Renee Smith, Jeremy Foley, Charles Hallahan, Grant Heslov;8; - - -;560;45;6723;4137
-Cloverfield;Sci-Fi;Matt Reeves;36;2008;Lizzy Caplan, Jessica Lucas, T.J. Miller, Michael Stahl-David, Mike Vogel;4; - - -;734;43;8724;8273
+Lord of the Rings II - The Two Towers;Fantasy;Peter Jackson;35;2002;Elijah Wood, Ian McKellen, Viggo Mortensen, Orlando Bloom, John Rhys-Davies, Cate Blanchett, Liv Tyler, Ch. Lee;5; - - -;975;780;7365;1572
+Lord of the Rings III - The Return of the King;Fantasy;Peter Jackson;34;2003;Elijah Wood, Ian McKellen, Viggo Mortensen, Orlando Bloom, John Rhys-Davies, Cate Blanchett, Liv Tyler, Ch. Lee;10; - - -;815;727;5232;6280
 Matrix;Sci-Fi;Wachowski Brothers;43;1999;Keanu Reeves, Laurence Fishburne, Carrie-Anne Moss, Joe Pantoliano, Hugo Weaving, Belinda Mcclory ;9; - - -;787;42;2240;2242
-Argo;Drama;Ben Affleck;41;2012;Ben Affleck, Bryan Cranston, John Goodman, Clea DuVall, Alan Arkin;6; - - -;637;38;6419;3364
+Matrix Reloaded;Sci-Fi;Wachowski Brothers;38;2003;K. Reeves, L. Fishburne, C.A. Moss,  H. Weaving, Jada Pinkett-Smith, Gloria Foster, M. Bellucci, Daniel Bernhardt ;7; - - -;884;364;3527;3241
+Matrix Revolutions;Sci-Fi;Wachowski Brothers;38;2003;Keanu Reeves, Carrie-Anne Moss, Laurence Fishburne, Nona Gaye, Monica Bellucci, Hugo Weaving;8; - - -;794;586;8856;5720
+Mary Poppins;Animation;Robert Stevenson;27;1964;Julie Andrews, Dick Van Dyke, David Tomlinson, Glynis Johns, Hermione Baddeley, Reta Shaw;9; - - -;982;801;2506;1415
+Max Payne;Sci-Fi;John Moore;30;2008;Mark Wahlberg, Mila Kunis, Beau Bridges, Ludacris, Chris O'Donnell, Donal Logue, Amaury Nolasco,;10; - - -;962;413;1450;9998
+Mission: Impossible;Action;Brian De Palma;34;1996;Tom Cruise, Jon Voight, Henry Czerny, Emmanuelle Beart, Jean Reno, Ving Rhames;4; - - -;373;314;6292;7493
+Mission: Impossible II;Action;John Woo;39;2000;Tom Cruise, Dougray Scott, Ving Rhames, Thandie Newton, Anthony Hopkins, Brendan Gleeson;7; - - -;532;346;5711;8999
+Mission: Impossible III;Action;J. J. Abrams;45;2006;Tom Cruise, Ving Rhames, Sasha Alexander, Billy Crudup, Laurence Fishburne, Philip Seymour Hoffman;3; - - -;800;626;6246;7521
+Monster;Drama;Patty Jenkins;39;2003;Charlize Theron, Christina Ricci, Bruce Dern, Scott Wilson, Pruitt Taylor Vince, Lee Tergesen, Annie Corley;5; - - -;781;525;6352;5291
+Monster Inc.;Animation;Pixar, Walt Disney;38;2001;Stimmen von Billy Crystal, John Goodman, Mary Gibbs, Steve Buscemi, James Coburn, Jennifer Tilly;9; - - -;504;190;2982;6716
+Monsters University;Animation;Dan Scanlon;44;2013;Nathan Fillion, John Goodman, Steve Buscemi, John Krasinski, Aubrey Plaza, Helen Mirren;7; - - -;954;386;2797;663
+Mr. and Mrs. Smith;Comedy;Doug Liman;37;2005;Brad Pitt, Angelina Jolie, Vince Vaughn, Adam Brody, Kerry Washington;6; - - -;114;94;4510;1511
 Mulan;Animation;B. Cook, T. Bancroft;36;1998;Stimmen von Ming-Na Wen, Lea Salonga, Eddie Murphy, B.D. Wong, Donny Osmond, Harvey Fierstein;3; - - -;569;28;8116;8366
+Mulan II;Animation;Darrell Rooney, Lynne Southerland;45;2012;William Shatner und weitere;4; - - -;701;642;4847;5228
+Night at the Museum 2;Comedy;Shawn Levy;33;2009;Amy Adams, Ben Stiller, Robin Williams, Jonah Hill, Owen Wilson, Bill Hader;4; - - -;950;822;9639;1098
+Oblivion;Sci-Fi;Joseph Kosinski;45;2013;Tom Cruise, Morgan Freeman, Olga Kurylenko, Andrea Riseborough, Melissa Leo;6; - - -;695;627;6361;1992
+Ocean's 11;Crime;Steven Soderbergh;43;2001;George Clooney, Brad Pitt, Matt Damon, Andy Garcia, Don Cheadle, Elliot Gould, Carl Reiner, Julia Roberts ;7; - - -;929;721;784;3812
+Ocean's 12;Crime;Steven Soderbergh;32;2004;George Clooney, Brad Pitt, Matt Damon, Andy Garcia, Don Cheadle, Bernie Mac, Catherine Zeta-Jones, Julia Roberts;9; - - -;789;671;4240;9046
+Ocean's 13;Crime;Steven Soderbergh;38;2007;George Clooney, Brad Pitt, Matt Damon, Andy Garcia, Don Cheadle, Bernie Mac, Al Pacino, Ellen Barkin;3; - - -;927;920;6845;5899
+One Way;Crime;Reto Salimbeni;37;2007;Til Schweiger, Lauren Lee Smith, Sebastien Roberts, Michael Clarke Duncan, Eric Roberts;10; - - -;775;288;5768;2702
+Password Swordfish;Crime;Dominic Sena;33;2001;John Travolta, Hugh Jackman, Halle Berry, Vinnie Jones, Don Cheadle, Camryn Grimes ;10; - - -;264;112;9162;7603
+Peter Pan (Walt Disney);Animation;Walt Disney;43;2012;Wilfred Jackson, Denis Leary, Hamilton Luske, ...;7; - - -;742;453;3258;8958
+Pirates of the Caribbean I: The Curse of the Black Pearl;Fantasy;Gore Verbinski;42;2003;Johnny Depp, Geoffrey Rush, Orlando Bloom, Keira Knightley, Jack Davenport, Jonathan Pryce;8; - - -;956;937;5780;7718
+Pirates of the Caribbean II: Dead Man's Chest;Fantasy;Gore Verbinski;27;2006;Johnny Depp, Orlando Bloom, Keira Knightley, Jack Davenport, Bill Nighy, Jonathan Pryce;5; - - -;943;905;8446;7124
+Pirates of the Caribbean III: At World's End;Fantasy;Gore Verbinski;30;2007;Johnny Depp, Geoffrey Rush, Orlando Bloom, Keira Knightley, Stellan Skarsgard, Bill Nighy, Chow Yun-Fat;5; - - -;880;334;5769;393
+Pirates of the Caribbean IV: Fremde Gezeiten;Fantasy;Rob Marshall;42;2011;Johnny Depp, Geoffrey Rush, Penelope Cruz, Ian McShane, Bill Nighy;10; - - -;892;874;9604;8931
+Pitch Black;Sci-Fi;David Twohy;28;2000;Vin Diesel, Radha Mitchell, Cole Hauser, Keith David, Lewis Fitz-Gerald, Claudia Black;8; - - -;456;257;6090;2814
+Poseidon;Action;Wolfgang Petersen;28;2006;Joshua Lucas, Kurt Russell, Emmy Rossum, Jacinda Barrett, Mike Vogel, Richard Dreyfuss;10; - - -;654;507;5360;6875
+Rambo IV;Action;Sylvester Stallone;44;2007;Sylvester Stallone, Julie Benz, Paul Schulze, Matthew Marsden, Graham McTavish;9; - - -;421;366;9848;6087
+Rapunzel;Animation;Walt Disney;30;2010;Matthew Gray Gubler, Mandy Moore, Zachary Levi, David Schwimmer, John Goodman;3; - - -;726;675;4476;6860
+Ratatouille;Animation;Pixar, Walt Disney;32;2007;Stimmen von Patton Oswalt, Brad Garrett, Ian Holm, Brian Dennehy, Janeane Garofalo, Peter O'Toole;5; - - -;979;910;4503;4356
+Reader, The (Der Vorleser);Drama;Stephen Daldry ;38;2008;Ralph Fiennes, Jeanette Hain, David Kross, Kate Winslet, Bruno Ganz;7; - - -;967;557;5663;4882
+Red Planet;Sci-Fi;Antony Hoffman;25;2000;Val Kilmer, Benjamin Bratt, Carrie-Anne Moss, Tom Sizemore, Terrence Stamp, Simon Baker;4; - - -;914;561;2807;1221
+Reservoir Dogs;Crime;Quentin Tarantino;37;1992;Harvey Keitel, Tim Roth, Michael Madsen, Christopher Penn, Steve Buscemi, Lawrence Tierney;6; - - -;607;240;9010;4434
+Resident Evil;Horror;Paul Anderson;28;2002;Milla Jovovich, Michelle Rodriguez, Eric Mabius, James Purefoy, Martin Crewes, Colin Salmon;8; - - -;895;688;3456;7377
+Resident Evil: Apocalypse;Horror;Alexander Witt;32;2004;Milla Jovovich, Sienna Guillory, Oded Fehr, Zack Ward, Razaaq Adoti, Thomas Kretschmann, Sandrine Holt;6; - - -;893;865;9461;7279
+Resident Evil: Extinction;Horror;Russell Mulcahy;37;2007;Milla Jovovich, Oded Fehr, Ali Larter, Iain Glen, Ashanti, Mike Epps;10; - - -;953;907;1400;5395
+Rio;Animation;Carlos Saldanha;43;2011;Anne Hathaway, Neil Patrick Harris, Rodrigo Santoro, Jake T. Austin;8; - - -;994;839;7064;9335
+Rio 2;Animation;Carlos Saldanha;36;2004;Carlinhos Brown, Jake T. Austin, Kristin Chenoweth, Alberto Costa, Amandla Stenberg;4; - - -;929;374;6024;933
+Robin Hood;Animation;Walt Disney;41;2010; - - -;5; - - -;868;832;7186;3533
+Robin Hood: Prince of Thieves;Historical;Kevin Reynolds;30;1991;Kevin Costner, Morgan Freeman, Mary Elizabeth Mastrantonio, Christian Slater, Alan Rickman, Geraldine McEwan;3; - - -;750;553;3077;4348
+Ronin;Action;John Frankenheimer;38;1998;Robert De Niro, Jean Reno, Natascha McElhone, Stellan Skarsgard, Jonathan Pryce, Sean Bean ;4; - - -;663;558;7893;5220
+Shrek;Animation;Adamson & Jenson;39;2001;Stimmen von Mike Myers, Eddie Murphy, Cameron Diaz, John Lithgow, Vincent Cassel;8; - - -;824;338;9689;4162
+Shrek 2;Animation;Adamson & Jenson;37;2004;Stimmen von Mike Myers, Eddie Murphy, Cameron Diaz, Julie Andrews, John Cleese;8; - - -;633;127;7717;5437
+Shutter Island;Drama;Martin Scorsese;39;2010;Leo DiCaprio, Mark Ruffalo, Ben Kingsley, Max von Sydow;4; - - -;937;798;9990;2929
+Signs;Sci-Fi;M. Night Shyamalan;45;2002;Mel Gibson, Joaquin Phoenix, Rory Culkin, Patricia Kalember, Cherry Jones, Abigail Breslin, M. Night Shyamalan;10; - - -;399;289;1897;6910
+Spider-Man;Fantasy;Sam Raimi;45;2002;Tobey Maguire, Kirsten Dunst, James Franco, Rosemary Harris, Willem Dafoe, Cliff Robertson;6; - - -;566;552;2134;1893
+Spider-Man 2;Fantasy;Sam Raimi;31;2004;Tobey Maguire, Kirsten Dunst, James Franco, Rosemary Harris, Alfred Molina, Donna Murphy, J.K. Simmons;4; - - -;922;348;9565;3072
+Spider-Man 3;Fantasy;Sam Raimi;44;2007;Tobey Maguire, Kirsten Dunst, Thomas Haden Church, James Franco, Topher Grace, Dylan Baker, Elizabeth Banks;10; - - -;760;702;7026;400
+Star Wars IV - A New Hope;Sci-Fi;George Lucas;31;1977;Mark Hamill, Harrison Ford, Carrie Fisher, Peter Cushing, Alec Guinness, C-3P0, R2-D2, Chewbacca, Darth Vader;5; - - -;948;841;1596;6709
+Star Wars V - The Empire Strikes Back;Sci-Fi;Irvin Kershner;43;1980;Mark Hamill, Harrison Ford, Carrie Fisher, Billy Dee Williams, Anthony Daniels, C-3P0, R2-D2, Darth Vader;4; - - -;767;619;4984;8156
+Star Wars VI - Return of the Jedi;Sci-Fi;Richard Marquand;28;1983;Mark Hamill, Harrison Ford, Carrie Fisher, Billy Dee Williams, Anthony Daniels, C-3P0, R2-D2, Darth Vader;4; - - -;652;601;5192;7651
+Super 8;Sci-Fi;J. J. Abrams;36;2011;Elle Fanning, Joel Courtney, Ryan Lee, Zach Mills, Riley Griffiths, Gabriel Basso;3; - - -;791;708;8451;7853
+Tarzan 2;Animation;Brian Smith;34;2009; - - -;4; - - -;770;122;2458;2669
+Terminator;Sci-Fi;James Cameron;28;1984;Arnold Schwarzenegger, Michael Biehn, Linda Hamilton, Paul Winfield, Lance Henriksen, Rick Rossovich;3; - - -;838;732;3925;3937
+Terminator 2: Judgment Day;Sci-Fi;James Cameron;44;1991;Arnold Schwarzenegger, Linda Hamilton, Robert Patrick, Edward Furlong, Earl Boen, Joe Morton;10; - - -;949;910;4005;9574
+Terminator 3: Rise of the Machines;Sci-Fi;Jonathan Mostow;37;2003;A.Schwarzenegger, Nick Stahl, Claire Danes, Kristanna Loken, David Andrews, Mark Famiglietti, Matthew Bonnar;3; - - -;657;586;8245;6555
+Tinker Bell: Secret of the Wings;Animation;Bradley Raymond;37;2012;Stimmen von Megan Hilty, Lucy Hale, Anjelica Huston, Mae Whitman, Lucy Liu;9; - - -;528;289;4389;5872
+Tomb Raider (Lara Croft);Fantasy;Simon West;39;2001;Angelina Jolie, Iain Glenn, Jon Voight, Noah Taylor, Daniel Craig, Chrstopher Barrie, Julian Rhind-Tutt;4; - - -;755;619;3853;2431
+Troy;Historical;Wolfgang Petersen;31;2004;Brad Pitt, Eric Bana, Orlando Bloom, Diane Kruger, Brian Cox, Sean Bean, Brendan Gleeson, Peter O'Toole;3; - - -;680;472;9018;6340
+Unbreakable;Sci-Fi;M. Night Shyamalan;33;2000;Bruce Willis, Samuel L. Jackson, Robin Wright Penn, Spencer Treat Clark, Charlayne Woodard, Eamonn Walker;3; - - -;815;483;934;4858
+Underworld I;Fantasy;Len Wiseman;36;2003;Kate Beckinsale, Scott Speedman, Michael Sheen, Shane Brolly, Bill Nighy, Erwin Leder, Sophia Myles;10; - - -;741;465;6869;2611
+Underworld II: Evolution;Fantasy;Len Wiseman;37;2006;Kate Beckinsale, Scott Speedman, Tony Curran, Derek Jacobi, Bill Nighy, Steven Mackintosh;10; - - -;957;524;1847;9384
+V for Vendetta;Action;James McTeigue;31;2005;Natalie Portman, Hugo Weaving, Stephen Rea, John Hurt, Rupert Graves, Sinead Cusack;5; - - -;797;779;4222;5410
+Van Helsing;Fantasy;Stephen Sommers;38;2004;Hugh Jackman, Kate Beckinsale, Richard Roxburgh, David Wenham, Shuler Hensley, Wiil Kemp;9; - - -;979;215;2014;8564
+Wall-E;Animation;Andrew Stanton;42;2008;Pixar Animation Studios - Fred Willard, Ben Burtt ;8; - - -;856;644;1000;8908
+White House Down;Action;Roland Emmerich;30;2013;Channing Tatum, Jamie Foxx, Maggie Gyllenhaal, Jason Clarke, Richard Jenkins;5; - - -;914;430;2973;3603
+Woman in Black, The;Horror;James Watkins;36;2012;Daniel Radcliffe, Ciar�n Hinds, Janet McTeer, Alisa Khazanova, Shaun Dooley;7; - - -;873;580;5621;8238
+World War Z;Sci-Fi;Marc Forster;25;2013;Brad Pitt, Bryan Cranston, Mireille Enos, James Badge Dale, Elyes Gabel;4; - - -;979;953;7184;4839

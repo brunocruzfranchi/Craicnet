@@ -50,6 +50,12 @@ namespace TPFINAL_Craicnet
 
         }
 
+        private void Inicio_Load(object sender, EventArgs e)
+        {
+            pictureBox1.Image = Image.FromFile(AppDomain.CurrentDomain.BaseDirectory + "\\Caricenet000.png");
+        }
+
+
         //Buttons 
         private void btn_iniciar_sesion_Click(object sender, EventArgs e)
         {
@@ -66,8 +72,8 @@ namespace TPFINAL_Craicnet
                     if (usuario_ingresando.Admin)
                     {
                         Administrador admin = new Administrador(usuario_ingresando);
-                        admin.Show(this);
                         this.Hide();
+                        admin.Show(this);
                     }
                     else
                     {
@@ -90,9 +96,43 @@ namespace TPFINAL_Craicnet
           
         }
 
+        private void btn_registrar_Click(object sender, EventArgs e)
+        {
+
+            if (txt_UsuarioNuevo.Text.Length < Min_Length_ID)
+            {
+                MessageBox.Show("Usuario Inválido");
+                return;
+            }
+            if (Tabla_Usuarios.Buscar_usuario(txt_UsuarioNuevo.Text) != null)
+            {
+                MessageBox.Show("Usuario ya existente");
+                return;
+            }
+            else
+            {
+                if (radio_Admin.Checked)
+                {
+                    if (txt_verificacion.Text == Clave_verificacion)
+                    {
+                        Tabla_Usuarios.Agregar(new cUsuario(txt_UsuarioNuevo.Text, txt_ContraseñaNueva.Text, radio_Admin.Checked));
+                        MessageBox.Show("Nuevo usuario registrado exitosamente");
+                    }
+                    else
+                        MessageBox.Show("Clave de Verificación Incorrecta");
+                }
+                else
+                {
+                    Tabla_Usuarios.Agregar(new cUsuario(txt_UsuarioNuevo.Text, txt_ContraseñaNueva.Text, radio_Admin.Checked));
+                    MessageBox.Show("Nuevo usuario registrado exitosamente");
+                }
+
+            }
+        }
+
         //Status Strip
 
-            private void txt_usuario_MouseHover(object sender, EventArgs e)
+        private void txt_usuario_MouseHover(object sender, EventArgs e)
             {
                 toolStripStatus.Text = "Ingrese su DNI";
 
@@ -140,11 +180,7 @@ namespace TPFINAL_Craicnet
                 toolStripStatus.Text = "";
             }
 
-        private void Inicio_Load(object sender, EventArgs e)
-        {
-            pictureBox1.Image = Image.FromFile(AppDomain.CurrentDomain.BaseDirectory + "\\Caricenet000.png");
-        }
-
+        //Eventos 
         private void radio_Cliente_CheckedChanged(object sender, EventArgs e)
         {
             txt_verificacion.Enabled = false;
@@ -158,39 +194,6 @@ namespace TPFINAL_Craicnet
         private void label2_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void btn_registrar_Click(object sender, EventArgs e)
-        {
-
-            if (txt_UsuarioNuevo.Text.Length < Min_Length_ID)
-            {
-                MessageBox.Show("Usuario Inválido");
-                return;
-            }
-            if (Tabla_Usuarios.Buscar_usuario(txt_UsuarioNuevo.Text) != null)
-            { MessageBox.Show("Usuario ya existente");
-                return;
-            }
-            else
-            {
-                if (radio_Admin.Checked)
-                {
-                    if (txt_verificacion.Text == Clave_verificacion)
-                    {
-                        Tabla_Usuarios.Agregar(new cUsuario(txt_UsuarioNuevo.Text, txt_ContraseñaNueva.Text, radio_Admin.Checked));
-                        MessageBox.Show("Nuevo usuario registrado exitosamente");
-                    }
-                    else
-                        MessageBox.Show("Clave de Verificación Incorrecta");
-                }
-                else
-                {
-                    Tabla_Usuarios.Agregar(new cUsuario(txt_UsuarioNuevo.Text, txt_ContraseñaNueva.Text, radio_Admin.Checked));
-                    MessageBox.Show("Nuevo usuario registrado exitosamente");
-                }
-
-            }
         }
 
         /// <summary>
