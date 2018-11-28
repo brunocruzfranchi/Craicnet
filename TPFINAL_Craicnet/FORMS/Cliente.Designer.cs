@@ -42,14 +42,7 @@
             this.tabp_promo = new System.Windows.Forms.TabPage();
             this.grid_promociones_cliente = new System.Windows.Forms.DataGridView();
             this.tabp_alq = new System.Windows.Forms.TabPage();
-            this.groupBox_cliente = new System.Windows.Forms.GroupBox();
-            this.btn_VerPelicula = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.pic_unlike = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.pict_like = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.grid_alq = new System.Windows.Forms.DataGridView();
             this.gbox_alquilar = new System.Windows.Forms.GroupBox();
             this.rbtn_Alquiler = new System.Windows.Forms.RadioButton();
             this.rbtn_buscar = new System.Windows.Forms.RadioButton();
@@ -71,9 +64,18 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.groupBox_cliente = new System.Windows.Forms.GroupBox();
+            this.btn_VerPelicula = new System.Windows.Forms.Button();
+            this.txt_peliculaver = new System.Windows.Forms.TextBox();
+            this.pic_unlike = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pict_like = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.gbox_cliente = new System.Windows.Forms.GroupBox();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.cPeliculasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.label5 = new System.Windows.Forms.Label();
             this.NombreColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DirectorColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PrecioColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -102,8 +104,6 @@
             this.vistosAnioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cPromoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cPeliculaBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Pelicula = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.split_alquilar)).BeginInit();
             this.split_alquilar.Panel1.SuspendLayout();
@@ -115,17 +115,17 @@
             this.tabp_promo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid_promociones_cliente)).BeginInit();
             this.tabp_alq.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.grid_alq)).BeginInit();
+            this.gbox_alquilar.SuspendLayout();
             this.groupBox_cliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_unlike)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pict_like)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.gbox_alquilar.SuspendLayout();
             this.gbox_cliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cPeliculasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cPeliculaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cPromoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cPeliculaBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -185,8 +185,8 @@
             // 
             // split_alquilar.Panel2
             // 
-            this.split_alquilar.Panel2.Controls.Add(this.gbox_alquilar);
             this.split_alquilar.Panel2.Controls.Add(this.groupBox_cliente);
+            this.split_alquilar.Panel2.Controls.Add(this.gbox_alquilar);
             this.split_alquilar.Size = new System.Drawing.Size(2544, 1456);
             this.split_alquilar.SplitterDistance = 1511;
             this.split_alquilar.SplitterWidth = 11;
@@ -298,7 +298,7 @@
             // 
             // tabp_alq
             // 
-            this.tabp_alq.Controls.Add(this.dataGridView1);
+            this.tabp_alq.Controls.Add(this.grid_alq);
             this.tabp_alq.Location = new System.Drawing.Point(10, 48);
             this.tabp_alq.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabp_alq.Name = "tabp_alq";
@@ -308,93 +308,18 @@
             this.tabp_alq.Text = "Alquileres";
             this.tabp_alq.UseVisualStyleBackColor = true;
             // 
-            // groupBox_cliente
+            // grid_alq
             // 
-            this.groupBox_cliente.Controls.Add(this.btn_VerPelicula);
-            this.groupBox_cliente.Controls.Add(this.textBox1);
-            this.groupBox_cliente.Controls.Add(this.pic_unlike);
-            this.groupBox_cliente.Controls.Add(this.label3);
-            this.groupBox_cliente.Controls.Add(this.pict_like);
-            this.groupBox_cliente.Controls.Add(this.pictureBox1);
-            this.groupBox_cliente.Controls.Add(this.label4);
-            this.groupBox_cliente.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox_cliente.Location = new System.Drawing.Point(0, 0);
-            this.groupBox_cliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox_cliente.Name = "groupBox_cliente";
-            this.groupBox_cliente.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox_cliente.Size = new System.Drawing.Size(1022, 1456);
-            this.groupBox_cliente.TabIndex = 0;
-            this.groupBox_cliente.TabStop = false;
-            this.groupBox_cliente.Text = "Perfil";
-            // 
-            // btn_VerPelicula
-            // 
-            this.btn_VerPelicula.Location = new System.Drawing.Point(744, 1004);
-            this.btn_VerPelicula.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btn_VerPelicula.Name = "btn_VerPelicula";
-            this.btn_VerPelicula.Size = new System.Drawing.Size(192, 69);
-            this.btn_VerPelicula.TabIndex = 2;
-            this.btn_VerPelicula.Text = "Ver";
-            this.btn_VerPelicula.UseVisualStyleBackColor = true;
-            this.btn_VerPelicula.Click += new System.EventHandler(this.btn_VerPelicula_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(227, 1021);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(308, 38);
-            this.textBox1.TabIndex = 3;
-            // 
-            // pic_unlike
-            // 
-            this.pic_unlike.Location = new System.Drawing.Point(957, 789);
-            this.pic_unlike.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pic_unlike.Name = "pic_unlike";
-            this.pic_unlike.Size = new System.Drawing.Size(147, 148);
-            this.pic_unlike.TabIndex = 5;
-            this.pic_unlike.TabStop = false;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(365, 789);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(93, 32);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "label3";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
-            // 
-            // pict_like
-            // 
-            this.pict_like.Location = new System.Drawing.Point(720, 782);
-            this.pict_like.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pict_like.Name = "pict_like";
-            this.pict_like.Size = new System.Drawing.Size(141, 148);
-            this.pict_like.TabIndex = 4;
-            this.pict_like.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(237, 81);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(504, 534);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label4.Location = new System.Drawing.Point(165, 782);
-            this.label4.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(144, 39);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Usuario:";
+            this.grid_alq.AllowUserToAddRows = false;
+            this.grid_alq.AllowUserToDeleteRows = false;
+            this.grid_alq.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grid_alq.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.grid_alq.Location = new System.Drawing.Point(3, 2);
+            this.grid_alq.Name = "grid_alq";
+            this.grid_alq.ReadOnly = true;
+            this.grid_alq.Size = new System.Drawing.Size(1485, 1394);
+            this.grid_alq.TabIndex = 0;
+            this.grid_alq.SelectionChanged += new System.EventHandler(this.grid_alq_SelectionChanged_1);
             // 
             // gbox_alquilar
             // 
@@ -638,6 +563,99 @@
             this.label9.TabIndex = 10;
             this.label9.Text = "Pelicula";
             // 
+            // groupBox_cliente
+            // 
+            this.groupBox_cliente.Controls.Add(this.label5);
+            this.groupBox_cliente.Controls.Add(this.btn_VerPelicula);
+            this.groupBox_cliente.Controls.Add(this.txt_peliculaver);
+            this.groupBox_cliente.Controls.Add(this.pic_unlike);
+            this.groupBox_cliente.Controls.Add(this.label3);
+            this.groupBox_cliente.Controls.Add(this.pict_like);
+            this.groupBox_cliente.Controls.Add(this.pictureBox1);
+            this.groupBox_cliente.Controls.Add(this.label4);
+            this.groupBox_cliente.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox_cliente.Location = new System.Drawing.Point(0, 0);
+            this.groupBox_cliente.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox_cliente.Name = "groupBox_cliente";
+            this.groupBox_cliente.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox_cliente.Size = new System.Drawing.Size(1022, 1456);
+            this.groupBox_cliente.TabIndex = 0;
+            this.groupBox_cliente.TabStop = false;
+            this.groupBox_cliente.Text = "Perfil";
+            // 
+            // btn_VerPelicula
+            // 
+            this.btn_VerPelicula.Location = new System.Drawing.Point(681, 1160);
+            this.btn_VerPelicula.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_VerPelicula.Name = "btn_VerPelicula";
+            this.btn_VerPelicula.Size = new System.Drawing.Size(192, 69);
+            this.btn_VerPelicula.TabIndex = 2;
+            this.btn_VerPelicula.Text = "Ver";
+            this.btn_VerPelicula.UseVisualStyleBackColor = true;
+            this.btn_VerPelicula.Click += new System.EventHandler(this.btn_VerPelicula_Click);
+            // 
+            // txt_peliculaver
+            // 
+            this.txt_peliculaver.Location = new System.Drawing.Point(441, 1009);
+            this.txt_peliculaver.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txt_peliculaver.Name = "txt_peliculaver";
+            this.txt_peliculaver.ReadOnly = true;
+            this.txt_peliculaver.Size = new System.Drawing.Size(432, 38);
+            this.txt_peliculaver.TabIndex = 3;
+            // 
+            // pic_unlike
+            // 
+            this.pic_unlike.Location = new System.Drawing.Point(392, 1232);
+            this.pic_unlike.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pic_unlike.Name = "pic_unlike";
+            this.pic_unlike.Size = new System.Drawing.Size(147, 148);
+            this.pic_unlike.TabIndex = 5;
+            this.pic_unlike.TabStop = false;
+            this.pic_unlike.Click += new System.EventHandler(this.pic_unlike_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.900001F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(385, 782);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(109, 39);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "label3";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // pict_like
+            // 
+            this.pict_like.Location = new System.Drawing.Point(98, 1232);
+            this.pict_like.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pict_like.Name = "pict_like";
+            this.pict_like.Size = new System.Drawing.Size(141, 148);
+            this.pict_like.TabIndex = 4;
+            this.pict_like.TabStop = false;
+            this.pict_like.Click += new System.EventHandler(this.pict_like_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(237, 81);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(504, 534);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label4.Location = new System.Drawing.Point(165, 782);
+            this.label4.Margin = new System.Windows.Forms.Padding(8, 0, 8, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(144, 39);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Usuario:";
+            // 
             // gbox_cliente
             // 
             this.gbox_cliente.AutoSize = true;
@@ -661,6 +679,15 @@
             this.statusStrip1.Size = new System.Drawing.Size(2560, 22);
             this.statusStrip1.TabIndex = 4;
             this.statusStrip1.Text = "statusStrip1";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(166, 1009);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(117, 32);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "Pelicula";
             // 
             // NombreColumn
             // 
@@ -901,29 +928,6 @@
             // 
             this.cPeliculaBindingSource1.DataSource = typeof(TPFINAL_Craicnet.cPelicula);
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Pelicula});
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(1485, 1394);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // Pelicula
-            // 
-            this.Pelicula.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Pelicula.DataPropertyName = "Nombre";
-            this.Pelicula.DividerWidth = 20;
-            this.Pelicula.HeaderText = "Pelicula";
-            this.Pelicula.Name = "Pelicula";
-            this.Pelicula.ReadOnly = true;
-            // 
             // Cliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 31F);
@@ -951,19 +955,19 @@
             this.tabp_promo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.grid_promociones_cliente)).EndInit();
             this.tabp_alq.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.grid_alq)).EndInit();
+            this.gbox_alquilar.ResumeLayout(false);
+            this.gbox_alquilar.PerformLayout();
             this.groupBox_cliente.ResumeLayout(false);
             this.groupBox_cliente.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_unlike)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pict_like)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.gbox_alquilar.ResumeLayout(false);
-            this.gbox_alquilar.PerformLayout();
             this.gbox_cliente.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.cPeliculasBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cPeliculaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cPromoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cPeliculaBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1024,7 +1028,7 @@
         private System.Windows.Forms.TabPage tabp_alq;
         private System.Windows.Forms.GroupBox groupBox_cliente;
         private System.Windows.Forms.Button btn_VerPelicula;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_peliculaver;
         private System.Windows.Forms.PictureBox pic_unlike;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pict_like;
@@ -1048,7 +1052,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn vistosMesDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn alqAnioDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn vistosAnioDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Pelicula;
+        private System.Windows.Forms.DataGridView grid_alq;
+        private System.Windows.Forms.Label label5;
     }
 }

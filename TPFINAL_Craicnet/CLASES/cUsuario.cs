@@ -26,5 +26,16 @@ namespace TPFINAL_Craicnet
         public string Password { get; set; }
         public bool Admin { get; set; }
         public List<cPelicula> peliculas_alquiladas { get; set; }
+
+
+        public void Actualizar_peliculas_alquiladas()
+        {
+            foreach (cPelicula peli in peliculas_alquiladas)
+            {
+                if (DateTime.Today > peli.Fecha_Dev)
+                    peliculas_alquiladas.Remove(peli);
+            }
     }
+    }
+
 }

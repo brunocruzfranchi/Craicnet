@@ -19,8 +19,8 @@ namespace TPFINAL_Craicnet.FORMS
         public Alquiler()
         {
             InitializeComponent();
-            this.Width = 1000;
-            this.Height = 700;
+            this.Width = 165*4;
+            this.Height = 70*4;
             this.CenterToScreen();
         }
         public Alquiler(cPelicula peli, cUsuario cliente)
@@ -44,7 +44,7 @@ namespace TPFINAL_Craicnet.FORMS
             if(!EsPromo)
                 txt_Precio.Text = Pelicula_Alquilada.Precio.ToString();
             txt_n_dias.Text = DateTime.Compare( dateTimePicker1.Value, DateTime.Today).ToString();
-            txt_PrecioTotal.Text = (int.Parse(txt_n_dias.Text) * int.Parse(txt_Precio.Text)).ToString();
+            txt_PrecioTotal.Text = (int.Parse(txt_n_dias.Text) * float.Parse(txt_Precio.Text)).ToString();
         }
         public Alquiler(cPromo peli, cUsuario cliente)
         {
@@ -57,7 +57,7 @@ namespace TPFINAL_Craicnet.FORMS
             txt_Nombre.Text = Pelicula_Alquilada.Nombre;
             txt_Precio.Text = peli.PrecioPromo_String();
             txt_n_dias.Text = DateTime.Compare(dateTimePicker1.Value, DateTime.Today).ToString();
-            txt_PrecioTotal.Text = (int.Parse(txt_n_dias.Text) * int.Parse(txt_Precio.Text)).ToString();
+            txt_PrecioTotal.Text = (int.Parse(txt_n_dias.Text) * float.Parse(txt_Precio.Text)).ToString();
         
     }
         private void button1_Click(object sender, EventArgs e)

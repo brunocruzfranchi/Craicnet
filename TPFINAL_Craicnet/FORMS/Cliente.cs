@@ -59,6 +59,9 @@ namespace TPFINAL_Craicnet
         {
             grid_peliculas_cliente.DataSource = Inicio.peliculas;
             grid_promociones_cliente.DataSource = Inicio.promociones;
+            DataTable data = new DataTable();
+            data = Inicio.ToDataTable(Cliente_Activo.peliculas_alquiladas);
+            grid_alq.DataSource = data;
             pict_like.Image = Image.FromFile(AppDomain.CurrentDomain.BaseDirectory + "like.png");
             label3.Hide();
             split_alquilar.BringToFront();
@@ -301,24 +304,31 @@ namespace TPFINAL_Craicnet
 
                 }
 
+
         //Buttons 
 
         private void btn_alquilar_Click(object sender, EventArgs e)
+            
         {
+            cPelicula aux = null;
             if (tab_Peliculas.SelectedTab == tabp_peliculas)
             {
-                FORMS.Alquiler alquiler = new FORMS.Alquiler(Inicio.lista_peliculas.Find(x => x.Nombre.Contains(txt_pelicula_cliente.Text)), Cliente_Activo);
+                aux = Inicio.lista_peliculas.Find(x => x.Nombre.Contains(txt_pelicula_cliente.Text));
+                FORMS.Alquiler alquiler = new FORMS.Alquiler(aux, Cliente_Activo);
                 cPelicula.Actualizar(Inicio.lista_peliculas);
                 alquiler.Show(this);
             }
             if (tab_Peliculas.SelectedTab == tabp_promo)
             {
-                FORMS.Alquiler alquiler = new FORMS.Alquiler(Inicio.lista_promociones.Find(x => x.Nombre.Contains(txt_pelicula_cliente.Text)), Cliente_Activo);
+                aux = Inicio.lista_promociones.Find(x => x.Pelicula.Nombre.Contains(txt_pelicula_cliente.Text)).Pelicula;
+                FORMS.Alquiler alquiler = new FORMS.Alquiler(aux, Cliente_Activo);
                 cPelicula.Actualizar(Inicio.lista_peliculas);
                 alquiler.Show(this);
             }
-          
-            //falta sumar alquiler
+
+            grid_alq.DataSource = Cliente_Activo.peliculas_alquiladas;
+            
+           
 
         }
 
@@ -373,9 +383,9 @@ namespace TPFINAL_Craicnet
                                                                              obj.Director.Contains(txt_director_cliente.Text) &&
                                                                              obj.Año.Contains(txt_anio_cliente.Text) &&
                                                                              obj.Genero.Contains(txt_genero_cliente.Text))).ToList());
-                grid_peliculas_cliente.DataSource = filtered;
-                grid_peliculas_cliente.EndEdit();
-                grid_peliculas_cliente.ResetBindings();
+                grid_alq.DataSource = filtered;
+                grid_alq.EndEdit();
+                grid_alq.ResetBindings();
 
             }
 
@@ -439,7 +449,16 @@ namespace TPFINAL_Craicnet
 
         private void btn_VerPelicula_Click(object sender, EventArgs e)
         {
-            //actualizar y sumar a pelicula
+            cPelicula.Actualizar(Inicio.lista_peliculas);
+            cPelicula aux = null;
+            aux =Cliente_Activo.peliculas_alquiladas.Find( x => x.Nombre.Contains(txt_peliculaver.Text));
+            if (aux != null)
+            {
+                aux.Vistos_Anio++;
+                aux.Vistos_Mes++;
+                MessageBox.Show("Viendo " + aux.Nombre, "Craicnet - Ver Pelicula");
+            }
+            //sumar vistos pelicula seleccionada
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -451,17 +470,26 @@ namespace TPFINAL_Craicnet
         {
             if (tab_Peliculas.SelectedTab == tabp_peliculas )
             {
+                label3.Hide();
                 split_alquilar.Show();
                 groupBox_cliente.Hide();
             }
             if (tab_Peliculas.SelectedTab == tabp_promo)
             {
+                label3.Hide();
+                cPromo.Actualizar_promociones();
+                grid_promociones_cliente.EndEdit();
+                grid_promociones_cliente.ResetBindings();
                 split_alquilar.Show();
                 groupBox_cliente.Hide();
             }
             if (tab_Peliculas.SelectedTab == tabp_alq)
             {
                 // split_alquilar.Hide();
+                label3.Show();
+                Cliente_Activo.Actualizar_peliculas_alquiladas();
+                grid_alq.EndEdit();
+                grid_alq.ResetBindings();
                 groupBox_cliente.Show();
                 groupBox_cliente.BringToFront();
             }
@@ -470,6 +498,55 @@ namespace TPFINAL_Craicnet
         private void tab_Peliculas_SelectedIndexChanged(object sender, EventArgs e)
         {
             
+        }
+
+        private void grid_alq_SelectionChanged_1(object sender, EventArgs e)
+        {
+            
+
+            DataGridViewCell cell = null;
+
+            foreach (DataGridViewCell selectedCell in grid_alq.SelectedCells)
+            {
+                cell = selectedCell;
+                break;
+            }
+
+            if (cell != null)
+            {
+                DataGridViewRow row = cell.OwningRow;
+                txt_peliculaver.Text = row.Cells[0].Value.ToString();
+
+            }
+        }
+
+        private void pict_like_Click(object sender, EventArgs e)
+        {
+            
+            cPelicula aux = null;
+            aux = Cliente_Activo.peliculas_alquiladas.Find(x => x.Nombre.Contains(txt_peliculaver.Text));
+            if (aux != null)
+            {
+                if (aux.Puntaje < 10)
+                    aux.Puntaje++;
+            }
+            grid_alq.EndEdit();
+            grid_alq.ResetBindings();
+
+        }
+
+        private void pic_unlike_Click(object sender, EventArgs e)
+        {
+            cPelicula aux = null;
+            aux = Cliente_Activo.peliculas_alquiladas.Find(x => x.Nombre.Contains(txt_peliculaver.Text));
+            if (aux != null)
+            {
+                if (aux.Puntaje > 1)
+                    aux.Puntaje--;
+            }
+            grid_alq.EndEdit();
+            grid_alq.ResetBindings();
+
         }
     }
 }

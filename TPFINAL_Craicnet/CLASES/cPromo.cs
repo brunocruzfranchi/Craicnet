@@ -161,5 +161,16 @@ namespace TPFINAL_Craicnet.CLASES
 
             this.Precio_descuento = (double)(this.Precio - this.Porcentaje_Descuento * this.Precio);
         }
+
+       static public void Actualizar_promociones()
+        {
+            foreach(cPromo promo in Inicio.lista_promociones)
+            {
+                if(DateTime.Today > promo.Fecha_limite){
+                    Inicio.lista_peliculas.Add(promo.Pelicula);
+                    Inicio.lista_promociones.Remove(promo);                  
+                }
+            }
+        }
     }
 }
