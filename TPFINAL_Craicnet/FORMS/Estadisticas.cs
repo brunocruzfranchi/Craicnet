@@ -181,5 +181,10 @@ namespace TPFINAL_Craicnet.FORMS
             //bubble.Dispose();
             //quick.Dispose();
         }
+
+        private void splitContainer1_Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

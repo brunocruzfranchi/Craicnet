@@ -37,12 +37,12 @@
             this.combo_alq = new System.Windows.Forms.ComboBox();
             this.chart_alq = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.combo_cmp = new System.Windows.Forms.ComboBox();
+            this.btn_cmp = new System.Windows.Forms.Button();
+            this.combo_vistos = new System.Windows.Forms.ComboBox();
             this.chart_vistos = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label2 = new System.Windows.Forms.Label();
-            this.combo_vistos = new System.Windows.Forms.ComboBox();
-            this.btn_cmp = new System.Windows.Forms.Button();
-            this.combo_cmp = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -62,6 +62,7 @@
             this.splitContainer1.Panel1.Controls.Add(this.combo_alq);
             this.splitContainer1.Panel1.Controls.Add(this.chart_alq);
             this.splitContainer1.Panel1.Controls.Add(this.label1);
+            this.splitContainer1.Panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.splitContainer1_Panel1_Paint);
             // 
             // splitContainer1.Panel2
             // 
@@ -112,6 +113,51 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Peliculas Alquiladas";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(82, 1311);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(479, 32);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Comparar rendimiento ordenamiento";
+            // 
+            // combo_cmp
+            // 
+            this.combo_cmp.FormattingEnabled = true;
+            this.combo_cmp.Items.AddRange(new object[] {
+            "Mensual",
+            "Anual"});
+            this.combo_cmp.Location = new System.Drawing.Point(680, 1304);
+            this.combo_cmp.Name = "combo_cmp";
+            this.combo_cmp.Size = new System.Drawing.Size(341, 39);
+            this.combo_cmp.TabIndex = 6;
+            this.combo_cmp.SelectedValueChanged += new System.EventHandler(this.comboBox1_SelectedValueChanged);
+            // 
+            // btn_cmp
+            // 
+            this.btn_cmp.Location = new System.Drawing.Point(1113, 1289);
+            this.btn_cmp.Name = "btn_cmp";
+            this.btn_cmp.Size = new System.Drawing.Size(259, 61);
+            this.btn_cmp.TabIndex = 5;
+            this.btn_cmp.Text = "Comparar";
+            this.btn_cmp.UseVisualStyleBackColor = true;
+            this.btn_cmp.Click += new System.EventHandler(this.btn_cmp_Click);
+            // 
+            // combo_vistos
+            // 
+            this.combo_vistos.FormattingEnabled = true;
+            this.combo_vistos.Items.AddRange(new object[] {
+            "Mensual",
+            "Anual"});
+            this.combo_vistos.Location = new System.Drawing.Point(88, 191);
+            this.combo_vistos.Name = "combo_vistos";
+            this.combo_vistos.Size = new System.Drawing.Size(454, 39);
+            this.combo_vistos.TabIndex = 4;
+            this.combo_vistos.Text = "Periodo";
+            this.combo_vistos.SelectedIndexChanged += new System.EventHandler(this.combo_anual_SelectedIndexChanged);
+            this.combo_vistos.SelectedValueChanged += new System.EventHandler(this.combo_anual_SelectedValueChanged);
+            // 
             // chart_vistos
             // 
             chartArea2.Name = "ChartArea1";
@@ -135,51 +181,6 @@
             this.label2.Size = new System.Drawing.Size(216, 32);
             this.label2.TabIndex = 2;
             this.label2.Text = "Peliculas Vistas";
-            // 
-            // combo_vistos
-            // 
-            this.combo_vistos.FormattingEnabled = true;
-            this.combo_vistos.Items.AddRange(new object[] {
-            "Mensual",
-            "Anual"});
-            this.combo_vistos.Location = new System.Drawing.Point(88, 191);
-            this.combo_vistos.Name = "combo_vistos";
-            this.combo_vistos.Size = new System.Drawing.Size(454, 39);
-            this.combo_vistos.TabIndex = 4;
-            this.combo_vistos.Text = "Periodo";
-            this.combo_vistos.SelectedIndexChanged += new System.EventHandler(this.combo_anual_SelectedIndexChanged);
-            this.combo_vistos.SelectedValueChanged += new System.EventHandler(this.combo_anual_SelectedValueChanged);
-            // 
-            // btn_cmp
-            // 
-            this.btn_cmp.Location = new System.Drawing.Point(1113, 1289);
-            this.btn_cmp.Name = "btn_cmp";
-            this.btn_cmp.Size = new System.Drawing.Size(259, 61);
-            this.btn_cmp.TabIndex = 5;
-            this.btn_cmp.Text = "Comparar";
-            this.btn_cmp.UseVisualStyleBackColor = true;
-            this.btn_cmp.Click += new System.EventHandler(this.btn_cmp_Click);
-            // 
-            // combo_cmp
-            // 
-            this.combo_cmp.FormattingEnabled = true;
-            this.combo_cmp.Items.AddRange(new object[] {
-            "Mensual",
-            "Anual"});
-            this.combo_cmp.Location = new System.Drawing.Point(680, 1304);
-            this.combo_cmp.Name = "combo_cmp";
-            this.combo_cmp.Size = new System.Drawing.Size(341, 39);
-            this.combo_cmp.TabIndex = 6;
-            this.combo_cmp.SelectedValueChanged += new System.EventHandler(this.comboBox1_SelectedValueChanged);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(82, 1311);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(479, 32);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Comparar rendimiento ordenamiento";
             // 
             // Estadisticas
             // 
